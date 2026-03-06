@@ -1,11 +1,11 @@
-Aggiungi una entry al log.md per documentare una decisione o un ciclo chiuso.
+Aggiungi una entry al mastro.md per documentare una decisione o un ciclo chiuso.
 
-Questa skill e' per entry manuali. Per chiudere un issue usa /issue-close,
-che scrive nel log automaticamente.
+Questa skill e' per entry manuali. Per chiudere una questione usa /chiudi-questione,
+che scrive nel mastro automaticamente.
 
-## 1. Trova log.md
+## 1. Trova mastro.md
 
-Cerca `log.md` nella directory corrente e nelle sottodirectory immediate.
+Cerca `mastro.md` nella directory corrente e nelle sottodirectory immediate.
 Se non esiste, chiedi all'utente dove crearlo prima di procedere.
 
 ## 2. Raccogli le informazioni
@@ -36,8 +36,8 @@ Ometti la sezione **Impatto** se non ci sono artefatti coinvolti.
 
 ## Regole
 
-- Il log contiene solo cicli chiusi: non usare questa skill per decisioni
+- Il mastro contiene solo cicli chiusi: non usare questa skill per decisioni
   ancora in discussione o soggette a revisione
-- Una entry nel log non viene mai modificata dopo la scrittura
-- Se la decisione riguarda la chiusura di un issue, usa /issue-close
+- Una entry nel mastro non viene mai modificata dopo la scrittura
+- Se la decisione riguarda la chiusura di una questione, usa /chiudi-questione
   invece di questa skill

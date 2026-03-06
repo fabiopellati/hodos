@@ -1,16 +1,16 @@
-Aggiorna lo stato di un issue esistente in issues.md.
+Aggiorna lo stato di una questione esistente in questioni.md.
 
-## 1. Trova issues.md
+## 1. Trova questioni.md
 
-Cerca `issues.md` nella directory corrente e nelle sottodirectory immediate.
+Cerca `questioni.md` nella directory corrente e nelle sottodirectory immediate.
 Se non esiste, interrompi e avvisa l'utente.
 
-## 2. Identifica l'issue
+## 2. Identifica la questione
 
-Se il messaggio specifica un ID (es. ISSUE-003) o un titolo, individua l'issue
-direttamente.
+Se il messaggio specifica un ID (es. QUESTIONE-003) o un titolo, individua la
+questione direttamente.
 
-Altrimenti, mostra la lista degli issue presenti nell'indice tramite
+Altrimenti, mostra la lista delle questioni presenti nell'indice tramite
 AskUserQuestion e chiedi quale aggiornare.
 
 ## 3. Determina il nuovo stato
@@ -34,7 +34,7 @@ Se il messaggio non la contiene, chiedila prima di procedere.
 
 ## 5. Aggiorna il file
 
-Modifica il campo **Stato** dell'issue e aggiungi una riga in fondo alla
+Modifica il campo **Stato** della questione e aggiungi una riga in fondo alla
 sezione **Storia**:
 
 ```markdown
@@ -45,7 +45,7 @@ Aggiorna la riga corrispondente nell'indice con il nuovo stato.
 
 ## Regole
 
-- Non modificare mai il corpo dell'issue (Descrizione, Domande aperte, Impatto)
-  tramite questa skill: usa /issue-close per chiuderlo o edita manualmente
+- Non modificare mai il corpo della questione (Descrizione, Domande aperte, Impatto)
+  tramite questa skill: usa /chiudi-questione per chiuderla o edita manualmente
 - La motivazione e' obbligatoria: non aggiornare senza di essa
-- Lo stato `closed` non e' raggiungibile con questa skill: usa /issue-close
+- Lo stato `closed` non e' raggiungibile con questa skill: usa /chiudi-questione

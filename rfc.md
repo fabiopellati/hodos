@@ -1,44 +1,44 @@
-Genera una RFC da un issue esistente in stato pending-rfc.
+Genera una RFC da una questione esistente in stato pending-rfc.
 
-## 1. Trova issues.md
+## 1. Trova questioni.md
 
-Cerca `issues.md` nella directory corrente e nelle sottodirectory immediate.
+Cerca `questioni.md` nella directory corrente e nelle sottodirectory immediate.
 Se non esiste, interrompi e avvisa l'utente.
 
-## 2. Identifica l'issue
+## 2. Identifica la questione
 
-Se il messaggio specifica un ID, individua l'issue direttamente e verifica
+Se il messaggio specifica un ID, individua la questione direttamente e verifica
 che sia in stato `pending-rfc`.
 
-Altrimenti, mostra tramite AskUserQuestion gli issue in stato `pending-rfc`
+Altrimenti, mostra tramite AskUserQuestion le questioni in stato `pending-rfc`
 e chiedi quale usare. Se non ce ne sono, interrompi e avvisa l'utente.
 
 ## 3. Raccogli le informazioni mancanti
 
-Leggi l'issue per estrarre il contesto disponibile. Per le informazioni
-non deducibili dall'issue, chiedi tramite AskUserQuestion:
+Leggi la questione per estrarre il contesto disponibile. Per le informazioni
+non deducibili dalla questione, chiedi tramite AskUserQuestion:
 
 - **Team-B**: nome del team destinatario
-- **Sistema**: sistema o componente su cui e' richiesto l'intervento
-- **Criteri di accettazione**: come Team-A verifichera' il lavoro (se non gia' nell'issue)
+- **Sistema**: sistema o unita' su cui e' richiesto l'intervento
+- **Criteri di accettazione**: come Team-A verifichera' il lavoro (se non gia' nella questione)
 
 ## 4. Determina il percorso del file RFC
 
-Il file RFC va nella stessa directory di issues.md, in una sottodirectory `rfc/`.
+Il file RFC va nella stessa directory di questioni.md, in una sottodirectory `rfc/`.
 Crea la directory se non esiste.
 
-Nome file: `rfc-{ISSUE-ID}-{slug-titolo}.md`
-Esempio: `rfc-ISSUE-003-aggiunta-campo-mgzsp00f.md`
+Nome file: `rfc-{QUESTIONE-ID}-{slug-titolo}.md`
+Esempio: `rfc-QUESTIONE-003-aggiunta-campo-mgzsp00f.md`
 
 ## 5. Scrivi il file RFC
 
 ```markdown
-# RFC — {ISSUE-ID}
+# RFC — {QUESTIONE-ID}
 
 **Data**: {YYYY-MM-DD}
 **Da**: Team-A / {nome progetto}
 **A**: Team-B / {Team-B}
-**Issue di origine**: {ISSUE-ID} — {Titolo issue}
+**Questione di origine**: {QUESTIONE-ID} — {Titolo questione}
 
 ## Contesto
 
@@ -78,4 +78,4 @@ quale campo, quale comportamento atteso.}
   richiedente per capire cosa gli viene chiesto
 - Non includere dettagli interni del progetto non rilevanti per Team-B
 - I Criteri di Accettazione descrivono il punto di vista di Team-A,
-  non le istruzioni implementative per Team-B
+  non le istruzioni realizzative per Team-B

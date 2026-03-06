@@ -8,7 +8,7 @@ il percorso P0-P4 quando e come opportuno.
 ## Percorso P0-P4
 
 Il percorso si articola in cinque fasi sequenziali. Ogni fase si chiude con
-un gate di approvazione esplicita prima di procedere alla successiva.
+un'approvazione esplicita prima di procedere alla successiva.
 
 Non e' obbligatorio attraversarle tutte: un'opera semplice puo' partire
 direttamente da P2. Il percorso e' un riferimento, non un vincolo.
@@ -25,17 +25,17 @@ direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 - Quali sono i vincoli non negoziabili?
 - Cosa e' in scope e cosa no?
 
-**Directory**: `docs/inception/`
+**Directory**: `documenti/definizione/`
 
 **Artefatti attesi**:
-- `objectives.md` — obiettivi misurabili, vincoli, stakeholder, criteri di successo
-- `features-overview.md` — funzionalita' in/out scope, priorita'
+- `obiettivi.md` — obiettivi misurabili, vincoli, stakeholder, criteri di successo
+- `panoramica-funzionalita.md` — funzionalita' in/out scope, priorita'
 
-**Gate**: approvazione di entrambi gli artefatti prima di aprire P1.
+**Approvazione**: approvazione di entrambi gli artefatti prima di aprire P1.
 
 ---
 
-## P1 — Analysis
+## P1 — Analisi
 
 **Scopo**: tradurre gli obiettivi in specifiche realizzabili.
 
@@ -45,17 +45,17 @@ direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 - Come e' strutturato il risultato atteso?
 - In quale ordine si realizza?
 
-**Directory**: `docs/analysis/`
+**Directory**: `documenti/analisi/`
 
 **Artefatti attesi**:
-- `use-cases.md` — scenari d'uso rilevanti
-- `specs-functional.md` — requisiti funzionali
-- `specs-non-functional.md` — requisiti non funzionali
-- `architecture.md` — struttura del risultato atteso
-- `execution-plan.md` — unita' di lavoro, ordine, milestone
+- `scenari.md` — scenari d'uso rilevanti
+- `requisiti.md` — requisiti funzionali
+- `vincoli.md` — requisiti non funzionali
+- `struttura.md` — struttura del risultato atteso
+- `piano-esecutivo.md` — unita' di lavoro, ordine, milestone
 
-**Gate**: approvazione del piano esecutivo. Il piano autorizza l'avvio della
-realizzazione.
+**Approvazione**: approvazione del piano esecutivo. Il piano autorizza l'avvio
+della realizzazione.
 
 ---
 
@@ -65,23 +65,23 @@ realizzazione.
 
 **Ciclo per ogni unita'**:
 1. Design — progettazione dettagliata
-2. Gate: approvazione del design
+2. Approvazione del design
 3. Iterazioni — cicli brevi: pianifica / realizza / verifica / chiudi
 4. Integrazione nell'aggregato o nell'opera
 
-**Directory**: `docs/unita'/[nome]/`
+**Directory**: `documenti/unita/[nome]/`
 
 **Artefatti attesi per unita'**:
 - `design.md` — progettazione dettagliata
-- `backlog.md` — iterazioni con obiettivi, backlog item, note
+- `attivita.md` — iterazioni con obiettivi, voci di attivita', note
 
-**Nota**: finding e problemi inattesi vanno in `issues.md`, non nel backlog.
-Il backlog e' proattivo (nasce dalla pianificazione); l'issue e' reattivo
+**Nota**: rilievi e problemi inattesi vanno in `questioni.md`, non nell'attivita'.
+L'attivita' e' proattiva (nasce dalla pianificazione); la questione e' reattiva
 (nasce da un problema).
 
 ---
 
-## P3 — Integration
+## P3 — Integrazione
 
 **Scopo**: verificare il risultato nel suo insieme.
 
@@ -93,11 +93,11 @@ Il backlog e' proattivo (nasce dalla pianificazione); l'issue e' reattivo
 **Directory**: nessuna propria. La verifica opera sugli artefatti delle
 fasi precedenti.
 
-**Nota**: gli issue che emergono qui non sono anomalie di singole unita'
-(P2) ma disallineamenti sistemici. Se un issue invalida assunzioni di fasi
-precedenti, aprire issue collegati (propagazione a ritroso).
+**Nota**: le questioni che emergono qui non sono anomalie di singole unita'
+(P2) ma disallineamenti sistemici. Se una questione invalida assunzioni di
+fasi precedenti, aprire questioni collegate (propagazione a ritroso).
 
-**Gate**: approvazione prima di aprire P4.
+**Approvazione**: approvazione prima di aprire P4.
 
 ---
 
@@ -110,31 +110,31 @@ precedenti, aprire issue collegati (propagazione a ritroso).
 - Approvazione della versione
 - Consegna al destinatario o messa a disposizione
 
-**Gate**: approvazione esplicita della consegna.
+**Approvazione**: approvazione esplicita della consegna.
 
 ---
 
 ## Struttura directory di riferimento
 
 ```
-docs/
-  inception/
-    objectives.md
-    features-overview.md
-  analysis/
-    use-cases.md
-    specs-functional.md
-    specs-non-functional.md
-    architecture.md
-    execution-plan.md
-  unita'/
-    [nome-unita']/
+documenti/
+  definizione/
+    obiettivi.md
+    panoramica-funzionalita.md
+  analisi/
+    scenari.md
+    requisiti.md
+    vincoli.md
+    struttura.md
+    piano-esecutivo.md
+  unita/
+    [nome-unita]/
       design.md
-      backlog.md
+      attivita.md
     [nome-aggregato]/
       design.md
-      backlog.md
-      [nome-unita']/
+      attivita.md
+      [nome-unita]/
         design.md
-        backlog.md
+        attivita.md
 ```

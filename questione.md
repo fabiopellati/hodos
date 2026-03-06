@@ -1,9 +1,9 @@
-Apri un nuovo issue nel file issues.md del progetto corrente.
+Apri una nuova questione nel file questioni.md del progetto corrente.
 
-## 1. Trova issues.md
+## 1. Trova questioni.md
 
-Cerca `issues.md` nella directory corrente e nelle sottodirectory immediate
-(es. `docs/`, `project/`).
+Cerca `questioni.md` nella directory corrente e nelle sottodirectory immediate
+(es. `documenti/`, `project/`).
 
 Se non esiste, chiedi all'utente dove crearlo prima di procedere.
 
@@ -12,35 +12,33 @@ Se non esiste, chiedi all'utente dove crearlo prima di procedere.
 Se il contesto del messaggio non fornisce tutte le informazioni necessarie,
 usa AskUserQuestion per raccogliere:
 
-- **Tipo**: `finding` (conoscenza nuova emersa), `revision` (correzione artefatto esistente) o `anomalia` (comportamento difforme da quanto atteso)
+- **Tipo**: `rilievo` (conoscenza nuova emersa), `revisione` (correzione artefatto esistente) o `anomalia` (comportamento difforme da quanto atteso)
 - **Titolo**: breve e descrittivo
-- **Fase**: fase di appartenenza (es. P0, P1, P2, step 1, step 3...)
-- **Descrizione**: il problema, il finding, la revisione o l'anomalia
+- **Descrizione**: il problema, il rilievo, la revisione o l'anomalia
 
 ## 3. Determina l'ID
 
-Leggi il file per identificare tutti gli ID esistenti (formato `ISSUE-NNN`).
+Leggi il file per identificare tutti gli ID esistenti (formato `QUESTIONE-NNN`).
 Assegna il prossimo ID disponibile. La numerazione non deve essere progressiva
 senza buchi, ma ogni ID deve essere univoco.
 
-## 4. Scrivi l'issue
+## 4. Scrivi la questione
 
-Inserisci il nuovo issue in cima al file, dopo la sezione Indice, usando
+Inserisci la nuova questione in cima al file, dopo la sezione Indice, usando
 questo formato:
 
 ```markdown
-## ISSUE-{ID} — {Titolo}
+## QUESTIONE-{ID} — {Titolo}
 
-**Tipo**: {finding | revision | anomalia}
+**Tipo**: {rilievo | revisione | anomalia}
 **Stato**: open
-**Fase**: {fase}
 
 **Storia**
 - {YYYY-MM-DD} open — {motivazione apertura, una riga}
 
 **Descrizione**
 
-{descrizione del problema, finding, revisione o anomalia}
+{descrizione del problema, rilievo, revisione o anomalia}
 
 **Domande aperte**
 - [ ] {prima domanda, se presente}
@@ -56,17 +54,17 @@ questo formato:
 Aggiungi una riga in cima alla tabella dell'indice:
 
 ```markdown
-| ISSUE-{ID} | {Titolo} | open |
+| QUESTIONE-{ID} | {Titolo} | open |
 ```
 
 Aggiorna la nota:
 
 ```
-> Ultimo issue inserito: ISSUE-{ID} — {YYYY-MM-DD}.
+> Ultima questione inserita: QUESTIONE-{ID} — {YYYY-MM-DD}.
 ```
 
 ## Regole
 
-- Un issue aperto non contiene mai la soluzione, solo il problema
+- Una questione aperta non contiene mai la soluzione, solo il problema
 - La motivazione nella Storia deve rispondere al "perche'" non al "cosa"
 - Se le domande aperte non sono ancora note, ometti la sezione o lasciala vuota

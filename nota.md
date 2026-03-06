@@ -21,7 +21,7 @@ Se non esiste, crealo con questa struttura minima:
 
 ## 2. Determina l'ID
 
-Leggi il file per identificare tutti gli ID esistenti (formato `NOTE-NNN`).
+Leggi il file per identificare tutti gli ID esistenti (formato `NOTA-NNN`).
 Assegna il prossimo ID disponibile. Ogni ID deve essere univoco.
 
 ## 3. Determina il contenuto
@@ -36,7 +36,7 @@ Se il messaggio non fornisce il contenuto della nota, chiedi:
 Inserisci la nuova nota in cima al file, prima delle note esistenti:
 
 ```markdown
-## NOTE-{ID} — {YYYY-MM-DD} — {Descrizione sintetica}
+## NOTA-{ID} — {YYYY-MM-DD} — {Descrizione sintetica}
 
 {corpo della nota}
 
@@ -47,13 +47,13 @@ Inserisci la nuova nota in cima al file, prima delle note esistenti:
 Aggiungi una riga in cima alla tabella:
 
 ```markdown
-| NOTE-{ID} | {Descrizione sintetica} | {YYYY-MM-DD} |
+| NOTA-{ID} | {Descrizione sintetica} | {YYYY-MM-DD} |
 ```
 
 Aggiorna la nota a fondo file:
 
 ```
-> Ultima nota inserita: NOTE-{ID} — {YYYY-MM-DD}.
+> Ultima nota inserita: NOTA-{ID} — {YYYY-MM-DD}.
 ```
 
 ## Regole
