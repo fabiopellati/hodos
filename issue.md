@@ -3,7 +3,7 @@ Apri un nuovo issue nel file issues.md del progetto corrente.
 ## 1. Trova issues.md
 
 Cerca `issues.md` nella directory corrente e nelle sottodirectory immediate
-(es. `docs/`, `process/`).
+(es. `docs/`, `project/`).
 
 Se non esiste, chiedi all'utente dove crearlo prima di procedere.
 
@@ -12,10 +12,10 @@ Se non esiste, chiedi all'utente dove crearlo prima di procedere.
 Se il contesto del messaggio non fornisce tutte le informazioni necessarie,
 usa AskUserQuestion per raccogliere:
 
-- **Tipo**: `finding` (conoscenza nuova emersa) o `revision` (correzione artefatto esistente)
+- **Tipo**: `finding` (conoscenza nuova emersa), `revision` (correzione artefatto esistente) o `anomalia` (comportamento difforme da quanto atteso)
 - **Titolo**: breve e descrittivo
 - **Fase**: fase di appartenenza (es. P0, P1, P2, step 1, step 3...)
-- **Descrizione**: il problema, il finding o la revisione necessaria
+- **Descrizione**: il problema, il finding, la revisione o l'anomalia
 
 ## 3. Determina l'ID
 
@@ -31,7 +31,7 @@ questo formato:
 ```markdown
 ## ISSUE-{ID} — {Titolo}
 
-**Tipo**: {finding | revision}
+**Tipo**: {finding | revision | anomalia}
 **Stato**: open
 **Fase**: {fase}
 
@@ -40,7 +40,7 @@ questo formato:
 
 **Descrizione**
 
-{descrizione del problema, finding o revisione}
+{descrizione del problema, finding, revisione o anomalia}
 
 **Domande aperte**
 - [ ] {prima domanda, se presente}

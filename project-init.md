@@ -7,10 +7,9 @@ Inizializza un nuovo progetto nella directory corrente con il workflow issue-bas
 Chiedi all'utente le seguenti informazioni se non sono gia' presenti nel messaggio:
 
 - **Nome del progetto** — identificatore del progetto
-- **Path degli artefatti** — directory dove vivono i sorgenti o gli artefatti
-  da verificare durante la compliance dei backlog item. Esempi: `../code`,
-  `./src`, `.` (stessa directory). Se il progetto non ha artefatti (solo
-  documenti), rispondere "nessuno".
+- **Path degli artefatti** — directory dove vivono gli artefatti da verificare
+  durante la compliance dei backlog item. Esempi: `../code`, `./src`, `.`
+  (stessa directory). Se il progetto non ha artefatti, rispondere "nessuno".
 
 ### 2. Verifica i file esistenti
 
@@ -63,7 +62,7 @@ completamento. L'umano approva esplicitamente prima di procedere.
 ## Stato Corrente
 
 - Fase: —
-- Componente attivo: —
+- Unita' attiva: —
 - Issue aperti: nessuno
 
 ## File di progetto
@@ -80,8 +79,7 @@ completamento. L'umano approva esplicitamente prima di procedere.
 | `/issue-close` | Chiudere un issue e scrivere l'entry nel log |
 | `/rfc` | Generare una RFC da un issue in stato pending-rfc |
 | `/log` | Aggiungere una entry manuale al log |
-| `/backlog` | Gestire item di backlog durante lo sviluppo |
-| `/worklog` | Aggiornare il work log a fine sessione |
+| `/backlog` | Gestire item di backlog durante la realizzazione |
 
 ## Principi operativi
 
@@ -91,6 +89,9 @@ l'approvazione prima di procedere.
 
 **Gli stati validi di un issue sono**: `open`, `in-progress`, `pending-approval`,
 `pending-rfc`, `in-verification`, `deferred`.
+
+**I tipi di issue sono**: `finding` (conoscenza nuova), `revision` (correzione
+artefatto esistente), `anomalia` (comportamento difforme da quanto atteso).
 
 **Il log e' immutabile.** Le entry vengono aggiunte in cima (prepend-only) e
 non vengono mai modificate. Solo i cicli chiusi entrano nel log.

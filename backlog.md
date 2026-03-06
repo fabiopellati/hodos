@@ -1,13 +1,13 @@
-Gestisci un item nel backlog di un componente in fase P2 — Development.
+Gestisci un item nel backlog di un'unita' in fase P2 — Realizzazione.
 
-Il backlog item e' un contratto in due tempi tra chi pianifica e chi implementa:
+Il backlog item e' un contratto in due tempi tra chi pianifica e chi realizza:
 all'apertura definisce cosa deve essere fatto e come verificarlo; alla chiusura
 documenta cosa e' stato consegnato e ne verifica la compliance rispetto alla richiesta.
 
 ## 1. Trova il file backlog
 
-Cerca `backlog.md` nella directory del componente corrente
-(es. `docs/components/[nome]/backlog.md`).
+Cerca `backlog.md` nella directory dell'unita' corrente
+(es. `docs/unita'/[nome]/backlog.md`).
 
 Se non esiste, chiedi all'utente dove crearlo prima di procedere.
 
@@ -15,7 +15,7 @@ Se non esiste, chiedi all'utente dove crearlo prima di procedere.
 
 Se il contesto del messaggio non indica chiaramente l'operazione,
 usa AskUserQuestion con queste opzioni:
-- "Apri nuovo item" — si sta pianificando un task di implementazione
+- "Apri nuovo item" — si sta pianificando un task di realizzazione
 - "Chiudi item esistente" — si sta documentando la consegna e verificando la compliance
 
 ---
@@ -30,24 +30,24 @@ Aggiungi in append al file:
 
 ### Richiesta
 
-{Cosa deve essere implementato e perche'. Descrive il "cosa" e il "perche'",
-non il "come". Se l'implementazione e' delegata, questo e' il documento
-di riferimento per chi implementa.}
+{Cosa deve essere realizzato e perche'. Descrive il "cosa" e il "perche'",
+non il "come". Se la realizzazione e' delegata, questo e' il documento
+di riferimento per chi realizza.}
 
 ### Criteri di verifica
 
-{Come si verifica che l'implementazione soddisfi la richiesta. Condizioni
+{Come si verifica che la realizzazione soddisfi la richiesta. Condizioni
 osservabili e misurabili. Usato alla chiusura per la verifica di compliance.}
 
-### Note tecniche
+### Note
 
-{Strutture dati, file coinvolti, vincoli rilevanti. Opzionale.}
+{Vincoli rilevanti, riferimenti utili. Opzionale.}
 ```
 
 **Regole:**
-- La Richiesta descrive il risultato atteso, non i passi implementativi
-- I Criteri di verifica devono essere verificabili da chi non ha implementato
-- Non inserire stime di tempo ne' dettagli di debug
+- La Richiesta descrive il risultato atteso, non i passi realizzativi
+- I Criteri di verifica devono essere verificabili da chi non ha realizzato
+- Non inserire stime di tempo ne' dettagli di diagnosi
 
 ---
 
@@ -61,8 +61,8 @@ mostrando la lista degli item aperti come opzioni.
 ### Individua gli artefatti da verificare
 
 Prima di valutare la compliance, leggi il `CLAUDE.md` nella directory corrente
-e cerca la sezione `Percorsi`. Il campo `Artefatti` indica dove cercare i
-sorgenti o gli output da verificare rispetto ai Criteri di verifica.
+e cerca la sezione `Percorsi`. Il campo `Artefatti` indica dove cercare gli
+output da verificare rispetto ai Criteri di verifica.
 
 - Se il path e' definito: usa quella directory come base per la verifica
 - Se il campo e' "nessuno": la compliance si valuta solo su documenti
@@ -78,7 +78,7 @@ Aggiungi in append all'item:
 
 **Compliance**: conforme | parziale | non conforme
 
-{Descrizione di quanto implementato. Se parziale o non conforme, documenta
+{Descrizione di quanto realizzato. Se parziale o non conforme, documenta
 gli scostamenti rispetto alla Richiesta e la motivazione.}
 ```
 
@@ -92,7 +92,7 @@ gli scostamenti rispetto alla Richiesta e la motivazione.}
 
 ## Cosa NON appartiene al backlog
 
-- Finding o problemi inattesi emersi durante lo sviluppo — usare /issue
-- Stime di tempo — appartengono al work log
-- Note operative di sessione — appartengono al work log
-- Dettagli di debug o troubleshooting — appartengono al work log o ai commit
+- Finding, anomalie o problemi inattesi emersi durante la realizzazione — usare /issue
+- Stime di tempo
+- Note operative di sessione
+- Dettagli di diagnosi
