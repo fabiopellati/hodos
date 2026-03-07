@@ -15,7 +15,7 @@ direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 
 ---
 
-## P0 — Inception
+## P0 — Definizione
 
 **Scopo**: capire il problema prima di qualsiasi soluzione.
 
