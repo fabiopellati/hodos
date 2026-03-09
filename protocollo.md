@@ -239,6 +239,10 @@ La RFC e' bidirezionale: il team ricevente compila una sezione **Response RFC**
 (decisione, cosa e' stato fatto, eventuali deviazioni) e restituisce il documento.
 Questo vale sia per RFC outbound che inbound.
 
+**Immutabilita' della richiesta**: la sezione di richiesta e' immutabile dopo la
+generazione. I contributi successivi avvengono esclusivamente tramite la sezione
+Response RFC e commenti.
+
 ### RFC Outbound
 
 Generata quando una questione interna non puo' essere risolta senza intervento
