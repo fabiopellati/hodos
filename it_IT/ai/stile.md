@@ -1,8 +1,9 @@
-# Guida allo Stile Redazionale — Hodos
+# Istruzioni di Stile Redazionale — Hodos
 
-Gli artefatti di Hodos hanno audience e tono distinti per livello. Questo
-documento definisce le aspettative redazionali per ciascun tipo attraverso
-una persona di riferimento e coppie di esempi prima/dopo.
+Questo documento e' indirizzato all'agente AI che scrive o revisiona artefatti
+Hodos. Definisce la persona di riferimento e coppie di esempi prima/dopo per
+ciascun tipo di documento. Gli estensori umani non sono il destinatario: si
+presuppone che sappiano gia' come redigere un documento tecnico in italiano.
 
 ---
 
@@ -112,7 +113,7 @@ riferimento. Termini come "buono", "veloce", "semplice" non sono requisiti.
 
 ---
 
-## Nota per gli agenti AI
+## Istruzione operativa
 
 Identifica il tipo di documento dal percorso e dalla struttura del file,
 poi applica la persona del livello corrispondente. In caso di dubbio,
