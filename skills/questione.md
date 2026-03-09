@@ -16,6 +16,16 @@ usa AskUserQuestion per raccogliere:
 - **Titolo**: breve e descrittivo
 - **Descrizione**: il problema, il rilievo, la revisione o l'anomalia
 
+Se il tipo e' `rilievo`, verifica con l'operatore:
+
+> Stai aprendo un rilievo — conoscenza nuova emersa, soluzione non ancora definita.
+> Se sai gia' cosa fare e sei pronto ad agire, apri una revisione invece.
+> Confermi rilievo?
+
+Se l'operatore corregge in revisione, procedi con `revisione`. Il tipo e'
+immutabile dopo l'apertura: scegliere bene ora evita di dover chiudere e
+riaprire la questione.
+
 ## 3. Determina l'ID
 
 Leggi il file per identificare tutti gli ID esistenti (formato `QUESTIONE-NNN`).
@@ -45,6 +55,11 @@ questo formato:
 
 **Impatto**
 - {artefatto o fase} — {descrizione dell'impatto}
+
+**Commenti** (opzionale — ometti se assente)
+
+COMMENTO-NNN — YYYY-MM-DD
+[testo]
 
 ---
 ```

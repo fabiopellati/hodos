@@ -56,10 +56,32 @@ Aggiorna la nota a fondo file:
 > Ultima nota inserita: NOTA-{ID} — {YYYY-MM-DD}.
 ```
 
+## Aggiungere un commento a una nota esistente
+
+Quando occorre rettificare, integrare o contestualizzare una nota senza
+modificarne il corpo, aggiungere un commento alla nota esistente.
+
+1. Individua la nota in `notes.md` per ID o titolo.
+2. Determina il prossimo numero di commento locale alla nota
+   (COMMENTO-001 se e' il primo, altrimenti il successivo disponibile).
+3. Aggiungi in fondo alla nota, prima del separatore `---`, la sezione
+   `**Commenti**` se non esiste, poi il commento:
+
+```markdown
+**Commenti**
+
+COMMENTO-{NNN} — {YYYY-MM-DD}
+{testo del commento}
+```
+
+4. Non modificare il corpo della nota ne' l'indice.
+
 ## Regole
 
 - Il formato e' leggero: nessuna sezione strutturata, nessuno stato
 - La descrizione sintetica e' quella che appare nell'indice: deve essere
   comprensibile senza leggere il corpo
-- Le note non hanno ciclo di vita: non cambiare mai il contenuto di una
-  nota esistente; se serve un aggiornamento, apri una nuova nota
+- Il corpo di una nota e' immutabile dopo la scrittura
+- Per rettifiche o nuove conoscenze sullo stesso argomento, aggiungere un
+  commento (COMMENTO-NNN) alla nota esistente invece di aprirne una nuova
+- I commenti sono additivi e immutabili: non modificare un commento esistente
