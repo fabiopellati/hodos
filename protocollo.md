@@ -105,7 +105,7 @@ non modificare il tipo in corso d'opera.
 | `open` | creata, da analizzare |
 | `in-progress` | analisi in corso |
 | `pending-approval` | proposta redatta, in attesa di approvazione umana |
-| `pending-rfc` | RFC inviata a Team-B, in attesa di risposta |
+| `pending-rfc` | RFC in corso: dall'invio fino all'avvio effettivo del lavoro da parte del team ricevente |
 | `in-verification` | risposta ricevuta, verifica in corso |
 | `deferred` | rimandato con motivazione esplicita |
 | `closed` | risolto, rimosso da questioni.md e registrato in mastro.md |
