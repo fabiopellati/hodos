@@ -184,8 +184,29 @@ nella fase appropriata seguendo il normale ciclo Hodos.
 
 ### C4. Informa l'utente
 
-Riepiloga le questioni aperte e ricorda che al completamento del lavoro
-occorre compilare la sezione Response RFC e restituire il file al mittente.
+Riepiloga le questioni aperte. Rammenta che al completamento del lavoro
+e' obbligatorio eseguire il passo C5 prima di chiudere qualsiasi questione.
+
+### C5. Compila e consegna la Response RFC (gate obbligatorio)
+
+Questo passo deve essere completato prima di chiudere qualsiasi questione
+aperta in C3. Eseguire in ordine:
+
+1. Compila la sezione `## Response RFC` del file:
+   - `**Data risposta**`, `**Stato**`, `**Da**`, `**A**`
+   - `### Decisione` — cosa e' stato fatto o deciso
+   - `### Lavoro svolto` — sintesi delle questioni risolte
+   - `### Deviazioni` — eventuali scostamenti dalla richiesta (ometti se assente)
+
+2. Esegui il commit del file RFC compilato.
+
+3. Consegna il file al mittente (Team-A).
+
+4. Aggiungi una nota nella storia di **ciascuna** questione aperta in C3:
+   `{YYYY-MM-DD} — RFC restituita a {Team-A}, file: {nome-file}`
+
+Solo dopo il completamento di tutti i punti precedenti e' possibile procedere
+con la chiusura delle questioni aperte in C3.
 
 ---
 
@@ -199,3 +220,6 @@ occorre compilare la sezione Response RFC e restituire il file al mittente.
   non le istruzioni realizzative per Team-B
 - La questione resta in `pending-rfc` fino all'avvio effettivo del lavoro
   da parte del team ricevente (semantica estesa: copre l'intero ciclo RFC)
+- Le questioni aperte in C3 non possono essere chiuse prima che C5 sia
+  completato: compilazione Response RFC, commit, consegna a Team-A, nota
+  nella storia di ciascuna questione

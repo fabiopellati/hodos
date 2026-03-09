@@ -278,5 +278,9 @@ Ricevuta quando Team-B richiede un intervento nel sistema di Team-A.
 5. Al completamento, Team-A compila la sezione Response RFC e la restituisce
 6. La questione viene chiusa
 
+La chiusura della questione segna il completamento del ciclo RFC nella sua
+interezza, inclusa la restituzione della risposta. Non e' un atto separabile
+dalla consegna.
+
 La verifica di conformita' e' implicita nel processo: la questione non si chiude
 prima che il risultato sia verificato rispetto alla request originale.
