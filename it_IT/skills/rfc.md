@@ -148,6 +148,21 @@ Aggiungi una nota nella storia della questione senza cambiare lo stato
 Se la risposta contiene blocchi o una RFC inbound allegata, segnalarlo
 esplicitamente nella nota.
 
+### B6. Aggiungi la sintesi RFC come commento nella questione
+
+Aggiungi un commento nella questione con la sintesi del ciclo RFC.
+Il commento rende la questione autocontenuta: al momento della chiusura
+il mastro ricevera' tutto il contesto rilevante senza dover leggere il file RFC.
+
+```markdown
+COMMENTO-NNN — {YYYY-MM-DD}
+RFC {nome-file}
+
+Richiesta: {sintesi di una o due righe della sezione Richiesta}
+Risposta ({Team-B}): {sintesi della Decisione e del Lavoro svolto}
+Deviazioni: {sintesi, ometti se assente}
+```
+
 ---
 
 ## Operazione C — Ricezione inbound

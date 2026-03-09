@@ -131,6 +131,14 @@ Inserisci in cima al file (prepend) la nuova entry:
 > Ultima questione chiusa: QUESTIONE-{ID} — {YYYY-MM-DD}.
 ```
 
+### 8c. Elimina il file RFC se presente
+
+Cerca in `rfc/` un file il cui nome contiene l'ID della questione appena chiusa.
+Se trovato:
+- Verifica che la questione contenga un commento con la sintesi RFC (step B6 di hodos-rfc).
+  Se il commento e' assente, avvisa l'utente prima di procedere.
+- Elimina il file con `git rm`.
+
 ### 9b. Valuta se suggerire /compact
 
 1. Raccogli tutti gli ID citati nei campi `Questioni collegate` delle questioni
