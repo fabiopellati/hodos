@@ -6,6 +6,28 @@ Applicabile solo se il team usa git. Ignorabile altrimenti.
 
 ---
 
+## Verifica preliminare
+
+Prima di procedere, verifica se la directory corrente e' un repo git:
+
+```bash
+git rev-parse --is-inside-work-tree 2>/dev/null
+```
+
+Se il comando fallisce o restituisce errore, la directory non e' un repo git.
+In questo caso, ricorda all'utente:
+
+> La directory corrente non e' un repo git. Esegui `git init` per inizializzare
+> il repository prima di applicare le convenzioni di versionamento.
+
+Dopo `git init`, e' buona norma creare subito il branch `develop`:
+
+```bash
+git checkout -b develop
+```
+
+---
+
 ## Integrazione con P4 — Consegna
 
 La fase P4 di Hodos e' agnostica rispetto agli strumenti. Per team che usano git,
