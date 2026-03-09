@@ -1,54 +1,65 @@
-Genera una RFC da una questione esistente in stato pending-rfc.
+Gestisci il ciclo RFC: generazione outbound, acquisizione risposta, ricezione inbound.
+L'operazione deve essere dichiarata esplicitamente nel messaggio.
 
-## 1. Trova questioni.md
+## 1. Determina l'operazione
+
+Leggi il messaggio dell'utente e identifica l'operazione richiesta:
+
+- **generazione** — creare una nuova RFC da una questione in stato `pending-rfc`
+- **acquisizione** — registrare la risposta ricevuta a una RFC outbound
+- **inbound** — ricevere e processare una RFC inviata da un team esterno
+
+Se l'operazione non e' chiara, chiedi tramite AskUserQuestion.
+
+---
+
+## Operazione A — Generazione outbound
+
+### A1. Trova questioni.md
 
 Cerca `questioni.md` nella directory corrente e nelle sottodirectory immediate.
-Se non esiste, interrompi e avvisa l'utente.
 
-## 2. Identifica la questione
+### A2. Identifica la questione
 
-Se il messaggio specifica un ID, individua la questione direttamente e verifica
-che sia in stato `pending-rfc`.
+Se il messaggio specifica un ID, individua la questione e verifica che sia in
+stato `pending-rfc`. Altrimenti mostra tramite AskUserQuestion le questioni
+in stato `pending-rfc` e chiedi quale usare.
 
-Altrimenti, mostra tramite AskUserQuestion le questioni in stato `pending-rfc`
-e chiedi quale usare. Se non ce ne sono, interrompi e avvisa l'utente.
-
-## 3. Raccogli le informazioni mancanti
+### A3. Raccogli le informazioni mancanti
 
 Leggi la questione per estrarre il contesto disponibile. Per le informazioni
 non deducibili dalla questione, chiedi tramite AskUserQuestion:
 
-- **Team-B**: nome del team destinatario
+- **Team-B**: nome e contatto del team destinatario
 - **Sistema**: sistema o unita' su cui e' richiesto l'intervento
-- **Criteri di accettazione**: come Team-A verifichera' il lavoro (se non gia' nella questione)
+- **Criteri di accettazione**: come Team-A verifichera' il lavoro
 
-## 4. Determina il percorso del file RFC
+### A4. Determina il percorso del file RFC
 
 Il file RFC va nella stessa directory di questioni.md, in una sottodirectory `rfc/`.
 Crea la directory se non esiste.
 
 Nome file: `rfc-{QUESTIONE-ID}-{slug-titolo}.md`
-Esempio: `rfc-QUESTIONE-003-aggiunta-campo-mgzsp00f.md`
 
-## 5. Scrivi il file RFC
+### A5. Scrivi il file RFC
 
 ```markdown
 # RFC — {QUESTIONE-ID}
 
 **Data**: {YYYY-MM-DD}
+**Commit generazione**: {da compilare dopo il commit}
 **Da**: Team-A / {nome progetto}
-**A**: Team-B / {Team-B}
+**A**: {Team-B}
 **Questione di origine**: {QUESTIONE-ID} — {Titolo questione}
 
 ## Contesto
 
-{Descrizione del progetto e del contesto in cui e' emersa la necessita'.
-Autocontenuto: leggibile senza conoscere la storia interna del progetto.}
+{Descrizione del progetto e del contesto. Autocontenuto: leggibile senza
+conoscere la storia interna del progetto richiedente.}
 
 ## Richiesta
 
-{Descrizione precisa di cosa viene richiesto: quale sistema, quale modifica,
-quale campo, quale comportamento atteso.}
+{Descrizione precisa di cosa viene richiesto.}
 
 ## Motivazione
 
@@ -72,10 +83,94 @@ quale campo, quale comportamento atteso.}
 ### Deviazioni
 ```
 
+### A6. Committa e registra il SHA
+
+Dopo aver scritto il file, esegui il commit. Poi aggiorna il campo
+`**Commit generazione**` nel file con il SHA del commit appena creato
+e committa nuovamente con `--amend`.
+
+### A7. Aggiorna la storia della questione
+
+Aggiungi una nota nella storia della questione:
+`{YYYY-MM-DD} — RFC generata e consegnata a {Team-B}, file: {nome-file}`
+
+---
+
+## Operazione B — Acquisizione risposta
+
+### B1. Identifica il file RFC
+
+Il file e' gia' stato copiato nella directory `rfc/` dall'utente.
+Se il percorso e' specificato nel messaggio, usalo. Altrimenti cerca i file
+RFC con campo `**Stato**:` vuoto nella sezione Response RFC.
+
+### B2. Verifica integrita' della sezione di richiesta
+
+Leggi il campo `**Commit generazione**` dal file. Se presente, esegui:
+
+```
+git diff {commit-sha} HEAD -- {percorso-file}
+```
+
+Verifica che nessuna riga modificata appartenga alla sezione di richiesta
+(tutto cio' che precede `## Response RFC`). Se ci sono modifiche alla
+sezione di richiesta, interrompi e avvisa l'utente.
+
+Se il campo `**Commit generazione**` non e' presente, avvisa l'utente che
+la verifica automatica non e' possibile e chiedi conferma prima di procedere.
+
+### B3. Committa il file aggiornato
+
+Esegui il commit del file RFC con la risposta acquisita.
+
+### B4. Identifica la questione collegata
+
+Cerca in questioni.md la questione con `**Stato**: pending-rfc` collegata
+a questa RFC (tramite ID nel nome file o nel campo Questione di origine).
+
+### B5. Aggiorna la storia della questione
+
+Aggiungi una nota nella storia della questione senza cambiare lo stato
+(la questione resta `pending-rfc` fino all'avvio effettivo del lavoro):
+
+`{YYYY-MM-DD} — Risposta ricevuta da {Team-B}: {sintesi della decisione}`
+
+Se la risposta contiene blocchi o una RFC inbound allegata, segnalarlo
+esplicitamente nella nota.
+
+---
+
+## Operazione C — Ricezione inbound
+
+### C1. Acquisisce il file RFC inbound
+
+Il file e' gia' presente o viene fornito dall'utente. Copialo nella
+directory `rfc/` se non e' gia' li'. Committalo.
+
+### C2. Valuta la RFC prima di aprire questioni
+
+Leggi la RFC per capire cosa viene richiesto e in quale fase del progetto
+ricade il lavoro. La valutazione precede l'apertura di qualsiasi questione.
+
+### C3. Apri le questioni necessarie
+
+Per ciascuna decisione o lavoro richiesto dalla RFC, apri una questione
+nella fase appropriata seguendo il normale ciclo Hodos.
+
+### C4. Informa l'utente
+
+Riepiloga le questioni aperte e ricorda che al completamento del lavoro
+occorre compilare la sezione Response RFC e restituire il file al mittente.
+
+---
+
 ## Regole
 
+- La sezione di richiesta di una RFC e' immutabile dopo la generazione;
+  i contributi successivi avvengono solo tramite Response RFC e commenti
 - La RFC deve essere autocontenuta: Team-B non deve conoscere il progetto
   richiedente per capire cosa gli viene chiesto
-- Non includere dettagli interni del progetto non rilevanti per Team-B
 - I Criteri di Accettazione descrivono il punto di vista di Team-A,
   non le istruzioni realizzative per Team-B
+- La questione resta in `pending-rfc` fino all'avvio effettivo del lavoro
+  da parte del team ricevente (semantica estesa: copre l'intero ciclo RFC)
