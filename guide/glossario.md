@@ -13,7 +13,7 @@ cui viene introdotto per la prima volta nel protocollo.
 I documenti consegnabili della metodologia, classificati in tre livelli gerarchici.
 Livello primario: `protocollo.md` — normativo, per umano non tecnico. Livello
 secondario: `guide/` — operativo, per umano che applica il processo. Livello
-terziario: skills in `code/` — procedurale, per agente esecutore (AI); formulati
+terziario: skills in `skills/` — procedurale, per agente esecutore (AI); formulati
 per efficacia ed efficienza del modello, autocontenuti. Distinti dai documenti
 di stato dell'opera (`questioni.md`, `mastro.md`, `notes.md`) che sono strumenti
 di governo del processo, non artefatti distribuibili.

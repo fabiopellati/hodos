@@ -61,6 +61,8 @@ contatta Team-A prima di deviare dalla richiesta.
 
 **Data risposta**: {YYYY-MM-DD}
 **Stato**: accepted
+**Da**: {il tuo team}
+**A**: {Team-A richiedente}
 
 ### Decisione
 

@@ -80,10 +80,12 @@ obbligatorio per le questioni di tipo *rilievo* che hanno il campo `Impatto` non
 vuoto (vedi regola di chiusura sotto).
 
 **Ordine**: decrescente — ogni nuova questione viene inserita prima delle
-precedenti. L'ordine e' immutabile dopo la creazione. Le sezioni strutturali
-del documento (intestazione, indice) restano nelle loro posizioni. L'indice
-in intestazione compensa l'immutabilita' mostrando lo stato corrente di ogni
-questione.
+precedenti. L'ordine riflette la sequenza cronologica di inserimento, che e'
+informazione di processo rilevante: sapere quando e' emerso un problema rispetto
+agli altri aiuta a ricostruire il contesto decisionale. Per questa ragione
+l'ordine e' immutabile dopo la creazione. Le sezioni strutturali del documento
+(intestazione, indice) restano nelle loro posizioni. L'indice in intestazione
+compensa l'immutabilita' mostrando lo stato corrente di ogni questione.
 
 **Natura delle questioni**: una questione puo' essere di tre nature:
 - *rilievo* — conoscenza nuova emersa che modifica la comprensione del dominio
@@ -182,8 +184,11 @@ Registro immutabile delle decisioni prese. Contiene solo cicli chiusi.
 Ogni entry descrive cosa e' emerso, cosa e' stato deciso e perche'.
 
 **Ordine**: decrescente — ogni nuova entry viene inserita prima delle precedenti
-(prepend-only). Le sezioni strutturali del documento restano nelle loro posizioni.
-Una entry nel mastro non viene mai modificata dopo la scrittura.
+(prepend-only). L'ordine cronologico inverso serve a trovare rapidamente le
+decisioni piu' recenti senza scorrere l'intero registro. Una entry nel mastro
+non viene mai modificata dopo la scrittura: il mastro e' testimonianza storica,
+non uno strumento di lavoro corrente — modificarlo significherebbe alterare la
+memoria del processo.
 
 **Struttura di una entry**:
 
