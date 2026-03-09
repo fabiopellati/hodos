@@ -27,9 +27,9 @@ direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 
 **Directory**: `documenti/definizione/`
 
-**Artefatti attesi**:
-- `obiettivi.md` — obiettivi misurabili, vincoli, stakeholder, criteri di successo
-- `panoramica-funzionalita.md` — funzionalita' in/out scope, priorita'
+**Artefatti attesi** (in ordine di redazione):
+- `1-obiettivi.md` — obiettivi misurabili, vincoli, stakeholder, criteri di successo
+- `2-panoramica-funzionalita.md` — funzionalita' in/out scope, priorita'
 
 **Approvazione**: approvazione di entrambi gli artefatti prima di aprire P1.
 
@@ -47,12 +47,12 @@ direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 
 **Directory**: `documenti/analisi/`
 
-**Artefatti attesi**:
-- `scenari.md` — scenari d'uso rilevanti
-- `requisiti.md` — requisiti funzionali
-- `vincoli.md` — requisiti non funzionali
-- `struttura.md` — struttura del risultato atteso
-- `piano-esecutivo.md` — unita' di lavoro, ordine, milestone
+**Artefatti attesi** (in ordine di redazione):
+- `3-scenari.md` — scenari d'uso rilevanti
+- `4-requisiti.md` — requisiti funzionali
+- `5-vincoli.md` — requisiti non funzionali
+- `6-struttura.md` — struttura del risultato atteso
+- `7-piano-esecutivo.md` — unita' di lavoro, ordine, milestone
 
 **Approvazione**: approvazione del piano esecutivo. Il piano autorizza l'avvio
 della realizzazione.
@@ -119,14 +119,14 @@ fasi precedenti, aprire questioni collegate (propagazione a ritroso).
 ```
 documenti/
   definizione/
-    obiettivi.md
-    panoramica-funzionalita.md
+    1-obiettivi.md
+    2-panoramica-funzionalita.md
   analisi/
-    scenari.md
-    requisiti.md
-    vincoli.md
-    struttura.md
-    piano-esecutivo.md
+    3-scenari.md
+    4-requisiti.md
+    5-vincoli.md
+    6-struttura.md
+    7-piano-esecutivo.md
   unita/
     [nome-unita]/
       design.md
