@@ -29,7 +29,7 @@ vivono per tutta la durata dell'opera.
 
 Hodos non prescrive un ciclo di vita a fasi. Chi adotta la metodologia definisce
 il proprio percorso. Un percorso di riferimento opzionale basato su fasi
-sequenziali (P0-P4) e' descritto nello skill `fasi.md`.
+sequenziali (P0-P4) e' descritto nello skill `arricchimento-fasi.md`.
 
 ### questioni.md
 

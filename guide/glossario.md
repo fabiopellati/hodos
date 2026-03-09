@@ -123,7 +123,7 @@ rimossa dal file.
 **Fase**
 Periodo del ciclo di lavoro con scopo, artefatti e approvazione definiti. Hodos
 non prescrive fasi obbligatorie: il percorso P0-P4 e' un arricchimento opzionale
-descritto nello skill `fasi.md`.
+descritto nello skill `arricchimento-fasi.md`.
 
 **Prepend-only**
 Modalita' di inserimento in cui ogni nuova entry viene inserita prima delle

@@ -15,7 +15,7 @@ percorso in base alla natura dell'opera.
 
 Un percorso di riferimento opzionale basato su fasi sequenziali (P0 Definizione,
 P1 Analisi, P2 Realizzazione, P3 Integrazione, P4 Consegna) e' disponibile
-come arricchimento: consulta lo skill `fasi.md` per la struttura dettagliata,
+come arricchimento: consulta lo skill `arricchimento-fasi.md` per la struttura dettagliata,
 la directory dei documenti attesi e le approvazioni.
 
 ---

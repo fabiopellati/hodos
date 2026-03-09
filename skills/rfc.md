@@ -75,6 +75,8 @@ conoscere la storia interna del progetto richiedente.}
 
 **Data risposta**:
 **Stato**:
+**Da**:
+**A**:
 
 ### Decisione
 
