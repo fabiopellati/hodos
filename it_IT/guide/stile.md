@@ -1,9 +1,8 @@
 # Guida allo Stile Redazionale — Hodos
 
 Gli artefatti di Hodos hanno audience e tono distinti per livello. Questo
-documento definisce le aspettative redazionali per ciascun tipo. E' destinato
-sia agli estensori umani sia agli agenti AI che scrivono o revisionano documenti
-nel contesto di un'opera Hodos.
+documento definisce le aspettative redazionali per ciascun tipo attraverso
+una persona di riferimento e coppie di esempi prima/dopo.
 
 ---
 
@@ -13,20 +12,25 @@ nel contesto di un'opera Hodos.
 Potrebbe essere un responsabile di progetto, un cliente, un collaboratore
 esterno che vuole capire come funziona il processo prima di adottarlo.
 
-**Tono**: valutativo e motivazionale. Ogni regola ha una ragione esplicita.
-Il lettore deve capire non solo *cosa* prescrive il protocollo, ma *perche'*
-quella scelta e' stata fatta e quale problema risolve.
+**Persona**: scrivi come un esperto che convincerebbe un collega scettico.
+Non basta dire cosa prescrive il protocollo — ogni regola porta con se' la
+ragione che l'ha prodotta e il problema che risolve. Il lettore deve poter
+valutare, non solo applicare.
 
-**Stile**:
-- Frasi complete, linguaggio accessibile
-- Motivazioni prima delle regole, non dopo
-- Struttura argomentativa, non operativa
+**Esempi**
 
-**Evita**:
-- Checklist e istruzioni step-by-step
-- Formulazioni algoritmiche ("se X allora Y")
-- Tono da manuale tecnico o da specifica software
-- Regole senza motivazione
+Regola senza motivazione (da evitare):
+> Un rilievo con impatto non vuoto richiede almeno una questione di revisione
+> collegata aperta.
+
+Regola con motivazione (corretto):
+> Un rilievo che ha gia' modificato artefatti non si chiude senza una questione
+> di revisione aperta: il processo deve poter tracciare se le modifiche eseguite
+> sono state valutate e, se necessario, corrette. Senza questo vincolo, un
+> impatto eseguito potrebbe restare privo di verifica.
+
+Pattern: la regola risponde prima alla domanda "perche'" e poi alla domanda
+"cosa". La struttura argomentativa precede la prescrizione.
 
 ---
 
@@ -35,21 +39,26 @@ quella scelta e' stata fatta e quale problema risolve.
 **Audience**: chi applica il processo nel lavoro quotidiano. Conosce la
 metodologia ma ha bisogno di riferimenti operativi chiari e rapidi.
 
-**Tono**: operativo e diretto. Orientato all'azione, senza prolissita'.
+**Persona**: scrivi come un tecnico italiano che spiega a un collega operativo.
+Le frasi sono complete e le relazioni tra concetti sono dichiarate, non lasciate
+all'inferenza del lettore. L'italiano ha strutture sintattiche piu' esplicite
+dell'inglese: non comprimere la frase per inseguire la concisione di una
+traduzione letterale.
 
-**Stile**:
-- Conciso, esempi pratici dove utili
-- Rimandi mirati e poco frequenti
-- L'italiano ha regole sintattiche che producono frasi piu' verbose delle
-  equivalenti in inglese: non comprimere eccessivamente. Una traduzione
-  letterale dall'inglese suona spesso sintetica al punto da risultare
-  rigida o meccanica. Preferire la costruzione naturale della frase italiana.
+**Esempi**
 
-**Evita**:
-- Motivazioni verbose (appartengono al livello primario)
-- Ripetizioni del contenuto del protocollo
-- Rimandi a catena che costringono il lettore a navigare piu' documenti
-- Costruzioni sintetiche che sacrificano la leggibilita'
+Colon senza framing (da evitare):
+> Il knowledge-provider rende la knowledge base intercambiabile senza modificare
+> il core del server: lettura da filesystem locale o da repository git per tag.
+
+Relazione dichiarata (corretto):
+> Il knowledge-provider rende la knowledge base intercambiabile senza modificare
+> il core del server. Le sorgenti supportate sono due: il filesystem locale e il
+> repository git, con accesso per tag.
+
+Pattern: prima del colon deve comparire una parola che nomina la categoria di
+cio' che segue (sorgenti, opzioni, modalita', casi). Se quella parola manca, il
+colon e' prematuro.
 
 ---
 
@@ -58,18 +67,24 @@ metodologia ma ha bisogno di riferimenti operativi chiari e rapidi.
 **Audience**: agente AI esecutore. Il documento viene letto e interpretato
 da un modello linguistico, non da un umano.
 
-**Tono**: procedurale e compatto.
+**Persona**: scrivi come un ingegnere che produce una specifica di macchina.
+Ogni passo e' eseguibile senza contesto esterno, senza narrativa, senza
+spiegazioni rivolte a un umano. L'agente esegue: non ha bisogno di capire il
+perche', ha bisogno di sapere esattamente cosa fare in ogni caso.
 
-**Stile**:
-- Autocontenuto: ogni passo e' eseguibile senza contesto esterno
-- Formulato per efficienza del modello: istruzioni dirette, senza narrativa
-- Struttura a passi numerati o con titoli chiari
+**Esempi**
 
-**Evita**:
-- Tono narrativo o descrittivo
-- Ridondanza e ripetizioni
-- Spiegazioni destinate a un lettore umano
-- Motivazioni esplicite (l'agente esegue, non valuta)
+Istruzione ambigua (da evitare):
+> Identifica la questione da chiudere nel contesto.
+
+Istruzione specifica (corretto):
+> Leggi l'ID della questione dagli argomenti dello skill. Se non e' presente
+> negli argomenti, mostra l'indice di questioni.md tramite AskUserQuestion e
+> chiedi quale questione chiudere.
+
+Pattern: ogni passo specifica sia il caso normale sia il caso alternativo.
+Un agente non improvvisa: ogni deviazione dal percorso atteso deve avere un
+ramo esplicito.
 
 ---
 
@@ -78,27 +93,30 @@ da un modello linguistico, non da un umano.
 **Audience**: analisti, architetti, decision-maker tecnici. Lettori con
 competenza tecnica e familiarita' con il dominio del progetto.
 
-**Tono**: analitico e strutturato.
+**Persona**: scrivi come un analista che produce un documento formale
+consegnabile. Ogni affermazione e' verificabile o motivata esplicitamente.
+I concetti simili sono distinti, le ambiguita' terminologiche sono risolte
+prima di usare il termine.
 
-**Stile**:
-- Vocabolario di dominio usato in modo coerente
-- Distinzioni esplicite tra concetti simili
-- Rigore descrittivo: ogni affermazione e' verificabile o motivata
+**Esempi**
 
-**Evita**:
-- Opinioni implicite presentate come fatti
-- Affermazioni vaghe o non fondate
-- Ambiguita' terminologica
-- Mistura di livelli di astrazione diversi nello stesso paragrafo
+Affermazione vaga (da evitare):
+> Il sistema deve essere performante e scalabile.
+
+Affermazione verificabile (corretto):
+> Il sistema deve rispondere a una query standard entro 200ms con un carico
+> di 100 richieste concorrenti (RF-007).
+
+Pattern: ogni requisito o vincolo porta un criterio di verifica o un
+riferimento. Termini come "buono", "veloce", "semplice" non sono requisiti.
 
 ---
 
 ## Nota per gli agenti AI
 
-Quando scrivi o revisioni un documento, identifica il tipo dal percorso e
-dalla struttura del file, poi applica le regole del livello corrispondente.
-In caso di dubbio sul tipo, chiedi prima di procedere.
+Identifica il tipo di documento dal percorso e dalla struttura del file,
+poi applica la persona del livello corrispondente. In caso di dubbio,
+chiedi prima di procedere.
 
 Questo documento e' candidato a diventare una risorsa MCP accessibile
-tramite `get_protocol_rules(context="style")` quando il server Hodos MCP
-sara' disponibile (QUESTIONE-048).
+tramite `get_protocol_rules(context="style")` (QUESTIONE-048).
