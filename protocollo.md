@@ -110,7 +110,8 @@ non modificare il tipo in corso d'opera.
 | `deferred` | rimandato con motivazione esplicita |
 | `closed` | risolto, rimosso da questioni.md e registrato in mastro.md |
 
-Ogni cambio di stato porta una nota nella storia che risponde al "perche'".
+La storia cattura ogni evento significativo della questione — cambio di stato
+o no — con una nota che risponde al "perche'".
 Quando una questione viene chiusa e spostata nel mastro, anche la relativa voce
 in indice viene rimossa.
 
