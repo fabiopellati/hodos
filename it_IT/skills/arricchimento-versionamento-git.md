@@ -1,3 +1,11 @@
+---
+skill: arricchimento-versionamento-git
+client: Claude Code CLI
+invocazione: /hodos-arricchimento-versionamento-git
+tipo: descrittivo
+locale: it_IT
+---
+
 Arricchimento opzionale per opere che adottano git come sistema di versionamento.
 Questo skill e' descrittivo: non esegue azioni, non crea file. Fornisce il contesto
 per integrare il workflow git con il percorso P0-P4 di Hodos.

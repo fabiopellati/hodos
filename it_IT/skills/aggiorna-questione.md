@@ -1,3 +1,11 @@
+---
+skill: aggiorna-questione
+client: Claude Code CLI
+invocazione: /hodos-aggiorna-questione
+tipo: operativo
+locale: it_IT
+---
+
 Aggiorna lo stato di una questione esistente in questioni.md.
 Quando lo stato di destinazione e' `closed`, esegue anche la chiusura completa:
 verifica precondizioni, scrive l'entry nel mastro, rimuove la questione dal file.

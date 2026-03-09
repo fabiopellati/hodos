@@ -1,3 +1,11 @@
+---
+skill: attivita
+client: Claude Code CLI
+invocazione: /hodos-attivita
+tipo: operativo
+locale: it_IT
+---
+
 Gestisci una voce nel file attivita.md di un'unita' in fase P2 — Realizzazione.
 
 La voce di attivita' e' un contratto in due tempi tra chi pianifica e chi realizza:

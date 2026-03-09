@@ -1,3 +1,11 @@
+---
+skill: questione
+client: Claude Code CLI
+invocazione: /hodos-questione
+tipo: operativo
+locale: it_IT
+---
+
 Apri una nuova questione nel file questioni.md del progetto corrente.
 
 ## 1. Trova questioni.md

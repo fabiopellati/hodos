@@ -1,3 +1,11 @@
+---
+skill: rfc
+client: Claude Code CLI
+invocazione: /hodos-rfc
+tipo: operativo
+locale: it_IT
+---
+
 Gestisci il ciclo RFC: generazione outbound, acquisizione risposta, ricezione inbound.
 L'operazione deve essere dichiarata esplicitamente nel messaggio.
 

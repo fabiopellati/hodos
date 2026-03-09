@@ -1,3 +1,11 @@
+---
+skill: arricchimento-fasi
+client: Claude Code CLI
+invocazione: /hodos-arricchimento-fasi
+tipo: descrittivo
+locale: it_IT
+---
+
 Percorso di riferimento opzionale per opere che adottano un ciclo di vita
 a fasi sequenziali. Questo skill e' descrittivo: non esegue azioni, non crea
 file. Fornisce il contesto necessario a chi governa o all'AI per applicare

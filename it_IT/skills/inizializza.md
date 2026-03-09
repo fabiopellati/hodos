@@ -1,3 +1,11 @@
+---
+skill: inizializza
+client: Claude Code CLI
+invocazione: /hodos-inizializza
+tipo: operativo
+locale: it_IT
+---
+
 Inizializza un nuovo progetto nella directory corrente con il workflow questione-based.
 
 ## Procedura

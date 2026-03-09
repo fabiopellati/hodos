@@ -1,3 +1,11 @@
+---
+skill: nota
+client: Claude Code CLI
+invocazione: /hodos-nota
+tipo: operativo
+locale: it_IT
+---
+
 Aggiungi una nuova nota nel file notes.md del progetto corrente.
 
 ## 1. Trova notes.md
