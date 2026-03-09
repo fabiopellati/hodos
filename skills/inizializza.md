@@ -163,8 +163,12 @@ le configurazioni esistenti:
   "hooks": {
     "SessionStart": [
       {
-        "type": "command",
-        "command": "bash .claude/hooks/hodos-check-version.sh"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/hodos-check-version.sh"
+          }
+        ]
       }
     ]
   }
