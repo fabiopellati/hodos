@@ -28,6 +28,9 @@ Se il tipo e' `rilievo`, verifica con l'operatore:
 
 > Stai aprendo un rilievo — conoscenza nuova emersa, soluzione non ancora definita.
 > Se sai gia' cosa fare e sei pronto ad agire, apri una revisione invece.
+> Nota: se durante l'analisi emerge una soluzione pronta ad essere eseguita, apri
+> una revisione prima di agire sull'artefatto. Il rilievo registra conoscenza;
+> la revisione esegue l'impatto.
 > Confermi rilievo?
 
 Se l'operatore corregge in revisione, procedi con `revisione`. Il tipo e'

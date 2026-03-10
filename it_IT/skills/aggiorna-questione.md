@@ -159,3 +159,4 @@ Se trovato:
 - La motivazione e' obbligatoria per qualsiasi cambio di stato
 - Nel ramo chiusura: scrivi l'entry nel mastro prima di rimuovere la questione da questioni.md
 - L'entry nel mastro e' immutabile dopo la scrittura: non modificarla mai
+- Se la questione e' di tipo rilievo: il rilievo non puo' modificare artefatti nel corso del suo ciclo. Se durante l'analisi emerge una soluzione pronta ad essere eseguita, l'operatore deve aprire una revisione prima di agire. Segnalare questa regola se l'operatore intende agire su un artefatto nel contesto di un rilievo aperto.

@@ -100,6 +100,19 @@ Il tipo e' immutabile dopo l'apertura. Se la classificazione iniziale si rivela
 errata, la strada corretta e' chiudere la questione e riaprirla con il tipo giusto,
 non modificare il tipo in corso d'opera.
 
+**Perimetro del rilievo**: nel corso del suo ciclo, un rilievo non puo' modificare
+artefatti. Il suo compito e' registrare conoscenza e identificare cosa vale la pena
+fare — non farlo. Se durante l'analisi emerge una soluzione chiara e l'operatore
+e' pronto ad agire, la strada corretta e' aprire immediatamente una revisione e
+agire tramite essa. L'overhead e' minimo; il guadagno e' che ogni modifica a un
+artefatto e' sempre governata da una questione dedicata, con la propria storia e
+il proprio ciclo.
+
+Questo vincolo esiste per una ragione precisa: senza di esso, il rilievo tende a
+espandersi fino a eseguire l'impatto che ha identificato, aggirando la distinzione
+concettuale tra "ho capito cosa c'e' da fare" e "l'ho fatto". Il mastro registra
+decisioni, non esecuzioni; la revisione e' lo strumento che collega le due cose.
+
 **Stati**:
 
 | Stato | Significato |
