@@ -122,6 +122,59 @@ fasi precedenti, aprire questioni collegate (propagazione a ritroso).
 
 ---
 
+## Questioni e wall
+
+Le questioni in `questioni.md` tracciano il processo, non lo contengono.
+Gli elaborati prodotti da ogni fase vivono nei propri file; il wall
+registra apertura, progressione e chiusura.
+
+**Una questione di revisione per fase o blocco di fasi:**
+
+```
+## QUESTIONE-NNN — Fase P0-P1: [titolo opera]
+
+**Tipo**: revisione
+**Stato**: open
+
+**Storia**
+- YYYY-MM-DD open — Avvio P0: raccolta obiettivi e vincoli.
+- YYYY-MM-DD in-progress — P0 completato, avvio P1.
+- YYYY-MM-DD closed — Piano esecutivo approvato.
+
+**Elaborati prodotti**
+- `documenti/definizione/1-obiettivi.md`
+- `documenti/analisi/7-piano-esecutivo.md`
+```
+
+**Una questione di revisione per unita' di esecuzione:**
+
+```
+## QUESTIONE-NNN — Unita': [nome unita']
+
+**Tipo**: revisione
+**Stato**: open
+
+**Storia**
+- YYYY-MM-DD open — Avvio design unita'.
+- YYYY-MM-DD in-progress — Design approvato, avvio iterazioni.
+- YYYY-MM-DD closed — Unita' completata e integrata.
+
+**Elaborati prodotti**
+- `documenti/unita/[nome]/design.md`
+- `documenti/unita/[nome]/attivita.md`
+```
+
+La granularita' minima e' una questione per fase significativa e una per
+unita'. Non si aprono questioni per ogni micro-passo: i passi di esecuzione
+vivono nell'`attivita.md` dell'unita'.
+
+Questo modello vale per umano e AI. Quando l'AI elabora un ciclo P0-P4
+in autonomia, apre la questione di fase, produce gli elaborati nei propri
+file, aggiorna la storia al completamento di ogni elaborato significativo,
+e chiude la questione quando la fase e' verificata e approvata.
+
+---
+
 ## Struttura directory di riferimento
 
 ```

@@ -21,6 +21,33 @@ senza ridefinirli.
 
 ---
 
+## Documenti di un'Opera
+
+Un'opera Hodos produce e utilizza documenti di natura diversa. Riconoscere
+la categoria di un documento orienta il modo in cui viene governato, modificato
+e referenziato nelle questioni.
+
+| Categoria | Dove | Natura |
+|---|---|---|
+| Documenti di governo | `project/` | Tracciano decisioni atomiche e storia del processo (questioni.md, mastro.md, notes.md) |
+| Artefatti della metodologia | `artefatti/` | Definiscono come si usa Hodos (protocollo.md, guide, skills) |
+| Elaborati dell'opera | `documenti/` | Documentano l'analisi e le decisioni tecniche dell'opera (obiettivi, scenari, requisiti, design, attivita') |
+| Prodotto | `code/` o equivalente | Deliverable dell'opera |
+| Piani operativi di sessione | Effimeri | Documentano l'approccio per un'esecuzione specifica; non persistono nel repo |
+
+Gli **elaborati dell'opera** sono specifici dell'opera che li ha prodotti, non
+della metodologia. La loro forma canonica e' definita dall'arricchimento fasi
+o da convenzioni dell'opera. Sono modificabili tramite questioni di revisione.
+Il termine "elaborati" e' preferibile a "documenti di fase" perche' alcuni
+evolvono su piu' fasi: il vincolo alla fase e' nella produzione, non nella vita
+del documento.
+
+I **piani operativi di sessione** (tipicamente prodotti in plan-mode dall'AI)
+non richiedono persistenza autonoma: la loro tracciabilita' e' garantita dagli
+elaborati e dalle questioni che l'esecuzione produce.
+
+---
+
 ## Artefatti del Processo
 
 Ogni opera mantiene tre documenti trasversali che non sono artefatti consolidati
@@ -95,6 +122,17 @@ compensa l'immutabilita' mostrando lo stato corrente di ogni questione.
 Il criterio per scegliere tra rilievo e revisione e' l'intenzione al momento
 dell'apertura: se si e' identificato qualcosa ma non si e' ancora pronti ad agire,
 e' un rilievo; se si sa gia' cosa fare e si e' pronti ad agire, e' una revisione.
+
+I tipi sono costrutti di governance: definiscono il comportamento del ciclo
+della questione, non la natura semantica del lavoro che la questione descrive.
+Una revisione che crea un elaborato nuovo e una revisione che corregge un
+elaborato esistente hanno lo stesso comportamento di governance — entrambe
+producono o modificano un artefatto. Il tipo descrive il ciclo, non il lavoro.
+
+Per questa ragione i tipi non sono estendibili dagli arricchimenti. Se un
+arricchimento necessita di distinguere semanticamente le questioni, usa campi
+aggiuntivi o convenzioni di titolo — non nuovi tipi. Questo preserva
+l'univocita' terminologica di Hodos attraverso opere e domini diversi.
 
 Il tipo e' immutabile dopo l'apertura. Se la classificazione iniziale si rivela
 errata, la strada corretta e' chiudere la questione e riaprirla con il tipo giusto,

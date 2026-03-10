@@ -30,33 +30,51 @@ scritta nella sessione corrente.
 
 ## Elementi con firma
 
-La firma si applica a tutti i punti di contribuzione tracciabile:
+La firma si applica a tutti i punti di contribuzione tracciabile, con formato
+differenziato per tipo di elemento.
 
-**Voci di storia** (questioni.md, ogni aggiornamento di stato o nota):
+**Voci di storia** (questioni.md, ogni aggiornamento di stato):
 ```
-- 2026-03-10 open — motivazione dell'apertura [Nome]
+- 2026-03-10 open [Nome] — motivazione dell'apertura
 ```
+La firma precede il separatore `—` per garantire allineamento di colonna
+ordinato nei log multi-operatore. I brackets `[]` sono mantenuti per
+facilitare lo scanning visivo.
 
 **Commenti** (sezione Commenti di questioni o note):
 ```
 COMMENTO-001 — 2026-03-10 [Nome]
 [testo del commento]
 ```
+La firma e' inline nell'header del commento, dopo la data.
 
-**Note** (notes.md, intestazione della nota):
+**Note** (notes.md):
 ```
-## NOTA-042 — 2026-03-10 — Titolo sintetico [Nome]
+## NOTA-042 — 2026-03-10 — Titolo sintetico
+**Autore**: Nome
+[corpo della nota]
 ```
+La firma e' un campo header strutturato, prima riga del blocco dopo
+l'intestazione. Non fa parte del titolo.
 
 ---
 
 ## Formato
 
-La firma e' `[Nome]` posizionata a fine riga dell'elemento a cui appartiene.
-Fa parte del testo e segue le stesse regole di immutabilita' dell'elemento:
-una voce di storia firmata non si modifica, un commento firmato non si modifica.
-
 Il campo `Nome` corrisponde esattamente al valore dichiarato in `CLAUDE.md`.
+
+La firma fa parte dell'elemento a cui appartiene e segue le stesse regole
+di immutabilita': una voce di storia firmata non si modifica, un commento
+firmato non si modifica.
+
+---
+
+## Arricchimenti multipli e storia
+
+Gli arricchimenti possono aggiungere campi header a questioni e note
+liberamente. La voce di storia tuttavia riporta solo i metadati
+significativi per la storia dell'elemento: informazioni accessorie
+restano nell'header e non compaiono nella storia.
 
 ---
 
@@ -67,7 +85,7 @@ Non portano firma:
 - Il corpo di una questione (Descrizione, Domande aperte, Impatto): sono
   scritti al momento dell'apertura e appartengono alla questione, non a un
   contributo successivo
-- Il corpo immutabile di una nota (firmato nell'intestazione)
+- Il corpo immutabile di una nota (firmato nell'header)
 - Le entry del mastro: il mastro registra decisioni collettive dell'opera,
   non contributi individuali
 
@@ -77,8 +95,13 @@ Non portano firma:
 
 In team con piu' operatori, sapere chi ha aperto una questione, chi ha scritto
 un commento o chi ha aggiornato la storia e' informazione di processo rilevante.
-La firma e' parte del testo e non e' separabile: garantisce che l'attribuzione
-sia immutabile come l'elemento a cui appartiene.
+La firma e' parte dell'elemento e non e' separabile: garantisce che
+l'attribuzione sia immutabile come l'elemento a cui appartiene.
+
+Il formato differenziato per tipo di elemento riflette i vincoli strutturali
+di ciascuno: le voci di storia sono righe singole e richiedono firma inline;
+commenti e note sono blocchi e possono ospitare un campo header strutturato,
+piu' estraibile e componibile con altri arricchimenti.
 
 La configurazione per opera (non globale) riflette il fatto che la firma e'
 contestuale: lo stesso operatore puo' avere ruoli diversi in opere diverse,
