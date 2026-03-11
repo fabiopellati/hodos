@@ -159,7 +159,7 @@ decisioni, non esecuzioni; la revisione e' lo strumento che collega le due cose.
 | `in-progress` | analisi in corso |
 | `pending-approval` | proposta redatta, in attesa di approvazione umana |
 | `pending-rfc` | RFC in corso: dall'invio fino all'avvio effettivo del lavoro da parte del team ricevente |
-| `in-verification` | risposta ricevuta, verifica in corso |
+| `in-verification` | risposta RFC ricevuta, verifica in corso; al completamento la questione torna a `open` per essere ripresa dall'esecuzione |
 | `deferred` | rimandato con motivazione esplicita |
 | `closed` | risolto, rimosso da questioni.md e registrato in mastro.md |
 
@@ -249,7 +249,7 @@ memoria del processo.
 **Questione**: [QUESTIONE-ID] — Titolo
 
 **Percorso** (opzionale)
-[arco sintetico del ciclo: stati intermedi, ripensamenti, alternative valutate]
+[sintesi del percorso: stati intermedi, ripensamenti, alternative valutate]
 
 **Decisioni prese**
 [elenco delle decisioni con motivazione]
@@ -263,6 +263,11 @@ un ciclo significativo — stati multipli, ripensamenti, alternative scartate.
 Quando la decisione e' stata diretta, si omette. La sua presenza garantisce
 che il mastro possa rispondere non solo a "cosa si e' deciso" ma anche a
 "come si e' arrivati a deciderlo".
+
+Il mastro non va compresso sistematicamente: la brevita' non e' un valore
+primario delle entry. L'omissione del Percorso e' legittima solo quando il
+ciclo e' stato effettivamente diretto — apertura e chiusura senza stati
+intermedi. Ometterla per concisione vanifica il valore del registro.
 
 ---
 

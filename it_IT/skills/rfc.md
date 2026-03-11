@@ -47,7 +47,11 @@ non deducibili dalla questione, chiedi tramite AskUserQuestion:
 Il file RFC va nella stessa directory di questioni.md, in una sottodirectory `rfc/`.
 Crea la directory se non esiste.
 
-Nome file: `rfc-{QUESTIONE-ID}-{slug-titolo}.md`
+Nome file: `rfc-{progetto}-{YYYY-MM-DD}-{slug-titolo}.md`
+
+Dove `{progetto}` e' l'identificatore kebab-case del progetto mittente
+(es. `rfc-hodos-2026-03-11-template-ai-frontmatter.md`).
+La questione di origine e' tracciata nel campo `**Questione di origine**` nell'header.
 
 ### A5. Scrivi il file RFC
 
@@ -59,6 +63,8 @@ Nome file: `rfc-{QUESTIONE-ID}-{slug-titolo}.md`
 **Da**: Team-A / {nome progetto}
 **A**: {Team-B}
 **Questione di origine**: {QUESTIONE-ID} — {Titolo questione}
+**Consegna RFC**: {opzionale — canale usato per consegnare questa RFC a Team-B, es. mail a <indirizzo>, copia in file:///path, sftp://host/path}
+**Consegna risposta**: {opzionale — canale che Team-B deve usare per restituire la risposta, es. mail a <indirizzo>, copia in file:///path}
 
 ## Contesto
 
