@@ -267,8 +267,11 @@ Se trovato:
 
 ## Regole
 
-- Non modificare mai il corpo della questione (Descrizione, Domande aperte,
-  Impatto): usa un commento (Operazione C) per rettifiche o integrazioni
+- Non modificare mai Descrizione e Domande aperte: usa un commento
+  (Operazione C) per rettifiche o integrazioni
+- Il campo Impatto e' mutabile per addizione: si possono aggiungere nuove
+  voci documentando il motivo; una voce esistente non si cancella ma si puo'
+  dichiarare inattuata inline (`- artefatto — descrizione — inattuata: motivazione`)
 - La motivazione e' obbligatoria per qualsiasi cambio di stato
 - Nel ramo chiusura: scrivi l'entry nel mastro prima di rimuovere la questione
 - L'entry nel mastro e' immutabile dopo la scrittura: non modificarla mai

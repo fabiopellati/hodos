@@ -106,6 +106,14 @@ Il campo `Questioni collegate` e' opzionale nella struttura generale, ma diventa
 obbligatorio per le questioni di tipo *rilievo* che hanno il campo `Impatto` non
 vuoto (vedi regola di chiusura sotto).
 
+**Mutabilita' del campo Impatto**: a differenza di Descrizione e Domande aperte,
+il campo Impatto e' mutabile per addizione nel corso del ciclo. Durante
+l'esecuzione possono emergere dipendenze non previste all'apertura. Due regole
+garantiscono la tracciabilita': (1) una voce esistente non puo' essere cancellata,
+ma puo' essere dichiarata inattuata con motivazione esplicita inline:
+`- artefatto — descrizione — inattuata: motivazione`; (2) nuove voci possono
+essere aggiunte in qualsiasi momento, documentando il motivo.
+
 **Ordine**: decrescente — ogni nuova questione viene inserita prima delle
 precedenti. L'ordine riflette la sequenza cronologica di inserimento, che e'
 informazione di processo rilevante: sapere quando e' emerso un problema rispetto

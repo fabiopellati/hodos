@@ -72,6 +72,17 @@ Si', se la decisione e' stata diretta e non richiede approvazione esplicita.
 Il passaggio per pending-approval e' obbligatorio quando chi realizza e chi
 governa sono persone diverse, o quando il processo lo richiede.
 
+**Posso aggiungere voci al campo Impatto dopo l'apertura?**
+
+Si'. Il campo Impatto e' mutabile per addizione: durante l'esecuzione possono
+emergere dipendenze non previste. Si possono aggiungere nuove voci in qualsiasi
+momento documentando il motivo. Una voce esistente non si cancella, ma si puo'
+dichiarare inattuata con motivazione esplicita inline:
+
+```
+- artefatto — descrizione — inattuata: motivazione
+```
+
 **Cosa faccio se una questione ha domande aperte al momento della chiusura?**
 
 L'operatore viene avvisato prima di procedere. La presenza di domande aperte
