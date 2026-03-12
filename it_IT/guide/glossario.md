@@ -131,7 +131,7 @@ Un'opera ha una durata definita, produce elaborati propri (in `documenti/`) e
 mantiene tre strumenti di governo trasversali: `questioni.md`, `mastro.md` e
 `note.md`. Il termine designa il lavoro nella sua interezza — indipendentemente
 dal dominio, dalla tecnologia o dalla dimensione. Radice latina *opus* (lavoro,
-creazione): neutro rispetto ai domini, coerente con il nome della metodologia.
+creazione): neutro rispetto ai domini e ai contesti in cui Hodos viene adottato.
 
 **Prepend-only**
 Modalita' di inserimento in cui ogni nuova entry viene inserita prima delle
