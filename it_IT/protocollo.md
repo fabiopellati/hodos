@@ -45,29 +45,29 @@ dall'idea al manufatto.
 
 ## Art. 2 — Categorie di strumenti
 
-1. Un'[opera] Hodos produce e utilizza strumenti riconducibili alle seguenti
+1. Un'opera Hodos produce e utilizza strumenti riconducibili alle seguenti
    categorie:
    a) gli strumenti di governo, conservati in `project/`, tracciano le decisioni
       atomiche e la storia del processo; ne fanno parte `questioni.md`,
       `mastro.md` e `note.md`;
    b) gli artefatti della metodologia, conservati in `artefatti/`, definiscono
       come si usa Hodos; ne fanno parte `protocollo.md`, le guide e gli skills;
-   c) gli elaborati dell'[opera], conservati in `documenti/`, documentano le analisi
-      e le decisioni tecniche prodotte nel corso dell'[opera]: obiettivi, scenari,
+   c) gli elaborati dell'opera, conservati in `documenti/`, documentano le analisi
+      e le decisioni tecniche prodotte nel corso dell'opera: obiettivi, scenari,
       requisiti, design, attivita';
-   d) il prodotto e' il deliverable dell'[opera]; quando e' costituito da file,
+   d) il prodotto e' il deliverable dell'opera; quando e' costituito da file,
       e' conservato in `artefatti/` o in una directory equivalente.
 
 ---
 
 ## Art. 3 — Strumenti di governo
 
-1. Ogni [opera] mantiene tre strumenti di governo trasversali:
+1. Ogni opera mantiene tre strumenti di governo trasversali:
       - `questioni.md`
       - `note.md`
       - `mastro.md`
 
-   Sono strumenti trasversali e vivono per tutta la durata dell'[opera].
+   Sono strumenti trasversali e vivono per tutta la durata dell'opera.
 
 2. L'organizzazione del lavoro nel tempo — fasi, iterazioni, milestone — e'
    fuori dal perimetro di questo protocollo. Chi adotta Hodos la definisce
@@ -77,7 +77,7 @@ dall'idea al manufatto.
 
 ## Art. 4 — questioni.md
 
-1. `questioni.md` contiene le questioni aperte dell'[opera]: in analisi, in attesa,
+1. `questioni.md` contiene le questioni aperte dell'opera: in analisi, in attesa,
    rimandati. Quando una questione viene chiusa, viene rimossa da `questioni.md`
    e la sua risoluzione viene registrata in `mastro.md`.
 
@@ -220,7 +220,7 @@ dall'idea al manufatto.
    viene tracciato aprendo una nuova questione. La chiusura di questa questione
    produce una nuova voce nel mastro che documenta la decisione aggiornata.
 
-3. Il mastro preserva la sequenza storica, non lo stato corrente dell'[opera].
+3. Il mastro preserva la sequenza storica, non lo stato corrente dell'opera.
    La coesistenza di una decisione e della sua successiva revisione e' corretta e attesa.
 
 ---
@@ -229,7 +229,7 @@ dall'idea al manufatto.
 
 1. Una RFC e' un documento formale generato quando una questione richiede
    intervento nell'ambito di competenza di un attore esterno. E' autocontenuto:
-   leggibile senza conoscere la storia interna dell'[opera] richiedente.
+   leggibile senza conoscere la storia interna dell'opera richiedente.
 
 2. La RFC e' bidirezionale: l'attore ricevente compila una sezione
    **Response RFC** e restituisce il documento. Questo vale sia per RFC
@@ -246,25 +246,24 @@ dall'idea al manufatto.
    a) la questione passa allo stato `pending-rfc`;
    b) la RFC viene generata e consegnata all'attore esterno;
    c) l'attore esterno compila la sezione Response RFC e restituisce la RFC;
-   d) l'[opera] verifica che il lavoro soddisfi l'esigenza;
+   d) il richiedente verifica che il lavoro soddisfi l'esigenza;
    e) solo se la verifica ha esito positivo, la questione viene chiusa;
    f) il lavoro in attesa puo' procedere.
 
 5. Il completamento del lavoro da parte dell'attore esterno non chiude la
    questione: sblocca la fase di verifica. La responsabilita' della verifica
-   resta in capo all'[opera].
+   resta in capo al richiedente.
 
 **RFC Inbound**
 
 6. La RFC Inbound viene ricevuta quando un attore esterno richiede un
-   intervento nell'[opera]. Il ciclo e':
-   a) la RFC viene valutata dall'[opera] prima di aprire qualsiasi questione;
+   intervento nell'opera. Il ciclo e':
+   a) la RFC viene valutata prima di aprire qualsiasi questione;
    b) la valutazione determina la distribuzione del lavoro;
    c) viene aperta una questione appropriata;
    d) il lavoro segue il normale ciclo di realizzazione, inclusi verifica
       e conformita' rispetto alla richiesta;
-   e) al completamento, l'[opera] compila la sezione Response RFC e la
-      restituisce;
+   e) al completamento, la sezione Response RFC viene compilata e restituita;
    f) la questione viene chiusa.
 
 7. La chiusura della questione segna il completamento del ciclo RFC nella sua
