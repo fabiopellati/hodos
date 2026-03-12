@@ -125,6 +125,14 @@ Periodo del ciclo di lavoro con scopo, artefatti e approvazione definiti. Hodos
 non prescrive fasi obbligatorie: il percorso P0-P4 e' un arricchimento opzionale
 descritto nello skill `arricchimento-fasi.md`.
 
+**Opera**
+Istanza di lavoro organizzato che adotta Hodos come metodologia di processo.
+Un'opera ha una durata definita, produce elaborati propri (in `documenti/`) e
+mantiene tre strumenti di governo trasversali: `questioni.md`, `mastro.md` e
+`note.md`. Il termine designa il lavoro nella sua interezza — indipendentemente
+dal dominio, dalla tecnologia o dalla dimensione. Radice latina *opus* (lavoro,
+creazione): neutro rispetto ai domini, coerente con il nome della metodologia.
+
 **Prepend-only**
 Modalita' di inserimento in cui ogni nuova entry viene inserita prima delle
 entry esistenti dello stesso tipo, mantenendo l'ordine decrescente per data.
