@@ -1,0 +1,39 @@
+@startuml fasi-p0-p4
+title Percorso P0-P4 — Hodos
+
+start
+
+:P0 — Definizione
+obiettivi, vincoli, scope;
+
+:Approvazione P0;
+
+:P1 — Analisi
+scenari, requisiti, vincoli, struttura, piano;
+
+:Approvazione piano esecutivo;
+
+repeat
+  :P2 — Realizzazione
+  design + iterazioni per unita';
+  note right
+    per ogni unita':
+    design -> approvazione
+    -> iterazioni -> integrazione
+  end note
+repeat while (altre unita'?) is (si)
+-> no;
+
+:P3 — Integrazione
+verifica del risultato complessivo;
+
+:Approvazione P3;
+
+:P4 — Consegna
+verifiche finali, approvazione, consegna;
+
+:Approvazione e consegna;
+
+stop
+
+@enduml

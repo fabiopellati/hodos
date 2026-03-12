@@ -197,6 +197,8 @@ dall'idea al manufatto.
 3. Quando una questione viene chiusa, la voce corrispondente nell'indice
    viene rimossa.
 
+Diagramma: [ciclo di vita di una questione](diagrams/ciclo-questione.puml)
+
 ---
 
 ## Art. 9 — Chiusura di un rilievo con impatto
@@ -269,6 +271,8 @@ dall'idea al manufatto.
 7. La chiusura della questione segna il completamento del ciclo RFC nella sua
    interezza, inclusa la restituzione della risposta. Non e' un atto
    separabile dalla consegna.
+
+Diagramma: [flusso RFC outbound e inbound](diagrams/flusso-rfc.puml)
 
 ---
 

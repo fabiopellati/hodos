@@ -1,0 +1,35 @@
+@startuml flusso-rfc
+title Flusso RFC — Hodos
+
+|Team-A|
+start
+split
+  :RFC Outbound;
+  :questione -> pending-rfc;
+  :genera RFC;
+  |Team-B|
+  :riceve RFC;
+  :compila Response RFC;
+  |Team-A|
+  :riceve risposta;
+  :questione -> in-verification;
+  if (verifica soddisfatta?) then (si)
+    :questione -> closed;
+  else (no)
+    :questione -> in-progress;
+  endif
+split again
+  :RFC Inbound;
+  |Team-B|
+  :riceve RFC da Team-A;
+  :valuta RFC;
+  :apre questioni;
+  :realizza e verifica;
+  :compila Response RFC;
+  :consegna Response a Team-A;
+  :chiude questioni;
+end split
+
+stop
+
+@enduml

@@ -18,6 +18,8 @@ il percorso P0-P4 quando e come opportuno.
 Il percorso si articola in cinque fasi sequenziali. Ogni fase si chiude con
 un'approvazione esplicita prima di procedere alla successiva.
 
+Diagramma: [percorso P0-P4](../diagrams/fasi-p0-p4.puml)
+
 Non e' obbligatorio attraversarle tutte: un'opera semplice puo' partire
 direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 

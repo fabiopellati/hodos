@@ -1,0 +1,40 @@
+@startuml ciclo-questione
+title Ciclo di vita di una questione — Hodos
+
+hide empty description
+
+state "open" as open
+state "in-progress" as in_progress
+state "pending-approval" as pending_approval
+state "pending-rfc" as pending_rfc
+state "in-verification" as in_verification
+state "deferred" as deferred
+state "closed" as closed
+
+[*] --> open : apertura
+
+open --> in_progress : analisi avviata
+open --> deferred : rimandato
+
+in_progress --> pending_approval : proposta redatta
+in_progress --> pending_rfc : richiede intervento esterno
+in_progress --> deferred : rimandato
+
+pending_approval --> in_progress : revisione richiesta
+pending_approval --> closed : approvato *
+
+pending_rfc --> in_verification : risposta RFC ricevuta
+
+in_verification --> open : verifica completata
+
+deferred --> open : ripreso
+
+closed --> [*]
+
+note bottom of pending_approval
+  * Precondizione per rilievo con Impatto non vuoto:
+  deve esistere almeno una questione di tipo revisione
+  aperta nel campo Questioni collegate.
+end note
+
+@enduml
