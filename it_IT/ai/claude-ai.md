@@ -51,6 +51,13 @@ di stato e' sempre obbligatoria. Non cambiare stato senza nota nella Storia.
 domande aperte siano tutte risolte prima di procedere. Lo skill scrive l'entry
 nel mastro prima di rimuovere la questione da questioni.md.
 
+**Entry nel mastro — norma sul Percorso**: ogni entry deve includere la sezione
+Percorso quando il ciclo ha avuto qualsiasi complessita': stati multipli,
+ripensamenti, blocchi, alternative esplorate. Il bias corretto e' includere
+il Percorso. L'omissione e' legittima solo quando la decisione e' stata diretta
+— apertura e chiusura senza stati intermedi significativi. Ometterla per
+concisione vanifica il valore del registro.
+
 **Propagazione a ritroso**: se una questione emerge in una fase avanzata e
 invalida assunzioni di fasi precedenti, aprire questioni collegate nelle fasi
 impattate. Indicare esplicitamente Fase di origine, Propagazione, Sintesi

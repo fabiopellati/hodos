@@ -11,6 +11,14 @@ Un'entry nel mastro documenta la chiusura di una questione. Va inserita in cima
 a `mastro.md` (prepend-only). Il mastro e' immutabile: le entry non vengono mai
 modificate dopo la scrittura.
 
+## Norma sul Percorso
+
+Il Percorso va incluso ogni volta che il ciclo ha avuto qualsiasi complessita':
+stati multipli, ripensamenti, blocchi, alternative esplorate. Il bias corretto
+e' includere il Percorso. L'omissione e' legittima solo quando la decisione e'
+stata diretta — apertura e chiusura senza stati intermedi significativi. Omettere
+il Percorso per concisione vanifica il valore del registro.
+
 ## Struttura
 
 ```markdown
@@ -18,7 +26,7 @@ modificate dopo la scrittura.
 
 **Questione**: {QUESTIONE-ID} — {Titolo}
 
-**Percorso** (opzionale — ometti se la decisione e' stata diretta)
+**Percorso** (ometti solo se la decisione e' stata diretta — nessuno stato intermedio)
 
 {sintesi del percorso: aperta per X, bloccata per Y, reindirizzata per Z}
 
@@ -33,17 +41,10 @@ modificate dopo la scrittura.
 ---
 ```
 
-## Sezione Percorso
-
-Includere il Percorso quando il ciclo ha avuto qualsiasi complessita': stati
-multipli, ripensamenti, alternative esplorate, blocchi. Il bias corretto e'
-includere il Percorso. L'omissione e' giustificata solo quando la decisione
-e' stata diretta (apertura e chiusura senza stati intermedi significativi).
-
 ## Regole
 
 - L'entry va scritta nel mastro prima di rimuovere la questione da questioni.md.
 - Il mastro e' prepend-only: ogni nuova entry va inserita in cima al file.
 - Le entry sono immutabili: non modificarle mai dopo la scrittura.
 - Decisioni prese e Impatto sono obbligatori.
-- Il Percorso e' opzionale ma il bias e' includerlo.
+- Il Percorso e' obbligatorio salvo ciclo diretto: in caso di dubbio, includerlo.
