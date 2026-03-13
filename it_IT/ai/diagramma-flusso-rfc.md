@@ -1,3 +1,10 @@
+---
+tipo-artefatto: guida
+documento: diagramma-flusso-rfc
+descrizione: diagramma e riferimento visivo del flusso RFC outbound e inbound
+autorita: informativa
+---
+
 # Flusso RFC
 
 Riferimento visivo: `../diagrams/flusso-rfc.puml`

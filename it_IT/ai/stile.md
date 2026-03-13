@@ -1,3 +1,10 @@
+---
+tipo-artefatto: guida
+documento: stile
+descrizione: istruzioni di stile redazionale per l'agente AI che scrive o revisiona artefatti Hodos
+autorita: operativa
+---
+
 # Istruzioni di Stile Redazionale — Hodos
 
 Questo documento e' indirizzato all'agente AI che scrive o revisiona artefatti

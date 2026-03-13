@@ -1,3 +1,10 @@
+---
+tipo-artefatto: guida
+documento: diagramma-ciclo-questione
+descrizione: diagramma e riferimento visivo del ciclo di vita di una questione
+autorita: informativa
+---
+
 # Ciclo di vita di una questione
 
 Riferimento visivo: `../diagrams/ciclo-questione.puml`

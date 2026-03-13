@@ -1,3 +1,10 @@
+---
+tipo-artefatto: guida
+documento: diagramma-fasi-p0-p4
+descrizione: diagramma e riferimento visivo del percorso a fasi P0-P4
+autorita: informativa
+---
+
 # Percorso P0-P4
 
 Riferimento visivo: `../diagrams/fasi-p0-p4.puml`

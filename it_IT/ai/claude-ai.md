@@ -1,30 +1,18 @@
-# Guida AI — Layer Claude sopra il Protocollo
-
-Questa guida descrive come Claude applica il protocollo di processo definito
-in `protocollo.md`. E' un layer opzionale: il processo e' applicabile
-senza AI. Claude accelera l'esecuzione ma non sostituisce le decisioni umane.
-
+---
+tipo-artefatto: guida
+documento: guida-ai
+descrizione: istruzioni operative per l'agente AI che lavora in un'opera Hodos
+autorita: operativa
 ---
 
-## Principi operativi
+# Guida AI — Layer operativo sopra il Protocollo
 
-**Il processo guida Claude, non viceversa.** Prima di qualsiasi azione,
-Claude verifica lo stato corrente del progetto (questioni aperte, note attive,
-CLAUDE.md), quale questione e' in corso e quale stato ha. Non chiude questioni
-senza approvazione.
+Questa guida descrive come l'agente AI applica il protocollo di processo definito
+in `protocollo.md`. E' un layer opzionale: il processo e' applicabile senza AI.
+L'agente accelera l'esecuzione ma non sostituisce le decisioni umane.
 
-**Ogni artefatto rilevante passa per una questione.** La redazione di un documento,
-la creazione di diagrammi, la scrittura di skill: ogni attivita' non banale
-viene tracciata con una questione aperta prima di iniziare e portata a
-`pending-approval` al completamento. L'umano approva esplicitamente.
-
-**L'umano approva le approvazioni.** Claude non avanza da una fase alla successiva
-autonomamente. Il superamento di un'approvazione richiede sempre conferma esplicita
-dell'umano.
-
-**I file di processo si aggiornano in tempo reale.** Quando una questione cambia
-stato, quando viene chiusa, quando una entry va nel mastro: Claude aggiorna
-i file immediatamente, non a fine sessione.
+Per le norme vincolanti (principi operativi, norma sul Percorso, limiti di
+autonomia) consultare `norme-ai.md`.
 
 ---
 
@@ -50,13 +38,6 @@ di stato e' sempre obbligatoria. Non cambiare stato senza nota nella Storia.
 **Chiudere**: usare `/aggiorna-questione` con stato `closed`. Verificare che le
 domande aperte siano tutte risolte prima di procedere. Lo skill scrive l'entry
 nel mastro prima di rimuovere la questione da questioni.md.
-
-**Entry nel mastro — norma sul Percorso**: ogni entry deve includere la sezione
-Percorso quando il ciclo ha avuto qualsiasi complessita': stati multipli,
-ripensamenti, blocchi, alternative esplorate. Il bias corretto e' includere
-il Percorso. L'omissione e' legittima solo quando la decisione e' stata diretta
-— apertura e chiusura senza stati intermedi significativi. Ometterla per
-concisione vanifica il valore del registro.
 
 **Propagazione a ritroso**: se una questione emerge in una fase avanzata e
 invalida assunzioni di fasi precedenti, aprire questioni collegate nelle fasi
@@ -102,12 +83,3 @@ nel glossario, aggiungerlo immediatamente prima di continuare.
 
 Non usare "nostro team" o "team esterno": usare Team-A e Team-B.
 Non usare "append-only" per mastro.md: il termine corretto e' prepend-only.
-
----
-
-## Cosa Claude non decide autonomamente
-
-- Quale stato assegnare a un'approvazione (approvato / da rivedere)
-- Se una questione puo' essere chiusa con domande ancora aperte
-- Se avanzare alla fase successiva
-- Se una RFC inbound va accettata, rifiutata o rimandata
