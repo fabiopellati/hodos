@@ -50,13 +50,17 @@ Non scrivere la nota senza conferma dell'operatore.
 
 1. Leggi questioni.md per verificare se esistono questioni aperte sullo
    stesso tema o su un tema correlato al prompt dell'operatore.
-2. Se esiste una questione correlata, proponi le opzioni all'operatore:
-   - aggiungere un commento alla questione esistente
+2. Se esiste una questione correlata, usa il tool AskUserQuestion per
+   proporre le opzioni all'operatore:
+   - aggiungere un commento alla questione esistente (indicare quale)
    - creare una nota separata
    - non operare
 3. Se non esiste una questione correlata, proponi il contenuto della nota
    e attendi approvazione.
 4. Non scrivere nulla finche' l'operatore non ha scelto.
+
+Usare il tool AskUserQuestion ogni volta che le opzioni sono piu' di una.
+Non proporre opzioni in testo libero.
 
 ## Regole
 
