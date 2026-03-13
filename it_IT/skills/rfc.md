@@ -108,7 +108,20 @@ e committa nuovamente con `--amend`.
 ### A7. Aggiorna la storia della questione
 
 Aggiungi una nota nella storia della questione:
-`{YYYY-MM-DD} — RFC generata e consegnata a {Team-B}, file: {nome-file}`
+`{YYYY-MM-DD} — RFC generata, file: {nome-file}`
+
+### A8. Conferma consegna
+
+Chiedi all'operatore di confermare che la RFC e' stata consegnata a Team-B.
+Se il campo `**Consegna RFC**` nel file contiene il canale previsto, mostralo
+come riferimento.
+
+Solo dopo la conferma, aggiungi una seconda nota nella storia:
+`{YYYY-MM-DD} — RFC consegnata a {Team-B}`
+
+Se l'operatore non conferma (consegna non ancora avvenuta), non scrivere la
+nota. La consegna potra' essere registrata in un momento successivo invocando
+nuovamente la skill con l'indicazione di confermare la consegna.
 
 ---
 
@@ -193,7 +206,7 @@ nella fase appropriata seguendo il normale ciclo Hodos.
 Riepiloga le questioni aperte. Rammenta che al completamento del lavoro
 e' obbligatorio eseguire il passo C5 prima di chiudere qualsiasi questione.
 
-### C5. Compila e consegna la Response RFC (gate obbligatorio)
+### C5. Compila la Response RFC (gate obbligatorio)
 
 Questo passo deve essere completato prima di chiudere qualsiasi questione
 aperta in C3. Eseguire in ordine:
@@ -206,13 +219,21 @@ aperta in C3. Eseguire in ordine:
 
 2. Esegui il commit del file RFC compilato.
 
-3. Consegna il file al mittente (Team-A).
+### C6. Conferma consegna risposta
 
-4. Aggiungi una nota nella storia di **ciascuna** questione aperta in C3:
-   `{YYYY-MM-DD} — RFC restituita a {Team-A}, file: {nome-file}`
+Chiedi all'operatore di confermare che la risposta RFC e' stata consegnata
+a Team-A. Se il campo `**Consegna risposta**` nel file contiene il canale
+previsto, mostralo come riferimento.
 
-Solo dopo il completamento di tutti i punti precedenti e' possibile procedere
-con la chiusura delle questioni aperte in C3.
+Solo dopo la conferma, aggiungi una nota nella storia di **ciascuna**
+questione aperta in C3:
+`{YYYY-MM-DD} — Risposta RFC consegnata a {Team-A}, file: {nome-file}`
+
+Se l'operatore non conferma, non scrivere la nota. La consegna potra'
+essere registrata in un momento successivo.
+
+Solo dopo il completamento di C5 e C6 e' possibile procedere con la
+chiusura delle questioni aperte in C3.
 
 ---
 
@@ -226,6 +247,6 @@ con la chiusura delle questioni aperte in C3.
   non le istruzioni realizzative per Team-B
 - La questione resta in `pending-rfc` fino all'avvio effettivo del lavoro
   da parte del team ricevente (semantica estesa: copre l'intero ciclo RFC)
-- Le questioni aperte in C3 non possono essere chiuse prima che C5 sia
-  completato: compilazione Response RFC, commit, consegna a Team-A, nota
-  nella storia di ciascuna questione
+- Le questioni aperte in C3 non possono essere chiuse prima che C5 e C6
+  siano completati: compilazione Response RFC, commit, conferma consegna
+  a Team-A, nota nella storia di ciascuna questione
