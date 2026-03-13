@@ -69,6 +69,13 @@ Aggiornare la nota:
 > Ultima questione inserita: QUESTIONE-{ID} — {YYYY-MM-DD}.
 ```
 
+## Prima di scrivere
+
+Non scrivere la questione senza conferma dell'operatore. Proponi i parametri
+(tipo, titolo, descrizione sintetica) e attendi approvazione esplicita. Se
+esistono questioni aperte sullo stesso tema, segnalalo e chiedi se l'operatore
+preferisce aggiungere un commento alla questione esistente.
+
 ## Regole
 
 - Il tipo e' immutabile dopo l'apertura.

@@ -21,6 +21,12 @@ COMMENTO-{NNN} — {YYYY-MM-DD}
 {testo del commento}
 ```
 
+## Prima di scrivere
+
+Non scrivere il commento senza conferma dell'operatore. Proponi il contenuto
+e il contenitore di destinazione (quale questione o nota) e attendi
+approvazione esplicita.
+
 ## Regole
 
 - La numerazione (COMMENTO-NNN) e' locale al contenitore (questione o nota).

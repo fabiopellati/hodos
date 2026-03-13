@@ -44,6 +44,13 @@ Aggiornare la nota a fondo file:
 > Ultima nota inserita: NOTA-{ID} — {YYYY-MM-DD}.
 ```
 
+## Prima di scrivere
+
+Non scrivere la nota senza conferma dell'operatore. Proponi il contenuto e
+attendi approvazione esplicita. Se esistono questioni aperte sullo stesso tema,
+segnalalo e chiedi se l'operatore preferisce aggiungere un commento alla
+questione esistente piuttosto che creare una nota separata.
+
 ## Regole
 
 - Il formato e' leggero: nessuna sezione strutturata, nessuno stato.
