@@ -7,6 +7,11 @@ fase: P2
 
 # Template — Voce Attivita'
 
+**Arricchimento**: questo template appartiene all'arricchimento fasi (P2).
+Prima di usarlo, verificare che il CLAUDE.md dell'opera includa questo
+arricchimento nella sezione `Arricchimenti abilitati`. Se non e' abilitato,
+non proporre voci di attivita' all'operatore.
+
 Una voce di attivita' e' un contratto in due tempi: all'apertura definisce cosa
 deve essere fatto e come verificarlo; alla chiusura documenta cosa e' stato
 consegnato e ne verifica la conformita'. Va aggiunta in append al file

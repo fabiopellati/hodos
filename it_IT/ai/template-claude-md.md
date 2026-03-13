@@ -32,8 +32,11 @@ hodos-mcp.
 
 ## Stato corrente
 
-- Fase: —
 - Questioni aperte: nessuna
+
+## Arricchimenti abilitati
+
+nessuno
 ```
 
 ## Regole
@@ -43,7 +46,8 @@ hodos-mcp.
 - Lo stato corrente va aggiornato quando cambiano la fase o le questioni attive.
 - Il riferimento a hodos-mcp e' sufficiente per l'agente: non replicare le
   istruzioni del protocollo nel CLAUDE.md.
-- Il campo `Fase` e' significativo solo se l'opera ha abilitato l'arricchimento
-  fasi (P0-P4). Se non e' abilitato, lasciare il valore `—` e non inventare
-  nomi di fase. Non modificare questo campo a meno che l'operatore non abbia
-  esplicitamente dichiarato una fase.
+- La sezione `Arricchimenti abilitati` elenca gli arricchimenti attivi
+  nell'opera (es. fasi P0-P4, voci di attivita'). Se la sezione dice
+  `nessuno`, l'agente non deve proporre funzionalita' degli arricchimenti
+  (fasi, voci di attivita', iterazioni). Usare solo il protocollo base:
+  questioni, note, commenti, mastro, RFC.
