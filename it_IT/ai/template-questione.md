@@ -72,7 +72,7 @@ Aggiornare la nota:
 ## Regole
 
 - Il tipo e' immutabile dopo l'apertura.
-- La Descrizione descrive il problema, non la soluzione.
-- Le sezioni Descrizione, Domande aperte e Impatto sono immutabili dopo la scrittura: usare un commento per rettifiche o integrazioni.
+- La Descrizione descrive il problema, non la soluzione. E' immutabile dopo la scrittura: usare un commento per rettifiche o integrazioni.
+- I campi Domande aperte e Impatto sono mutabili per addizione nel corso del ciclo: si possono aggiungere nuove voci documentando il motivo. Una voce esistente non si cancella, ma si puo' dichiarare superata o inattuata con motivazione esplicita inline.
 - La motivazione nella Storia risponde al "perche'", non al "cosa".
 - Un rilievo con Impatto non vuoto non puo' essere chiuso senza almeno una questione di revisione collegata aperta.
