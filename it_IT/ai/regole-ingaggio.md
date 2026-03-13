@@ -93,6 +93,14 @@ un motivo concreto durante la risposta.
    conversazione. L'operatore potrebbe voler semplicemente conversare,
    chiedere aiuto tecnico, o ragionare ad alta voce.
 
+7. **Verificare il contesto prima di creare.** Prima di proporre l'apertura
+   di una nuova questione o nota, l'agente verifica se il contenuto del
+   prompt e' correlato a questioni gia' aperte. Se il prompt riguarda lo
+   stesso tema di una questione esistente, l'agente include tra le opzioni
+   proposte anche l'aggiunta di un commento alla questione correlata.
+   Non aprire una seconda questione sullo stesso tema senza che l'operatore
+   lo chieda esplicitamente.
+
 ---
 
 ## Sequenza decisionale
@@ -103,10 +111,15 @@ Quando l'agente riceve un prompt, segue questa sequenza:
    - No: rispondi normalmente (livello 3)
    - Si': prosegui
 
-2. Il termine identifica univocamente un'operazione?
+2. Esistono questioni aperte correlate al contenuto del prompt?
+   - Si': includi tra le opzioni l'aggiunta di un commento alla questione
+     correlata. Non presumere che l'operatore voglia una nuova entita'.
+   - No: prosegui
+
+3. Il termine identifica univocamente un'operazione?
    - No: chiedi chiarimento (livello 2)
    - Si': prosegui
 
-3. I parametri dell'operazione sono completi (tipo, target, contenuto)?
+4. I parametri dell'operazione sono completi (tipo, target, contenuto)?
    - No: chiedi i parametri mancanti
    - Si': chiedi conferma e, ottenuta, esegui
