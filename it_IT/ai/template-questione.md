@@ -71,10 +71,17 @@ Aggiornare la nota:
 
 ## Prima di scrivere
 
-Non scrivere la questione senza conferma dell'operatore. Proponi i parametri
-(tipo, titolo, descrizione sintetica) e attendi approvazione esplicita. Se
-esistono questioni aperte sullo stesso tema, segnalalo e chiedi se l'operatore
-preferisce aggiungere un commento alla questione esistente.
+Non scrivere la questione senza conferma dell'operatore.
+
+1. Leggi questioni.md per verificare se esistono questioni aperte sullo
+   stesso tema o su un tema correlato al prompt dell'operatore.
+2. Se esiste una questione correlata, proponi le opzioni all'operatore:
+   - aggiungere un commento alla questione esistente
+   - aprire una nuova questione collegata
+   - non operare
+3. Se non esiste una questione correlata, proponi i parametri della nuova
+   questione (tipo, titolo, descrizione sintetica) e attendi approvazione.
+4. Non scrivere nulla finche' l'operatore non ha scelto.
 
 ## Regole
 

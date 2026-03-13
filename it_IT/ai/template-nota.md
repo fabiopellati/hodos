@@ -46,10 +46,17 @@ Aggiornare la nota a fondo file:
 
 ## Prima di scrivere
 
-Non scrivere la nota senza conferma dell'operatore. Proponi il contenuto e
-attendi approvazione esplicita. Se esistono questioni aperte sullo stesso tema,
-segnalalo e chiedi se l'operatore preferisce aggiungere un commento alla
-questione esistente piuttosto che creare una nota separata.
+Non scrivere la nota senza conferma dell'operatore.
+
+1. Leggi questioni.md per verificare se esistono questioni aperte sullo
+   stesso tema o su un tema correlato al prompt dell'operatore.
+2. Se esiste una questione correlata, proponi le opzioni all'operatore:
+   - aggiungere un commento alla questione esistente
+   - creare una nota separata
+   - non operare
+3. Se non esiste una questione correlata, proponi il contenuto della nota
+   e attendi approvazione.
+4. Non scrivere nulla finche' l'operatore non ha scelto.
 
 ## Regole
 
