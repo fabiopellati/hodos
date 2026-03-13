@@ -23,6 +23,8 @@ richiedente.
 **Commit generazione**: {SHA del commit che ha generato la RFC}
 **Da**: Team-A / {nome progetto}
 **A**: {Team-B}
+**Consegna RFC**: {canale o percorso per consegnare la RFC a Team-B — omettere se implicito}
+**Consegna risposta**: {canale o percorso per restituire la risposta a Team-A — omettere se implicito}
 **Questione di origine**: {QUESTIONE-ID} — {Titolo questione}
 
 ## Contesto
