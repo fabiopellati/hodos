@@ -85,6 +85,48 @@ Esempi:
 - `docs/governance`
 - `docs/p2-chiusura`
 
+### Release
+
+Branch per preparare una nuova release: freeze funzionalita', bug fix
+minori, bump version. Parte da `develop`:
+
+```
+release/<versione>
+```
+
+Al completamento, confluisce su `main` E su `develop`:
+
+```bash
+git checkout main && git merge --no-ff release/<versione> -m "release: <versione>"
+git tag <versione>
+git checkout develop && git merge --no-ff release/<versione> -m "Merge release: <versione>"
+```
+
+Esempi:
+- `release/1.2.0`
+- `release/2.0.0`
+
+### Hotfix
+
+Branch per correggere bug critici in produzione senza attendere il ciclo
+ordinario. Parte da `main`:
+
+```
+hotfix/<versione>
+```
+
+Al completamento, confluisce su `main` E su `develop`:
+
+```bash
+git checkout main && git merge --no-ff hotfix/<versione> -m "hotfix: <versione>"
+git tag <versione>
+git checkout develop && git merge --no-ff hotfix/<versione> -m "Merge hotfix: <versione>"
+```
+
+Esempi:
+- `hotfix/1.2.1`
+- `hotfix/2.0.1`
+
 ---
 
 ## Regola operativa alla transizione open -> in-progress
@@ -116,3 +158,13 @@ git merge --no-ff <tipo-git>/q<NNN>-<descrizione> -m "Merge <tipo>: descrizione"
 ```
 
 Il `--no-ff` preserva la tracciabilita' del branch nella storia git.
+
+---
+
+## Branch di produzione: main
+
+`main` e' il branch di produzione. Ogni merge su `main` rappresenta una
+release stabile e deve essere accompagnato da un tag con versione semantica.
+
+Non si lavora mai direttamente su `main`. Le uniche operazioni valide su
+`main` sono i merge da branch `release/*` e `hotfix/*`.
