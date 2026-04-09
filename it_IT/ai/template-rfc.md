@@ -7,11 +7,11 @@ fase: trasversale
 
 # Template — RFC
 
-Una RFC e' un documento formale generato quando una questione richiede l'intervento
-di un attore esterno (Team-B). E' bidirezionale: Team-A descrive la richiesta,
+Una RFC è un documento formale generato quando una questione richiede l'intervento
+di un attore esterno (Team-B). È bidirezionale: Team-A descrive la richiesta,
 Team-B compila la risposta nella sezione Response RFC e restituisce il documento.
 
-La RFC e' autocontenuta: leggibile senza conoscere la storia interna dell'opera
+La RFC è autocontenuta: leggibile senza conoscere la storia interna dell'opera
 richiedente.
 
 ## Struttura del documento
@@ -38,11 +38,11 @@ conoscere la storia interna del progetto richiedente.}
 
 ## Motivazione
 
-{Perche' questa modifica e' necessaria. Quale problema risolve.}
+{Perché questa modifica è necessaria. Quale problema risolve.}
 
 ## Criteri di Accettazione
 
-{Come Team-A verifichera' che il lavoro soddisfi l'esigenza.}
+{Come Team-A verificherà che il lavoro soddisfi l'esigenza.}
 
 ---
 
@@ -69,7 +69,7 @@ conoscere la storia interna del progetto richiedente.}
 5. Solo se la verifica ha esito positivo, la questione viene chiusa.
 
 La risposta di Team-B non chiude la questione: sblocca la fase di verifica.
-La responsabilita' della verifica resta in capo a Team-A.
+La responsabilità della verifica resta in capo a Team-A.
 
 ## Ciclo inbound
 
@@ -81,7 +81,7 @@ La responsabilita' della verifica resta in capo a Team-A.
 
 ## Regole
 
-- La sezione di richiesta e' immutabile dopo la generazione. I contributi successivi avvengono solo tramite Response RFC e commenti.
+- La sezione di richiesta è immutabile dopo la generazione. I contributi successivi avvengono solo tramite Response RFC e commenti.
 - La RFC deve essere autocontenuta: Team-B non deve conoscere il progetto richiedente per capire cosa gli viene chiesto.
 - I Criteri di Accettazione descrivono il punto di vista di Team-A, non le istruzioni realizzative per Team-B.
 - La questione resta in `pending-rfc` per l'intero ciclo RFC, fino all'avvio effettivo del lavoro.

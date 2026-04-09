@@ -9,7 +9,7 @@ autorita: operativa
 # Template — File notes.md
 
 Il file `notes.md` raccoglie note e memo informali dell'opera. Viene creato
-durante l'inizializzazione e vive nella directory di processo. E' opzionale:
+durante l'inizializzazione e vive nella directory di processo. È opzionale:
 non tutte le opere lo usano.
 
 ## Struttura

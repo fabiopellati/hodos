@@ -10,8 +10,8 @@ autorita: informativa
 Riferimento visivo: `../diagrams/flusso-rfc.puml`
 
 Una RFC viene emessa quando una questione richiede intervento nell'ambito di
-competenza di un attore esterno. E' autocontenuta: leggibile senza conoscere
-la storia interna dell'opera richiedente. La RFC e' bidirezionale: l'attore
+competenza di un attore esterno. È autocontenuta: leggibile senza conoscere
+la storia interna dell'opera richiedente. La RFC è bidirezionale: l'attore
 ricevente compila la sezione Response RFC e restituisce il documento.
 
 ---
@@ -28,11 +28,11 @@ ricevente compila la sezione Response RFC e restituisce il documento.
 | 5b | Team-A | verifica non soddisfatta | in-progress |
 
 La questione rimane `pending-rfc` fino all'avvio effettivo del lavoro da parte
-di Team-B. Ricevere la risposta non e' sufficiente per passare a in-verification:
-e' necessario che il lavoro sia iniziato.
+di Team-B. Ricevere la risposta non è sufficiente per passare a in-verification:
+è necessario che il lavoro sia iniziato.
 
 Il completamento del lavoro da parte di Team-B sblocca la verifica, ma non chiude
-la questione. La responsabilita' della verifica resta in capo a Team-A.
+la questione. La responsabilità della verifica resta in capo a Team-A.
 
 ---
 
@@ -48,14 +48,14 @@ la questione. La responsabilita' della verifica resta in capo a Team-A.
 | 6 | Team-B | consegna Response a Team-A |
 | 7 | Team-B | chiude le questioni aperte |
 
-Il passo 7 (chiusura questioni) non puo' avvenire prima del passo 6 (consegna Response).
-La chiusura e' il completamento del ciclo RFC nella sua interezza, inclusa la restituzione.
+Il passo 7 (chiusura questioni) non può avvenire prima del passo 6 (consegna Response).
+La chiusura è il completamento del ciclo RFC nella sua interezza, inclusa la restituzione.
 
 ---
 
 ## Regole
 
-- La sezione di richiesta di una RFC e' immutabile dopo la generazione. I contributi successivi avvengono solo tramite Response RFC e commenti.
+- La sezione di richiesta di una RFC è immutabile dopo la generazione. I contributi successivi avvengono solo tramite Response RFC e commenti.
 - La RFC deve essere autocontenuta: Team-B non deve conoscere il progetto richiedente per capire cosa gli viene chiesto.
 - I Criteri di Accettazione descrivono il punto di vista di Team-A, non le istruzioni realizzative per Team-B.
 - La questione resta `pending-rfc` fino all'avvio effettivo del lavoro (semantica estesa: copre l'intero ciclo RFC).

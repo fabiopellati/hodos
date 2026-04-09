@@ -20,79 +20,79 @@ di governo del processo, non artefatti distribuibili.
 
 **Team-A**
 Il team interno che gestisce il progetto e le sue questioni. Nei diagrammi e nel
-protocollo, Team-A e' sempre il soggetto attivo: apre questioni, genera RFC
+protocollo, Team-A è sempre il soggetto attivo: apre questioni, genera RFC
 outbound, riceve e valuta RFC inbound, verifica il lavoro esterno.
 
 **Team-B**
 Un team esterno che gestisce un sistema correlato. Nei diagrammi e nel protocollo,
-Team-B e' il destinatario di una RFC outbound o il mittente di una RFC inbound.
+Team-B è il destinatario di una RFC outbound o il mittente di una RFC inbound.
 Team-B non partecipa al processo interno di Team-A: interagisce solo attraverso
 il documento RFC.
 
 **Commento**
 Contributo additivo e immutabile aggiunto a una questione o a una nota dopo
 la sua creazione. Serve a rettificare, integrare o contestualizzare il
-contenuto originale senza modificarlo. Ogni commento e' numerato localmente
+contenuto originale senza modificarlo. Ogni commento è numerato localmente
 all'artefatto a cui appartiene (COMMENTO-001, COMMENTO-002, ...) e reca la
-data di inserimento. Non modifica lo stato ne' il corpo dell'artefatto a cui
+data di inserimento. Non modifica lo stato né il corpo dell'artefatto a cui
 si riferisce.
 
 **Anomalia**
 Tipo di questione che segnala un comportamento o risultato difforme da quanto
-atteso. Distinto da *rilievo* e *revisione*: non porta conoscenza nuova ne'
+atteso. Distinto da *rilievo* e *revisione*: non porta conoscenza nuova né
 corregge un artefatto, ma indica che qualcosa non funziona come dovrebbe.
 
 **Aggregato**
-Insieme di unita' correlate che condividono un obiettivo comune in P2. Puo'
-contenere piu' unita' ma non altri aggregati. Equivalente astratto di modulo
+Insieme di unità correlate che condividono un obiettivo comune in P2. Può
+contenere più unità ma non altri aggregati. Equivalente astratto di modulo
 o epic nel contesto software.
 
-**Voce di attivita'**
-Unita' di lavoro pianificata in P2 per la realizzazione di un'unita'.
+**Voce di attività**
+Unità di lavoro pianificata in P2 per la realizzazione di un'unità.
 Funziona come contratto in due tempi: all'apertura definisce la richiesta e
-i criteri di verifica; alla chiusura documenta la consegna e la conformita'
-rispetto alla richiesta originale. Distinta dalla questione, che e' reattiva;
-la voce di attivita' e' proattiva — nasce dalla pianificazione, non da un problema.
+i criteri di verifica; alla chiusura documenta la consegna e la conformità
+rispetto alla richiesta originale. Distinta dalla questione, che è reattiva;
+la voce di attività è proattiva — nasce dalla pianificazione, non da un problema.
 
-**Conformita'** (attivita')
+**Conformità** (attività)
 Verifica che quanto realizzato soddisfi la richiesta originale della voce di
-attivita'. Valutata rispetto ai Criteri di verifica definiti all'apertura. Puo'
+attività. Valutata rispetto ai Criteri di verifica definiti all'apertura. Può
 essere: conforme, parziale (con motivazione degli scostamenti), non conforme
 (con motivazione).
 
 **Artefatto consolidato**
-Documento che rappresenta lo stato corrente della verita' in una fase. Viene
+Documento che rappresenta lo stato corrente della verità in una fase. Viene
 aggiornato in-place durante i cicli di affinamento. Distinto da `questioni.md` e
 `mastro.md` che sono strumenti di governo del processo.
 
 **Iterazione**
-Ciclo breve di realizzazione all'interno di P2 per una singola unita'.
+Ciclo breve di realizzazione all'interno di P2 per una singola unità.
 Segue il pattern: pianifica / realizza / verifica / chiudi. Ogni iterazione
 ha obiettivi definiti e si chiude con una verifica di quanto consegnato.
-Le iterazioni sono tracciate nell'attivita.md dell'unita'.
+Le iterazioni sono tracciate nell'attivita.md dell'unità.
 
 **Rilievo**
 Tipo di questione che porta conoscenza nuova — non nota prima dell'analisi — che
 modifica o arricchisce la comprensione del dominio. Distinto da *revisione*.
-Quando il campo `Impatto` non e' vuoto, il rilievo non puo' essere chiuso senza
+Quando il campo `Impatto` non è vuoto, il rilievo non può essere chiuso senza
 almeno una questione di *revisione* collegata aperta (vedi *Questioni collegate*).
 
-Criterio di scelta: aprire un rilievo quando si e' identificato qualcosa di
-rilevante ma non si e' ancora pronti ad agire — perche' serve analisi, perche'
-la soluzione non e' chiara, o perche' la decisione spetta a qualcun altro.
-Esempio: durante l'analisi emerge che un requisito contraddice un vincolo gia'
-documentato. Il problema e' chiaro, ma la direzione da prendere no — rilievo.
-Se invece la direzione e' chiara e si e' pronti ad agire, aprire una *revisione*.
+Criterio di scelta: aprire un rilievo quando si è identificato qualcosa di
+rilevante ma non si è ancora pronti ad agire — perché serve analisi, perché
+la soluzione non è chiara, o perché la decisione spetta a qualcun altro.
+Esempio: durante l'analisi emerge che un requisito contraddice un vincolo già
+documentato. Il problema è chiaro, ma la direzione da prendere no — rilievo.
+Se invece la direzione è chiara e si è pronti ad agire, aprire una *revisione*.
 
 **Approvazione**
 Punto di approvazione esplicita tra una fase e la successiva. Il passaggio
-alla fase successiva non puo' avvenire senza che l'approvazione sia stata
-ottenuta. Come si materializza operativamente e' una scelta lasciata a chi
+alla fase successiva non può avvenire senza che l'approvazione sia stata
+ottenuta. Come si materializza operativamente è una scelta lasciata a chi
 adotta la metodologia.
 
 **Questione**
-Problema aperto che deve essere risolto prima di procedere. Puo' essere di
-natura *rilievo*, *revisione* o *anomalia*. Vive in `questioni.md` finche' non
+Problema aperto che deve essere risolto prima di procedere. Può essere di
+natura *rilievo*, *revisione* o *anomalia*. Vive in `questioni.md` finché non
 viene chiusa; alla chiusura viene rimossa e la risoluzione registrata in
 `mastro.md`.
 
@@ -103,15 +103,15 @@ correlate. Diventa obbligatorio per le questioni di tipo *rilievo* con campo
 questione di tipo *revisione* aperta prima che il rilievo possa essere chiuso.
 
 **Nota**
-Osservazione, memo o idea in incubazione registrata in `notes.md`. Non e' una
+Osservazione, memo o idea in incubazione registrata in `notes.md`. Non è una
 questione: non ha stati, non produce una entry nel mastro, non richiede
-approvazione. Il corpo e' immutabile dopo la scrittura. Puo' ricevere commenti
+approvazione. Il corpo è immutabile dopo la scrittura. Può ricevere commenti
 (COMMENTO-NNN) per rettifiche o nuove conoscenze sullo stesso argomento, senza
 dover aprire una nota separata.
 
 **mastro.md**
 Registro immutabile delle decisioni prese. Contiene solo cicli chiusi.
-Ordine decrescente (prepend-only): le entry piu' recenti stanno in cima.
+Ordine decrescente (prepend-only): le entry più recenti stanno in cima.
 Una entry non viene mai modificata dopo la scrittura.
 
 **questioni.md**
@@ -122,7 +122,7 @@ rimossa dal file.
 
 **Fase**
 Periodo del ciclo di lavoro con scopo, artefatti e approvazione definiti. Hodos
-non prescrive fasi obbligatorie: il percorso P0-P4 e' un arricchimento opzionale
+non prescrive fasi obbligatorie: il percorso P0-P4 è un arricchimento opzionale
 descritto nello skill `arricchimento-fasi.md`.
 
 **Opera**
@@ -134,10 +134,10 @@ dal dominio, dalla tecnologia o dalla dimensione. Radice latina *opus* (lavoro,
 creazione): neutro rispetto ai domini e ai contesti in cui Hodos viene adottato.
 
 **Prepend-only**
-Modalita' di inserimento in cui ogni nuova entry viene inserita prima delle
+Modalità di inserimento in cui ogni nuova entry viene inserita prima delle
 entry esistenti dello stesso tipo, mantenendo l'ordine decrescente per data.
 Il prepend riguarda l'ordine tra le entry: le sezioni strutturali del documento
-(intestazione, indice, note a pie') restano nelle loro posizioni. Usato per
+(intestazione, indice, note a piè) restano nelle loro posizioni. Usato per
 `mastro.md` e `questioni.md`. Equivalente funzionale di *append-only* con
 ordine invertito.
 
@@ -150,16 +150,16 @@ questioni propagate sono collegate esplicitamente alla questione di origine.
 Tipo di questione che corregge o affina un artefatto esistente. Distinta da
 *rilievo*, che porta conoscenza nuova.
 
-Criterio di scelta: aprire una revisione quando si sa gia' cosa fare e si e'
-pronti ad agire — la soluzione e' definita, l'artefatto da modificare e'
+Criterio di scelta: aprire una revisione quando si sa già cosa fare e si è
+pronti ad agire — la soluzione è definita, l'artefatto da modificare è
 identificato, manca solo l'esecuzione.
-Esempio: si decide di aggiungere una voce al glossario perche' un termine e'
-usato nel protocollo senza essere definito. L'azione e' chiara — revisione.
+Esempio: si decide di aggiungere una voce al glossario perché un termine è
+usato nel protocollo senza essere definito. L'azione è chiara — revisione.
 
 **RFC (Request for Change)**
 Documento formale generato quando una questione richiede intervento su un sistema
 o team esterno. Autocontenuto e bidirezionale: include una sezione Response RFC
-compilata dal team ricevente. Puo' essere *outbound* (generata dal nostro team)
+compilata dal team ricevente. Può essere *outbound* (generata dal nostro team)
 o *inbound* (ricevuta da un team esterno).
 
 **RFC inbound**
@@ -169,14 +169,14 @@ fase e distribuzione del lavoro.
 
 **RFC outbound**
 RFC generata da Team-A verso un sistema o team esterno, originata da una
-questione interna che non puo' essere risolta senza intervento esterno.
+questione interna che non può essere risolta senza intervento esterno.
 
 **Response RFC**
 Sezione della RFC compilata dal team ricevente al completamento del lavoro.
 Contiene: decisione presa, descrizione di quanto realizzato, eventuali
 deviazioni dalla request originale.
 
-**Unita'**
-Elemento atomico di realizzazione in P2. Ha un design proprio, un'attivita'
-e un ciclo di iterazioni. Puo' essere raggruppata in un aggregato. Equivalente
+**Unità**
+Elemento atomico di realizzazione in P2. Ha un design proprio, un'attività
+e un ciclo di iterazioni. Può essere raggruppata in un aggregato. Equivalente
 astratto di componente nel contesto software.

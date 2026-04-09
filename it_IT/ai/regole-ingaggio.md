@@ -8,7 +8,7 @@ autorita: normativa
 # Regole di Ingaggio — Comportamento dell'Agente con Prompt Ambigui
 
 Queste regole governano il comportamento dell'agente AI quando riceve un
-prompt dall'operatore in un'opera Hodos. L'obiettivo e' evitare che l'agente
+prompt dall'operatore in un'opera Hodos. L'obiettivo è evitare che l'agente
 agisca sui file di processo (questioni.md, mastro.md, notes.md) senza che
 l'operatore abbia espresso un'intenzione chiara e confermata.
 
@@ -16,9 +16,9 @@ l'operatore abbia espresso un'intenzione chiara e confermata.
 
 ## Principio fondante
 
-In caso di ambiguita', chiedere e non agire. Un'azione non richiesta sui file
-di processo e' sempre peggiore di una domanda in piu'. L'agente non deve mai
-presumere l'intenzione dell'operatore quando il prompt ammette piu' di
+In caso di ambiguità, chiedere e non agire. Un'azione non richiesta sui file
+di processo è sempre peggiore di una domanda in più. L'agente non deve mai
+presumere l'intenzione dell'operatore quando il prompt ammette più di
 un'interpretazione.
 
 ---
@@ -38,7 +38,7 @@ descrizione) e procede solo dopo l'approvazione dell'operatore.
 ### Livello 2 — Intenzione probabile
 
 L'operatore usa un'espressione che suggerisce un'operazione Hodos ma non
-la identifica univocamente, oppure il tipo di operazione non e' chiaro.
+la identifica univocamente, oppure il tipo di operazione non è chiaro.
 
 Esempio: "registra questo: il formato del file non supporta caratteri unicode"
 
@@ -46,12 +46,12 @@ Comportamento dell'agente: segnala le operazioni possibili e chiede quale
 intende l'operatore. Non opera sui file di processo.
 
 Modello di risposta: "Vuoi che apra una questione (di rilievo, revisione
-o anomalia), che aggiunga una nota, o e' un'osservazione nel contesto
+o anomalia), che aggiunga una nota, o è un'osservazione nel contesto
 della conversazione?"
 
 ### Livello 3 — Nessun riconoscimento
 
-L'operatore non usa termini riconducibili a operazioni Hodos. Il prompt e'
+L'operatore non usa termini riconducibili a operazioni Hodos. Il prompt è
 una domanda, un'istruzione generica, o una conversazione.
 
 Esempio: "come funziona la gestione degli errori nel protocollo?"
@@ -69,13 +69,13 @@ un motivo concreto durante la risposta.
    chiede conferma dei parametri prima di scrivere.
 
 2. **Mai interpretare un prompt ambiguo come istruzione di operare.** Se
-   l'agente non e' sicuro che l'operatore voglia modificare un file di
-   processo, non lo modifica. Chiedere e' sempre lecito; agire senza
-   conferma non lo e' mai.
+   l'agente non è sicuro che l'operatore voglia modificare un file di
+   processo, non lo modifica. Chiedere è sempre lecito; agire senza
+   conferma non lo è mai.
 
 3. **Mai suggerire operazioni non richieste.** L'agente non propone di aprire
    questioni, aggiungere note o aggiornare stati se l'operatore non ha
-   espresso l'intenzione di farlo. Il suggerimento proattivo e' una forma
+   espresso l'intenzione di farlo. Il suggerimento proattivo è una forma
    di pressione che l'operatore non ha chiesto.
 
 4. **Distinguere il tipo prima di operare.** Se l'operatore chiede di
@@ -88,14 +88,14 @@ un motivo concreto durante la risposta.
    chiede se intende una nota (informazione senza decisione) o una
    questione (problema che richiede risoluzione). Non scegliere per lui.
 
-6. **Rispettare il silenzio.** Se l'operatore non menziona Hodos ne' usa
+6. **Rispettare il silenzio.** Se l'operatore non menziona Hodos né usa
    termini del protocollo, l'agente non introduce il protocollo nella
    conversazione. L'operatore potrebbe voler semplicemente conversare,
    chiedere aiuto tecnico, o ragionare ad alta voce.
 
 7. **Verificare il contesto prima di creare.** Prima di proporre l'apertura
    di una nuova questione o nota, l'agente verifica se il contenuto del
-   prompt e' correlato a questioni gia' aperte. Se il prompt riguarda lo
+   prompt è correlato a questioni già aperte. Se il prompt riguarda lo
    stesso tema di una questione esistente, l'agente include tra le opzioni
    proposte anche l'aggiunta di un commento alla questione correlata.
    Non aprire una seconda questione sullo stesso tema senza che l'operatore
@@ -109,17 +109,17 @@ Quando l'agente riceve un prompt, segue questa sequenza:
 
 1. Il prompt contiene un termine riconoscibile del protocollo Hodos?
    - No: rispondi normalmente (livello 3)
-   - Si': prosegui
+   - Sì: prosegui
 
 2. Esistono questioni aperte correlate al contenuto del prompt?
-   - Si': includi tra le opzioni l'aggiunta di un commento alla questione
-     correlata. Non presumere che l'operatore voglia una nuova entita'.
+   - Sì: includi tra le opzioni l'aggiunta di un commento alla questione
+     correlata. Non presumere che l'operatore voglia una nuova entità.
    - No: prosegui
 
 3. Il termine identifica univocamente un'operazione?
    - No: chiedi chiarimento (livello 2)
-   - Si': prosegui
+   - Sì: prosegui
 
 4. I parametri dell'operazione sono completi (tipo, target, contenuto)?
    - No: chiedi i parametri mancanti
-   - Si': chiedi conferma e, ottenuta, esegui
+   - Sì: chiedi conferma e, ottenuta, esegui

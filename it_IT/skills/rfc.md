@@ -17,7 +17,7 @@ Leggi il messaggio dell'utente e identifica l'operazione richiesta:
 - **acquisizione** — registrare la risposta ricevuta a una RFC outbound
 - **inbound** — ricevere e processare una RFC inviata da un team esterno
 
-Se l'operazione non e' chiara, chiedi tramite AskUserQuestion.
+Se l'operazione non è chiara, chiedi tramite AskUserQuestion.
 
 ---
 
@@ -39,8 +39,8 @@ Leggi la questione per estrarre il contesto disponibile. Per le informazioni
 non deducibili dalla questione, chiedi tramite AskUserQuestion:
 
 - **Team-B**: nome e contatto del team destinatario
-- **Sistema**: sistema o unita' su cui e' richiesto l'intervento
-- **Criteri di accettazione**: come Team-A verifichera' il lavoro
+- **Sistema**: sistema o unità su cui è richiesto l'intervento
+- **Criteri di accettazione**: come Team-A verificherà il lavoro
 
 ### A4. Determina il percorso del file RFC
 
@@ -49,9 +49,9 @@ Crea la directory se non esiste.
 
 Nome file: `rfc-{progetto}-{YYYY-MM-DD}-{slug-titolo}.md`
 
-Dove `{progetto}` e' l'identificatore kebab-case del progetto mittente
+Dove `{progetto}` è l'identificatore kebab-case del progetto mittente
 (es. `rfc-hodos-2026-03-11-template-ai-frontmatter.md`).
-La questione di origine e' tracciata nel campo `**Questione di origine**` nell'header.
+La questione di origine è tracciata nel campo `**Questione di origine**` nell'header.
 
 ### A5. Scrivi il file RFC
 
@@ -77,11 +77,11 @@ conoscere la storia interna del progetto richiedente.}
 
 ## Motivazione
 
-{Perche' questa modifica e' necessaria. Quale problema risolve.}
+{Perché questa modifica è necessaria. Quale problema risolve.}
 
 ## Criteri di Accettazione
 
-{Come Team-A verifichera' che il lavoro soddisfi l'esigenza.}
+{Come Team-A verificherà che il lavoro soddisfi l'esigenza.}
 
 ---
 
@@ -112,7 +112,7 @@ Aggiungi una nota nella storia della questione:
 
 ### A8. Conferma consegna
 
-Chiedi all'operatore di confermare che la RFC e' stata consegnata a Team-B.
+Chiedi all'operatore di confermare che la RFC è stata consegnata a Team-B.
 Se il campo `**Consegna RFC**` nel file contiene il canale previsto, mostralo
 come riferimento.
 
@@ -120,7 +120,7 @@ Solo dopo la conferma, aggiungi una seconda nota nella storia:
 `{YYYY-MM-DD} — RFC consegnata a {Team-B}`
 
 Se l'operatore non conferma (consegna non ancora avvenuta), non scrivere la
-nota. La consegna potra' essere registrata in un momento successivo invocando
+nota. La consegna potrà essere registrata in un momento successivo invocando
 nuovamente la skill con l'indicazione di confermare la consegna.
 
 ---
@@ -129,11 +129,11 @@ nuovamente la skill con l'indicazione di confermare la consegna.
 
 ### B1. Identifica il file RFC
 
-Il file e' gia' stato copiato nella directory `rfc/` dall'utente.
-Se il percorso e' specificato nel messaggio, usalo. Altrimenti cerca i file
+Il file è già stato copiato nella directory `rfc/` dall'utente.
+Se il percorso è specificato nel messaggio, usalo. Altrimenti cerca i file
 RFC con campo `**Stato**:` vuoto nella sezione Response RFC.
 
-### B2. Verifica integrita' della sezione di richiesta
+### B2. Verifica integrità della sezione di richiesta
 
 Leggi il campo `**Commit generazione**` dal file. Se presente, esegui:
 
@@ -142,11 +142,11 @@ git diff {commit-sha} HEAD -- {percorso-file}
 ```
 
 Verifica che nessuna riga modificata appartenga alla sezione di richiesta
-(tutto cio' che precede `## Response RFC`). Se ci sono modifiche alla
+(tutto ciò che precede `## Response RFC`). Se ci sono modifiche alla
 sezione di richiesta, interrompi e avvisa l'utente.
 
-Se il campo `**Commit generazione**` non e' presente, avvisa l'utente che
-la verifica automatica non e' possibile e chiedi conferma prima di procedere.
+Se il campo `**Commit generazione**` non è presente, avvisa l'utente che
+la verifica automatica non è possibile e chiedi conferma prima di procedere.
 
 ### B3. Committa il file aggiornato
 
@@ -171,7 +171,7 @@ esplicitamente nella nota.
 
 Aggiungi un commento nella questione con la sintesi del ciclo RFC.
 Il commento rende la questione autocontenuta: al momento della chiusura
-il mastro ricevera' tutto il contesto rilevante senza dover leggere il file RFC.
+il mastro riceverà tutto il contesto rilevante senza dover leggere il file RFC.
 
 ```markdown
 COMMENTO-NNN — {YYYY-MM-DD}
@@ -188,8 +188,8 @@ Deviazioni: {sintesi, ometti se assente}
 
 ### C1. Acquisisce il file RFC inbound
 
-Il file e' gia' presente o viene fornito dall'utente. Copialo nella
-directory `rfc/` se non e' gia' li'. Committalo.
+Il file è già presente o viene fornito dall'utente. Copialo nella
+directory `rfc/` se non è già lì. Committalo.
 
 ### C2. Valuta la RFC prima di aprire questioni
 
@@ -204,7 +204,7 @@ nella fase appropriata seguendo il normale ciclo Hodos.
 ### C4. Informa l'utente
 
 Riepiloga le questioni aperte. Rammenta che al completamento del lavoro
-e' obbligatorio eseguire il passo C5 prima di chiudere qualsiasi questione.
+è obbligatorio eseguire il passo C5 prima di chiudere qualsiasi questione.
 
 ### C5. Compila la Response RFC (gate obbligatorio)
 
@@ -213,7 +213,7 @@ aperta in C3. Eseguire in ordine:
 
 1. Compila la sezione `## Response RFC` del file:
    - `**Data risposta**`, `**Stato**`, `**Da**`, `**A**`
-   - `### Decisione` — cosa e' stato fatto o deciso
+   - `### Decisione` — cosa è stato fatto o deciso
    - `### Lavoro svolto` — sintesi delle questioni risolte
    - `### Deviazioni` — eventuali scostamenti dalla richiesta (ometti se assente)
 
@@ -221,7 +221,7 @@ aperta in C3. Eseguire in ordine:
 
 ### C6. Conferma consegna risposta
 
-Chiedi all'operatore di confermare che la risposta RFC e' stata consegnata
+Chiedi all'operatore di confermare che la risposta RFC è stata consegnata
 a Team-A. Se il campo `**Consegna risposta**` nel file contiene il canale
 previsto, mostralo come riferimento.
 
@@ -229,17 +229,17 @@ Solo dopo la conferma, aggiungi una nota nella storia di **ciascuna**
 questione aperta in C3:
 `{YYYY-MM-DD} — Risposta RFC consegnata a {Team-A}, file: {nome-file}`
 
-Se l'operatore non conferma, non scrivere la nota. La consegna potra'
+Se l'operatore non conferma, non scrivere la nota. La consegna potrà
 essere registrata in un momento successivo.
 
-Solo dopo il completamento di C5 e C6 e' possibile procedere con la
+Solo dopo il completamento di C5 e C6 è possibile procedere con la
 chiusura delle questioni aperte in C3.
 
 ---
 
 ## Regole
 
-- La sezione di richiesta di una RFC e' immutabile dopo la generazione;
+- La sezione di richiesta di una RFC è immutabile dopo la generazione;
   i contributi successivi avvengono solo tramite Response RFC e commenti
 - La RFC deve essere autocontenuta: Team-B non deve conoscere il progetto
   richiedente per capire cosa gli viene chiesto

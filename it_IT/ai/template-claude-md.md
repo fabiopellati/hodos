@@ -44,10 +44,10 @@ nessuno
 - Il CLAUDE.md non contiene le regole operative: quelle vivono nel protocollo
   e sono accessibili via hodos-mcp.
 - Lo stato corrente va aggiornato quando cambiano la fase o le questioni attive.
-- Il riferimento a hodos-mcp e' sufficiente per l'agente: non replicare le
+- Il riferimento a hodos-mcp è sufficiente per l'agente: non replicare le
   istruzioni del protocollo nel CLAUDE.md.
 - La sezione `Arricchimenti abilitati` elenca gli arricchimenti attivi
-  nell'opera (es. fasi P0-P4, voci di attivita'). Se la sezione dice
-  `nessuno`, l'agente non deve proporre funzionalita' degli arricchimenti
-  (fasi, voci di attivita', iterazioni). Usare solo il protocollo base:
+  nell'opera (es. fasi P0-P4, voci di attività). Se la sezione dice
+  `nessuno`, l'agente non deve proporre funzionalità degli arricchimenti
+  (fasi, voci di attività, iterazioni). Usare solo il protocollo base:
   questioni, note, commenti, mastro, RFC.

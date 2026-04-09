@@ -52,16 +52,16 @@ Condizione necessaria per qualsiasi questione: tutte le domande aperte sono riso
 Condizione aggiuntiva per questioni di tipo **rilievo** con campo `Impatto` non vuoto:
 il campo `Questioni collegate` deve contenere almeno una questione di tipo revisione
 in stato aperto. La revisione non deve essere completata prima della chiusura del rilievo:
-deve esistere, a testimonianza che il lavoro di applicazione e' stato preso in carico.
+deve esistere, a testimonianza che il lavoro di applicazione è stato preso in carico.
 
-Se la precondizione non e' soddisfatta, la chiusura e' bloccata.
+Se la precondizione non è soddisfatta, la chiusura è bloccata.
 
 ---
 
 ## Regole operative
 
-- Ogni cambio di stato richiede una nota nella sezione Storia che risponde al "perche'", non al "cosa".
-- Il tipo (rilievo / revisione / anomalia) e' immutabile dopo l'apertura. Se la classificazione e' errata, chiudere e riaprire con il tipo corretto.
-- Un rilievo non puo' modificare artefatti nel corso del suo ciclo. Se durante l'analisi emerge una soluzione pronta, aprire una revisione e agire tramite essa.
-- La motivazione nella Storia e' obbligatoria per qualsiasi cambio di stato.
+- Ogni cambio di stato richiede una nota nella sezione Storia che risponde al "perché", non al "cosa".
+- Il tipo (rilievo / revisione / anomalia) è immutabile dopo l'apertura. Se la classificazione è errata, chiudere e riaprire con il tipo corretto.
+- Un rilievo non può modificare artefatti nel corso del suo ciclo. Se durante l'analisi emerge una soluzione pronta, aprire una revisione e agire tramite essa.
+- La motivazione nella Storia è obbligatoria per qualsiasi cambio di stato.
 - Prima di chiudere: scrivere l'entry in mastro.md, poi rimuovere la questione da questioni.md. Mai nell'ordine inverso.

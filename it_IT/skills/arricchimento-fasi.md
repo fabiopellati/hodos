@@ -7,7 +7,7 @@ locale: it_IT
 ---
 
 Percorso di riferimento opzionale per opere che adottano un ciclo di vita
-a fasi sequenziali. Questo skill e' descrittivo: non esegue azioni, non crea
+a fasi sequenziali. Questo skill è descrittivo: non esegue azioni, non crea
 file. Fornisce il contesto necessario a chi governa o all'AI per applicare
 il percorso P0-P4 quando e come opportuno.
 
@@ -20,8 +20,8 @@ un'approvazione esplicita prima di procedere alla successiva.
 
 Diagramma: [percorso P0-P4](../diagrams/fasi-p0-p4.puml)
 
-Non e' obbligatorio attraversarle tutte: un'opera semplice puo' partire
-direttamente da P2. Il percorso e' un riferimento, non un vincolo.
+Non è obbligatorio attraversarle tutte: un'opera semplice può partire
+direttamente da P2. Il percorso è un riferimento, non un vincolo.
 
 ---
 
@@ -30,16 +30,16 @@ direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 **Scopo**: capire il problema prima di qualsiasi soluzione.
 
 **Domande guida**:
-- Qual e' l'obiettivo dell'opera?
+- Qual è l'obiettivo dell'opera?
 - Chi sono gli stakeholder e cosa si aspettano?
 - Quali sono i vincoli non negoziabili?
-- Cosa e' in scope e cosa no?
+- Cosa è in scope e cosa no?
 
 **Directory**: `documenti/definizione/`
 
 **Artefatti attesi** (in ordine di redazione):
 - `1-obiettivi.md` — obiettivi misurabili, vincoli, stakeholder, criteri di successo
-- `2-panoramica-funzionalita.md` — funzionalita' in/out scope, priorita'
+- `2-panoramica-funzionalita.md` — funzionalità in/out scope, priorità
 
 **Approvazione**: approvazione di entrambi gli artefatti prima di aprire P1.
 
@@ -52,7 +52,7 @@ direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 **Domande guida**:
 - Quali sono gli scenari d'uso rilevanti?
 - Quali requisiti funzionali e non funzionali emergono?
-- Come e' strutturato il risultato atteso?
+- Come è strutturato il risultato atteso?
 - In quale ordine si realizza?
 
 **Directory**: `documenti/analisi/`
@@ -62,7 +62,7 @@ direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 - `4-requisiti.md` — requisiti funzionali
 - `5-vincoli.md` — requisiti non funzionali
 - `6-struttura.md` — struttura del risultato atteso
-- `7-piano-esecutivo.md` — unita' di lavoro, ordine, milestone
+- `7-piano-esecutivo.md` — unità di lavoro, ordine, milestone
 
 **Approvazione**: approvazione del piano esecutivo. Il piano autorizza l'avvio
 della realizzazione.
@@ -71,9 +71,9 @@ della realizzazione.
 
 ## P2 — Realizzazione
 
-**Scopo**: realizzare quanto pianificato, unita' per unita'.
+**Scopo**: realizzare quanto pianificato, unità per unità.
 
-**Ciclo per ogni unita'**:
+**Ciclo per ogni unità**:
 1. Design — progettazione dettagliata
 2. Approvazione del design
 3. Iterazioni — cicli brevi: pianifica / realizza / verifica / chiudi
@@ -81,12 +81,12 @@ della realizzazione.
 
 **Directory**: `documenti/unita/[nome]/`
 
-**Artefatti attesi per unita'**:
+**Artefatti attesi per unità**:
 - `design.md` — progettazione dettagliata
-- `attivita.md` — iterazioni con obiettivi, voci di attivita', note
+- `attivita.md` — iterazioni con obiettivi, voci di attività, note
 
-**Nota**: rilievi e problemi inattesi vanno in `questioni.md`, non nell'attivita'.
-L'attivita' e' proattiva (nasce dalla pianificazione); la questione e' reattiva
+**Nota**: rilievi e problemi inattesi vanno in `questioni.md`, non nell'attività.
+L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva
 (nasce da un problema).
 
 ---
@@ -96,14 +96,14 @@ L'attivita' e' proattiva (nasce dalla pianificazione); la questione e' reattiva
 **Scopo**: verificare il risultato nel suo insieme.
 
 **Domande guida**:
-- Le unita' si integrano correttamente?
+- Le unità si integrano correttamente?
 - Il risultato complessivo rispetta le specifiche di P1?
-- Ci sono disallineamenti tra unita' o rispetto alle aspettative?
+- Ci sono disallineamenti tra unità o rispetto alle aspettative?
 
 **Directory**: nessuna propria. La verifica opera sugli artefatti delle
 fasi precedenti.
 
-**Nota**: le questioni che emergono qui non sono anomalie di singole unita'
+**Nota**: le questioni che emergono qui non sono anomalie di singole unità
 (P2) ma disallineamenti sistemici. Se una questione invalida assunzioni di
 fasi precedenti, aprire questioni collegate (propagazione a ritroso).
 
@@ -115,7 +115,7 @@ fasi precedenti, aprire questioni collegate (propagazione a ritroso).
 
 **Scopo**: portare a destinazione una versione stabile.
 
-**Attivita'**:
+**Attività**:
 - Verifiche finali
 - Approvazione della versione
 - Consegna al destinatario o messa a disposizione
@@ -148,32 +148,32 @@ registra apertura, progressione e chiusura.
 - `documenti/analisi/7-piano-esecutivo.md`
 ```
 
-**Una questione di revisione per unita' di esecuzione:**
+**Una questione di revisione per unità di esecuzione:**
 
 ```
-## QUESTIONE-NNN — Unita': [nome unita']
+## QUESTIONE-NNN — Unità: [nome unità]
 
 **Tipo**: revisione
 **Stato**: open
 
 **Storia**
-- YYYY-MM-DD open — Avvio design unita'.
+- YYYY-MM-DD open — Avvio design unità.
 - YYYY-MM-DD in-progress — Design approvato, avvio iterazioni.
-- YYYY-MM-DD closed — Unita' completata e integrata.
+- YYYY-MM-DD closed — Unità completata e integrata.
 
 **Elaborati prodotti**
 - `documenti/unita/[nome]/design.md`
 - `documenti/unita/[nome]/attivita.md`
 ```
 
-La granularita' minima e' una questione per fase significativa e una per
-unita'. Non si aprono questioni per ogni micro-passo: i passi di esecuzione
-vivono nell'`attivita.md` dell'unita'.
+La granularità minima è una questione per fase significativa e una per
+unità. Non si aprono questioni per ogni micro-passo: i passi di esecuzione
+vivono nell'`attivita.md` dell'unità.
 
 Questo modello vale per umano e AI. Quando l'AI elabora un ciclo P0-P4
 in autonomia, apre la questione di fase, produce gli elaborati nei propri
 file, aggiorna la storia al completamento di ogni elaborato significativo,
-e chiude la questione quando la fase e' verificata e approvata.
+e chiude la questione quando la fase è verificata e approvata.
 
 ---
 
@@ -182,7 +182,7 @@ e chiude la questione quando la fase e' verificata e approvata.
 Dopo P4 approvato e prima release taggata su `main`, l'opera entra nel
 regime iterativo post-release. La definizione normativa del ciclo —
 condizioni di ingresso, modello iterativo, ruolo del backlog, caso hotfix —
-e' in `ai/ciclo-post-release.md`.
+è in `ai/ciclo-post-release.md`.
 
 Operativamente, ogni ciclo post-release si traccia con questioni nel normale
 ciclo Hodos e produce una release approvata taggata su `main`.

@@ -37,7 +37,7 @@ Va inserita in cima a `questioni.md`, dopo la sezione Indice.
 ## Tipi
 
 - **rilievo** — conoscenza nuova emersa, soluzione non ancora definita. Non modifica artefatti nel corso del suo ciclo: se emerge una soluzione pronta, aprire una revisione.
-- **revisione** — correzione o modifica da applicare a uno o piu' artefatti esistenti.
+- **revisione** — correzione o modifica da applicare a uno o più artefatti esistenti.
 - **anomalia** — comportamento difforme da quanto atteso.
 
 ## Sezioni opzionali
@@ -82,15 +82,15 @@ Non scrivere la questione senza conferma dell'operatore.
    - non operare
 3. Se non esiste una questione correlata, proponi i parametri della nuova
    questione (tipo, titolo, descrizione sintetica) e attendi approvazione.
-4. Non scrivere nulla finche' l'operatore non ha scelto.
+4. Non scrivere nulla finché l'operatore non ha scelto.
 
-Usare il tool AskUserQuestion ogni volta che le opzioni sono piu' di una.
+Usare il tool AskUserQuestion ogni volta che le opzioni sono più di una.
 Non proporre opzioni in testo libero.
 
 ## Regole
 
-- Il tipo e' immutabile dopo l'apertura.
-- La Descrizione descrive il problema, non la soluzione. E' immutabile dopo la scrittura: usare un commento per rettifiche o integrazioni.
-- I campi Domande aperte e Impatto sono mutabili per addizione nel corso del ciclo: si possono aggiungere nuove voci documentando il motivo. Una voce esistente non si cancella, ma si puo' dichiarare superata o inattuata con motivazione esplicita inline.
-- La motivazione nella Storia risponde al "perche'", non al "cosa".
-- Un rilievo con Impatto non vuoto non puo' essere chiuso senza almeno una questione di revisione collegata aperta.
+- Il tipo è immutabile dopo l'apertura.
+- La Descrizione descrive il problema, non la soluzione. È immutabile dopo la scrittura: usare un commento per rettifiche o integrazioni.
+- I campi Domande aperte e Impatto sono mutabili per addizione nel corso del ciclo: si possono aggiungere nuove voci documentando il motivo. Una voce esistente non si cancella, ma si può dichiarare superata o inattuata con motivazione esplicita inline.
+- La motivazione nella Storia risponde al "perché", non al "cosa".
+- Un rilievo con Impatto non vuoto non può essere chiuso senza almeno una questione di revisione collegata aperta.

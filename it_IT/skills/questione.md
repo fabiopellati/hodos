@@ -10,7 +10,7 @@ Gestisci il ciclo di vita di una questione nel file questioni.md del progetto
 corrente: apertura, aggiornamento di stato, esecuzione di azioni, chiusura.
 
 L'azione da svolgere viene determinata dalla combinazione tra il prompt di
-lancio e lo stato corrente della questione. Non e' necessario scegliere una
+lancio e lo stato corrente della questione. Non è necessario scegliere una
 skill diversa per fasi diverse del ciclo.
 
 ## 1. Trova questioni.md
@@ -34,7 +34,7 @@ Leggi il prompt e identifica l'operazione richiesta:
 - **chiusura** — il prompt specifica `closed` oppure usa termini come "chiudi",
   "completa", "risolvi"
 
-Se l'operazione non e' chiara, chiedi tramite AskUserQuestion.
+Se l'operazione non è chiara, chiedi tramite AskUserQuestion.
 
 ---
 
@@ -50,14 +50,14 @@ usa AskUserQuestion per raccogliere:
 - **Titolo**: breve e descrittivo
 - **Descrizione**: il problema, il rilievo, la revisione o l'anomalia
 
-Se il tipo e' `rilievo`, verifica con l'operatore:
+Se il tipo è `rilievo`, verifica con l'operatore:
 
 > Stai aprendo un rilievo — conoscenza nuova emersa, soluzione non ancora
-> definita. Se sai gia' cosa fare e sei pronto ad agire, apri una revisione
+> definita. Se sai già cosa fare e sei pronto ad agire, apri una revisione
 > invece. Il rilievo registra conoscenza; la revisione esegue l'impatto.
 > Confermi rilievo?
 
-Se l'operatore corregge in revisione, procedi con `revisione`. Il tipo e'
+Se l'operatore corregge in revisione, procedi con `revisione`. Il tipo è
 immutabile dopo l'apertura.
 
 ### A2. Determina l'ID
@@ -127,11 +127,11 @@ Stati validi:
 | `deferred` | rimandato con motivazione esplicita |
 | `closed` | risolto — avvia il ramo di chiusura (Operazione D) |
 
-Se il nuovo stato e' `closed`, passa a Operazione D.
+Se il nuovo stato è `closed`, passa a Operazione D.
 
 ### B3. Richiedi la motivazione
 
-Ogni cambio di stato richiede una nota che risponde al "perche'".
+Ogni cambio di stato richiede una nota che risponde al "perché".
 Se non presente nel contesto, chiedila prima di procedere.
 
 ### B4. Aggiorna il file
@@ -169,7 +169,7 @@ COMMENTO-{NNN} — {YYYY-MM-DD}
 {testo del commento}
 ```
 
-Il commento e' immutabile dopo la scrittura: additivo, non modificabile.
+Il commento è immutabile dopo la scrittura: additivo, non modificabile.
 
 ---
 
@@ -182,11 +182,11 @@ Cerca anche `mastro.md`. Se non esiste, interrompi e avvisa l'utente.
 
 ### D2. Verifica precondizione chiusura rilievo
 
-Se la questione e' di tipo **rilievo** e il campo `Impatto` e' non vuoto:
+Se la questione è di tipo **rilievo** e il campo `Impatto` è non vuoto:
 
 - Verifica che il campo `Questioni collegate` esista e contenga almeno un
   riferimento a una questione di tipo *revisione* in stato aperto.
-- Se la precondizione non e' soddisfatta, **interrompi** e avvisa l'utente:
+- Se la precondizione non è soddisfatta, **interrompi** e avvisa l'utente:
   > Impossibile chiudere: rilievo con impatto non vuoto richiede almeno una
   > questione di revisione collegata aperta. Aggiungere il campo
   > `Questioni collegate` con il riferimento alla revisione prima di procedere.
@@ -197,16 +197,16 @@ Se la questione ha domande ancora aperte, avvisa l'utente prima di procedere.
 
 Se non presenti nel contesto, chiedi:
 
-- **Decisioni prese**: cosa e' stato risolto e perche' (una o piu' voci)
+- **Decisioni prese**: cosa è stato risolto e perché (una o più voci)
 - **Impatto**: quali artefatti sono stati modificati o lo saranno
 
-Poi valuta il Percorso: se il ciclo ha avuto complessita' (stati multipli,
+Poi valuta il Percorso: se il ciclo ha avuto complessità (stati multipli,
 ripensamenti, alternative), proponi una sintesi del percorso per approvazione.
-Se la storia della questione e' nel contesto, puoi redigerla direttamente.
+Se la storia della questione è nel contesto, puoi redigerla direttamente.
 
-Il bias corretto e' includere il Percorso: l'omissione e' giustificata solo
-quando la decisione e' stata diretta (apertura e chiusura senza stati intermedi).
-Se il materiale e' molto esteso (allegati, commenti lunghi), proponi una sintesi
+Il bias corretto è includere il Percorso: l'omissione è giustificata solo
+quando la decisione è stata diretta (apertura e chiusura senza stati intermedi).
+Se il materiale è molto esteso (allegati, commenti lunghi), proponi una sintesi
 e chiedi conferma prima di scrivere.
 
 ### D4. Scrivi l'entry in mastro.md
@@ -218,7 +218,7 @@ Inserisci in cima al file (prepend):
 
 **Questione**: {QUESTIONE-ID} — {Titolo}
 
-**Percorso** (opzionale — ometti se la decisione e' stata diretta)
+**Percorso** (opzionale — ometti se la decisione è stata diretta)
 
 {sintesi del percorso: aperta per X, bloccata per Y, reindirizzata per Z}
 
@@ -255,13 +255,13 @@ Se trovato:
 
 1. Raccogli tutti gli ID citati nei campi `Questioni collegate` delle questioni
    ancora presenti nel file (non chiuse).
-2. Per ciascun ID citato, verifica se e' ancora presente in `questioni.md`.
-3. Se almeno un ID citato NON e' presente (quindi e' chiuso): non suggerire.
+2. Per ciascun ID citato, verifica se è ancora presente in `questioni.md`.
+3. Se almeno un ID citato NON è presente (quindi è chiuso): non suggerire.
 4. Se tutti gli ID citati sono ancora presenti, oppure nessuna questione aperta
    ha `Questioni collegate`: aggiungi questa nota al termine della risposta:
 
-> Il contesto di questa chiusura e' completamente persistito nei file.
-> Se la sessione e' lunga, questo e' un buon momento per /compact.
+> Il contesto di questa chiusura è completamente persistito nei file.
+> Se la sessione è lunga, questo è un buon momento per /compact.
 
 ---
 
@@ -269,19 +269,19 @@ Se trovato:
 
 - Non modificare mai Descrizione e Domande aperte: usa un commento
   (Operazione C) per rettifiche o integrazioni
-- Il campo Impatto e' mutabile per addizione: si possono aggiungere nuove
-  voci documentando il motivo; una voce esistente non si cancella ma si puo'
+- Il campo Impatto è mutabile per addizione: si possono aggiungere nuove
+  voci documentando il motivo; una voce esistente non si cancella ma si può
   dichiarare inattuata inline (`- artefatto — descrizione — inattuata: motivazione`)
-- La motivazione e' obbligatoria per qualsiasi cambio di stato
+- La motivazione è obbligatoria per qualsiasi cambio di stato
 - Nel ramo chiusura: scrivi l'entry nel mastro prima di rimuovere la questione
-- L'entry nel mastro e' immutabile dopo la scrittura: non modificarla mai
-- Non comprimere le entry del mastro: il bias corretto e' includere il Percorso
-  ogni volta che il ciclo ha avuto qualsiasi complessita'. L'omissione e'
-  giustificata solo quando la decisione e' stata diretta (nessuno stato
+- L'entry nel mastro è immutabile dopo la scrittura: non modificarla mai
+- Non comprimere le entry del mastro: il bias corretto è includere il Percorso
+  ogni volta che il ciclo ha avuto qualsiasi complessità. L'omissione è
+  giustificata solo quando la decisione è stata diretta (nessuno stato
   intermedio significativo). In caso di dubbio, includere.
-- Se la questione e' di tipo rilievo: non puo' modificare artefatti nel corso
+- Se la questione è di tipo rilievo: non può modificare artefatti nel corso
   del suo ciclo. Se durante l'analisi emerge una soluzione pronta ad essere
   eseguita, aprire una revisione prima di agire. Segnalare questa regola se
   l'operatore intende agire su un artefatto nel contesto di un rilievo aperto.
 - Una questione aperta non contiene mai la soluzione, solo il problema
-- La motivazione nella Storia deve rispondere al "perche'" non al "cosa"
+- La motivazione nella Storia deve rispondere al "perché" non al "cosa"

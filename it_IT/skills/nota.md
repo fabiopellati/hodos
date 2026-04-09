@@ -71,7 +71,7 @@ modificarne il corpo, aggiungere un commento alla nota esistente.
 
 1. Individua la nota in `notes.md` per ID o titolo.
 2. Determina il prossimo numero di commento locale alla nota
-   (COMMENTO-001 se e' il primo, altrimenti il successivo disponibile).
+   (COMMENTO-001 se è il primo, altrimenti il successivo disponibile).
 3. Aggiungi in fondo alla nota, prima del separatore `---`, la sezione
    `**Commenti**` se non esiste, poi il commento:
 
@@ -82,14 +82,14 @@ COMMENTO-{NNN} — {YYYY-MM-DD}
 {testo del commento}
 ```
 
-4. Non modificare il corpo della nota ne' l'indice.
+4. Non modificare il corpo della nota né l'indice.
 
 ## Regole
 
-- Il formato e' leggero: nessuna sezione strutturata, nessuno stato
-- La descrizione sintetica e' quella che appare nell'indice: deve essere
+- Il formato è leggero: nessuna sezione strutturata, nessuno stato
+- La descrizione sintetica è quella che appare nell'indice: deve essere
   comprensibile senza leggere il corpo
-- Il corpo di una nota e' immutabile dopo la scrittura
+- Il corpo di una nota è immutabile dopo la scrittura
 - Per rettifiche o nuove conoscenze sullo stesso argomento, aggiungere un
   commento (COMMENTO-NNN) alla nota esistente invece di aprirne una nuova
 - I commenti sono additivi e immutabili: non modificare un commento esistente

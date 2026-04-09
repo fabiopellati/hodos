@@ -7,7 +7,7 @@ autorita: operativa
 
 # Glossario Operativo — Riconoscimento Semantico per l'Agente AI
 
-Questo glossario e' il punto di riferimento dell'agente AI per riconoscere
+Questo glossario è il punto di riferimento dell'agente AI per riconoscere
 l'intenzione operativa dell'utente a partire da un prompt in linguaggio naturale.
 Ogni voce associa un termine del protocollo Hodos ai sinonimi, alle varianti
 colloquiali e alle espressioni che un operatore potrebbe usare per riferirsi
@@ -27,7 +27,7 @@ La questione ha un ciclo di vita (apertura, analisi, approvazione, chiusura)
 e tre tipi distinti.
 
 **Espressioni che indicano l'apertura di una questione:**
-apri una questione, nuova questione, c'e' un problema, ho trovato un problema,
+apri una questione, nuova questione, c'è un problema, ho trovato un problema,
 segnalo un problema, devo tracciare, va tracciato, apri un ticket, registra
 questo, tieni traccia, qualcosa non va, abbiamo un tema, serve una decisione,
 dobbiamo decidere.
@@ -47,7 +47,7 @@ questione risolta, deciso.
 
 Tipo di questione che porta conoscenza nuova — qualcosa che non si sapeva prima
 e che modifica la comprensione del dominio. Il rilievo registra la scoperta ma
-non agisce: se l'azione e' gia' chiara, serve una revisione.
+non agisce: se l'azione è già chiara, serve una revisione.
 
 **Espressioni che indicano un rilievo:**
 rilievo, ho notato che, mi sono accorto che, emerge che, risulta che, scopro che,
@@ -55,37 +55,37 @@ non sapevamo che, nuova informazione, nuova conoscenza, finding, osservazione,
 ho scoperto, attenzione a questo, importante sapere che, da considerare.
 
 **Distinzione critica:** se l'operatore descrive un problema senza indicare
-la soluzione, e' probabilmente un rilievo. Se descrive cosa fare per risolverlo,
-e' probabilmente una revisione. In caso di dubbio, l'agente chiede.
+la soluzione, è probabilmente un rilievo. Se descrive cosa fare per risolverlo,
+è probabilmente una revisione. In caso di dubbio, l'agente chiede.
 
 ---
 
 ## Revisione
 
-Tipo di questione che corregge o affina un artefatto esistente. La soluzione e'
-definita, l'artefatto da modificare e' identificato, manca l'esecuzione.
+Tipo di questione che corregge o affina un artefatto esistente. La soluzione è
+definita, l'artefatto da modificare è identificato, manca l'esecuzione.
 
 **Espressioni che indicano una revisione:**
 revisione, correggi, modifica, aggiorna, va cambiato, va corretto, da rivedere,
 fix, sistema questo, aggiungi al documento, togli dal documento, riformula,
 riscrivi, integra, completa il documento, manca questo nel protocollo.
 
-**Distinzione critica:** se l'operatore sa gia' cosa fare e su quale artefatto,
-e' una revisione. Se ha identificato un problema ma la soluzione richiede
-analisi, e' un rilievo.
+**Distinzione critica:** se l'operatore sa già cosa fare e su quale artefatto,
+è una revisione. Se ha identificato un problema ma la soluzione richiede
+analisi, è un rilievo.
 
 ---
 
 ## Anomalia
 
 Tipo di questione che segnala un comportamento difforme da quanto atteso.
-Non porta conoscenza nuova ne' corregge un artefatto: indica che qualcosa
+Non porta conoscenza nuova né corregge un artefatto: indica che qualcosa
 non funziona come dovrebbe.
 
 **Espressioni che indicano un'anomalia:**
 anomalia, bug, non funziona, errore, malfunzionamento, dovrebbe fare X ma fa Y,
-si e' rotto, non va, difetto, guasto, regressione, comportamento inatteso,
-prima funzionava, non e' conforme.
+si è rotto, non va, difetto, guasto, regressione, comportamento inatteso,
+prima funzionava, non è conforme.
 
 ---
 
@@ -99,14 +99,14 @@ che non richiedono ancora una decisione.
 nota, annotazione, memo, appunto, segna che, ricorda che, per memoria,
 da tenere a mente, promemoria, idea, pensiero, spunto, segniamoci.
 
-**Distinzione critica:** se c'e' qualcosa da decidere, non e' una nota ma una
-questione. Se e' solo un'informazione da registrare senza azione, e' una nota.
+**Distinzione critica:** se c'è qualcosa da decidere, non è una nota ma una
+questione. Se è solo un'informazione da registrare senza azione, è una nota.
 
 ---
 
 ## Commento
 
-Contributo additivo e immutabile aggiunto a una questione o a una nota gia'
+Contributo additivo e immutabile aggiunto a una questione o a una nota già
 esistente. Serve a rettificare, integrare o contestualizzare senza modificare
 il corpo originale.
 
@@ -130,7 +130,7 @@ bootstrap, avvia l'opera, parti con hodos, nuovo progetto hodos.
 ## RFC
 
 Documento formale per comunicare con un team esterno quando una questione
-non puo' essere risolta internamente.
+non può essere risolta internamente.
 
 **Espressioni che indicano una RFC:**
 manda una rfc, richiesta esterna, serve il team esterno, dobbiamo chiedere a,
@@ -150,7 +150,7 @@ quando abbiamo chiuso, riassunto delle decisioni.
 
 ---
 
-## Segnali di ambiguita'
+## Segnali di ambiguità
 
 Queste espressioni sono troppo generiche per essere associate a un'operazione
 specifica. L'agente non deve operare sui file di processo ma deve chiedere
@@ -160,5 +160,5 @@ chiarimento.
 registra questo, traccia questo, salva, documenta, gestisci, occupati di,
 fai qualcosa, sistema.
 
-L'agente chiede: "Vuoi aprire una questione, aggiungere una nota, o e'
+L'agente chiede: "Vuoi aprire una questione, aggiungere una nota, o è
 solo un'osservazione?"

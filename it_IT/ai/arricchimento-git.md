@@ -8,11 +8,11 @@ fase: trasversale
 
 # Arricchimento — Convenzioni git per progetti Hodos
 
-Questo arricchimento e' opzionale. Si attiva nei progetti che usano git e vogliono
+Questo arricchimento è opzionale. Si attiva nei progetti che usano git e vogliono
 una convenzione esplicita di nomenclatura branch legata alle questioni Hodos.
 
-Hodos e' git-agnostico per principio. Questo arricchimento non fa parte del
-protocollo base e non e' obbligatorio. I progetti che non lo attivano seguono
+Hodos è git-agnostico per principio. Questo arricchimento non fa parte del
+protocollo base e non è obbligatorio. I progetti che non lo attivano seguono
 le convenzioni git proprie del loro contesto.
 
 ## Come attivare
@@ -39,12 +39,12 @@ Branch dedicato a una singola questione operativa:
 <tipo-git>/q<NNN>-<descrizione-kebab>
 ```
 
-Il `<tipo-git>` e' il tipo della modifica git — scelto liberamente dall'operatore
+Il `<tipo-git>` è il tipo della modifica git — scelto liberamente dall'operatore
 in base a cosa fa il branch, non derivato dal tipo della questione Hodos:
 
 | Tipo git | Quando usarlo |
 |---|---|
-| `feat/` | nuova funzionalita' o capacita' |
+| `feat/` | nuova funzionalità o capacità |
 | `fix/` | correzione di un comportamento errato |
 | `docs/` | solo documentazione o artefatti |
 | `chore/` | manutenzione, configurazione, dipendenze |
@@ -58,7 +58,7 @@ Esempi:
 
 ### Batch di questioni
 
-Branch che copre piu' questioni sequenziali della stessa fase o contesto:
+Branch che copre più questioni sequenziali della stessa fase o contesto:
 
 ```
 <tipo-git>/<fase-o-contesto>-<descrizione>
@@ -66,7 +66,7 @@ Branch che copre piu' questioni sequenziali della stessa fase o contesto:
 
 Usare questo pattern quando si lavora su un insieme di questioni correlate
 che condividono lo stesso branch. La scelta tra questione singola e batch
-e' discrezionale: usare il batch quando le questioni sono strettamente
+è discrezionale: usare il batch quando le questioni sono strettamente
 sequenziali e difficilmente separabili, la questione singola negli altri casi.
 
 Esempi:
@@ -75,7 +75,7 @@ Esempi:
 
 ### Governance
 
-Branch per attivita' di revisione, approvazione e chiusura questioni:
+Branch per attività di revisione, approvazione e chiusura questioni:
 
 ```
 docs/<fase-o-contesto>
@@ -87,7 +87,7 @@ Esempi:
 
 ### Release
 
-Branch per preparare una nuova release: freeze funzionalita', bug fix
+Branch per preparare una nuova release: freeze funzionalità, bug fix
 minori, bump version. Parte da `develop`:
 
 ```
@@ -133,8 +133,8 @@ Esempi:
 
 Prima di portare una questione in `in-progress`, verificare il branch git corrente:
 
-1. Il branch corrente e' gia' coerente con il lavoro da fare? Proseguire.
-2. Il branch e' `develop`, `main`, o un branch di un'altra attivita'? Creare un branch dedicato prima di toccare qualsiasi file.
+1. Il branch corrente è già coerente con il lavoro da fare? Proseguire.
+2. Il branch è `develop`, `main`, o un branch di un'altra attività? Creare un branch dedicato prima di toccare qualsiasi file.
 
 ```bash
 git branch --show-current
@@ -157,13 +157,13 @@ git checkout develop
 git merge --no-ff <tipo-git>/q<NNN>-<descrizione> -m "Merge <tipo>: descrizione"
 ```
 
-Il `--no-ff` preserva la tracciabilita' del branch nella storia git.
+Il `--no-ff` preserva la tracciabilità del branch nella storia git.
 
 ---
 
 ## Branch di produzione: main
 
-`main` e' il branch di produzione. Ogni merge su `main` rappresenta una
+`main` è il branch di produzione. Ogni merge su `main` rappresenta una
 release stabile e deve essere accompagnato da un tag con versione semantica.
 
 Non si lavora mai direttamente su `main`. Le uniche operazioni valide su

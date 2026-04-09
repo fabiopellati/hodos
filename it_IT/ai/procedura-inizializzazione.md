@@ -9,7 +9,7 @@ autorita: operativa
 
 Quando l'operatore chiede di inizializzare Hodos, l'agente deve creare i file
 di processo dell'opera. Questa procedura si applica quando la directory contiene
-un CLAUDE.md con `**protocollo**: Hodos` ma manca uno o piu' file di processo.
+un CLAUDE.md con `**protocollo**: Hodos` ma manca uno o più file di processo.
 
 ## Passi
 
@@ -31,7 +31,7 @@ un CLAUDE.md con `**protocollo**: Hodos` ma manca uno o piu' file di processo.
    - `Stato corrente` — questioni aperte
    - `Arricchimenti abilitati` — nessuno per default
 
-5. Non creare file che esistono gia'. Non modificare il contenuto di file
+5. Non creare file che esistono già. Non modificare il contenuto di file
    esistenti diversi dal CLAUDE.md.
 
 ## Cosa non fare

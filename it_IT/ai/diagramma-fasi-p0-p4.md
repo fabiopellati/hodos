@@ -10,8 +10,8 @@ autorita: informativa
 Riferimento visivo: `../diagrams/fasi-p0-p4.puml`
 
 Percorso di riferimento opzionale per opere che adottano un ciclo di vita a fasi
-sequenziali. Non e' obbligatorio attraversarle tutte: un'opera semplice puo'
-partire direttamente da P2. Il percorso e' un riferimento, non un vincolo.
+sequenziali. Non è obbligatorio attraversarle tutte: un'opera semplice può
+partire direttamente da P2. Il percorso è un riferimento, non un vincolo.
 
 ---
 
@@ -21,7 +21,7 @@ partire direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 |---|---|---|---|
 | P0 | Definizione | Capire il problema prima di qualsiasi soluzione | Si, prima di aprire P1 |
 | P1 | Analisi | Tradurre obiettivi in specifiche realizzabili | Si (piano esecutivo), prima di aprire P2 |
-| P2 | Realizzazione | Realizzare quanto pianificato, unita' per unita' | Per ogni unita': design prima delle iterazioni |
+| P2 | Realizzazione | Realizzare quanto pianificato, unità per unità | Per ogni unità: design prima delle iterazioni |
 | P3 | Integrazione | Verificare il risultato nel suo insieme | Si, prima di aprire P4 |
 | P4 | Consegna | Portare a destinazione una versione stabile | Si (approvazione consegna) |
 
@@ -31,19 +31,19 @@ partire direttamente da P2. Il percorso e' un riferimento, non un vincolo.
 
 **P0** (`documenti/definizione/`)
 - `1-obiettivi.md` — obiettivi misurabili, vincoli, stakeholder, criteri di successo
-- `2-panoramica-funzionalita.md` — funzionalita' in/out scope, priorita'
+- `2-panoramica-funzionalita.md` — funzionalità in/out scope, priorità
 
 **P1** (`documenti/analisi/`)
 - `3-scenari.md` — scenari d'uso rilevanti
 - `4-requisiti.md` — requisiti funzionali
 - `5-vincoli.md` — requisiti non funzionali
 - `6-struttura.md` — struttura del risultato atteso
-- `7-piano-esecutivo.md` — unita' di lavoro, ordine, milestone
+- `7-piano-esecutivo.md` — unità di lavoro, ordine, milestone
 
 **P2** (`documenti/unita/[nome]/`)
-Per ogni unita':
+Per ogni unità:
 - `design.md` — progettazione dettagliata
-- `attivita.md` — iterazioni con obiettivi, voci di attivita', note
+- `attivita.md` — iterazioni con obiettivi, voci di attività, note
 
 **P3** — nessuna directory propria; la verifica opera sugli artefatti delle fasi precedenti.
 
@@ -51,7 +51,7 @@ Per ogni unita':
 
 ---
 
-## Ciclo per unita' in P2
+## Ciclo per unità in P2
 
 1. Design — progettazione dettagliata
 2. Approvazione del design
@@ -63,6 +63,6 @@ Per ogni unita':
 ## Regole
 
 - Ogni fase si chiude con un'approvazione esplicita prima di procedere alla successiva. L'AI non avanza autonomamente.
-- Rilievi e problemi inattesi vanno in questioni.md, non in attivita.md. L'attivita' e' proattiva (nasce dalla pianificazione); la questione e' reattiva (nasce da un problema).
-- Questioni che emergono in P3 e invalidano assunzioni di fasi precedenti richiedono questioni collegate con propagazione a ritroso: si risolve dalla fase radice verso quella piu' avanzata.
-- Per tracciare il ciclo in questioni.md: una questione di revisione per fase significativa, una per unita'. I passi di esecuzione vivono in attivita.md, non come questioni separate.
+- Rilievi e problemi inattesi vanno in questioni.md, non in attivita.md. L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva (nasce da un problema).
+- Questioni che emergono in P3 e invalidano assunzioni di fasi precedenti richiedono questioni collegate con propagazione a ritroso: si risolve dalla fase radice verso quella più avanzata.
+- Per tracciare il ciclo in questioni.md: una questione di revisione per fase significativa, una per unità. I passi di esecuzione vivono in attivita.md, non come questioni separate.

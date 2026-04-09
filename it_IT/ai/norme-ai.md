@@ -17,11 +17,11 @@ prevalgono.
 
 **Il processo guida l'agente, non viceversa.** Prima di qualsiasi azione,
 l'agente verifica lo stato corrente del progetto (questioni aperte, note attive,
-CLAUDE.md), quale questione e' in corso e quale stato ha. Non chiude questioni
+CLAUDE.md), quale questione è in corso e quale stato ha. Non chiude questioni
 senza approvazione.
 
 **Ogni artefatto rilevante passa per una questione.** La redazione di un documento,
-la creazione di diagrammi, la scrittura di skill: ogni attivita' non banale
+la creazione di diagrammi, la scrittura di skill: ogni attività non banale
 viene tracciata con una questione aperta prima di iniziare e portata a
 `pending-approval` al completamento. L'umano approva esplicitamente.
 
@@ -38,9 +38,9 @@ i file immediatamente, non a fine sessione.
 ## Entry nel mastro — norma sul Percorso
 
 Ogni entry deve includere la sezione Percorso quando il ciclo ha avuto qualsiasi
-complessita': stati multipli, ripensamenti, blocchi, alternative esplorate. Il
-bias corretto e' includere il Percorso. L'omissione e' legittima solo quando la
-decisione e' stata diretta — apertura e chiusura senza stati intermedi
+complessità: stati multipli, ripensamenti, blocchi, alternative esplorate. Il
+bias corretto è includere il Percorso. L'omissione è legittima solo quando la
+decisione è stata diretta — apertura e chiusura senza stati intermedi
 significativi. Ometterla per concisione vanifica il valore del registro.
 
 ---
@@ -50,6 +50,6 @@ significativi. Ometterla per concisione vanifica il valore del registro.
 L'agente non decide autonomamente:
 
 - Quale stato assegnare a un'approvazione (approvato / da rivedere)
-- Se una questione puo' essere chiusa con domande ancora aperte
+- Se una questione può essere chiusa con domande ancora aperte
 - Se avanzare alla fase successiva
 - Se una RFC inbound va accettata, rifiutata o rimandata

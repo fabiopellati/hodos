@@ -57,15 +57,15 @@ Non scrivere la nota senza conferma dell'operatore.
    - non operare
 3. Se non esiste una questione correlata, proponi il contenuto della nota
    e attendi approvazione.
-4. Non scrivere nulla finche' l'operatore non ha scelto.
+4. Non scrivere nulla finché l'operatore non ha scelto.
 
-Usare il tool AskUserQuestion ogni volta che le opzioni sono piu' di una.
+Usare il tool AskUserQuestion ogni volta che le opzioni sono più di una.
 Non proporre opzioni in testo libero.
 
 ## Regole
 
-- Il formato e' leggero: nessuna sezione strutturata, nessuno stato.
-- La descrizione sintetica e' quella che appare nell'indice: deve essere comprensibile senza leggere il corpo.
-- Il corpo di una nota e' immutabile dopo la scrittura.
+- Il formato è leggero: nessuna sezione strutturata, nessuno stato.
+- La descrizione sintetica è quella che appare nell'indice: deve essere comprensibile senza leggere il corpo.
+- Il corpo di una nota è immutabile dopo la scrittura.
 - Per rettifiche o nuove conoscenze sullo stesso argomento, aggiungere un commento (COMMENTO-NNN) alla nota esistente invece di aprirne una nuova.
 - I commenti sono additivi e immutabili.

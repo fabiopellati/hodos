@@ -8,7 +8,7 @@ autorita: operativa
 
 # Template — File questioni.md
 
-Il file `questioni.md` e' lo strumento di governo delle questioni aperte di
+Il file `questioni.md` è lo strumento di governo delle questioni aperte di
 un'opera Hodos. Viene creato durante l'inizializzazione dell'opera e vive
 nella directory di processo.
 
