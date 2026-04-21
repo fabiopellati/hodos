@@ -82,8 +82,11 @@ della realizzazione.
 **Directory**: `documenti/unita/[nome]/`
 
 **Artefatti attesi per unità**:
-- `design.md` — progettazione dettagliata
+- `design.md` — progettazione dettagliata (file singolo)
 - `attivita.md` — iterazioni con obiettivi, voci di attività, note
+
+Quando la complessità dell'unità lo richiede, il design può articolarsi in
+una directory di documenti: vedi la sezione dedicata più avanti.
 
 **Nota**: rilievi e problemi inattesi vanno in `questioni.md`, non nell'attività.
 L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva
@@ -162,7 +165,7 @@ registra apertura, progressione e chiusura.
 - YYYY-MM-DD closed — Unità completata e integrata.
 
 **Elaborati prodotti**
-- `documenti/unita/[nome]/design.md`
+- `documenti/unita/[nome]/design.md` (o `0-design.md` + documenti di approfondimento)
 - `documenti/unita/[nome]/attivita.md`
 ```
 
@@ -189,6 +192,44 @@ ciclo Hodos e produce una release approvata taggata su `main`.
 
 ---
 
+## Design articolato per unità complesse
+
+Un'unità semplice usa un singolo `design.md` nella propria directory.
+Un'unità complessa — con scenari d'uso multipli, modelli dati articolati,
+transizioni di stato e vincoli di dominio propri — può articolare il
+design in una directory di documenti. La scelta tra le due forme è di
+chi governa l'unità, in base alla profondità analitica necessaria.
+
+**Struttura del design articolato**:
+
+```
+documenti/unita/[nome-unita]/
+  0-design.md       <- punto di ingresso e indice ragionato
+  1-obiettivi.md    <- perché, scope, criteri di successo
+  2-scenari.md      <- scenari d'uso del dominio
+  3-requisiti.md    <- requisiti funzionali dell'unità
+  4-vincoli.md      <- requisiti non funzionali, vincoli
+  5-struttura.md    <- architettura, modello dati, integrazioni
+  attivita.md       <- voci di attività (invariato)
+```
+
+**Convenzioni**:
+
+- Il file `0-design.md` è il punto di ingresso che soddisfa la
+  prescrizione del protocollo. Deve contenere le decisioni chiave e un
+  indice ragionato dei documenti di approfondimento.
+- I documenti da 1 a 5 articolano il design in profondità. Il prefisso
+  numerico indica l'ordine di lettura, non l'ordine di produzione. Non
+  tutti i documenti sono obbligatori.
+- La struttura rispecchia quella dei documenti di progetto (P0/P1) perché
+  il lavoro analitico ha la stessa forma a qualsiasi scala.
+
+**Approvazione**: l'approvazione di `0-design.md` copre l'intero pacchetto
+di design. Non è necessaria un'approvazione esplicita per ciascun
+documento di approfondimento.
+
+---
+
 ## Struttura directory di riferimento
 
 ```
@@ -203,8 +244,16 @@ documenti/
     6-struttura.md
     7-piano-esecutivo.md
   unita/
-    [nome-unita]/
+    [unita-semplice]/
       design.md
+      attivita.md
+    [unita-complessa]/
+      0-design.md
+      1-obiettivi.md
+      2-scenari.md
+      3-requisiti.md
+      4-vincoli.md
+      5-struttura.md
       attivita.md
     [nome-aggregato]/
       design.md

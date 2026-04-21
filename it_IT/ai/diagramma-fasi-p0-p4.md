@@ -42,8 +42,13 @@ partire direttamente da P2. Il percorso è un riferimento, non un vincolo.
 
 **P2** (`documenti/unita/[nome]/`)
 Per ogni unità:
-- `design.md` — progettazione dettagliata
+- `design.md` — progettazione dettagliata (file singolo)
 - `attivita.md` — iterazioni con obiettivi, voci di attività, note
+
+Quando la complessità dell'unità lo richiede, il design può
+articolarsi in una directory di documenti anziché in un file
+singolo. La sezione "Design articolato per unità complesse"
+descrive la struttura e le regole applicabili.
 
 **P3** — nessuna directory propria; la verifica opera sugli artefatti delle fasi precedenti.
 
@@ -57,6 +62,64 @@ Per ogni unità:
 2. Approvazione del design
 3. Iterazioni — cicli brevi: pianifica / realizza / verifica / chiudi
 4. Integrazione nell'aggregato o nell'opera
+
+---
+
+## Design articolato per unità complesse
+
+Un'unità semplice usa un singolo `design.md` nella propria
+directory. Un'unità complessa — con scenari d'uso multipli,
+modelli dati articolati, transizioni di stato e vincoli di
+dominio propri — può articolare il design in una directory di
+documenti. La scelta tra le due forme è di chi governa l'unità,
+in base alla profondità analitica necessaria.
+
+### Struttura
+
+```
+documenti/unita/[nome-unita]/
+  0-design.md       <- punto di ingresso e indice ragionato
+  1-obiettivi.md    <- perché, scope, criteri di successo
+  2-scenari.md      <- scenari d'uso del dominio
+  3-requisiti.md    <- requisiti funzionali dell'unità
+  4-vincoli.md      <- requisiti non funzionali, vincoli,
+                       dipendenze dalla piattaforma
+  5-struttura.md    <- architettura, modello dati,
+                       transizioni di stato, integrazioni
+  attivita.md       <- voci di attività (invariato)
+```
+
+### Convenzioni
+
+- Il file `0-design.md` è il punto di ingresso che soddisfa la
+  prescrizione del protocollo: è l'artefatto che viene prodotto,
+  revisionato e approvato. Deve contenere le decisioni chiave e
+  un indice ragionato che descriva il contenuto e la funzione di
+  ciascun documento di approfondimento.
+- I documenti da 1 a 5 sono articolazioni del design che
+  sviluppano in profondità ciascun aspetto. Il prefisso numerico
+  indica l'ordine di lettura, non l'ordine di produzione.
+- La struttura rispecchia quella dei documenti di progetto
+  (P0/P1) perché il lavoro analitico necessario ha la stessa
+  forma a qualsiasi scala. I documenti di progetto descrivono la
+  piattaforma a livello strategico; quelli dell'unità descrivono
+  il dominio applicativo a livello operativo.
+- Non tutti i documenti sono obbligatori: se un'unità non ha
+  vincoli propri, il file `4-vincoli.md` non è necessario.
+- Il file `attivita.md` non ha prefisso numerico perché non è
+  un documento analitico ma lo strumento operativo che
+  accompagna la realizzazione.
+
+### Approvazione
+
+L'approvazione di `0-design.md` copre l'intero pacchetto di
+design. Non è necessaria un'approvazione esplicita per ciascun
+documento di approfondimento: chi approva il punto di ingresso
+approva il design nel suo insieme, compresi i documenti a cui
+il punto di ingresso fa riferimento.
+
+Chi governa l'approvazione può comunque richiedere revisioni su
+documenti specifici prima di approvare il punto di ingresso.
 
 ---
 

@@ -20,6 +20,10 @@ repeat
     per ogni unita':
     design -> approvazione
     -> iterazioni -> integrazione
+
+    design semplice: design.md
+    design articolato: 0-design.md
+    + documenti di approfondimento
   end note
 repeat while (altre unita'?) is (si)
 -> no;

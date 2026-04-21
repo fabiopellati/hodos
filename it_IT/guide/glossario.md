@@ -60,6 +60,16 @@ attività. Valutata rispetto ai Criteri di verifica definiti all'apertura. Può
 essere: conforme, parziale (con motivazione degli scostamenti), non conforme
 (con motivazione).
 
+**Design articolato**
+Modalità di strutturazione del design di un'unità complessa in P2, alternativa
+al singolo `design.md`. Il design si articola in una directory di documenti con
+un punto di ingresso (`0-design.md`) e documenti di approfondimento numerati
+(`1-obiettivi.md`, `2-scenari.md`, `3-requisiti.md`, `4-vincoli.md`,
+`5-struttura.md`). La struttura rispecchia quella dei documenti di progetto
+(P0/P1) applicata alla scala dell'unità. L'approvazione del punto di ingresso
+copre l'intero pacchetto. La scelta tra design semplice e articolato è di chi
+governa l'unità.
+
 **Artefatto consolidato**
 Documento che rappresenta lo stato corrente della verità in una fase. Viene
 aggiornato in-place durante i cicli di affinamento. Distinto da `questioni.md` e
@@ -179,4 +189,6 @@ deviazioni dalla request originale.
 **Unità**
 Elemento atomico di realizzazione in P2. Ha un design proprio, un'attività
 e un ciclo di iterazioni. Può essere raggruppata in un aggregato. Equivalente
-astratto di componente nel contesto software.
+astratto di componente nel contesto software. Un'unità semplice usa un singolo
+`design.md`; un'unità complessa può usare un *design articolato* con più
+documenti di approfondimento.
