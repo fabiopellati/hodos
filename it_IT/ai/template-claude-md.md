@@ -39,6 +39,32 @@ hodos-mcp.
 nessuno
 ```
 
+## Sezione documento-first per opere con fasi P0-P4
+
+Quando l'opera adotta l'arricchimento fasi P0-P4, si
+consiglia di aggiungere nel CLAUDE.md la seguente
+sezione:
+
+```markdown
+## Direttiva documento-first
+
+Questa opera adotta il flusso P0-P4. Il codice deriva
+dai documenti di progetto, non viceversa. Non scrivere
+codice senza che i documenti della fase corrente siano
+prodotti e approvati.
+
+I documenti di processo (questioni, mastro, note)
+governano il ciclo ma non guidano l'implementazione.
+I documenti di progetto (documenti/definizione/,
+documenti/analisi/, documenti/unita/) guidano
+l'implementazione.
+```
+
+La sezione serve come presidio diretto: il CLAUDE.md è
+letto all'inizio di ogni sessione e l'agente lo ha
+sempre in contesto, indipendentemente dal retrieval del
+knowledge base.
+
 ## Regole
 
 - Il CLAUDE.md non contiene le regole operative: quelle vivono nel protocollo

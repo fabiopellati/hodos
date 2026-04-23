@@ -15,6 +15,49 @@ partire direttamente da P2. Il percorso è un riferimento, non un vincolo.
 
 ---
 
+## Principio documento-first
+
+Quando il percorso P0-P4 è attivo, il codice è un
+derivato dei documenti di progetto approvati, non il
+contrario. L'agente non deve scrivere codice finché i
+documenti della fase corrente non sono stati prodotti
+e approvati.
+
+Questo principio richiede di distinguere due categorie
+di documenti che svolgono funzioni diverse nel processo:
+
+- **Documenti di processo** — `questioni.md`, `mastro.md`,
+  `notes.md`: governano il ciclo, tracciano problemi e
+  decisioni. Non guidano l'implementazione. Una questione
+  può contenere l'analisi che porta a decidere cosa fare,
+  ma il "cosa fare" va formalizzato nei documenti di
+  progetto
+- **Documenti di progetto** — quelli nelle directory
+  `documenti/definizione/`, `documenti/analisi/`,
+  `documenti/unita/`: guidano l'implementazione, devono
+  essere prodotti e approvati prima che il codice venga
+  scritto
+
+L'agente che ha accumulato conoscenza sufficiente per
+implementare — per esempio al termine di un'analisi
+condotta dentro una questione — non è autorizzato a
+procedere all'implementazione. Deve prima formalizzare
+quella conoscenza nei documenti di progetto della fase
+corrente e attendere l'approvazione. Scrivere tutto in
+una questione e poi implementare significa aver adempiuto
+al protocollo base (tracciare il lavoro) ma aver violato
+l'arricchimento fasi (produrre i documenti che guidano
+l'implementazione).
+
+Se l'agente ha le conoscenze per implementare ma i
+documenti di progetto non esistono ancora, la cosa
+corretta da fare è scrivere i documenti, non il codice.
+
+Si consiglia di inserire nel CLAUDE.md dell'opera un
+richiamo a questo principio (vedi template claude-md).
+
+---
+
 ## Fasi e approvazioni
 
 | Fase | Nome | Scopo | Approvazione per procedere |
