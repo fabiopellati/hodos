@@ -76,3 +76,4 @@ processo appartengono a chi governa.
 3. Svolgere il lavoro nel normale ciclo di realizzazione
 4. Compilare la sezione Response RFC e restituire il documento a Team-B
 5. Chiudere la questione
+
