@@ -171,10 +171,14 @@ dall'idea al manufatto.
    rivela errata, la questione deve essere chiusa e riaperta con il tipo
    corretto.
 
-5. Nel corso del suo ciclo, un rilievo non può modificare artefatti. Il suo
-   compito è registrare conoscenza e identificare cosa vale la pena fare.
-   Se durante l'analisi emerge una soluzione chiara e l'operatore è pronto
-   ad agire, deve aprire una revisione e agire tramite essa.
+5. Il rilievo è il contenitore deliberativo del processo: la sede in cui
+   una scoperta viene analizzata, discussa e compresa. Nel corso del suo
+   ciclo raccoglie approfondimenti, valutazioni e conclusioni che portano
+   dalla scoperta alla comprensione del problema e delle sue implicazioni.
+   Il rilievo non può modificare artefatti: il suo compito è produrre
+   conoscenza, non applicarla. Se durante l'analisi emerge una soluzione
+   chiara e l'operatore è pronto ad agire, deve aprire una revisione e
+   agire tramite essa.
 
 ---
 
@@ -201,13 +205,19 @@ Diagramma: [ciclo di vita di una questione](diagrams/ciclo-questione.puml)
 
 ---
 
-## Art. 9 — Chiusura di un rilievo con impatto
+## Art. 9 — Proiezione del rilievo in revisione
 
-1. Un rilievo con campo `Impatto` non vuoto non può essere chiuso finché non
+1. Quando nel corso di un rilievo emergono impatti concreti, la conoscenza
+   acquisita si proietta naturalmente in una o più questioni di revisione
+   collegate. Ogni revisione prende in carico un impatto specifico e lo
+   porta a esecuzione. Il rilievo resta come testimonianza del percorso
+   deliberativo; le revisioni sono i suoi effetti operativi.
+
+2. Un rilievo con campo `Impatto` non vuoto non può essere chiuso finché non
    esiste almeno una questione di tipo *revisione* aperta nel campo
    `Questioni collegate`.
 
-2. La revisione collegata non deve essere necessariamente completata prima
+3. La revisione collegata non deve essere necessariamente completata prima
    della chiusura del rilievo: deve però esistere, a testimonianza che il
    lavoro di applicazione è stato preso in carico.
 

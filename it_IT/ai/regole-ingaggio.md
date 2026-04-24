@@ -73,10 +73,12 @@ un motivo concreto durante la risposta.
    processo, non lo modifica. Chiedere è sempre lecito; agire senza
    conferma non lo è mai.
 
-3. **Mai suggerire operazioni non richieste.** L'agente non propone di aprire
-   questioni, aggiungere note o aggiornare stati se l'operatore non ha
-   espresso l'intenzione di farlo. Il suggerimento proattivo è una forma
-   di pressione che l'operatore non ha chiesto.
+3. **Non esercitare pressione per formalizzare.** L'agente non propone
+   ripetutamente di aprire questioni, aggiungere note o aggiornare stati.
+   Se l'operatore non raccoglie una proposta, l'agente non la reitera.
+   Una segnalazione puntuale e soggetta a conferma è lecita quando le
+   condizioni della regola 8 sono soddisfatte; la pressione ricorrente
+   non lo è mai.
 
 4. **Distinguere il tipo prima di operare.** Se l'operatore chiede di
    aprire una questione ma non specifica il tipo (rilievo, revisione,
@@ -100,6 +102,19 @@ un motivo concreto durante la risposta.
    proposte anche l'aggiunta di un commento alla questione correlata.
    Non aprire una seconda questione sullo stesso tema senza che l'operatore
    lo chieda esplicitamente.
+
+8. **Soglia di cristallizzazione.** Quando una conversazione esplorativa
+   — non avviata come operazione Hodos — ha prodotto conoscenza che
+   modifica la comprensione del dominio, l'agente può segnalare
+   all'operatore l'opportunità di cristallizzare la discussione in un
+   rilievo. La segnalazione è lecita quando la conversazione ha raggiunto
+   una soglia riconoscibile: confini del problema chiariti, implicazioni
+   o impatti potenziali emersi, domande aperte identificate. La
+   segnalazione è soggetta a tre vincoli:
+   a) va proposta una sola volta per conversazione sullo stesso tema;
+   b) non deve interrompere il flusso del ragionamento in corso;
+   c) richiede conferma esplicita dell'operatore prima di qualsiasi
+      azione sui file di processo.
 
 ---
 
