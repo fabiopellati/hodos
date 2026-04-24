@@ -70,6 +70,15 @@ un punto di ingresso (`0-design.md`) e documenti di approfondimento numerati
 copre l'intero pacchetto. La scelta tra design semplice e articolato è di chi
 governa l'unità.
 
+**Evoluzione**
+Artefatto che documenta il passaggio da uno stato del design a un altro
+per un'unità matura in P2. Descrive il delta (cosa cambia e perché),
+viene approvata prima della realizzazione e resta nella directory
+dell'unità come documento storico congelato. Il file si chiama
+`EVO-{N}-{titolo}.md` con numerazione progressiva locale all'unità.
+Le modifiche minori (entro i pattern esistenti) non richiedono
+un'evoluzione e si gestiscono con un BL in `2-attivita.md`.
+
 **Artefatto consolidato**
 Documento che rappresenta lo stato corrente della verità in una fase. Viene
 aggiornato in-place durante i cicli di affinamento. Distinto da `questioni.md` e

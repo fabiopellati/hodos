@@ -222,6 +222,73 @@ ciclo Hodos e produce una release approvata taggata su `main`.
 
 ---
 
+## Evoluzione di unità mature
+
+Quando un'unità è stata consegnata e i suoi documenti di design
+riflettono lo stato corrente, le modifiche successive si gestiscono
+in funzione della loro scala.
+
+### Modifiche minori
+
+Una modifica minore è una variazione entro i pattern esistenti
+dell'unità: un nuovo filtro, un campo aggiuntivo, una regola di
+validazione. Non introduce nuovi scenari d'uso, non modifica il
+modello dati o le transizioni di stato, non ha impatto su altre
+unità.
+
+Il flusso è un BL in `2-attivita.md` che prescrive nella sezione
+Richiesta sia la realizzazione sia l'aggiornamento dei documenti
+di design impattati. I Criteri di verifica devono includere la
+coerenza tra il design aggiornato e la realizzazione. La
+tracciabilità è garantita da git (il commit modifica codice e
+documenti insieme) e dalla questione che motiva la variazione.
+
+### Modifiche significative — evoluzione
+
+Una modifica è significativa quando soddisfa uno o più di questi
+criteri:
+
+- introduce nuovi scenari d'uso
+- modifica il modello dati o le transizioni di stato
+- ha impatto su altre unità
+
+Questi criteri sono una guida per chi governa, non una regola
+binaria. La decisione sulla scala della modifica è di chi governa.
+
+Per le modifiche significative si redige un'**evoluzione**
+(`EVO-{N}-{titolo}.md`), un artefatto che documenta il passaggio
+da uno stato del design a un altro. L'evoluzione viene approvata
+prima della realizzazione. Dopo l'approvazione, la realizzazione
+avviene tramite BL in `2-attivita.md` e include l'aggiornamento
+dei documenti di design per assorbire il delta.
+
+L'evoluzione resta nella directory dell'unità come documento
+storico congelato: non si modifica dopo l'approvazione. Nel tempo,
+la sequenza delle evoluzioni forma una catena narrativa che spiega
+come l'unità è giunta allo stato corrente. Il design riflette
+sempre lo stato attuale; le evoluzioni spiegano le transizioni.
+
+### Evoluzioni cross-unità
+
+Un'evoluzione che coinvolge più unità richiede un documento di
+coordinamento che descrive la visione d'insieme: motivazione,
+coordinamento tra unità, flusso end-to-end. La collocazione segue
+una regola a due livelli:
+
+- Se tutte le unità coinvolte appartengono allo stesso aggregato,
+  l'evoluzione di coordinamento vive nella directory
+  dell'aggregato.
+- Se l'evoluzione attraversa aggregati diversi o coinvolge unità
+  isolate, l'evoluzione di coordinamento vive a livello di opera
+  in `documenti/evoluzioni/EVO-{N}-{titolo}.md`.
+
+Le evoluzioni locali generate nelle singole unità impattate vivono
+nella directory di ciascuna unità e fanno riferimento
+all'evoluzione di coordinamento. Ogni sequenza numerica è
+indipendente.
+
+---
+
 ## Design articolato per unità complesse
 
 Un'unità semplice usa un singolo `1-design.md` nella propria directory.
@@ -277,6 +344,7 @@ documenti/
     [unita-semplice]/
       1-design.md
       2-attivita.md
+      EVO-1-titolo.md        <- evoluzione (se presente)
     [unita-complessa]/
       0-design.md
       1-obiettivi.md
@@ -285,9 +353,13 @@ documenti/
       4-vincoli.md
       5-struttura.md
       2-attivita.md
+      EVO-1-titolo.md        <- evoluzione (se presente)
     [nome-aggregato]/
       design.md
+      EVO-1-titolo.md        <- evo cross-unità intra-aggregato
       [nome-unita]/
         1-design.md
         2-attivita.md
+  evoluzioni/                <- evo cross-unità inter-aggregato
+    EVO-1-titolo.md
 ```
