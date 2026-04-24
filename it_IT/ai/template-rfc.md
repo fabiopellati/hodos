@@ -79,10 +79,51 @@ La responsabilità della verifica resta in capo a Team-A.
 4. Al completamento, la sezione Response RFC viene compilata e restituita.
 5. La questione viene chiusa solo dopo la restituzione della risposta.
 
+## Nome del file
+
+Il file RFC si chiama `rfc-Q{NNN}-{descrizione}.md`, dove
+`{NNN}` è il numero della questione di origine e
+`{descrizione}` è uno slug kebab-case che riassume il
+contenuto. Il file va nella sottodirectory `rfc/` della
+directory che contiene questioni.md.
+
+Esempio: `rfc/rfc-Q042-migrazione-schema-utenti.md`
+
+## Prima di scrivere
+
+Non redigere il documento RFC senza aver completato
+questa sequenza.
+
+1. Verificare che esista una questione dedicata
+   all'esigenza che richiede intervento esterno. Se il
+   prompt dell'operatore riguarda un'esigenza non ancora
+   tracciata, aprire prima la questione.
+2. Verificare che la questione sia in stato
+   `pending-rfc`. Se è in stato diverso, chiedere
+   conferma all'operatore prima di procedere con la
+   transizione.
+3. Verificare di aver consultato questo template con
+   `get_template("rfc")` nella sessione corrente.
+   Non redigere basandosi sulla struttura ricordata da
+   sessioni precedenti.
+4. Redigere il documento seguendo la struttura
+   dichiarata in questo template.
+5. Nominare il file secondo la convenzione descritta
+   nella sezione precedente.
+6. Dopo il commit, aggiornare il campo
+   `**Commit generazione**` con il SHA del commit e
+   committare nuovamente con amend.
+
 ## Regole
 
-- La sezione di richiesta è immutabile dopo la generazione. I contributi successivi avvengono solo tramite Response RFC e commenti.
-- La RFC deve essere autocontenuta: Team-B non deve conoscere il progetto richiedente per capire cosa gli viene chiesto.
-- I Criteri di Accettazione descrivono il punto di vista di Team-A, non le istruzioni realizzative per Team-B.
-- La questione resta in `pending-rfc` per l'intero ciclo RFC, fino all'avvio effettivo del lavoro.
-- Il file RFC va nella sottodirectory `rfc/` della directory che contiene questioni.md.
+- La sezione di richiesta è immutabile dopo la
+  generazione. I contributi successivi avvengono solo
+  tramite Response RFC e commenti.
+- La RFC deve essere autocontenuta: Team-B non deve
+  conoscere il progetto richiedente per capire cosa
+  gli viene chiesto.
+- I Criteri di Accettazione descrivono il punto di
+  vista di Team-A, non le istruzioni realizzative per
+  Team-B.
+- La questione resta in `pending-rfc` per l'intero
+  ciclo RFC, fino all'avvio effettivo del lavoro.

@@ -45,6 +45,23 @@ significativi. Ometterla per concisione vanifica il valore del registro.
 
 ---
 
+## Retrieval obbligatorio del template
+
+Prima di redigere qualsiasi artefatto protocollare
+(questione, nota, commento, entry del mastro, RFC,
+voce di attività), l'agente deve consultare il template
+corrispondente con `get_template` nella sessione
+corrente. Non è sufficiente basarsi sulla struttura
+ricordata da sessioni precedenti o dal contesto già
+caricato: il knowledge base potrebbe essere stato
+aggiornato e la struttura ricordata potrebbe essere
+incompleta o non conforme.
+
+Il costo del retrieval è trascurabile rispetto al costo
+della correzione manuale di un artefatto non conforme.
+
+---
+
 ## Limiti dell'autonomia dell'agente
 
 L'agente non decide autonomamente:

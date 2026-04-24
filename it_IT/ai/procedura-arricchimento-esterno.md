@@ -67,11 +67,19 @@ Frontmatter:
 ```yaml
 ---
 tipo-artefatto: skill
+skill: arricchimento-{nome}
 documento: arricchimento-{nome}
 descrizione: {descrizione breve, una riga}
 autorita: operativa
 ---
 ```
+
+Il campo `skill` è obbligatorio: senza di esso i tool
+`get_skill` e `list_skills` non trovano l'artefatto.
+Il tool `search_knowledge` lo trova comunque perché
+usa la ricerca vettoriale senza filtrare per nome
+skill, il che rende il problema difficile da
+diagnosticare.
 
 Contenuto: istruzioni operative per l'agente. Ogni
 passo deve essere eseguibile senza contesto esterno.
