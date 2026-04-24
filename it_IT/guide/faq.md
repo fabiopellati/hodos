@@ -215,7 +215,7 @@ analisi, decisione e registrazione del risultato.
 Quando l'unità ha una complessità di dominio propria che richiede
 profondità analitica: scenari d'uso multipli, modelli dati articolati,
 transizioni di stato, vincoli specifici. Le unità infrastrutturali
-semplici continuano a usare un singolo `design.md`. La scelta è di chi
+semplici continuano a usare un singolo `1-design.md`. La scelta è di chi
 governa l'unità.
 
 **Qual è la struttura del design articolato?**

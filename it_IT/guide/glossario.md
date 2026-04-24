@@ -62,7 +62,7 @@ essere: conforme, parziale (con motivazione degli scostamenti), non conforme
 
 **Design articolato**
 Modalità di strutturazione del design di un'unità complessa in P2, alternativa
-al singolo `design.md`. Il design si articola in una directory di documenti con
+al singolo `1-design.md`. Il design si articola in una directory di documenti con
 un punto di ingresso (`0-design.md`) e documenti di approfondimento numerati
 (`1-obiettivi.md`, `2-scenari.md`, `3-requisiti.md`, `4-vincoli.md`,
 `5-struttura.md`). La struttura rispecchia quella dei documenti di progetto
@@ -79,7 +79,7 @@ aggiornato in-place durante i cicli di affinamento. Distinto da `questioni.md` e
 Ciclo breve di realizzazione all'interno di P2 per una singola unità.
 Segue il pattern: pianifica / realizza / verifica / chiudi. Ogni iterazione
 ha obiettivi definiti e si chiude con una verifica di quanto consegnato.
-Le iterazioni sono tracciate nell'attivita.md dell'unità.
+Le iterazioni sono tracciate nel `2-attivita.md` dell'unità.
 
 **Rilievo**
 Tipo di questione che porta conoscenza nuova — non nota prima dell'analisi — che
@@ -190,5 +190,5 @@ deviazioni dalla request originale.
 Elemento atomico di realizzazione in P2. Ha un design proprio, un'attività
 e un ciclo di iterazioni. Può essere raggruppata in un aggregato. Equivalente
 astratto di componente nel contesto software. Un'unità semplice usa un singolo
-`design.md`; un'unità complessa può usare un *design articolato* con più
+`1-design.md`; un'unità complessa può usare un *design articolato* con più
 documenti di approfondimento.

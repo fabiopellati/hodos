@@ -85,8 +85,8 @@ richiamo a questo principio (vedi template claude-md).
 
 **P2** (`documenti/unita/[nome]/`)
 Per ogni unità:
-- `design.md` — progettazione dettagliata (file singolo)
-- `attivita.md` — iterazioni con obiettivi, voci di attività, note
+- `1-design.md` — progettazione dettagliata (file singolo)
+- `2-attivita.md` — iterazioni con obiettivi, voci di attività, note
 
 Quando la complessità dell'unità lo richiede, il design può
 articolarsi in una directory di documenti anziché in un file
@@ -110,7 +110,7 @@ descrive la struttura e le regole applicabili.
 
 ## Design articolato per unità complesse
 
-Un'unità semplice usa un singolo `design.md` nella propria
+Un'unità semplice usa un singolo `1-design.md` nella propria
 directory. Un'unità complessa — con scenari d'uso multipli,
 modelli dati articolati, transizioni di stato e vincoli di
 dominio propri — può articolare il design in una directory di
@@ -129,7 +129,7 @@ documenti/unita/[nome-unita]/
                        dipendenze dalla piattaforma
   5-struttura.md    <- architettura, modello dati,
                        transizioni di stato, integrazioni
-  attivita.md       <- voci di attività (invariato)
+  2-attivita.md     <- voci di attività (invariato)
 ```
 
 ### Convenzioni
@@ -149,9 +149,9 @@ documenti/unita/[nome-unita]/
   il dominio applicativo a livello operativo.
 - Non tutti i documenti sono obbligatori: se un'unità non ha
   vincoli propri, il file `4-vincoli.md` non è necessario.
-- Il file `attivita.md` non ha prefisso numerico perché non è
-  un documento analitico ma lo strumento operativo che
-  accompagna la realizzazione.
+- Il file `2-attivita.md` mantiene il prefisso numerico per
+  coerenza con la convenzione adottata in P0 e P1. Il prefisso
+  indica l'ordine di lettura rispetto al design.
 
 ### Approvazione
 
@@ -169,6 +169,6 @@ documenti specifici prima di approvare il punto di ingresso.
 ## Regole
 
 - Ogni fase si chiude con un'approvazione esplicita prima di procedere alla successiva. L'AI non avanza autonomamente.
-- Rilievi e problemi inattesi vanno in questioni.md, non in attivita.md. L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva (nasce da un problema).
+- Rilievi e problemi inattesi vanno in questioni.md, non in 2-attivita.md. L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva (nasce da un problema).
 - Questioni che emergono in P3 e invalidano assunzioni di fasi precedenti richiedono questioni collegate con propagazione a ritroso: si risolve dalla fase radice verso quella più avanzata.
-- Per tracciare il ciclo in questioni.md: una questione di revisione per fase significativa, una per unità. I passi di esecuzione vivono in attivita.md, non come questioni separate.
+- Per tracciare il ciclo in questioni.md: una questione di revisione per fase significativa, una per unità. I passi di esecuzione vivono in 2-attivita.md, non come questioni separate.

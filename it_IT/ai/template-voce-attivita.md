@@ -1,7 +1,7 @@
 ---
 tipo-artefatto: template
 documento: voce-attivita
-descrizione: struttura canonica di una voce nel file attivita.md di un'unità in fase P2
+descrizione: struttura canonica di una voce nel file 2-attivita.md di un'unità in fase P2
 fase: P2
 ---
 
@@ -15,7 +15,7 @@ non proporre voci di attività all'operatore.
 Una voce di attività è un contratto in due tempi: all'apertura definisce cosa
 deve essere fatto e come verificarlo; alla chiusura documenta cosa è stato
 consegnato e ne verifica la conformità. Va aggiunta in append al file
-`attivita.md` dell'unità corrente.
+`2-attivita.md` dell'unità corrente.
 
 ## Struttura — Apertura
 

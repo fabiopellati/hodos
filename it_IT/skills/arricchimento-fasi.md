@@ -82,15 +82,45 @@ della realizzazione.
 **Directory**: `documenti/unita/[nome]/`
 
 **Artefatti attesi per unità**:
-- `design.md` — progettazione dettagliata (file singolo)
-- `attivita.md` — iterazioni con obiettivi, voci di attività, note
+- `1-design.md` — progettazione dettagliata (file singolo)
+- `2-attivita.md` — iterazioni con obiettivi, voci di attività, note
 
-Quando la complessità dell'unità lo richiede, il design può articolarsi in
-una directory di documenti: vedi la sezione dedicata più avanti.
+Il prefisso numerico indica l'ordine naturale di lettura,
+coerentemente con la convenzione adottata in P0 e P1.
+
+Quando la complessità dell'unità lo richiede, il `1-design.md` può
+articolarsi in una directory di documenti: vedi la sezione dedicata
+più avanti.
 
 **Nota**: rilievi e problemi inattesi vanno in `questioni.md`, non nell'attività.
 L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva
 (nasce da un problema).
+
+### Aggregato
+
+Un aggregato è un raggruppamento di unità per correlazione forte.
+Le unità dentro un aggregato hanno una relazione semantica più
+stretta tra loro che con il resto dell'opera, ma questo non esclude
+che abbiano relazioni con unità fuori dall'aggregato. Il valore è
+organizzativo e di navigazione: chi legge la struttura documentale
+trova le unità raggruppate per affinità di dominio anziché in un
+elenco piatto. Non è un confine rigido di isolamento.
+
+**Criterio di attivazione**: la decisione di raggruppare unità in
+un aggregato si prende nel piano esecutivo (P1), quando chi governa
+riconosce una correlazione forte che giustifica un raggruppamento
+semantico. Non si introduce un aggregato durante P2.
+
+**Artefatti dell'aggregato**:
+- `design.md` — motiva il criterio di raggruppamento: perché
+  queste unità stanno insieme, qual è la correlazione che le lega.
+  Non prescrive decisioni architetturali alle unità contenute.
+
+L'aggregato non ha un proprio `2-attivita.md`. Le unità gestiscono
+le proprie attività in autonomia.
+
+**Vincolo di profondità**: un aggregato contiene unità, mai altri
+aggregati.
 
 ---
 
@@ -165,13 +195,13 @@ registra apertura, progressione e chiusura.
 - YYYY-MM-DD closed — Unità completata e integrata.
 
 **Elaborati prodotti**
-- `documenti/unita/[nome]/design.md` (o `0-design.md` + documenti di approfondimento)
-- `documenti/unita/[nome]/attivita.md`
+- `documenti/unita/[nome]/1-design.md` (o `0-design.md` + documenti di approfondimento)
+- `documenti/unita/[nome]/2-attivita.md`
 ```
 
 La granularità minima è una questione per fase significativa e una per
 unità. Non si aprono questioni per ogni micro-passo: i passi di esecuzione
-vivono nell'`attivita.md` dell'unità.
+vivono nel `2-attivita.md` dell'unità.
 
 Questo modello vale per umano e AI. Quando l'AI elabora un ciclo P0-P4
 in autonomia, apre la questione di fase, produce gli elaborati nei propri
@@ -194,7 +224,7 @@ ciclo Hodos e produce una release approvata taggata su `main`.
 
 ## Design articolato per unità complesse
 
-Un'unità semplice usa un singolo `design.md` nella propria directory.
+Un'unità semplice usa un singolo `1-design.md` nella propria directory.
 Un'unità complessa — con scenari d'uso multipli, modelli dati articolati,
 transizioni di stato e vincoli di dominio propri — può articolare il
 design in una directory di documenti. La scelta tra le due forme è di
@@ -210,14 +240,14 @@ documenti/unita/[nome-unita]/
   3-requisiti.md    <- requisiti funzionali dell'unità
   4-vincoli.md      <- requisiti non funzionali, vincoli
   5-struttura.md    <- architettura, modello dati, integrazioni
-  attivita.md       <- voci di attività (invariato)
+  2-attivita.md     <- voci di attività (invariato)
 ```
 
 **Convenzioni**:
 
-- Il file `0-design.md` è il punto di ingresso che soddisfa la
-  prescrizione del protocollo. Deve contenere le decisioni chiave e un
-  indice ragionato dei documenti di approfondimento.
+- Il file `0-design.md` è il punto di ingresso che sostituisce
+  `1-design.md` nel caso articolato. Deve contenere le decisioni
+  chiave e un indice ragionato dei documenti di approfondimento.
 - I documenti da 1 a 5 articolano il design in profondità. Il prefisso
   numerico indica l'ordine di lettura, non l'ordine di produzione. Non
   tutti i documenti sono obbligatori.
@@ -245,8 +275,8 @@ documenti/
     7-piano-esecutivo.md
   unita/
     [unita-semplice]/
-      design.md
-      attivita.md
+      1-design.md
+      2-attivita.md
     [unita-complessa]/
       0-design.md
       1-obiettivi.md
@@ -254,11 +284,10 @@ documenti/
       3-requisiti.md
       4-vincoli.md
       5-struttura.md
-      attivita.md
+      2-attivita.md
     [nome-aggregato]/
       design.md
-      attivita.md
       [nome-unita]/
-        design.md
-        attivita.md
+        1-design.md
+        2-attivita.md
 ```
