@@ -41,6 +41,13 @@ direttamente da P2. Il percorso è un riferimento, non un vincolo.
 - `1-obiettivi.md` — obiettivi misurabili, vincoli, stakeholder, criteri di successo
 - `2-panoramica-funzionalita.md` — funzionalità in/out scope, priorità
 
+**Identificatori**: prima di redigere gli artefatti P0,
+consultare la guida `identificatori-item` con
+`search_knowledge("identificatori item documenti fase")`
+per applicare la convenzione di identificazione univoca
+agli item (obiettivi, stakeholder, vincoli, criteri di
+successo, funzionalità).
+
 **Approvazione**: approvazione di entrambi gli artefatti prima di aprire P1.
 
 ---
@@ -63,6 +70,14 @@ direttamente da P2. Il percorso è un riferimento, non un vincolo.
 - `5-vincoli.md` — requisiti non funzionali
 - `6-struttura.md` — struttura del risultato atteso
 - `7-piano-esecutivo.md` — unità di lavoro, ordine, milestone
+
+**Identificatori**: prima di redigere gli artefatti P1,
+consultare la guida `identificatori-item` con
+`search_knowledge("identificatori item documenti fase")`
+per applicare la convenzione di identificazione univoca
+agli item (scenari, requisiti funzionali, vincoli non
+funzionali, decisioni strutturali) e le regole di
+tracciabilità cross-documento.
 
 **Approvazione**: approvazione del piano esecutivo. Il piano autorizza l'avvio
 della realizzazione.
