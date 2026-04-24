@@ -215,7 +215,7 @@ e chiude la questione quando la fase è verificata e approvata.
 Dopo P4 approvato e prima release taggata su `main`, l'opera entra nel
 regime iterativo post-release. La definizione normativa del ciclo —
 condizioni di ingresso, modello iterativo, ruolo del backlog, caso hotfix —
-è in `ai/ciclo-post-release.md`.
+è in `../ai/ciclo-post-release.md`.
 
 Operativamente, ogni ciclo post-release si traccia con questioni nel normale
 ciclo Hodos e produce una release approvata taggata su `main`.

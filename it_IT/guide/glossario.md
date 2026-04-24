@@ -42,53 +42,10 @@ Tipo di questione che segnala un comportamento o risultato difforme da quanto
 atteso. Distinto da *rilievo* e *revisione*: non porta conoscenza nuova né
 corregge un artefatto, ma indica che qualcosa non funziona come dovrebbe.
 
-**Aggregato**
-Insieme di unità correlate che condividono un obiettivo comune in P2. Può
-contenere più unità ma non altri aggregati. Equivalente astratto di modulo
-o epic nel contesto software.
-
-**Voce di attività**
-Unità di lavoro pianificata in P2 per la realizzazione di un'unità.
-Funziona come contratto in due tempi: all'apertura definisce la richiesta e
-i criteri di verifica; alla chiusura documenta la consegna e la conformità
-rispetto alla richiesta originale. Distinta dalla questione, che è reattiva;
-la voce di attività è proattiva — nasce dalla pianificazione, non da un problema.
-
-**Conformità** (attività)
-Verifica che quanto realizzato soddisfi la richiesta originale della voce di
-attività. Valutata rispetto ai Criteri di verifica definiti all'apertura. Può
-essere: conforme, parziale (con motivazione degli scostamenti), non conforme
-(con motivazione).
-
-**Design articolato**
-Modalità di strutturazione del design di un'unità complessa in P2, alternativa
-al singolo `1-design.md`. Il design si articola in una directory di documenti con
-un punto di ingresso (`0-design.md`) e documenti di approfondimento numerati
-(`1-obiettivi.md`, `2-scenari.md`, `3-requisiti.md`, `4-vincoli.md`,
-`5-struttura.md`). La struttura rispecchia quella dei documenti di progetto
-(P0/P1) applicata alla scala dell'unità. L'approvazione del punto di ingresso
-copre l'intero pacchetto. La scelta tra design semplice e articolato è di chi
-governa l'unità.
-
-**Evoluzione**
-Artefatto che documenta il passaggio da uno stato del design a un altro
-per un'unità matura in P2. Descrive il delta (cosa cambia e perché),
-viene approvata prima della realizzazione e resta nella directory
-dell'unità come documento storico congelato. Il file si chiama
-`EVO-{N}-{titolo}.md` con numerazione progressiva locale all'unità.
-Le modifiche minori (entro i pattern esistenti) non richiedono
-un'evoluzione e si gestiscono con un BL in `2-attivita.md`.
-
 **Artefatto consolidato**
 Documento che rappresenta lo stato corrente della verità in una fase. Viene
 aggiornato in-place durante i cicli di affinamento. Distinto da `questioni.md` e
 `mastro.md` che sono strumenti di governo del processo.
-
-**Iterazione**
-Ciclo breve di realizzazione all'interno di P2 per una singola unità.
-Segue il pattern: pianifica / realizza / verifica / chiudi. Ogni iterazione
-ha obiettivi definiti e si chiude con una verifica di quanto consegnato.
-Le iterazioni sono tracciate nel `2-attivita.md` dell'unità.
 
 **Rilievo**
 Tipo di questione che porta conoscenza nuova — non nota prima dell'analisi — che
@@ -102,12 +59,6 @@ la soluzione non è chiara, o perché la decisione spetta a qualcun altro.
 Esempio: durante l'analisi emerge che un requisito contraddice un vincolo già
 documentato. Il problema è chiaro, ma la direzione da prendere no — rilievo.
 Se invece la direzione è chiara e si è pronti ad agire, aprire una *revisione*.
-
-**Approvazione**
-Punto di approvazione esplicita tra una fase e la successiva. Il passaggio
-alla fase successiva non può avvenire senza che l'approvazione sia stata
-ottenuta. Come si materializza operativamente è una scelta lasciata a chi
-adotta la metodologia.
 
 **Questione**
 Problema aperto che deve essere risolto prima di procedere. Può essere di
@@ -139,11 +90,6 @@ immutabile dopo la creazione. Include una sezione di intestazione con l'indice
 e lo stato corrente di ogni questione. Quando una questione viene chiusa, viene
 rimossa dal file.
 
-**Fase**
-Periodo del ciclo di lavoro con scopo, artefatti e approvazione definiti. Hodos
-non prescrive fasi obbligatorie: il percorso P0-P4 è un arricchimento opzionale
-descritto nello skill `arricchimento-fasi.md`.
-
 **Opera**
 Istanza di lavoro organizzato che adotta Hodos come metodologia di processo.
 Un'opera ha una durata definita, produce elaborati propri (in `documenti/`) e
@@ -159,11 +105,6 @@ Il prepend riguarda l'ordine tra le entry: le sezioni strutturali del documento
 (intestazione, indice, note a piè) restano nelle loro posizioni. Usato per
 `mastro.md` e `questioni.md`. Equivalente funzionale di *append-only* con
 ordine invertito.
-
-**Propagazione a ritroso**
-Meccanismo per cui una questione emersa in una fase avanzata invalida assunzioni
-di fasi precedenti, generando questioni collegate nelle fasi impattate. Le
-questioni propagate sono collegate esplicitamente alla questione di origine.
 
 **Revisione**
 Tipo di questione che corregge o affina un artefatto esistente. Distinta da
@@ -195,9 +136,4 @@ Sezione della RFC compilata dal team ricevente al completamento del lavoro.
 Contiene: decisione presa, descrizione di quanto realizzato, eventuali
 deviazioni dalla request originale.
 
-**Unità**
-Elemento atomico di realizzazione in P2. Ha un design proprio, un'attività
-e un ciclo di iterazioni. Può essere raggruppata in un aggregato. Equivalente
-astratto di componente nel contesto software. Un'unità semplice usa un singolo
-`1-design.md`; un'unità complessa può usare un *design articolato* con più
-documenti di approfondimento.
+
