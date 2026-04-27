@@ -25,10 +25,21 @@ modifica.
 
 | Termine playbook | Termine opus | Motivazione |
 |---|---|---|
-| `componente` | `unità` | Neutro, applicabile a qualsiasi dominio |
+| `componente` (struttura) | `parte` | Elemento della struttura del risultato atteso |
+| `componente` (lavoro) | `unità` | Pacchetto di lavoro con design proprio e ciclo di iterazioni |
 | `modulo` | `aggregato` | Insieme di unità correlate, senza implicazioni tecniche |
 | `epic` | `aggregato` | Allineato alla sostituzione di modulo |
 | `bug` | `difetto` | Più generico, non implica software |
+
+Il termine playbook `componente` porta due accezioni distinte che
+nel lessico di opus vengono rese da due termini diversi. La
+**parte** è un elemento della struttura del risultato (che cosa
+compone l'opera) e si registra in `6-struttura.md` attraverso le
+decisioni strutturali (DST). L'**unità** è un pacchetto di lavoro
+per la realizzazione (come si costruisce l'opera) e si pianifica
+in `7-piano-esecutivo.md` per essere realizzata in P2. Le due
+viste sono distinte e la cardinalità della relazione fra parti e
+unità è scelta di chi governa l'opera.
 
 ---
 

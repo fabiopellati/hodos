@@ -80,7 +80,7 @@ richiamo a questo principio (vedi template claude-md).
 - `3-scenari.md` — scenari d'uso rilevanti
 - `4-requisiti.md` — requisiti funzionali
 - `5-vincoli.md` — requisiti non funzionali
-- `6-struttura.md` — struttura del risultato atteso
+- `6-struttura.md` — struttura del risultato atteso: parti che lo compongono e decisioni strutturali (DST)
 - `7-piano-esecutivo.md` — unità di lavoro, ordine, milestone
 
 **P2** (`documenti/unita/[nome]/`)

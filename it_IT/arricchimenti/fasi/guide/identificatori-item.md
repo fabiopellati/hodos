@@ -80,13 +80,23 @@ Gli item dei documenti P1 usano i prefissi seguenti.
   prestazione, sicurezza o altro vincolo non funzionale.
 - **DST** — Decisione strutturale. Definita in
   `6-struttura.md`. Rappresenta una scelta progettuale
-  significativa sulla struttura del risultato.
+  significativa sulla struttura del risultato. Le DST
+  determinano implicitamente le *parti* che
+  compongono l'opera: una parte può emergere da una
+  o più DST e una DST può determinare la forma di una
+  o più parti.
 
 Il piano esecutivo (`7-piano-esecutivo.md`) non
 introduce un prefisso proprio: le unità di lavoro
 definite nel piano sono identificate dal nome che
-assumeranno nella fase P2 e riferiscono gli item delle
-fasi precedenti.
+assumeranno nella fase P2 e riferiscono esplicitamente
+le decisioni strutturali (DST) che realizzano,
+oltre agli altri item delle fasi precedenti che le
+motivano. La cardinalità della relazione fra parti
+(DST) e unità è scelta di chi governa l'opera: può
+essere uno-a-uno, molti-a-molti o mista. Il piano
+esecutivo dichiara esplicitamente, per ciascuna unità,
+le DST coinvolte.
 
 ---
 

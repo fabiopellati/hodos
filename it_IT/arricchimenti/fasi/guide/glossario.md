@@ -84,6 +84,18 @@ e si chiude con una verifica di quanto consegnato. Le
 iterazioni sono tracciate nel `2-attivita.md`
 dell'unità.
 
+**Parte**
+Elemento della struttura del risultato atteso. Le parti
+emergono dalle decisioni strutturali (DST) registrate
+in `6-struttura.md` e descrivono *cosa* compone
+l'opera. Sono distinte dalle unità, che descrivono
+*come* l'opera si realizza. La corrispondenza fra
+parti e unità è scelta di chi governa l'opera: può
+essere uno-a-uno, molti-a-molti o mista, secondo
+quanto risulta più adatto al dominio. Equivalente
+astratto della parte architetturale (o del componente
+strutturale) nel contesto software.
+
 **Propagazione a ritroso**
 Meccanismo per cui una questione emersa in una fase
 avanzata invalida assunzioni di fasi precedenti,
@@ -92,13 +104,20 @@ questioni propagate sono collegate esplicitamente alla
 questione di origine.
 
 **Unità**
-Elemento atomico di realizzazione in P2. Ha un design
-proprio, un'attività e un ciclo di iterazioni. Può
-essere raggruppata in un aggregato. Equivalente
-astratto di componente nel contesto software. Un'unità
-semplice usa un singolo `1-design.md`; un'unità
-complessa può usare un *design articolato* con più
-documenti di approfondimento.
+Pacchetto di lavoro con design proprio e ciclo di
+iterazioni in P2. Distinta dalla *parte*, che descrive
+la struttura del risultato: l'unità descrive *come*
+si realizza una porzione dell'opera, non *cosa* la
+compone. Una unità può raggruppare la realizzazione di
+una o più parti, una parte può essere realizzata da
+una o più unità, e la cardinalità è scelta di chi
+governa. Una unità può essere raggruppata in un
+aggregato. Equivalente astratto del pacchetto di
+lavoro (o del componente di realizzazione) nel
+contesto software. Un'unità semplice usa un singolo
+`1-design.md`; un'unità complessa può usare un
+*design articolato* con più documenti di
+approfondimento.
 
 **Voce di attività**
 Unità di lavoro pianificata in P2 per la realizzazione
