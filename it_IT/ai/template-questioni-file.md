@@ -19,8 +19,7 @@ nella directory di processo.
 
 ## Indice
 
-| ID | Titolo | Stato |
-|---|---|---|
+- **QUESTIONE-{ID}** — {Titolo} — {stato}
 
 > Ultima questione inserita: —
 > Ultima questione chiusa: —
@@ -28,7 +27,11 @@ nella directory di processo.
 
 ## Regole
 
-- L'indice contiene tre colonne: ID, Titolo, Stato. Non aggiungere colonne extra.
-- Le questioni vengono inserite in cima al file, dopo la sezione Indice e il separatore `---`.
-- L'indice viene aggiornato coerentemente ad ogni apertura, cambio di stato e chiusura.
-- Per la struttura di una singola questione, consultare il template `questione`.
+- L'indice è un elenco puntato con tre campi: ID in grassetto, titolo,
+  stato. Non aggiungere campi extra.
+- Le questioni vengono inserite in cima al file, dopo la sezione Indice
+  e il separatore `---`.
+- L'indice viene aggiornato coerentemente ad ogni apertura, cambio di
+  stato e chiusura.
+- Per la struttura di una singola questione, consultare il template
+  `questione`.

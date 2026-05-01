@@ -57,10 +57,10 @@ COMMENTO-001 — {YYYY-MM-DD}
 
 ## Aggiornamento indice
 
-Aggiungere in cima alla tabella dell'indice:
+Aggiungere in cima all'elenco dell'indice:
 
 ```markdown
-| QUESTIONE-{ID} | {Titolo} | open |
+- **QUESTIONE-{ID}** — {Titolo} — open
 ```
 
 Aggiornare la nota:

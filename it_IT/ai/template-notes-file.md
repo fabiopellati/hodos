@@ -19,14 +19,16 @@ non tutte le opere lo usano.
 
 ## Indice
 
-| ID | Descrizione | Data |
-|---|---|---|
+- **NOTA-{ID}** — {Descrizione} — {YYYY-MM-DD}
 
 > Ultima nota inserita: —
 ```
 
 ## Regole
 
-- Le note vengono inserite in cima al file, dopo la sezione Indice e il separatore.
+- L'indice è un elenco puntato con tre campi: ID in grassetto,
+  descrizione, data. Non aggiungere campi extra.
+- Le note vengono inserite in cima al file, dopo la sezione Indice e
+  il separatore.
 - L'indice viene aggiornato ad ogni inserimento.
 - Per la struttura di una singola nota, consultare il template `nota`.

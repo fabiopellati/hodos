@@ -120,6 +120,63 @@ riferimento. Termini come "buono", "veloce", "semplice" non sono requisiti.
 
 ---
 
+## Formato strutturato: elenchi nidificati
+
+Gli artefatti Hodos usano l'**elenco nidificato** come formato standard
+per qualsiasi struttura che in altri contesti potrebbe essere resa con
+una tabella markdown.
+
+La scelta si motiva con la versatilità del formato. L'elenco nidificato
+copre l'intero spettro di complessità strutturale senza richiedere
+formati diversi per casi diversi: nella sua forma più semplice, con
+profondità uno, è equivalente a un elenco piatto; nelle forme più
+articolate, con raggruppamenti espliciti, copre anche strutture
+relazionali che la tabella rende solo con la griglia visiva.
+
+Le tabelle markdown, al contrario, non si riformattano correttamente
+sotto strumenti come `pandoc --columns=80`: le righe lunghe vengono
+spezzate in modo irregolare e il documento diventa illeggibile.
+
+Forme canoniche per tipo di struttura:
+
+Indice (ID + descrizione + attributo):
+```markdown
+- **QUESTIONE-{ID}** — {Titolo} — {stato}
+- **NOTA-{ID}** — {Descrizione} — {YYYY-MM-DD}
+```
+
+Lista di definizioni (termine + significato):
+```markdown
+- `open` — Creata, da analizzare
+- `in-progress` — Analisi in corso
+```
+
+Flusso sequenziale (passi ordinati con attori):
+```markdown
+1. Team-A — genera RFC e consegna a Team-B (`pending-rfc`)
+2. Team-B — compila Response RFC e restituisce (`pending-rfc`)
+```
+
+Struttura relazionale con raggruppamento (da/a con condizione):
+```markdown
+- Da `open`:
+  - → `in-progress`: analisi avviata
+  - → `deferred`: rimandato con motivazione
+```
+
+Corrispondenze bidirezionali (mappa terminologica):
+```markdown
+- `termine-A` → `termine-B`: motivazione della sostituzione
+```
+
+Le tabelle markdown non devono comparire negli artefatti Hodos.
+L'unica eccezione ammessa è il caso in cui la struttura a griglia
+sia realmente necessaria per contenuto a più dimensioni che non può
+essere reso con elenchi senza perdita di chiarezza: in quel caso,
+documentare esplicitamente la ragione.
+
+---
+
 ## Istruzione operativa
 
 Identifica il tipo di documento dal percorso e dalla struttura del file,

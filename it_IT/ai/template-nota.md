@@ -32,10 +32,10 @@ COMMENTO-{NNN} — {YYYY-MM-DD}
 
 ## Aggiornamento indice
 
-Aggiungere in cima alla tabella:
+Aggiungere in cima all'elenco:
 
 ```markdown
-| NOTA-{ID} | {Descrizione sintetica} | {YYYY-MM-DD} |
+- **NOTA-{ID}** — {Descrizione sintetica} — {YYYY-MM-DD}
 ```
 
 Aggiornare la nota a fondo file:

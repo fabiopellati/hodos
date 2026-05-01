@@ -18,14 +18,13 @@ ricevente compila la sezione Response RFC e restituisce il documento.
 
 ## RFC Outbound
 
-| Passo | Chi | Azione | Stato questione |
-|---|---|---|---|
-| 1 | Team-A | questione richiede intervento esterno | in-progress |
-| 2 | Team-A | genera RFC e consegna a Team-B | pending-rfc |
-| 3 | Team-B | compila Response RFC e restituisce | pending-rfc |
-| 4 | Team-A | avvia verifica | in-verification |
-| 5a | Team-A | verifica soddisfatta | closed |
-| 5b | Team-A | verifica non soddisfatta | in-progress |
+1. Team-A — questione richiede intervento esterno (`in-progress`)
+2. Team-A — genera RFC e consegna a Team-B (`pending-rfc`)
+3. Team-B — compila Response RFC e restituisce (`pending-rfc`)
+4. Team-A — avvia verifica (`in-verification`)
+5. Team-A — esito verifica:
+   - soddisfatta → `closed`
+   - non soddisfatta → `in-progress`
 
 La questione rimane `pending-rfc` fino all'avvio effettivo del lavoro da parte
 di Team-B. Ricevere la risposta non è sufficiente per passare a in-verification:
@@ -38,15 +37,13 @@ la questione. La responsabilità della verifica resta in capo a Team-A.
 
 ## RFC Inbound
 
-| Passo | Chi | Azione |
-|---|---|---|
-| 1 | Team-B | riceve RFC da Team-A |
-| 2 | Team-B | valuta RFC prima di aprire questioni |
-| 3 | Team-B | apre le questioni necessarie |
-| 4 | Team-B | segue il normale ciclo Hodos per ciascuna questione |
-| 5 | Team-B | compila sezione Response RFC |
-| 6 | Team-B | consegna Response a Team-A |
-| 7 | Team-B | chiude le questioni aperte |
+1. Team-B — riceve RFC da Team-A
+2. Team-B — valuta RFC prima di aprire questioni
+3. Team-B — apre le questioni necessarie
+4. Team-B — segue il normale ciclo Hodos per ciascuna questione
+5. Team-B — compila sezione Response RFC
+6. Team-B — consegna Response a Team-A
+7. Team-B — chiude le questioni aperte
 
 Il passo 7 (chiusura questioni) non può avvenire prima del passo 6 (consegna Response).
 La chiusura è il completamento del ciclo RFC nella sua interezza, inclusa la restituzione.

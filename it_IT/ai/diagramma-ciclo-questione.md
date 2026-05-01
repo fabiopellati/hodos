@@ -13,33 +13,37 @@ Riferimento visivo: `../diagrams/ciclo-questione.puml`
 
 ## Stati
 
-| Stato | Significato operativo |
-|---|---|
-| `open` | Creata, da analizzare |
-| `in-progress` | Analisi in corso |
-| `pending-approval` | Proposta redatta, in attesa di approvazione umana |
-| `pending-rfc` | RFC in corso: dall'invio fino all'avvio effettivo del lavoro da parte dell'attore ricevente |
-| `in-verification` | Risposta RFC ricevuta, verifica in corso |
-| `deferred` | Rimandato con motivazione esplicita |
-| `closed` | Risolto — rimosso da questioni.md, registrato in mastro.md |
+- `open` — Creata, da analizzare
+- `in-progress` — Analisi in corso
+- `pending-approval` — Proposta redatta, in attesa di approvazione umana
+- `pending-rfc` — RFC in corso: dall'invio fino all'avvio effettivo del
+  lavoro da parte dell'attore ricevente
+- `in-verification` — Risposta RFC ricevuta, verifica in corso
+- `deferred` — Rimandato con motivazione esplicita
+- `closed` — Risolto: rimosso da questioni.md, registrato in mastro.md
 
 ---
 
 ## Transizioni valide
 
-| Da | A | Condizione |
-|---|---|---|
-| — | `open` | apertura questione |
-| `open` | `in-progress` | analisi avviata |
-| `open` | `deferred` | rimandato con motivazione |
-| `in-progress` | `pending-approval` | proposta redatta |
-| `in-progress` | `pending-rfc` | richiede intervento esterno via RFC |
-| `in-progress` | `deferred` | rimandato con motivazione |
-| `pending-approval` | `in-progress` | revisione richiesta dall'approvatore |
-| `pending-approval` | `closed` | approvato, precondizioni soddisfatte |
-| `pending-rfc` | `in-verification` | risposta RFC ricevuta |
-| `in-verification` | `open` | verifica completata |
-| `deferred` | `open` | ripreso |
+- Da —:
+  - → `open`: apertura questione
+- Da `open`:
+  - → `in-progress`: analisi avviata
+  - → `deferred`: rimandato con motivazione
+- Da `in-progress`:
+  - → `pending-approval`: proposta redatta
+  - → `pending-rfc`: richiede intervento esterno via RFC
+  - → `deferred`: rimandato con motivazione
+- Da `pending-approval`:
+  - → `in-progress`: revisione richiesta dall'approvatore
+  - → `closed`: approvato, precondizioni soddisfatte
+- Da `pending-rfc`:
+  - → `in-verification`: risposta RFC ricevuta
+- Da `in-verification`:
+  - → `open`: verifica completata
+- Da `deferred`:
+  - → `open`: ripreso
 
 Transizioni non elencate non sono valide.
 

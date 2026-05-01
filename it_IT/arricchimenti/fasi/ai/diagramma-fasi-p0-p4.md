@@ -60,13 +60,16 @@ richiamo a questo principio (vedi template claude-md).
 
 ## Fasi e approvazioni
 
-| Fase | Nome | Scopo | Approvazione per procedere |
-|---|---|---|---|
-| P0 | Definizione | Capire il problema prima di qualsiasi soluzione | Si, prima di aprire P1 |
-| P1 | Analisi | Tradurre obiettivi in specifiche realizzabili | Si (piano esecutivo), prima di aprire P2 |
-| P2 | Realizzazione | Realizzare quanto pianificato, unità per unità | Per ogni unità: design prima delle iterazioni |
-| P3 | Integrazione | Verificare il risultato nel suo insieme | Si, prima di aprire P4 |
-| P4 | Consegna | Portare a destinazione una versione stabile | Si (approvazione consegna) |
+- **P0 — Definizione**: capire il problema prima di qualsiasi soluzione
+  - Approvazione richiesta: sì, prima di aprire P1
+- **P1 — Analisi**: tradurre obiettivi in specifiche realizzabili
+  - Approvazione richiesta: sì (piano esecutivo), prima di aprire P2
+- **P2 — Realizzazione**: realizzare quanto pianificato, unità per unità
+  - Approvazione richiesta: per ogni unità, design prima delle iterazioni
+- **P3 — Integrazione**: verificare il risultato nel suo insieme
+  - Approvazione richiesta: sì, prima di aprire P4
+- **P4 — Consegna**: portare a destinazione una versione stabile
+  - Approvazione richiesta: sì (approvazione consegna)
 
 ---
 

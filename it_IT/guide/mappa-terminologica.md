@@ -10,26 +10,27 @@ modifica.
 
 ## Fasi e ciclo di vita
 
-| Termine playbook | Termine opus | Motivazione |
-|---|---|---|
-| `P2 — Development` | `P2 — Realizzazione` | Copre produzione di qualsiasi artefatto, non solo software |
-| `sviluppo` | `realizzazione` | Idem |
-| `implementare` | `realizzare` | Idem |
-| `implementazione` | `realizzazione` | Idem |
-| `P4 — Release` | `P4 — Consegna` | Release è termine software; consegna è universale |
-| `portare in produzione` | `consegnare` | Idem |
+- `P2 — Development` → `P2 — Realizzazione`: copre produzione di
+  qualsiasi artefatto, non solo software
+- `sviluppo` → `realizzazione`: idem
+- `implementare` → `realizzare`: idem
+- `implementazione` → `realizzazione`: idem
+- `P4 — Release` → `P4 — Consegna`: Release è termine software;
+  consegna è universale
+- `portare in produzione` → `consegnare`: idem
 
 ---
 
 ## Struttura progetto
 
-| Termine playbook | Termine opus | Motivazione |
-|---|---|---|
-| `componente` (struttura) | `parte` | Elemento della struttura del risultato atteso |
-| `componente` (lavoro) | `unità` | Pacchetto di lavoro con design proprio e ciclo di iterazioni |
-| `modulo` | `aggregato` | Insieme di unità correlate, senza implicazioni tecniche |
-| `epic` | `aggregato` | Allineato alla sostituzione di modulo |
-| `bug` | `difetto` | Più generico, non implica software |
+- `componente` (struttura) → `parte`: elemento della struttura del
+  risultato atteso
+- `componente` (lavoro) → `unità`: pacchetto di lavoro con design
+  proprio e ciclo di iterazioni
+- `modulo` → `aggregato`: insieme di unità correlate, senza
+  implicazioni tecniche
+- `epic` → `aggregato`: allineato alla sostituzione di modulo
+- `bug` → `difetto`: più generico, non implica software
 
 Il termine playbook `componente` porta due accezioni distinte che
 nel lessico di opus vengono rese da due termini diversi. La
@@ -45,12 +46,13 @@ unità è scelta di chi governa l'opera.
 
 ## Artefatti di analisi (P1)
 
-| Termine playbook | Termine opus | Motivazione |
-|---|---|---|
-| `use-cases.md` | `scenari.md` | Scenari d'uso senza il gergo software |
-| `specs-functional.md` | `requisiti.md` | Più generico di "functional specs" |
-| `specs-non-functional.md` | `vincoli.md` | Vincoli non funzionali: performance, qualità, limiti |
-| `architecture.md` | `struttura.md` | Struttura della soluzione, non architettura software |
+- `use-cases.md` → `scenari.md`: scenari d'uso senza il gergo software
+- `specs-functional.md` → `requisiti.md`: più generico di "functional
+  specs"
+- `specs-non-functional.md` → `vincoli.md`: vincoli non funzionali,
+  performance, qualità, limiti
+- `architecture.md` → `struttura.md`: struttura della soluzione, non
+  architettura software
 
 ---
 
