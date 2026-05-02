@@ -282,6 +282,14 @@ Diagramma: [ciclo di vita di una questione](diagrams/ciclo-questione.puml)
    interezza, inclusa la restituzione della risposta. Non è un atto
    separabile dalla consegna.
 
+**RFC Informativa**
+
+8. Una RFC può essere emessa come comunicazione unidirezionale verso un
+   attore esterno, senza attesa di risposta. In questo caso il documento
+   dichiara `Tipo: informativa` nell'intestazione e la questione di
+   origine non transita allo stato `pending-rfc`; il suo ciclo prosegue
+   indipendentemente dall'invio.
+
 Diagramma: [flusso RFC outbound e inbound](diagrams/flusso-rfc.puml)
 
 ---
