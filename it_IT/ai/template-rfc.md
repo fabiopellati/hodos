@@ -127,3 +127,16 @@ questa sequenza.
   Team-B.
 - La questione resta in `pending-rfc` per l'intero
   ciclo RFC, fino all'avvio effettivo del lavoro.
+- La sezione Richiesta può contenere un elenco di item
+  (BL o EVO) anziché una singola richiesta puntuale,
+  quando la RFC è usata per assegnare un pacchetto di
+  lavoro a un team esterno che svolge il ruolo di
+  operations. Il ciclo RFC si applica invariato.
+- Nel ciclo multi-round — quando Team-B rifiuta e
+  segnala un gap che governance deve analizzare prima
+  di procedere — i round intermedi si svolgono tramite
+  commenti alla RFC: Team-B documenta il rifiuto e il
+  gap come COMMENTO-NNN, governance risponde con il
+  commento successivo. La Response RFC è unica e
+  riservata alla risposta conclusiva definitiva, quella
+  su cui governance basa la verifica.

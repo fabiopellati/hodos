@@ -226,6 +226,37 @@ e chiude la questione quando la fase è verificata e approvata.
 
 ---
 
+## RFC di dispaccio verso operations esterno
+
+In P2 e nelle fasi successive, governance può dover delegare l'esecuzione
+di un pacchetto di BL o EVO a un team esterno che svolge il ruolo di
+operations senza accesso ai documenti di processo Hodos. In questo contesto
+la RFC è lo strumento di comunicazione corretto.
+
+**Quando usarla**: quando operations esterno deve ricevere un insieme di
+item da eseguire in autonomia e restituire evidenza del completamento per
+consentire la verifica da parte di governance.
+
+**Come funziona**:
+
+1. Governance apre una questione che traccia il dispaccio e la porta a
+   `pending-rfc`.
+2. Genera la RFC con la sezione Richiesta strutturata come elenco di BL
+   o EVO, ciascuno con contesto sufficiente per l'esecuzione autonoma.
+3. Team-B riceve la RFC, valuta e può accettare, rifiutare con motivazione
+   o posticipare.
+4. Se Team-B accetta, esegue il lavoro e compila la Response RFC.
+5. Governance verifica e chiude la questione.
+
+**Ciclo multi-round**: se Team-B rileva un gap che non può risolvere
+autonomamente, rifiuta e lo documenta come COMMENTO-NNN alla RFC. Governance
+analizza il gap, risponde con il commento successivo che chiarisce o risolve,
+e Team-B può procedere. La Response RFC è unica: è la risposta conclusiva
+definitiva. Il ciclo può iterarsi più volte; la questione resta in
+`pending-rfc` per l'intera durata.
+
+---
+
 ## Ciclo post-release
 
 Dopo P4 approvato e prima release taggata su `main`, l'opera entra nel

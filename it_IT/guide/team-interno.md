@@ -68,6 +68,19 @@ implicazioni e apre le questioni figlie se necessario. Chi realizza può
 materialmente ricevere il documento, ma l'interpretazione e le decisioni di
 processo appartengono a chi governa.
 
+**RFC di dispaccio** (verso operations esterno nell'arricchimento a fasi):
+
+Quando governance deve assegnare un pacchetto di BL o EVO a un team esterno
+che svolge il ruolo di operations senza accesso ai documenti di processo, la
+RFC è lo strumento corretto. La sezione Richiesta contiene un elenco degli
+item da eseguire invece di una singola richiesta puntuale. Il ciclo è quello
+RFC standard: questione a `pending-rfc`, RFC consegnata, risposta di Team-B,
+verifica, chiusura. Team-B può accettare, rifiutare con motivazione o
+posticipare. Se Team-B rifiuta per un gap che non riesce a risolvere, il round
+intermedio si svolge tramite commenti alla RFC: Team-B documenta il gap,
+governance risponde con l'analisi o il chiarimento. La Response RFC è unica e
+riservata alla risposta conclusiva su cui si basa la verifica.
+
 **RFC inbound** (da Team-B):
 
 1. Valutare la RFC ricevuta: determinare a quale fase appartiene il lavoro

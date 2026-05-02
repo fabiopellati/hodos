@@ -159,11 +159,34 @@ del documento, non dal nome file.
 La RFC è progettata per un ciclo bidirezionale con attesa della risposta.
 Per comunicare qualcosa a un team esterno senza bloccare una questione, usa
 una nota in `notes.md` che documenta cosa è stato comunicato e a chi: la
-nota non entra in `pending-rfc` e non blocca nessuna questione. In alternativa,
-alcuni team usano il formato RFC dichiarando il tipo nell'intestazione
-(`Tipo: informativa`) senza portare la questione a `pending-rfc`; il ciclo
-della questione di origine prosegue indipendentemente. Questa variante non è
-regolamentata dal protocollo.
+nota non entra in `pending-rfc` e non blocca nessuna questione. In alternativa
+è ammessa una RFC informativa: nel documento si dichiara `Tipo: informativa`
+nell'intestazione e la questione di origine non transita a `pending-rfc`,
+quindi il suo ciclo prosegue indipendentemente dall'invio.
+
+**Posso usare la RFC per assegnare un pacchetto di BL o EVO a operations esterno?**
+
+Sì. Nel contesto dell'arricchimento a fasi, governance può dover assegnare
+un pacchetto di lavoro a un team esterno che svolge il ruolo di operations
+senza accesso ai documenti di processo Hodos. In questo caso la RFC è lo
+strumento corretto: governance apre una questione che traccia il dispaccio,
+la porta a `pending-rfc` e genera la RFC. La sezione Richiesta contiene un
+elenco di BL o EVO da eseguire invece di una singola richiesta puntuale.
+Team-B può accettare, rifiutare con motivazione o posticipare. Il ciclo RFC
+si applica invariato: la questione resta in `pending-rfc` fino al completamento
+verificato da governance.
+
+**Come gestisco un ciclo RFC in cui Team-B rifiuta perché trova un gap?**
+
+Quando Team-B non può procedere perché ha identificato un gap che non riesce
+a risolvere autonomamente, lo segnala rifiutando e documentando il problema.
+Il round intermedio — rifiuto di Team-B e risposta di governance — si svolge
+tramite commenti alla RFC: Team-B aggiunge un COMMENTO-NNN che descrive il
+gap, governance analizza e risponde con il commento successivo che risolve o
+chiarisce. Quando il ciclo si stabilizza, Team-B esegue il lavoro e compila
+la Response RFC. La Response RFC è unica: è la risposta conclusiva definitiva,
+non un diario dei round. Questo ciclo può iterarsi più volte; la questione
+resta in `pending-rfc` per l'intera durata.
 
 ---
 
