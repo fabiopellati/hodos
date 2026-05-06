@@ -1,18 +1,19 @@
 ---
 tipo-artefatto: template
 documento: rfc
-descrizione: struttura canonica di un documento RFC e regole operative del ciclo outbound/inbound
+descrizione: struttura canonica di un documento RFC e regole operative dei cicli outbound, inbound e informativa
 fase: trasversale
 ---
 
 # Template — RFC
 
-Una RFC è un documento formale generato quando una questione richiede l'intervento
-di un attore esterno (Team-B). È bidirezionale: Team-A descrive la richiesta,
-Team-B compila la risposta nella sezione Response RFC e restituisce il documento.
+Una RFC è un documento formale generato quando una questione richiede
+il coinvolgimento di un attore esterno. È autocontenuta: leggibile senza
+conoscere la storia interna dell'opera richiedente.
 
-La RFC è autocontenuta: leggibile senza conoscere la storia interna dell'opera
-richiedente.
+Esistono tre tipi: outbound (bidirezionale, Team-A emette e Team-B risponde),
+inbound (bidirezionale, Team-B riceve ed esegue) e informativa
+(unidirezionale, senza attesa di risposta).
 
 ## Struttura del documento
 
@@ -20,6 +21,7 @@ richiedente.
 # RFC — {QUESTIONE-ID}
 
 **Data**: {YYYY-MM-DD}
+**Tipo**: {outbound | informativa — omettere per RFC inbound}
 **Commit generazione**: {SHA del commit che ha generato la RFC}
 **Da**: Team-A / {nome progetto}
 **A**: {Team-B}
@@ -78,6 +80,20 @@ La responsabilità della verifica resta in capo a Team-A.
 3. Viene aperta una questione appropriata nel normale ciclo Hodos.
 4. Al completamento, la sezione Response RFC viene compilata e restituita.
 5. La questione viene chiusa solo dopo la restituzione della risposta.
+
+## Ciclo informativa
+
+Una RFC Informativa è una comunicazione unidirezionale verso un attore
+esterno, senza attesa di risposta. Si distingue dalla RFC outbound per
+tre aspetti:
+
+- Il campo `**Tipo**: informativa` è obbligatorio nell'intestazione.
+- La questione di origine non transita a `pending-rfc`: il suo ciclo
+  prosegue indipendentemente dall'invio.
+- La sezione Response RFC è assente: non è prevista risposta né
+  fase di verifica.
+
+Il ciclo si conclude con la consegna del documento all'attore esterno.
 
 ## Nome del file
 

@@ -1,7 +1,7 @@
 ---
 tipo-artefatto: guida
 documento: diagramma-flusso-rfc
-descrizione: diagramma e riferimento visivo del flusso RFC outbound e inbound
+descrizione: flusso RFC outbound, inbound e informativa — tipi, cicli e regole operative
 autorita: informativa
 ---
 
@@ -11,8 +11,15 @@ Riferimento visivo: `../diagrams/flusso-rfc.puml`
 
 Una RFC viene emessa quando una questione richiede intervento nell'ambito di
 competenza di un attore esterno. È autocontenuta: leggibile senza conoscere
-la storia interna dell'opera richiedente. La RFC è bidirezionale: l'attore
-ricevente compila la sezione Response RFC e restituisce il documento.
+la storia interna dell'opera richiedente.
+
+Esistono tre tipi di RFC, distinti per direzione e attesa di risposta:
+
+- RFC Outbound — bidirezionale: Team-A emette, Team-B risponde.
+- RFC Inbound — bidirezionale: Team-B riceve, compila la risposta e
+  restituisce.
+- RFC Informativa — unidirezionale: comunicazione senza attesa di
+  risposta.
 
 ---
 
@@ -47,6 +54,21 @@ la questione. La responsabilità della verifica resta in capo a Team-A.
 
 Il passo 7 (chiusura questioni) non può avvenire prima del passo 6 (consegna Response).
 La chiusura è il completamento del ciclo RFC nella sua interezza, inclusa la restituzione.
+
+---
+
+## RFC Informativa
+
+1. Team-A — decide di emettere una comunicazione unidirezionale verso
+   un attore esterno, senza richiedere risposta.
+2. Team-A — genera la RFC con `Tipo: informativa` nell'intestazione e
+   la consegna all'attore esterno.
+3. La questione di origine **non transita** a `pending-rfc`: il suo
+   ciclo prosegue indipendentemente dall'invio.
+
+La RFC Informativa non ha sezione Response RFC e non genera attesa.
+Non è previsto un ciclo di verifica: l'atto di consegna chiude
+il coordinamento esterno.
 
 ---
 

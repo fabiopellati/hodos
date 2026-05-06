@@ -62,6 +62,24 @@ della correzione manuale di un artefatto non conforme.
 
 ---
 
+## Sincronizzazione tra protocollo.md e protocollo-norme.md
+
+`protocollo-norme.md` è lo specchio AI di `protocollo.md`: espone il
+testo normativo degli articoli al RAG e all'MCP. I due file devono
+restare coerenti.
+
+Ogni modifica a `protocollo.md` richiede una verifica esplicita della
+proiezione su `protocollo-norme.md`. Se la modifica impatta il testo
+degli articoli, degli allegati o della struttura normativa, l'agente
+deve aggiornare `protocollo-norme.md` nella stessa sessione di lavoro,
+prima di portare la questione a `pending-approval`.
+
+La sincronizzazione non è opzionale: un `protocollo-norme.md` non
+aggiornato produce risposte errate o incomplete quando l'MCP viene
+interrogato su norme vigenti.
+
+---
+
 ## Limiti dell'autonomia dell'agente
 
 L'agente non decide autonomamente:
