@@ -24,6 +24,12 @@ o lo stato dell'opera.
 Questa opera segue il protocollo Hodos. Per sapere come operare consulta
 hodos-mcp.
 
+**Regola vincolante — creazione file di processo**: prima di creare o
+ricreare questioni.md, mastro.md o notes.md, chiama `get_template` per
+ciascun file. Non generare questi file da memoria: il formato è normato
+dai template MCP e cambia nel tempo. Generare da memoria produce formati
+obsoleti.
+
 ## File di progetto
 
 - `questioni.md` — questioni aperte, indice in intestazione
