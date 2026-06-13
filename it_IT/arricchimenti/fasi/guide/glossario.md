@@ -48,9 +48,9 @@ non conforme (con motivazione).
 
 **Design articolato**
 Modalità di strutturazione del design di un'unità
-complessa in P2, alternativa al singolo `1-design.md`.
-Il design si articola in una directory di documenti con
-un punto di ingresso (`0-design.md`) e documenti di
+complessa in P2, alternativa al singolo `design.md`.
+Il design si articola nella directory `design/` con
+un punto di ingresso (`0-indice.md`) e documenti di
 approfondimento numerati (`1-obiettivi.md`,
 `2-scenari.md`, `3-requisiti.md`, `4-vincoli.md`,
 `5-struttura.md`). La struttura rispecchia quella dei
@@ -68,7 +68,7 @@ come documento storico congelato. Il file si chiama
 `EVO-{N}-{titolo}.md` con numerazione progressiva
 locale all'unità. Le modifiche minori (entro i pattern
 esistenti) non richiedono un'evoluzione e si gestiscono
-con un BL in `2-attivita.md`.
+con un BL in `attivita.md`.
 
 **Fase**
 Periodo del ciclo di lavoro con scopo, artefatti e
@@ -81,7 +81,7 @@ Ciclo breve di realizzazione all'interno di P2 per una
 singola unità. Segue il pattern: pianifica / realizza /
 verifica / chiudi. Ogni iterazione ha obiettivi definiti
 e si chiude con una verifica di quanto consegnato. Le
-iterazioni sono tracciate nel `2-attivita.md`
+iterazioni sono tracciate nell'`attivita.md`
 dell'unità.
 
 **Parte**
@@ -115,9 +115,9 @@ governa. Una unità può essere raggruppata in un
 aggregato. Equivalente astratto del pacchetto di
 lavoro (o del componente di realizzazione) nel
 contesto software. Un'unità semplice usa un singolo
-`1-design.md`; un'unità complessa può usare un
-*design articolato* con più documenti di
-approfondimento.
+`design.md`; un'unità complessa può usare un
+*design articolato* con una directory `design/`
+contenente più documenti di approfondimento.
 
 **Voce di attività**
 Unità di lavoro pianificata in P2 per la realizzazione

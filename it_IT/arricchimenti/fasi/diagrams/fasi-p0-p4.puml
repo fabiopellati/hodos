@@ -22,8 +22,8 @@ repeat
     -> iterazioni -> integrazione
 
     design semplice: design.md
-    design articolato: 0-design.md
-    + documenti di approfondimento
+    design articolato: design/
+    + 0-indice.md e documenti 1-5
   end note
 repeat while (altre unita'?) is (si)
 -> no;

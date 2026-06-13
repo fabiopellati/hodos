@@ -98,15 +98,12 @@ della realizzazione.
 **Directory**: `documenti/unita/[nome]/`
 
 **Artefatti attesi per unità**:
-- `1-design.md` — progettazione dettagliata (file singolo)
-- `2-attivita.md` — iterazioni con obiettivi, voci di attività, note
+- `design.md` — progettazione dettagliata (file singolo)
+- `attivita.md` — iterazioni con obiettivi, voci di attività, note
 
-Il prefisso numerico indica l'ordine naturale di lettura,
-coerentemente con la convenzione adottata in P0 e P1.
-
-Quando la complessità dell'unità lo richiede, il `1-design.md` può
-articolarsi in una directory di documenti: vedi la sezione dedicata
-più avanti.
+Quando la complessità dell'unità lo richiede, il `design.md` può
+essere sostituito da una directory `design/`: vedi la sezione
+dedicata più avanti.
 
 **Nota**: rilievi e problemi inattesi vanno in `questioni.md`, non nell'attività.
 L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva
@@ -132,7 +129,7 @@ semantico. Non si introduce un aggregato durante P2.
   queste unità stanno insieme, qual è la correlazione che le lega.
   Non prescrive decisioni architetturali alle unità contenute.
 
-L'aggregato non ha un proprio `2-attivita.md`. Le unità gestiscono
+L'aggregato non ha un proprio `attivita.md`. Le unità gestiscono
 le proprie attività in autonomia.
 
 **Vincolo di profondità**: un aggregato contiene unità, mai altri
@@ -211,13 +208,14 @@ registra apertura, progressione e chiusura.
 - YYYY-MM-DD closed — Unità completata e integrata.
 
 **Elaborati prodotti**
-- `documenti/unita/[nome]/1-design.md` (o `0-design.md` + documenti di approfondimento)
-- `documenti/unita/[nome]/2-attivita.md`
+- `documenti/unita/[nome]/design.md` (semplice) o
+  `documenti/unita/[nome]/design/` (articolato)
+- `documenti/unita/[nome]/attivita.md`
 ```
 
 La granularità minima è una questione per fase significativa e una per
 unità. Non si aprono questioni per ogni micro-passo: i passi di esecuzione
-vivono nel `2-attivita.md` dell'unità.
+vivono nell'`attivita.md` dell'unità.
 
 Questo modello vale per umano e AI. Quando l'AI elabora un ciclo P0-P4
 in autonomia, apre la questione di fase, produce gli elaborati nei propri
@@ -283,7 +281,7 @@ validazione. Non introduce nuovi scenari d'uso, non modifica il
 modello dati o le transizioni di stato, non ha impatto su altre
 unità.
 
-Il flusso è un BL in `2-attivita.md` che prescrive nella sezione
+Il flusso è un BL in `attivita.md` che prescrive nella sezione
 Richiesta sia la realizzazione sia l'aggiornamento dei documenti
 di design impattati. I Criteri di verifica devono includere la
 coerenza tra il design aggiornato e la realizzazione. La
@@ -306,7 +304,7 @@ Per le modifiche significative si redige un'**evoluzione**
 (`EVO-{N}-{titolo}.md`), un artefatto che documenta il passaggio
 da uno stato del design a un altro. L'evoluzione viene approvata
 prima della realizzazione. Dopo l'approvazione, la realizzazione
-avviene tramite BL in `2-attivita.md` e include l'aggiornamento
+avviene tramite BL in `attivita.md` e include l'aggiornamento
 dei documenti di design per assorbire il delta.
 
 L'evoluzione resta nella directory dell'unità come documento
@@ -338,39 +336,44 @@ indipendente.
 
 ## Design articolato per unità complesse
 
-Un'unità semplice usa un singolo `1-design.md` nella propria directory.
+Un'unità semplice usa un singolo `design.md` nella propria directory.
 Un'unità complessa — con scenari d'uso multipli, modelli dati articolati,
 transizioni di stato e vincoli di dominio propri — può articolare il
-design in una directory di documenti. La scelta tra le due forme è di
+design nella directory `design/`. La scelta tra le due forme è di
 chi governa l'unità, in base alla profondità analitica necessaria.
 
 **Struttura del design articolato**:
 
 ```
 documenti/unita/[nome-unita]/
-  0-design.md       <- punto di ingresso e indice ragionato
-  1-obiettivi.md    <- perché, scope, criteri di successo
-  2-scenari.md      <- scenari d'uso del dominio
-  3-requisiti.md    <- requisiti funzionali dell'unità
-  4-vincoli.md      <- requisiti non funzionali, vincoli
-  5-struttura.md    <- architettura, modello dati, integrazioni
-  2-attivita.md     <- voci di attività (invariato)
+  design/
+    0-indice.md     <- punto di ingresso e indice ragionato
+    1-obiettivi.md  <- perché, scope, criteri di successo
+    2-scenari.md    <- scenari d'uso del dominio
+    3-requisiti.md  <- requisiti funzionali dell'unità
+    4-vincoli.md    <- requisiti non funzionali, vincoli
+    5-struttura.md  <- architettura, modello dati, integrazioni
+  attivita.md       <- voci di attività
 ```
 
 **Convenzioni**:
 
-- Il file `0-design.md` è il punto di ingresso che sostituisce
-  `1-design.md` nel caso articolato. Deve contenere le decisioni
-  chiave e un indice ragionato dei documenti di approfondimento.
+- La presenza di `design/` (directory) anziché `design.md` (file)
+  segnala al lettore che l'unità è articolata.
+- Il file `0-indice.md` è il punto di ingresso: deve contenere le
+  decisioni chiave e un indice ragionato dei documenti di
+  approfondimento.
 - I documenti da 1 a 5 articolano il design in profondità. Il prefisso
   numerico indica l'ordine di lettura, non l'ordine di produzione. Non
   tutti i documenti sono obbligatori.
 - La struttura rispecchia quella dei documenti di progetto (P0/P1) perché
   il lavoro analitico ha la stessa forma a qualsiasi scala.
+- Il file `attivita.md` vive sempre al livello della directory dell'unità,
+  mai dentro `design/`.
 
-**Approvazione**: l'approvazione di `0-design.md` copre l'intero pacchetto
-di design. Non è necessaria un'approvazione esplicita per ciascun
-documento di approfondimento.
+**Approvazione**: l'approvazione di `design/0-indice.md` copre l'intero
+pacchetto di design. Non è necessaria un'approvazione esplicita per
+ciascun documento di approfondimento.
 
 ---
 
@@ -389,24 +392,25 @@ documenti/
     7-piano-esecutivo.md
   unita/
     [unita-semplice]/
-      1-design.md
-      2-attivita.md
+      design.md
+      attivita.md
       EVO-1-titolo.md        <- evoluzione (se presente)
     [unita-complessa]/
-      0-design.md
-      1-obiettivi.md
-      2-scenari.md
-      3-requisiti.md
-      4-vincoli.md
-      5-struttura.md
-      2-attivita.md
+      design/
+        0-indice.md
+        1-obiettivi.md
+        2-scenari.md
+        3-requisiti.md
+        4-vincoli.md
+        5-struttura.md
+      attivita.md
       EVO-1-titolo.md        <- evoluzione (se presente)
     [nome-aggregato]/
       design.md
       EVO-1-titolo.md        <- evo cross-unità intra-aggregato
       [nome-unita]/
-        1-design.md
-        2-attivita.md
+        design.md
+        attivita.md
   evoluzioni/                <- evo cross-unità inter-aggregato
     EVO-1-titolo.md
 ```

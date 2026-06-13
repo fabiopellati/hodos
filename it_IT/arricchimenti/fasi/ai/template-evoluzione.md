@@ -91,7 +91,7 @@ o più di questi criteri:
 
 Modifiche entro i pattern esistenti dell'unità (nuovo filtro,
 campo aggiuntivo, regola di validazione) non richiedono
-un'evoluzione: si gestiscono con un BL in `2-attivita.md` che
+un'evoluzione: si gestiscono con un BL in `attivita.md` che
 prescrive anche l'aggiornamento dei documenti di design.
 
 ## Prima di scrivere

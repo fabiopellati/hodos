@@ -238,25 +238,26 @@ analisi, decisione e registrazione del risultato.
 Quando l'unità ha una complessità di dominio propria che richiede
 profondità analitica: scenari d'uso multipli, modelli dati articolati,
 transizioni di stato, vincoli specifici. Le unità infrastrutturali
-semplici continuano a usare un singolo `1-design.md`. La scelta è di chi
+semplici continuano a usare un singolo `design.md`. La scelta è di chi
 governa l'unità.
 
 **Qual è la struttura del design articolato?**
 
-Il file `0-design.md` è il punto di ingresso e contiene le decisioni
-chiave e un indice ragionato dei documenti di approfondimento. I
-documenti numerati da 1 a 5 (`1-obiettivi.md`, `2-scenari.md`,
-`3-requisiti.md`, `4-vincoli.md`, `5-struttura.md`) sviluppano ciascun
-aspetto in profondità. Non tutti sono obbligatori: si includono solo
-quelli necessari per l'unità specifica.
+Il design si articola nella directory `design/`. Il file `0-indice.md`
+è il punto di ingresso e contiene le decisioni chiave e un indice
+ragionato dei documenti di approfondimento. I documenti numerati da
+1 a 5 (`1-obiettivi.md`, `2-scenari.md`, `3-requisiti.md`,
+`4-vincoli.md`, `5-struttura.md`) sviluppano ciascun aspetto in
+profondità. Non tutti sono obbligatori: si includono solo quelli
+necessari per l'unità specifica.
 
 **Come funziona l'approvazione del design articolato?**
 
-L'approvazione di `0-design.md` copre l'intero pacchetto di design. Chi
-approva il punto di ingresso approva il design nel suo insieme, compresi
-i documenti di approfondimento a cui fa riferimento. Chi governa può
-comunque richiedere revisioni su documenti specifici prima di approvare
-il punto di ingresso.
+L'approvazione di `design/0-indice.md` copre l'intero pacchetto di
+design. Chi approva il punto di ingresso approva il design nel suo
+insieme, compresi i documenti di approfondimento a cui fa riferimento.
+Chi governa può comunque richiedere revisioni su documenti specifici
+prima di approvare il punto di ingresso.
 
 **La struttura del design articolato ripete i documenti P0/P1?**
 

@@ -88,11 +88,11 @@ richiamo a questo principio (vedi template claude-md).
 
 **P2** (`documenti/unita/[nome]/`)
 Per ogni unità:
-- `1-design.md` — progettazione dettagliata (file singolo)
-- `2-attivita.md` — iterazioni con obiettivi, voci di attività, note
+- `design.md` — progettazione dettagliata (file singolo)
+- `attivita.md` — iterazioni con obiettivi, voci di attività, note
 
 Quando la complessità dell'unità lo richiede, il design può
-articolarsi in una directory di documenti anziché in un file
+articolarsi in una directory `design/` anziché in un file
 singolo. La sezione "Design articolato per unità complesse"
 descrive la struttura e le regole applicabili.
 
@@ -113,35 +113,37 @@ descrive la struttura e le regole applicabili.
 
 ## Design articolato per unità complesse
 
-Un'unità semplice usa un singolo `1-design.md` nella propria
+Un'unità semplice usa un singolo `design.md` nella propria
 directory. Un'unità complessa — con scenari d'uso multipli,
 modelli dati articolati, transizioni di stato e vincoli di
-dominio propri — può articolare il design in una directory di
-documenti. La scelta tra le due forme è di chi governa l'unità,
+dominio propri — può articolare il design nella directory
+`design/`. La scelta tra le due forme è di chi governa l'unità,
 in base alla profondità analitica necessaria.
 
 ### Struttura
 
 ```
 documenti/unita/[nome-unita]/
-  0-design.md       <- punto di ingresso e indice ragionato
-  1-obiettivi.md    <- perché, scope, criteri di successo
-  2-scenari.md      <- scenari d'uso del dominio
-  3-requisiti.md    <- requisiti funzionali dell'unità
-  4-vincoli.md      <- requisiti non funzionali, vincoli,
+  design/
+    0-indice.md     <- punto di ingresso e indice ragionato
+    1-obiettivi.md  <- perché, scope, criteri di successo
+    2-scenari.md    <- scenari d'uso del dominio
+    3-requisiti.md  <- requisiti funzionali dell'unità
+    4-vincoli.md    <- requisiti non funzionali, vincoli,
                        dipendenze dalla piattaforma
-  5-struttura.md    <- architettura, modello dati,
+    5-struttura.md  <- architettura, modello dati,
                        transizioni di stato, integrazioni
-  2-attivita.md     <- voci di attività (invariato)
+  attivita.md       <- voci di attività
 ```
 
 ### Convenzioni
 
-- Il file `0-design.md` è il punto di ingresso che soddisfa la
-  prescrizione del protocollo: è l'artefatto che viene prodotto,
-  revisionato e approvato. Deve contenere le decisioni chiave e
-  un indice ragionato che descriva il contenuto e la funzione di
-  ciascun documento di approfondimento.
+- La presenza di `design/` (directory) anziché `design.md`
+  (file) segnala al lettore che l'unità è articolata.
+- Il file `0-indice.md` è il punto di ingresso: deve contenere
+  le decisioni chiave e un indice ragionato che descriva il
+  contenuto e la funzione di ciascun documento di
+  approfondimento.
 - I documenti da 1 a 5 sono articolazioni del design che
   sviluppano in profondità ciascun aspetto. Il prefisso numerico
   indica l'ordine di lettura, non l'ordine di produzione.
@@ -152,17 +154,16 @@ documenti/unita/[nome-unita]/
   il dominio applicativo a livello operativo.
 - Non tutti i documenti sono obbligatori: se un'unità non ha
   vincoli propri, il file `4-vincoli.md` non è necessario.
-- Il file `2-attivita.md` mantiene il prefisso numerico per
-  coerenza con la convenzione adottata in P0 e P1. Il prefisso
-  indica l'ordine di lettura rispetto al design.
+- Il file `attivita.md` vive sempre al livello della directory
+  dell'unità, mai dentro `design/`.
 
 ### Approvazione
 
-L'approvazione di `0-design.md` copre l'intero pacchetto di
-design. Non è necessaria un'approvazione esplicita per ciascun
-documento di approfondimento: chi approva il punto di ingresso
-approva il design nel suo insieme, compresi i documenti a cui
-il punto di ingresso fa riferimento.
+L'approvazione di `design/0-indice.md` copre l'intero pacchetto
+di design. Non è necessaria un'approvazione esplicita per
+ciascun documento di approfondimento: chi approva il punto di
+ingresso approva il design nel suo insieme, compresi i documenti
+a cui il punto di ingresso fa riferimento.
 
 Chi governa l'approvazione può comunque richiedere revisioni su
 documenti specifici prima di approvare il punto di ingresso.
@@ -172,6 +173,6 @@ documenti specifici prima di approvare il punto di ingresso.
 ## Regole
 
 - Ogni fase si chiude con un'approvazione esplicita prima di procedere alla successiva. L'AI non avanza autonomamente.
-- Rilievi e problemi inattesi vanno in questioni.md, non in 2-attivita.md. L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva (nasce da un problema).
+- Rilievi e problemi inattesi vanno in questioni.md, non in attivita.md. L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva (nasce da un problema).
 - Questioni che emergono in P3 e invalidano assunzioni di fasi precedenti richiedono questioni collegate con propagazione a ritroso: si risolve dalla fase radice verso quella più avanzata.
-- Per tracciare il ciclo in questioni.md: una questione di revisione per fase significativa, una per unità. I passi di esecuzione vivono in 2-attivita.md, non come questioni separate.
+- Per tracciare il ciclo in questioni.md: una questione di revisione per fase significativa, una per unità. I passi di esecuzione vivono in attivita.md, non come questioni separate.
