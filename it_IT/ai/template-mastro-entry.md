@@ -23,14 +23,18 @@ il Percorso per concisione vanifica il valore del registro.
 
 ## Struttura
 
-Frontmatter (mutabile) più corpo (immutabile). I campi `decisioni` e
-`file-toccati` del frontmatter sono la distillazione queryable,
-rispettivamente, delle sezioni `Decisioni prese` e `Impatto` del corpo.
+Frontmatter (mutabile) più corpo (immutabile). Il campo `descrizione` è la
+sintesi distillata delle motivazioni della questione — il "prima" —, mentre i
+campi `decisioni` e `file-toccati` sono la distillazione queryable,
+rispettivamente, delle sezioni `Decisioni prese` e `Impatto` del corpo — il
+"dopo". La coppia `descrizione` / `decisioni` rende il frontmatter una
+proiezione completa del ciclo: perché la questione è nata e come si è chiusa.
 
 ```markdown
 ---
 id: {QUESTIONE-ID}
 titolo: {Titolo}
+descrizione: {sintesi distillata delle motivazioni: perché la questione è stata aperta}
 tipo-elemento: voce-mastro
 tipo: {rilievo | revisione | anomalia}
 stato: closed
@@ -69,4 +73,6 @@ file-toccati:
   dei campi di giudizio (`decisioni`, `related`, `tag`) e bonifica di versione.
 - Decisioni prese e Impatto (corpo) sono obbligatori, così come i campi
   `decisioni` e `file-toccati` (frontmatter) che ne sono la proiezione.
+- Il campo `descrizione` (frontmatter) è obbligatorio: è la sintesi distillata
+  delle motivazioni della questione, il "prima" che affianca `decisioni`.
 - Il Percorso è obbligatorio salvo ciclo diretto: in caso di dubbio, includerlo.

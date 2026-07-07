@@ -23,6 +23,7 @@ coerenza è presidiata dal validatore dell'opera.
 ---
 id: QUESTIONE-{ID}
 titolo: {Titolo}
+descrizione: {sintesi distillata delle motivazioni: perché la questione esiste, il problema o il bisogno che la origina}
 tipo-elemento: questione
 tipo: {rilievo | revisione | anomalia}
 stato: open
@@ -50,6 +51,11 @@ tag: [tema-uno, tema-due]
 **Impatto**
 - {artefatto o fase} — {descrizione dell'impatto}
 ```
+
+Il campo `descrizione` è la sintesi distillata delle motivazioni della
+questione — il "prima", cioè il perché la questione esiste — ed è la proiezione
+queryable della sezione `Descrizione` del corpo. Nel mastro farà da contraltare
+a `decisioni`, il "dopo".
 
 Il campo `related` è opzionale nel caso generale; sostituisce la vecchia
 sezione `Questioni collegate` del corpo. I campi `related` e `tag` accettano
@@ -102,6 +108,7 @@ Non proporre opzioni in testo libero.
 ## Regole
 
 - Il tipo è immutabile dopo l'apertura.
+- Il campo `descrizione` del frontmatter è la sintesi distillata delle motivazioni ed è obbligatorio: proietta in forma queryable la sezione `Descrizione` del corpo.
 - La Descrizione descrive il problema, non la soluzione. È immutabile dopo la scrittura: usare un commento per rettifiche o integrazioni.
 - I campi Domande aperte e Impatto sono mutabili per addizione nel corso del ciclo: si possono aggiungere nuove voci documentando il motivo. Una voce esistente non si cancella, ma si può dichiarare superata o inattuata con motivazione esplicita inline.
 - La motivazione nella Storia risponde al "perché", non al "cosa".

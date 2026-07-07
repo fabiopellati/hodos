@@ -9,14 +9,21 @@ fonte: protocollo.md
 
 # Norme del Protocollo — Hodos
 
-**Versione**: 1.0.0
+**Versione**: 1.1.0
 
 Questo documento è la trascrizione fedele degli articoli normativi di
 `protocollo.md`, resa disponibile per la consultazione tramite MCP. In
 caso di discrepanza, il testo autoritativo è `protocollo.md`.
 
+> Nota di compatibilità (1.1.0).
+> Questa versione aggiunge il campo `descrizione` al frontmatter delle
+> questioni e delle voci del mastro: la sintesi distillata delle motivazioni
+> — il "prima" — che affianca `decisioni`, il "dopo".
+> Aggiunta additiva rispetto alla 1.0.0; le opere già segregate popolano il
+> campo tramite l'arricchimento `bonifica-forma-segregata`.
+>
 > Nota di compatibilità (1.0.0).
-> Questa versione introduce la forma segregata degli strumenti di governo
+> La 1.0.0 ha introdotto la forma segregata degli strumenti di governo
 > (`questioni`, `note`, `mastro`): ogni strumento passa da un unico file
 > accumulante a una collezione di file, uno per elemento, con frontmatter di
 > metadati e indice derivato.
@@ -339,6 +346,7 @@ Frontmatter:
 ---
 id: QUESTIONE-XXX
 titolo: Titolo della questione
+descrizione: sintesi distillata delle motivazioni della questione (il "prima")
 tipo-elemento: questione
 tipo: rilievo | revisione | anomalia
 stato: open | in-progress | pending-approval | pending-rfc | in-verification | deferred
@@ -424,6 +432,7 @@ Frontmatter:
 ---
 id: QUESTIONE-XXX
 titolo: Titolo della questione
+descrizione: sintesi distillata delle motivazioni della questione (il "prima")
 tipo-elemento: voce-mastro
 tipo: rilievo | revisione | anomalia
 stato: closed
@@ -454,6 +463,7 @@ Corpo:
 [artefatti modificati o da modificare]
 ```
 
-I campi `decisioni` e `file-toccati` del frontmatter sono la distillazione
-queryable, rispettivamente, della sezione `Decisioni prese` e della sezione
-`Impatto` del corpo.
+Il campo `descrizione` del frontmatter è la sintesi distillata delle
+motivazioni della questione — il "prima" —; i campi `decisioni` e
+`file-toccati` sono la distillazione queryable, rispettivamente, della sezione
+`Decisioni prese` e della sezione `Impatto` del corpo — il "dopo".
