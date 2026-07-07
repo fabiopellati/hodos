@@ -25,16 +25,20 @@ Questa opera segue il protocollo Hodos. Per sapere come operare consulta
 hodos-mcp.
 
 **Regola vincolante — creazione file di processo**: prima di creare o
-ricreare questioni.md, mastro.md o notes.md, chiama `get_template` per
-ciascun file. Non generare questi file da memoria: il formato è normato
+ricreare gli indici questioni.md, mastro.md o note.md, o un elemento nelle
+cartelle questioni/, mastro/, note/, chiama `get_template` per il template
+corrispondente. Non generare questi artefatti da memoria: il formato è normato
 dai template MCP e cambia nel tempo. Generare da memoria produce formati
 obsoleti.
 
 ## File di progetto
 
-- `questioni.md` — questioni aperte, indice in intestazione
-- `mastro.md` — registro immutabile delle decisioni chiuse (prepend-only)
-- `notes.md` — note e memo
+- `questioni/` — una questione aperta per file (`Q{NNN}-slug.md`); l'indice
+  `questioni.md` ne è la proiezione derivata
+- `mastro/` — una decisione chiusa per file (`Q{NNN}-slug.md`), corpo
+  immutabile e frontmatter mutabile; l'indice `mastro.md` ne è la proiezione
+- `note/` — una nota per file (`NOTA-{NNN}-slug.md`); l'indice `note.md` ne è
+  la proiezione
 
 ## Stato corrente
 

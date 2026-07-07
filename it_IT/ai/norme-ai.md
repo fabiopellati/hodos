@@ -30,8 +30,31 @@ successiva autonomamente. Il superamento di un'approvazione richiede sempre
 conferma esplicita dell'umano.
 
 **I file di processo si aggiornano in tempo reale.** Quando una questione cambia
-stato, quando viene chiusa, quando una entry va nel mastro: l'agente aggiorna
-i file immediatamente, non a fine sessione.
+stato, quando viene chiusa, quando una voce va nel mastro: l'agente aggiorna
+i file immediatamente, non a fine sessione. Dopo aver modificato un file-elemento
+in `questioni/`, `note/` o `mastro/`, l'agente rigenera l'indice corrispondente.
+
+---
+
+## Forma segregata: indici derivati e doppio regime del mastro
+
+Gli strumenti di governo sono collezioni segregate: una cartella
+(`questioni/`, `note/`, `mastro/`) con un file per elemento, più un indice
+(`questioni.md`, `note.md`, `mastro.md`) che è proiezione derivata dei
+frontmatter. Ne discendono due vincoli.
+
+**Gli indici non si modificano a mano.** L'indice è generato dai frontmatter
+degli elementi. L'agente non scrive né corregge l'indice direttamente: modifica
+il file-elemento e poi rigenera l'indice con lo strumento dell'opera. Scrivere a
+mano nell'indice introduce una seconda sorgente divergente, che è esattamente
+ciò che la forma segregata elimina.
+
+**Il mastro ha un doppio regime.** Nei file di `mastro/` il corpo markdown è
+immutabile — testimonianza storica della decisione, mai modificata dopo la
+scrittura — mentre il frontmatter è mutabile, per sanare disallineamenti,
+affinare i campi di giudizio (`decisioni`, `related`, `tag`) o eseguire una
+bonifica di versione. Cambiare una decisione non si fa mai correggendo il corpo
+di una voce esistente: si apre una nuova questione.
 
 ---
 

@@ -1,18 +1,37 @@
 ---
 tipo-artefatto: template
 documento: questione
-descrizione: struttura canonica di una questione in questioni.md (rilievo, revisione o anomalia)
+descrizione: struttura canonica di una questione segregata nella cartella questioni/ (rilievo, revisione o anomalia)
 fase: trasversale
 ---
 
 # Template — Questione
 
 Una questione traccia un problema, un rilievo o una revisione nel ciclo di lavoro Hodos.
-Va inserita in cima a `questioni.md`, dopo la sezione Indice.
+Ogni questione vive nel proprio file `questioni/Q{NNN}-slug.md`, dove `{NNN}`
+è l'identificativo e `slug` è uno slug kebab-case del titolo.
+L'indice `questioni.md` è una proiezione derivata dei frontmatter e si
+rigenera: non si scrive la questione dentro l'indice.
 
 ## Struttura
 
+Il file è composto da un frontmatter YAML di metadati queryable e da un corpo
+markdown narrativo. I campi `tipo` e `stato` compaiono in entrambi: la
+coerenza è presidiata dal validatore dell'opera.
+
 ```markdown
+---
+id: QUESTIONE-{ID}
+titolo: {Titolo}
+tipo-elemento: questione
+tipo: {rilievo | revisione | anomalia}
+stato: open
+aperta: {YYYY-MM-DD}
+aggiornata: {YYYY-MM-DD}
+related: [QUESTIONE-NNN]
+tag: [tema-uno, tema-due]
+---
+
 ## QUESTIONE-{ID} — {Titolo}
 
 **Tipo**: {rilievo | revisione | anomalia}
@@ -30,9 +49,11 @@ Va inserita in cima a `questioni.md`, dopo la sezione Indice.
 
 **Impatto**
 - {artefatto o fase} — {descrizione dell'impatto}
-
----
 ```
+
+Il campo `related` è opzionale nel caso generale; sostituisce la vecchia
+sezione `Questioni collegate` del corpo. I campi `related` e `tag` accettano
+liste vuote (`[]`) quando non applicabili.
 
 ## Tipi
 
@@ -42,11 +63,10 @@ Va inserita in cima a `questioni.md`, dopo la sezione Indice.
 
 ## Sezioni opzionali
 
-Aggiungere dopo `**Impatto**` solo se presenti:
+Il legame con altre questioni si esprime nel campo `related` del frontmatter,
+non in una sezione del corpo.
 
-```markdown
-**Questioni collegate**: QUESTIONE-NNN, QUESTIONE-MMM
-```
+Aggiungere in fondo al corpo solo se presente:
 
 ```markdown
 **Commenti**
@@ -57,17 +77,9 @@ COMMENTO-001 — {YYYY-MM-DD}
 
 ## Aggiornamento indice
 
-Aggiungere in cima all'elenco dell'indice:
-
-```markdown
-- **QUESTIONE-{ID}** — {Titolo} — open
-```
-
-Aggiornare la nota:
-
-```
-> Ultima questione inserita: QUESTIONE-{ID} — {YYYY-MM-DD}.
-```
+L'indice `questioni.md` è una proiezione derivata: dopo aver creato o
+aggiornato il file della questione, si rigenera l'indice dai frontmatter con
+lo strumento dell'opera. Non si modifica l'indice a mano.
 
 ## Prima di scrivere
 

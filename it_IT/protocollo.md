@@ -1,7 +1,17 @@
 # Protocollo di Processo — Hodos
 
-**Versione**: bozza-capitolato
-**Stato**: anteprima forma normativa
+**Versione**: 1.0.0
+**Stato**: forma normativa vigente
+
+> Nota di compatibilità (1.0.0).
+> Questa versione introduce la forma segregata degli strumenti di governo
+> (`questioni`, `note`, `mastro`) e comporta una rottura di compatibilità
+> rispetto alla forma monolitica precedente.
+> Ogni strumento passa da un unico file accumulante a una collezione di file,
+> uno per elemento, con frontmatter di metadati e indice derivato.
+> Le opere costruite sulla forma monolitica restano valide ma non conformi a
+> questa versione: la migrazione è descritta dall'arricchimento di bonifica
+> (`arricchimenti/bonifica-forma-segregata`).
 
 ---
 
@@ -62,38 +72,88 @@ dall'idea al manufatto.
 
 ## Art. 3 — Strumenti di governo
 
-1. Ogni opera mantiene tre strumenti di governo trasversali:
-      - `questioni.md`
-      - `note.md`
-      - `mastro.md`
-
+1. Ogni opera mantiene tre strumenti di governo trasversali: le questioni,
+   le note e il mastro.
    Sono strumenti trasversali e vivono per tutta la durata dell'opera.
 
 2. L'organizzazione del lavoro nel tempo — fasi, iterazioni, milestone — è
    fuori dal perimetro di questo protocollo. Chi adotta Hodos la definisce
    autonomamente.
 
+3. Ciascuno dei tre strumenti è una **collezione segregata**: non un unico
+   file accumulante, ma una cartella che raccoglie un file per ogni elemento.
+   Le cartelle sono `questioni/`, `note/` e `mastro/`.
+   Ogni elemento vive nel proprio file con nome parlante:
+   `Q{NNN}-slug.md` per le questioni e le voci del mastro,
+   `NOTA-{NNN}-slug.md` per le note.
+   La segregazione rende i diff minimi per costruzione, perché ogni elemento
+   è isolato nel proprio file e nessuna riga preesistente viene spostata
+   all'inserimento di un elemento nuovo.
+
+4. A ciascuna collezione è affiancato un **indice**: `questioni.md`,
+   `note.md` e `mastro.md`.
+   L'indice è una **proiezione derivata** dei frontmatter degli elementi
+   della collezione: viene rigenerato da uno strumento, è committato per
+   comodità di lettura e navigazione, ma non è mai una seconda sorgente
+   indipendente rispetto ai file-elemento.
+   Un indice non va mai modificato a mano: la modifica avviene sull'elemento,
+   e l'indice si rigenera.
+
+5. Ogni elemento porta un **frontmatter YAML** di metadati strutturati, che
+   affianca il corpo markdown senza sostituirne le sezioni.
+   Corpo e frontmatter sono due canali con audience diversa: il corpo è
+   narrazione per il lettore umano, il frontmatter è la proiezione queryable
+   per l'automazione (indici, ricerche, validazione).
+   La loro duplicazione controllata è deliberata e va presidiata da un
+   validatore che ne verifica la coerenza.
+   I campi comuni a ogni famiglia sono `id`, `titolo`, `tipo-elemento`,
+   `related` e `tag`; le famiglie aggiungono i campi propri, definiti negli
+   Allegati A, B e C.
+
+6. I legami tra elementi sono espressi dal campo `related`, come lista di
+   identificativi (`QUESTIONE-NNN`, `NOTA-NNN`).
+   Il legame si dichiara una sola volta, sull'elemento che lo origina; le
+   back-reference — quali elementi citano un dato elemento — sono derivate
+   dallo strumento e non si scrivono a mano.
+   I legami sono così traversabili in modo deterministico, non affidati alla
+   prosa.
+
+7. Il protocollo prescrive la forma e le invarianti — un file per elemento,
+   frontmatter per famiglia, indice come proiezione derivata, `related`
+   traversabile, doppio regime del mastro (Art. 6 e 10).
+   La realizzazione degli strumenti che generano gli indici e validano i
+   frontmatter è lasciata a chi adotta Hodos, secondo il proprio stack
+   tecnologico: il protocollo non impone un linguaggio né un'architettura.
+
 ---
 
-## Art. 4 — questioni.md
+## Art. 4 — Le questioni
 
-1. `questioni.md` contiene le questioni aperte dell'opera: in analisi, in attesa,
-   rimandati. Quando una questione viene chiusa, viene rimossa da `questioni.md`
-   e la sua risoluzione viene registrata in `mastro.md`.
+1. La cartella `questioni/` contiene le questioni aperte dell'opera: in
+   analisi, in attesa, rimandate.
+   Ogni questione vive nel proprio file `Q{NNN}-slug.md`.
+   Quando una questione viene chiusa, il suo file viene spostato in `mastro/`
+   (Art. 6) e rimosso da `questioni/`.
 
-2. La struttura di una questione è definita nell'Allegato A.
+2. La struttura di una questione, corpo e frontmatter, è definita
+   nell'Allegato A.
 
-3. Il documento è preceduto da un indice in intestazione che riporta ID,
-   titolo e stato corrente di ogni questione presente.
+3. L'indice `questioni.md` è la proiezione derivata dei frontmatter dei file
+   in `questioni/` e riporta ID, titolo e stato corrente di ogni questione
+   presente.
+   Non si mantiene a mano: si rigenera dai frontmatter (Art. 3).
 
-4. Le questioni sono ordinate in senso decrescente: ogni nuova questione viene
-   inserita prima delle precedenti. L'ordine è immutabile dopo la creazione.
+4. L'ordine di presentazione nell'indice è decrescente per identificativo:
+   le questioni più recenti compaiono per prime.
+   L'ordinamento è una proprietà dell'indice, non dei file, che sono
+   indipendenti l'uno dall'altro.
 
-5. Il campo `Questioni collegate` è opzionale, ma diventa obbligatorio per le
-   questioni di tipo *rilievo* con campo `Impatto` non vuoto (vedi Art. 9).
+5. Il campo `related` è opzionale, ma diventa obbligatorio per le questioni
+   di tipo *rilievo* con campo `Impatto` non vuoto (vedi Art. 9).
 
-6. I campi `Domande aperte` e `Impatto` sono mutabili per addizione nel corso
-   del ciclo. Due regole garantiscono la tracciabilità in entrambi i campi:
+6. I campi `Domande aperte` e `Impatto` del corpo sono mutabili per addizione
+   nel corso del ciclo. Due regole garantiscono la tracciabilità in entrambi
+   i campi:
    a) una voce esistente non può essere rimossa; può essere dichiarata
       superata o inattuata con motivazione esplicita inline;
    b) nuove voci possono essere aggiunte in qualsiasi momento, documentando
@@ -101,18 +161,24 @@ dall'idea al manufatto.
 
 ---
 
-## Art. 5 — note.md
+## Art. 5 — Le note
 
-1. `note.md` raccoglie osservazioni, memo e idee in incubazione che non
-   richiedono ancora una decisione formale. Una nota non ha stati, non produce
-   una voce nel mastro e non richiede approvazione.
+1. La cartella `note/` raccoglie osservazioni, memo e idee in incubazione che
+   non richiedono ancora una decisione formale.
+   Ogni nota vive nel proprio file `NOTA-{NNN}-slug.md`.
+   Una nota non ha stati, non produce una voce nel mastro e non richiede
+   approvazione.
 
-2. Il ciclo di vita di una nota è libero: può essere archiviata nel mastro
+2. L'indice `note.md` è la proiezione derivata dei frontmatter dei file in
+   `note/` e riporta ID, titolo e data di ogni nota.
+   Come gli altri indici, si rigenera e non si mantiene a mano.
+
+3. Il ciclo di vita di una nota è libero: può essere archiviata nel mastro
    quando ha esaurito il suo scopo, oppure restare indefinitamente.
 
-3. La struttura di una nota è definita nell'Allegato B.
+4. La struttura di una nota, corpo e frontmatter, è definita nell'Allegato B.
 
-4. Il corpo di una nota è immutabile dopo la scrittura. Le rettifiche o le
+5. Il corpo di una nota è immutabile dopo la scrittura. Le rettifiche o le
    nuove conoscenze sullo stesso argomento vanno inserite nella sezione
    `Commenti`: ogni commento è additivo, immutabile e numerato localmente
    alla nota (COMMENTO-001, COMMENTO-002, ...).
@@ -127,26 +193,44 @@ dall'idea al manufatto.
 
 ---
 
-## Art. 6 — mastro.md
+## Art. 6 — Il mastro
 
-1. `mastro.md` è il registro immutabile delle decisioni prese. Contiene solo
-   cicli chiusi. Ogni voce descrive cosa è emerso, cosa è stato deciso
-   e perché.
+1. La cartella `mastro/` è il registro delle decisioni prese. Contiene solo
+   cicli chiusi: una questione chiusa diventa un file `Q{NNN}-slug.md` in
+   `mastro/`.
+   Ogni voce descrive cosa è emerso, cosa è stato deciso e perché.
 
-2. Le voci sono ordinate in senso decrescente: ogni nuova voce viene inserita
-   prima delle precedenti (prepend-only). Una voce non viene mai modificata
-   dopo la scrittura.
+2. La chiusura di una questione è un atto meccanico:
+   a) si aggiunge al file-questione la sezione `Decisioni prese` (e il
+      `Percorso`, se dovuto);
+   b) si sposta il file da `questioni/` a `mastro/`, aggiornandone il
+      frontmatter (`tipo-elemento`, `stato: closed`, `chiusa`, e i campi di
+      distillazione `decisioni` e `file-toccati`);
+   c) si rigenerano gli indici `questioni.md` e `mastro.md`.
+   Questo atto è distinto dal lavoro di giudizio che crea il valore della
+   decisione, e non richiede di spostare testo dentro un file monolitico.
 
-3. La struttura di ogni voce del mastro è definita nell'Allegato C.
+3. L'indice `mastro.md` è la proiezione derivata dei frontmatter dei file in
+   `mastro/` e ne offre il sommario cronologico decrescente.
 
-4. La sezione `Percorso` va inclusa quando la questione ha avuto un ciclo
+4. La struttura di ogni voce del mastro, corpo e frontmatter, è definita
+   nell'Allegato C.
+
+5. La sezione `Percorso` va inclusa quando la questione ha avuto un ciclo
    significativo — stati multipli, ripensamenti, alternative scartate. Quando
    la decisione è stata diretta, si omette.
 
-5. La brevità non è un valore primario delle voci. L'omissione del Percorso
+6. La brevità non è un valore primario delle voci. L'omissione del Percorso
    è legittima solo quando il ciclo è stato effettivamente diretto — apertura
    e chiusura senza stati intermedi. Ometterla per concisione vanifica il
    valore del registro.
+
+7. Il file del mastro adotta un **doppio regime** (vedi Art. 10):
+   il corpo markdown è immutabile, il frontmatter è mutabile.
+   Il corpo è la testimonianza storica della decisione e non si tocca dopo la
+   scrittura; il frontmatter può essere corretto per sanare disallineamenti,
+   affinare i campi di giudizio (`decisioni`, `related`, `tag`) o eseguire una
+   bonifica di versione.
 
 ---
 
@@ -223,16 +307,27 @@ Diagramma: [ciclo di vita di una questione](diagrams/ciclo-questione.puml)
 
 ---
 
-## Art. 10 — Immutabilità del mastro e tracciamento dei cambiamenti
+## Art. 10 — Doppio regime del mastro e tracciamento dei cambiamenti
 
-1. Il mastro è immutabile: una voce registrata non può essere modificata
-   né rimossa.
+1. Il **corpo** di una voce del mastro è immutabile: una volta registrato non
+   può essere modificato né rimosso.
+   Il corpo è la testimonianza storica della decisione.
 
-2. Se una decisione precedente viene cambiata o invalidata, il cambiamento
+2. Il **frontmatter** di una voce del mastro è mutabile.
+   Può essere corretto per sanare un disallineamento con il corpo, per
+   affinare i campi di giudizio (`decisioni`, `related`, `tag`) o nel corso di
+   una bonifica di versione dell'opera.
+   La mutabilità del frontmatter non intacca l'immutabilità del corpo: sono
+   due canali distinti, e ogni modifica del frontmatter resta tracciata dalla
+   cronologia di versione.
+
+3. Se una decisione precedente viene cambiata o invalidata, il cambiamento
    viene tracciato aprendo una nuova questione. La chiusura di questa questione
    produce una nuova voce nel mastro che documenta la decisione aggiornata.
+   Correggere il corpo di una voce esistente non è mai il modo di cambiare una
+   decisione: per questo si apre una nuova questione.
 
-3. Il mastro preserva la sequenza storica, non lo stato corrente dell'opera.
+4. Il mastro preserva la sequenza storica, non lo stato corrente dell'opera.
    La coesistenza di una decisione e della sua successiva revisione è corretta e attesa.
 
 ---
@@ -302,6 +397,26 @@ Diagramma: [flusso RFC outbound e inbound](diagrams/flusso-rfc.puml)
 
 ## Allegato A — Struttura di una questione
 
+File: `questioni/Q{NNN}-slug.md`.
+
+Frontmatter:
+
+```yaml
+---
+id: QUESTIONE-XXX
+titolo: Titolo della questione
+tipo-elemento: questione
+tipo: rilievo | revisione | anomalia
+stato: open | in-progress | pending-approval | pending-rfc | in-verification | deferred
+aperta: YYYY-MM-DD
+aggiornata: YYYY-MM-DD
+related: [QUESTIONE-YYY, ...]
+tag: [tema-uno, tema-due]
+---
+```
+
+Corpo:
+
 ```
 ## QUESTIONE-XXX — Titolo
 
@@ -310,8 +425,6 @@ Diagramma: [flusso RFC outbound e inbound](diagrams/flusso-rfc.puml)
 
 **Storia**
 - YYYY-MM-DD [stato] — motivazione
-
-**Questioni collegate**: [QUESTIONE-YYY, ...] (opzionale)
 
 **Descrizione**
 [corpo della questione]
@@ -328,9 +441,32 @@ COMMENTO-NNN — YYYY-MM-DD
 [testo del commento]
 ```
 
+I campi `tipo` e `stato` compaiono sia nel frontmatter sia nel corpo: il
+frontmatter è il canale queryable, il corpo il canale narrativo.
+La coerenza tra i due è presidiata dal validatore dell'opera.
+Il legame con altre questioni si dichiara nel campo `related` del frontmatter,
+non più in una sezione `Questioni collegate` del corpo.
+
 ---
 
 ## Allegato B — Struttura di una nota
+
+File: `note/NOTA-{NNN}-slug.md`.
+
+Frontmatter:
+
+```yaml
+---
+id: NOTA-XXX
+titolo: Titolo sintetico
+tipo-elemento: nota
+data: YYYY-MM-DD
+related: [QUESTIONE-YYY, NOTA-ZZZ, ...]
+tag: [tema-uno]
+---
+```
+
+Corpo:
 
 ```
 ## NOTA-XXX — YYYY-MM-DD — Titolo sintetico
@@ -347,6 +483,30 @@ COMMENTO-NNN — YYYY-MM-DD
 
 ## Allegato C — Struttura di una voce del mastro
 
+File: `mastro/Q{NNN}-slug.md`.
+Il corpo è immutabile; il frontmatter è mutabile (Art. 10).
+
+Frontmatter:
+
+```yaml
+---
+id: QUESTIONE-XXX
+titolo: Titolo della questione
+tipo-elemento: voce-mastro
+tipo: rilievo | revisione | anomalia
+stato: closed
+chiusa: YYYY-MM-DD
+related: [QUESTIONE-YYY, ...]
+tag: [tema-uno, tema-due]
+decisioni:
+  - sintesi distillata di una decisione presa
+file-toccati:
+  - percorso/artefatto/uno
+---
+```
+
+Corpo:
+
 ```
 ## YYYY-MM-DD — Chiusura [QUESTIONE-ID]: Titolo
 
@@ -361,3 +521,7 @@ COMMENTO-NNN — YYYY-MM-DD
 **Impatto**
 [artefatti modificati o da modificare]
 ```
+
+I campi `decisioni` e `file-toccati` del frontmatter sono la distillazione
+queryable, rispettivamente, della sezione `Decisioni prese` e della sezione
+`Impatto` del corpo.

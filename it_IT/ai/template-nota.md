@@ -1,23 +1,36 @@
 ---
 tipo-artefatto: template
 documento: nota
-descrizione: struttura canonica di una nota in notes.md
+descrizione: struttura canonica di una nota segregata nella cartella note/
 fase: trasversale
 ---
 
 # Template — Nota
 
-Una nota registra un memo, un'osservazione o una decisione informale nel file
-`notes.md`. Va inserita in cima al file, prima delle note esistenti.
+Una nota registra un memo, un'osservazione o una decisione informale.
+Ogni nota vive nel proprio file `note/NOTA-{NNN}-slug.md`.
+L'indice `note.md` è una proiezione derivata dei frontmatter e si rigenera.
 
 ## Struttura
 
+Frontmatter YAML di metadati più corpo markdown a formato libero.
+
 ```markdown
+---
+id: NOTA-{ID}
+titolo: {Descrizione sintetica}
+tipo-elemento: nota
+data: {YYYY-MM-DD}
+related: [QUESTIONE-NNN]
+tag: [tema-uno]
+---
+
 ## NOTA-{ID} — {YYYY-MM-DD} — {Descrizione sintetica}
 
 {corpo della nota}
-
 ```
+
+I campi `related` e `tag` accettano liste vuote (`[]`) quando non applicabili.
 
 ## Commento a una nota esistente
 
@@ -32,17 +45,9 @@ COMMENTO-{NNN} — {YYYY-MM-DD}
 
 ## Aggiornamento indice
 
-Aggiungere in cima all'elenco:
-
-```markdown
-- **NOTA-{ID}** — {Descrizione sintetica} — {YYYY-MM-DD}
-```
-
-Aggiornare la nota a fondo file:
-
-```
-> Ultima nota inserita: NOTA-{ID} — {YYYY-MM-DD}.
-```
+L'indice `note.md` è una proiezione derivata: dopo aver creato il file della
+nota, si rigenera l'indice dai frontmatter con lo strumento dell'opera. Non
+si modifica l'indice a mano.
 
 ## Prima di scrivere
 

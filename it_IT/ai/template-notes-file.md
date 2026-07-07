@@ -1,21 +1,26 @@
 ---
 tipo-artefatto: template
 documento: notes-file
-descrizione: struttura canonica del file notes.md vuoto per un'opera Hodos
+descrizione: struttura canonica dell'indice note.md, proiezione derivata della cartella note/
 fase: trasversale
 autorita: operativa
 ---
 
-# Template — File notes.md
+# Template — Indice note.md
 
-Il file `notes.md` raccoglie note e memo informali dell'opera. Viene creato
-durante l'inizializzazione e vive nella directory di processo. È opzionale:
-non tutte le opere lo usano.
+Il file `note.md` è l'**indice** delle note dell'opera: una proiezione
+derivata dei frontmatter dei file presenti nella cartella `note/`.
+La sorgente è il singolo file `note/NOTA-{NNN}-slug.md`; l'indice ne offre il
+sommario ed è rigenerato dallo strumento dell'opera.
+Le note sono opzionali: non tutte le opere le usano.
 
 ## Struttura
 
 ```markdown
 # Note — {Nome Opera}
+
+<!-- FILE GENERATO — proiezione derivata dei frontmatter in note/.
+     Non modificare a mano: rigenerare con lo strumento dell'opera. -->
 
 ## Indice
 
@@ -26,9 +31,10 @@ non tutte le opere lo usano.
 
 ## Regole
 
-- L'indice è un elenco puntato con tre campi: ID in grassetto,
-  descrizione, data. Non aggiungere campi extra.
-- Le note vengono inserite in cima al file, dopo la sezione Indice e
-  il separatore.
-- L'indice viene aggiornato ad ogni inserimento.
+- L'indice è un elenco puntato con tre campi derivati dal frontmatter di
+  ciascuna nota: ID in grassetto (`id`), titolo/descrizione (`titolo`), data
+  (`data`). Non aggiungere campi extra.
+- Le voci sono ordinate in senso decrescente per data.
+- L'indice non si modifica a mano: si rigenera dai frontmatter ad ogni
+  inserimento.
 - Per la struttura di una singola nota, consultare il template `nota`.
