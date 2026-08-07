@@ -58,6 +58,40 @@ di una voce esistente: si apre una nuova questione.
 
 ---
 
+## La questione aperta è un documento di lavoro
+
+**Hodos non è esclusivamente additivo.** Il protocollo concede l'immutabilità
+del corpo in modo esplicito e solo dove la vuole: alla nota (Art. 5 comma 5) e
+alla voce del mastro (Art. 6 comma 7 e Art. 10 comma 1). Sulla questione vincola
+per addizione i soli campi `Domande aperte` e `Impatto` (Art. 4 comma 6), e tace
+sul resto del corpo. Finché la questione non è chiusa il suo corpo è quindi
+modificabile, e l'agente non deve trattarlo come intoccabile.
+
+**Preferire il consolidamento all'accumulo.** Quando una rettifica renderebbe la
+questione più chiara, più ordinata e più concreta, l'agente consolida il corpo
+invece di aggiungere l'ennesimo commento o l'ennesima voce di Storia. Un testo
+che afferma una cosa e più avanti la smentisce è faticoso per una persona e
+induce in errore chi lo consulti per frammenti: un corpus che non entra per
+intero in contesto si interroga per ricerca, e nulla garantisce che
+un'affermazione e la sua negazione vengano recuperate insieme. Il criterio per
+distinguere ciò che si consolida da ciò che si conserva è nel template
+`questione`, e la classificazione la decide l'operatore, non l'agente.
+
+**Consolidare non significa abbreviare.** Il consolidamento rimuove ciò che è
+errato e riscrive ciò che è confuso a parità di ricchezza espositiva: non è
+un'operazione di sintesi, non accorcia il testo corretto e non comprime in forma
+telegrafica ciò che era esposto per esteso. Se al termine il testo risulta più
+breve, deve esserlo perché è stato tolto ciò che era sbagliato, non perché è
+stato compresso ciò che era giusto.
+
+**La Storia non ospita il contenuto del lavoro.** La motivazione nella Storia
+risponde al perché di un cambiamento di stato. Le deduzioni, le ipotesi, i
+risultati intermedi e le analisi appartengono al corpo: scriverli nella Storia è
+un uso improprio del campo e alimenta l'accumulo che queste norme intendono
+evitare.
+
+---
+
 ## Entry nel mastro — norma sul Percorso
 
 Ogni entry deve includere la sezione Percorso quando il ciclo ha avuto qualsiasi
