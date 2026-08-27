@@ -1,4 +1,8 @@
 ---
+tipo-artefatto: skill
+documento: arricchimento-versionamento-git
+descrizione: arricchimento opzionale che integra il workflow git con il percorso a fasi;
+  skill descrittivo che non esegue azioni
 skill: arricchimento-versionamento-git
 client: Claude Code CLI
 invocazione: /hodos-arricchimento-versionamento-git

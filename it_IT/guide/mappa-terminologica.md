@@ -1,3 +1,10 @@
+---
+tipo-artefatto: guida
+documento: mappa-terminologica
+descrizione: tabella di conversione dai termini software-specifici ai termini astratti del
+  protocollo, usata nella trasformazione di documenti e skill
+---
+
 # Mappa Terminologica — Hodos
 
 Tabella di conversione da termini software-specifici di playbook ai termini

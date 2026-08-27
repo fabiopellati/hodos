@@ -1,4 +1,8 @@
 ---
+tipo-artefatto: skill
+documento: arricchimento-bonifica-forma-segregata
+descrizione: processo operativo con cui un'opera avviata sulla forma monolitica migra alla
+  forma segregata degli strumenti di governo
 skill: arricchimento-bonifica-forma-segregata
 client: Claude Code CLI
 invocazione: /hodos-arricchimento-bonifica-forma-segregata

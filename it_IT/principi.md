@@ -1,3 +1,11 @@
+---
+tipo-artefatto: guida
+documento: principi
+descrizione: valori fondativi su cui Hodos è costruita, cioè il perché della metodologia
+  e non il come, fra i quali la semplicità e l'adattabilità, con i criteri per valutarne
+  l'adozione
+---
+
 # Principi Guida — Hodos
 
 Questo documento descrive i valori fondamentali su cui Hodos è costruita.
