@@ -1,3 +1,10 @@
+---
+tipo-artefatto: guida
+documento: glossario
+descrizione: termini del protocollo Hodos in ordine alfabetico, ciascuno introdotto nel punto
+  in cui il protocollo lo nomina per la prima volta
+---
+
 # Glossario — Hodos
 
 **Versione**: bozza (in redazione parallela al protocollo)

@@ -1,4 +1,8 @@
 ---
+tipo-artefatto: skill
+documento: arricchimento-fasi
+descrizione: percorso di riferimento opzionale P0-P4 per opere che adottano un ciclo di vita a
+  fasi sequenziali; skill descrittivo che non esegue azioni
 skill: arricchimento-fasi
 client: Claude Code CLI
 invocazione: /hodos-arricchimento-fasi

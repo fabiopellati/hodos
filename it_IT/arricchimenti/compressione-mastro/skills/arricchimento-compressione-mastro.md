@@ -1,4 +1,8 @@
 ---
+tipo-artefatto: skill
+documento: arricchimento-compressione-mastro
+descrizione: arricchimento deprecato dalla versione 1.0.0 del protocollo, superato dalla forma
+  segregata degli strumenti di governo
 skill: arricchimento-compressione-mastro
 client: Claude Code CLI
 invocazione: /hodos-arricchimento-compressione-mastro

@@ -1,3 +1,11 @@
+---
+tipo-artefatto: regola
+documento: protocollo
+descrizione: testo normativo vigente del protocollo Hodos, con gli articoli su strumenti
+  di governo, tipi e stati della questione, mastro, note, RFC e ciclo di vita degli
+  artefatti di processo
+---
+
 # Protocollo di Processo — Hodos
 
 **Versione**: 1.1.0

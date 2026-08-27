@@ -1,4 +1,8 @@
 ---
+tipo-artefatto: skill
+documento: arricchimento-firma-utente
+descrizione: arricchimento opzionale che aggiunge la firma dell'autore alle contribuzioni
+  tracciabili, per opere in cui più operatori toccano gli stessi file di processo
 skill: arricchimento-firma-utente
 client: Claude Code CLI
 invocazione: /hodos-arricchimento-firma-utente

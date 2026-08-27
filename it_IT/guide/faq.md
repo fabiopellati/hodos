@@ -1,3 +1,10 @@
+---
+tipo-artefatto: guida
+documento: faq
+descrizione: domande operative frequenti e disambiguazioni per chi usa Hodos, in forma di
+  domanda e risposta diretta
+---
+
 # FAQ — Hodos
 
 Domande operative frequenti e disambiguazioni per chi usa Hodos.

@@ -1,3 +1,10 @@
+---
+tipo-artefatto: guida
+documento: team-interno
+descrizione: guida operativa per il team che governa l'opera, con l'applicazione quotidiana del
+  processo definito dal protocollo e senza presupporre strumenti o AI
+---
+
 # Guida Operativa — Team Interno
 
 Questa guida descrive come applicare il processo di gestione dei progetti
