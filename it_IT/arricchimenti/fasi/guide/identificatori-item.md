@@ -43,6 +43,17 @@ progressiva, con padding a tre cifre (001, 002, ...).
 La numerazione è locale al documento: il primo item di
 ciascun tipo parte da 001.
 
+Nelle fasi P0 e P1 la località al documento produce di
+fatto l'unicità nell'opera, perché i documenti di quelle
+fasi esistono in una sola copia: c'è un solo
+`3-scenari.md` e un solo `4-requisiti.md`, sicché
+`SCN-002` individua un solo item ovunque lo si citi.
+La proprietà non vale però per costruzione, e cade
+appena il documento che ospita la numerazione esiste in
+più copie, come accade in P2, dove ogni unità ha i
+propri documenti. Su questo si veda la sezione
+«Citazione fuori dall'ambito di numerazione».
+
 ---
 
 ## Tipi di item e prefissi
@@ -146,6 +157,25 @@ spiega l'origine.
 
 ---
 
+## Citazione fuori dall'ambito di numerazione
+
+Un identificatore numerato localmente individua il proprio item soltanto dentro l'ambito in cui la numerazione è locale.
+Finché la citazione resta in quell'ambito la sigla nuda basta ed è la forma corretta: nel documento che definisce l'item non si scrive altro.
+Appena la citazione esce dall'ambito, la sigla nuda non è più risolvibile, perché lo stesso identificatore esiste in ogni altra copia del documento che ospita quella numerazione.
+
+Vale allora la regola seguente, che è una proprietà della struttura degli artefatti e non una convenzione di stile.
+
+- Una citazione che esce dal proprio ambito di numerazione porta con sé il contesto sufficiente a risolvere l'identificatore, cioè l'ambito da cui proviene.
+- Il contesto si accumula man mano che la citazione si allontana: una citazione interna all'opera dichiara l'unità di provenienza, una citazione che esce dall'opera dichiara anche l'opera.
+- La forma concreta con cui il contesto si esprime è libera, purché sia riconoscibile e uniforme dentro la stessa opera.
+  Chi adotta Hodos la fissa come propria convenzione, e questa guida non ne prescrive una: prescrive che il contesto ci sia.
+
+La regola non è un'aggiunta al modo di titolare gli item, che resta quello dichiarato dallo schema di nomenclatura: riguarda la citazione, non la definizione.
+Il titolo di un item non va quindi caricato del proprio contesto per renderlo citabile, perché il contesto appartiene a chi cita e non a chi definisce.
+
+Il caso in cui la regola si applica più spesso è quello degli identificatori numerati localmente all'unità nella fase P2, cioè le voci di attività e le evoluzioni, che ripartono da uno in ciascuna unità.
+Per le evoluzioni la necessità è esplicita nel percorso stesso, perché le evoluzioni locali generate nelle unità impattate da un'evoluzione cross-unità devono riferire l'evoluzione di coordinamento, che vive fuori dall'unità.
+
 ## Unicità e stabilità
 
 Un identificatore, una volta assegnato, non viene mai
@@ -176,3 +206,6 @@ convenzione si estende naturalmente quando l'unità
 adotta il design articolato: gli item nei documenti
 di approfondimento dell'unità usano gli stessi prefissi
 con numerazione locale al documento dell'unità.
+
+In P2 quella località non produce però l'unicità nell'opera, a differenza di quanto accade in P0 e in P1, perché i documenti di unità esistono in una copia per ciascuna unità.
+Vale quindi per essi la sezione «Citazione fuori dall'ambito di numerazione», che vale del pari per gli altri identificatori numerati localmente all'unità e non coperti da questo schema di nomenclatura, cioè le voci di attività (`BL-{N}`) e le evoluzioni (`EVO-{N}`).
