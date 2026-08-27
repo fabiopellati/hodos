@@ -22,7 +22,6 @@ inbound (bidirezionale, Team-B riceve ed esegue) e informativa
 
 **Data**: {YYYY-MM-DD}
 **Tipo**: {outbound | informativa — omettere per RFC inbound}
-**Commit generazione**: {SHA del commit che ha generato la RFC}
 **Da**: Team-A / {nome progetto}
 **A**: {Team-B}
 **Consegna RFC**: {canale o percorso per consegnare la RFC a Team-B — omettere se implicito}
@@ -126,12 +125,11 @@ questa sequenza.
    dichiarata in questo template.
 5. Nominare il file secondo la convenzione descritta
    nella sezione precedente.
-6. Dopo il commit, aggiornare il campo
-   `**Commit generazione**` con il SHA del commit e
-   committare nuovamente con amend.
 
 ## Regole
 
+- L'intestazione non registra il commit che ha generato la RFC.
+  Il dato non è iscrivibile nel documento senza auto-riferimento, perché è il contenuto a determinare l'identificativo del commit, e la tracciabilità della generazione appartiene per intero allo strumento di versionamento di chi adotta Hodos, che la offre già sulla storia del file.
 - La sezione di richiesta è immutabile dopo la
   generazione. I contributi successivi avvengono solo
   tramite Response RFC e commenti.
