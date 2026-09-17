@@ -8,9 +8,16 @@ descrizione: testo normativo vigente del protocollo Hodos, con gli articoli su s
 
 # Protocollo di Processo — Hodos
 
-**Versione**: 1.1.0
+**Versione**: 1.2.0
 **Stato**: forma normativa vigente
 
+> Nota di compatibilità (1.2.0).
+> Questa versione enuncia il perimetro del campo `related`, che è locale
+> all'opera, e la forma del legame verso un'altra opera, che si scrive in
+> prosa nel corpo dell'elemento che lo origina (Art. 3 comma 6).
+> È una precisazione di ciò che le opere conformi già praticavano: nessuna
+> migrazione è richiesta e nessun campo cambia forma.
+>
 > Nota di compatibilità (1.1.0).
 > Questa versione aggiunge il campo `descrizione` al frontmatter delle
 > questioni e delle voci del mastro: la sintesi distillata delle motivazioni
@@ -127,11 +134,21 @@ dall'idea al manufatto.
 
 6. I legami tra elementi sono espressi dal campo `related`, come lista di
    identificativi (`QUESTIONE-NNN`, `NOTA-NNN`).
+   Il campo è locale all'opera: contiene soltanto identificativi che
+   risolvono in `questioni/`, `mastro/` o `note/` della medesima opera,
+   perché un identificativo di un'altra opera non risolverebbe, oppure
+   risolverebbe per omonimia numerica verso un elemento che non c'entra.
    Il legame si dichiara una sola volta, sull'elemento che lo origina; le
    back-reference — quali elementi citano un dato elemento — sono derivate
    dallo strumento e non si scrivono a mano.
    I legami sono così traversabili in modo deterministico, non affidati alla
    prosa.
+   Il legame verso un elemento di un'altra opera non entra in `related`: si
+   scrive in prosa nel corpo dell'elemento che lo origina, con il nome
+   dell'opera e l'identificativo, ed eventualmente il percorso del file, fin
+   dalla prima stesura dell'elemento.
+   Il protocollo non tratta il caso dell'elemento già immutabile in cui il
+   legame sia stato omesso: è un'anomalia dell'opera e resta a sua cura.
 
 7. Il protocollo prescrive la forma e le invarianti — un file per elemento,
    frontmatter per famiglia, indice come proiezione derivata, `related`
@@ -313,8 +330,8 @@ Diagramma: [ciclo di vita di una questione](diagrams/ciclo-questione.puml)
    deliberativo; le revisioni sono i suoi effetti operativi.
 
 2. Un rilievo con campo `Impatto` non vuoto non può essere chiuso finché non
-   esiste almeno una questione di tipo *revisione* aperta nel campo
-   `Questioni collegate`.
+   esiste almeno una questione di tipo *revisione* aperta che lo dichiari
+   nel proprio campo `related` (Art. 3 comma 6).
 
 3. La revisione collegata non deve essere necessariamente completata prima
    della chiusura del rilievo: deve però esistere, a testimonianza che il
@@ -460,8 +477,10 @@ COMMENTO-NNN — YYYY-MM-DD
 I campi `tipo` e `stato` compaiono sia nel frontmatter sia nel corpo: il
 frontmatter è il canale queryable, il corpo il canale narrativo.
 La coerenza tra i due è presidiata dal validatore dell'opera.
-Il legame con altre questioni si dichiara nel campo `related` del frontmatter,
-non più in una sezione `Questioni collegate` del corpo.
+Il legame con altri elementi della medesima opera si dichiara nel campo
+`related` del frontmatter, non più in una sezione `Questioni collegate` del
+corpo; il legame verso un'altra opera si scrive in prosa nel corpo
+(Art. 3 comma 6).
 
 ---
 

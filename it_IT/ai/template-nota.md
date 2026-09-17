@@ -31,6 +31,9 @@ tag: [tema-uno]
 ```
 
 I campi `related` e `tag` accettano liste vuote (`[]`) quando non applicabili.
+Il perimetro di `related` è locale all'opera e il legame verso un'altra opera
+si scrive in prosa nel corpo della nota: la norma è l'Art. 3 comma 6 del
+protocollo.
 
 ## Commento a una nota esistente
 

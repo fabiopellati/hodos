@@ -58,8 +58,10 @@ queryable della sezione `Descrizione` del corpo. Nel mastro farà da contraltare
 a `decisioni`, il "dopo".
 
 Il campo `related` è opzionale nel caso generale; sostituisce la vecchia
-sezione `Questioni collegate` del corpo. I campi `related` e `tag` accettano
-liste vuote (`[]`) quando non applicabili.
+sezione `Questioni collegate` del corpo. Il suo perimetro è locale all'opera
+e il legame verso un'altra opera si scrive in prosa nel corpo: la norma è
+l'Art. 3 comma 6 del protocollo. I campi `related` e `tag` accettano liste
+vuote (`[]`) quando non applicabili.
 
 ## Tipi
 
@@ -69,8 +71,8 @@ liste vuote (`[]`) quando non applicabili.
 
 ## Sezioni opzionali
 
-Il legame con altre questioni si esprime nel campo `related` del frontmatter,
-non in una sezione del corpo.
+Il legame con altri elementi della medesima opera si esprime nel campo
+`related` del frontmatter, non in una sezione del corpo (Art. 3 comma 6).
 
 Aggiungere in fondo al corpo solo se presente:
 
