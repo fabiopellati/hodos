@@ -71,6 +71,9 @@ file-toccati:
 - Il corpo della voce è immutabile: non modificarlo mai dopo la scrittura.
 - Il frontmatter è mutabile per correzione di disallineamenti, affinamento
   dei campi di giudizio (`decisioni`, `related`, `tag`) e bonifica di versione.
+- Il perimetro di `related` è locale all'opera; il legame verso un'altra opera
+  si scrive in prosa nel corpo della voce, fin dalla prima stesura, perché il
+  corpo non si riapre (Art. 3 comma 6 del protocollo).
 - Decisioni prese e Impatto (corpo) sono obbligatori, così come i campi
   `decisioni` e `file-toccati` (frontmatter) che ne sono la proiezione.
 - Il campo `descrizione` (frontmatter) è obbligatorio: è la sintesi distillata
