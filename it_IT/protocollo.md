@@ -8,9 +8,17 @@ descrizione: testo normativo vigente del protocollo Hodos, con gli articoli su s
 
 # Protocollo di Processo — Hodos
 
-**Versione**: 1.2.0
+**Versione**: 1.2.1
 **Stato**: forma normativa vigente
 
+> Nota di compatibilità (1.2.1).
+> Questa versione corregge un difetto di numerazione dell'Art. 5, che recava
+> due commi distinti contrassegnati entrambi dal numero 5: le casistiche
+> tipiche della nota sono ora il comma 6.
+> Nessuna norma è mutata e nessun riferimento esistente decade, perché le
+> citazioni in circolazione dell'«Art. 5 comma 5» riguardano tutte
+> l'immutabilità del corpo della nota, che conserva il proprio numero.
+>
 > Nota di compatibilità (1.2.0).
 > Questa versione enuncia il perimetro del campo `related`, che è locale
 > all'opera, e la forma del legame verso un'altra opera, che si scrive in
@@ -215,7 +223,7 @@ dall'idea al manufatto.
    `Commenti`: ogni commento è additivo, immutabile e numerato localmente
    alla nota (COMMENTO-001, COMMENTO-002, ...).
 
-5. Le casistiche tipiche di una nota sono:
+6. Le casistiche tipiche di una nota sono:
    a) *osservazione in incubazione* — idea non ancora matura per diventare
       questione;
    b) *questione prematura* — si sa già cosa fare, ma il momento non è

@@ -26,8 +26,9 @@ e approvati.
 Questo principio richiede di distinguere due categorie
 di documenti che svolgono funzioni diverse nel processo:
 
-- **Documenti di processo** — `questioni.md`, `mastro.md`,
-  `notes.md`: governano il ciclo, tracciano problemi e
+- **Strumenti di governo** — le collezioni `questioni/`,
+  `mastro/` e `note/`, con i rispettivi indici derivati:
+  governano il ciclo, tracciano problemi e
   decisioni. Non guidano l'implementazione. Una questione
   può contenere l'analisi che porta a decidere cosa fare,
   ma il "cosa fare" va formalizzato nei documenti di
@@ -173,6 +174,6 @@ documenti specifici prima di approvare il punto di ingresso.
 ## Regole
 
 - Ogni fase si chiude con un'approvazione esplicita prima di procedere alla successiva. L'AI non avanza autonomamente.
-- Rilievi e problemi inattesi vanno in questioni.md, non in attivita.md. L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva (nasce da un problema).
+- Rilievi e problemi inattesi vanno nella collezione questioni/, non in attivita.md. L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva (nasce da un problema).
 - Questioni che emergono in P3 e invalidano assunzioni di fasi precedenti richiedono questioni collegate con propagazione a ritroso: si risolve dalla fase radice verso quella più avanzata.
-- Per tracciare il ciclo in questioni.md: una questione di revisione per fase significativa, una per unità. I passi di esecuzione vivono in attivita.md, non come questioni separate.
+- Per tracciare il ciclo nella collezione questioni/: una questione di revisione per fase significativa, una per unità. I passi di esecuzione vivono in attivita.md, non come questioni separate.

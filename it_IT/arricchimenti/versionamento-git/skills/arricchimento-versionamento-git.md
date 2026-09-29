@@ -63,10 +63,16 @@ Un modello di riferimento compatibile con Hodos:
 |---|---|
 | `main` | Versioni stabili consegnate; ogni commit corrisponde a un tag |
 | `develop` | Integrazione continua del lavoro in corso |
-| `feat/nome` | Unità di realizzazione (P2); merge su develop al completamento |
-| `fix/nome` | Correzioni; merge su develop |
+| `feat/<nome>` | Unità di realizzazione (P2); merge su develop al completamento |
+| `fix/<nome>` | Correzioni; merge su develop |
 | `release/x.y.z` | Preparazione consegna (P4); merge su main e develop |
-| `hotfix/nome` | Correzione urgente su main; merge su main e develop |
+| `hotfix/<nome>` | Correzione urgente su main; merge su main e develop |
+
+La composizione di `<nome>` non è libera quando il branch nasce da una
+questione: la convenzione è `q<NNN>-<descrizione-kebab>` e la sua sede è il
+documento `arricchimento-git.md` di questo stesso arricchimento, che va
+consultato prima di nominare un branch. Qui si descrive la topologia dei
+branch, non la forma dei loro nomi.
 
 ---
 

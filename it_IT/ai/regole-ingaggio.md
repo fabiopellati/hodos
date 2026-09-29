@@ -9,7 +9,7 @@ autorita: normativa
 
 Queste regole governano il comportamento dell'agente AI quando riceve un
 prompt dall'operatore in un'opera Hodos. L'obiettivo è evitare che l'agente
-agisca sui file di processo (questioni.md, mastro.md, notes.md) senza che
+agisca sui file di processo (questioni.md, mastro.md, note.md) senza che
 l'operatore abbia espresso un'intenzione chiara e confermata.
 
 ---

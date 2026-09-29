@@ -109,7 +109,8 @@ Quando la complessità dell'unità lo richiede, il `design.md` può
 essere sostituito da una directory `design/`: vedi la sezione
 dedicata più avanti.
 
-**Nota**: rilievi e problemi inattesi vanno in `questioni.md`, non nell'attività.
+**Nota**: rilievi e problemi inattesi vanno nella collezione `questioni/`, non
+nell'attività.
 L'attività è proattiva (nasce dalla pianificazione); la questione è reattiva
 (nasce da un problema).
 
@@ -176,7 +177,8 @@ fasi precedenti, aprire questioni collegate (propagazione a ritroso).
 
 ## Questioni e wall
 
-Le questioni in `questioni.md` tracciano il processo, non lo contengono.
+Le questioni della collezione `questioni/` tracciano il processo, non lo
+contengono.
 Gli elaborati prodotti da ogni fase vivono nei propri file; il wall
 registra apertura, progressione e chiusura.
 

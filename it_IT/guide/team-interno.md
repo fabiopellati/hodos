@@ -29,20 +29,23 @@ la directory dei documenti attesi e le approvazioni.
 
 ## Gestione delle questioni
 
-Ogni progetto mantiene `questioni.md` e `mastro.md` nella root documentale.
+Ogni progetto mantiene i tre strumenti di governo nella root documentale: le
+collezioni `questioni/`, `note/` e `mastro/`, con i rispettivi indici derivati
+`questioni.md`, `note.md` e `mastro.md`, che si rigenerano e non si scrivono a
+mano.
 
 **Aprire una questione**: quando emerge un problema inatteso, una conoscenza
-nuova da tracciare o una revisione necessaria. Usare lo skill `/hodos-questione`
-se disponibile, altrimenti compilare manualmente seguendo la struttura definita
-nel protocollo.
+nuova da tracciare o una revisione necessaria. Si crea il file dell'elemento
+nella collezione `questioni/` seguendo il template, che va recuperato dalla sua
+fonte e non ricostruito a memoria, e si rigenera l'indice.
 
-**Aggiornare uno stato**: ad ogni cambio di stato aggiungere una nota nella
-Storia che risponde al "perché". Usare `/hodos-aggiorna-questione` se
-disponibile.
+**Aggiornare uno stato**: ad ogni cambio di stato aggiungere una voce nella
+Storia che risponde al "perché" e non al "cosa" (Art. 8 comma 2).
 
-**Chiudere una questione**: quando il problema è risolto, usare
-`/hodos-aggiorna-questione` con stato `closed`. Lo skill rimuove la questione da
-`questioni.md` e scrive la voce corrispondente in `mastro.md`.
+**Chiudere una questione**: quando il problema è risolto si aggiunge al file la
+sezione `Decisioni prese`, e il `Percorso` ove dovuto; si sposta il file da
+`questioni/` a `mastro/` aggiornandone il frontmatter; si rigenerano i due
+indici (Art. 6 comma 2). Gli indici non si modificano mai a mano.
 
 **Confine dei ruoli su `pending-approval`**: è chi realizza a portare la
 questione a `pending-approval` — è il segnale di consegna verso chi governa.
@@ -61,7 +64,7 @@ Risolvere sempre dalla fase radice verso la fase più avanzata.
 **RFC outbound** (verso Team-B):
 
 1. Portare la questione allo stato `pending-rfc`
-2. Generare la RFC con lo skill `/hodos-rfc` o seguendo il template
+2. Redigere la RFC seguendo il proprio template
 3. Consegnare il documento a Team-B
 4. Quando Team-B compila la sezione Response RFC e restituisce il documento,
    verificare che il lavoro soddisfi i criteri di accettazione

@@ -79,6 +79,10 @@ alla struttura; manca solo la ricchezza dei metadati di giudizio.
 Questo strato richiede lettura e interpretazione, può avvenire in tempi
 successivi e non blocca il primo. Per ciascun elemento, letto il corpo:
 
+- compila `descrizione` distillando le motivazioni dell'elemento, cioè il
+  perché è nato, dalla sezione `Descrizione` del corpo: è il campo che la
+  versione 1.1.0 del protocollo ha aggiunto e il cui popolamento la nota di
+  compatibilità affida a questo arricchimento;
 - compila `decisioni` distillando le decisioni prese (per le voci del mastro,
   dalla sezione `Decisioni prese`);
 - compila `file-toccati` dagli artefatti citati nella sezione `Impatto`;

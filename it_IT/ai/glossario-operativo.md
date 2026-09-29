@@ -91,7 +91,8 @@ prima funzionava, non è conforme.
 
 ## Nota
 
-Osservazione, memo o idea registrata in notes.md. Non ha stati, non produce
+Osservazione, memo o idea che vive nel proprio file della collezione `note/`,
+sommariata dall'indice derivato `note.md`. Non ha stati, non produce
 entry nel mastro, non richiede approvazione. Serve per annotare informazioni
 che non richiedono ancora una decisione.
 
@@ -119,7 +120,7 @@ correggo il commento, a proposito di, aggiunta, aggiorno, specifico meglio.
 ## Inizializzazione
 
 Creazione dello scaffolding di un'opera Hodos: CLAUDE.md, questioni.md,
-mastro.md, notes.md.
+mastro.md, note.md.
 
 **Espressioni che indicano inizializzazione:**
 inizializza hodos, crea il progetto, setup, prepara i file, scaffolding,

@@ -61,6 +61,12 @@ conoscere la storia interna del progetto richiedente.}
 ### Deviazioni
 ```
 
+La sezione `Response RFC` appartiene ai soli cicli che attendono una risposta,
+cioè l'outbound e l'inbound: si omette nella RFC informativa, che per l'Art. 11
+comma 8 non ne attende alcuna. Nel ciclo informativo il documento termina quindi
+con i Criteri di accettazione, ove presenti, e non porta la sezione di risposta
+nemmeno vuota.
+
 ## Ciclo outbound
 
 1. La questione passa a `pending-rfc`.

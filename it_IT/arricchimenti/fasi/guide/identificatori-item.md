@@ -103,8 +103,8 @@ definite nel piano sono identificate dal nome che
 assumeranno nella fase P2 e riferiscono esplicitamente
 le decisioni strutturali (DST) che realizzano,
 oltre agli altri item delle fasi precedenti che le
-motivano. La cardinalità della relazione fra parti
-(DST) e unità è scelta di chi governa l'opera: può
+motivano. La cardinalità della relazione fra le parti
+e le unità è scelta di chi governa l'opera: può
 essere uno-a-uno, molti-a-molti o mista. Il piano
 esecutivo dichiara esplicitamente, per ciascuna unità,
 le DST coinvolte.
@@ -196,8 +196,8 @@ definisce.
 
 Questa convenzione si applica ai documenti di progetto
 delle fasi P0 e P1 quando l'arricchimento fasi è
-attivo. Non si applica ai documenti di processo
-(questioni.md, mastro.md, notes.md), che hanno le
+attivo. Non si applica agli strumenti di governo
+(questioni.md, mastro.md, note.md), che hanno le
 proprie convenzioni di identificazione (QUESTIONE-NNN,
 NOTA-NNN, COMMENTO-NNN).
 

@@ -54,7 +54,8 @@ In sintesi:
   indici vengono rigenerati dai frontmatter. Questo strato è puramente
   meccanico e non richiede giudizio.
 - **Secondo strato — arricchimento progressivo.** I campi di giudizio del
-  frontmatter (`decisioni`, `related`, `tag`, `file-toccati`) vengono compilati
+  frontmatter (`descrizione`, `decisioni`, `related`, `tag`, `file-toccati`)
+  vengono compilati
   leggendo il contenuto di ciascun elemento. Questo strato richiede lettura e
   interpretazione, può avvenire in tempi successivi e non blocca il primo.
 - **Commit isolato.** La riformattazione di massa, che tocca l'intero corpus,
