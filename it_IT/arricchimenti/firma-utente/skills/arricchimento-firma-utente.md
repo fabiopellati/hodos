@@ -37,7 +37,8 @@ scritta nella sessione corrente.
 La firma si applica a tutti i punti di contribuzione tracciabile, con formato
 differenziato per tipo di elemento.
 
-**Voci di storia** (questioni.md, ogni aggiornamento di stato):
+**Voci di storia** (sezione `Storia` del file della questione in `questioni/`,
+a ogni aggiornamento di stato):
 ```
 - 2026-03-10 open [Nome] — motivazione dell'apertura
 ```
@@ -52,7 +53,7 @@ COMMENTO-001 — 2026-03-10 [Nome]
 ```
 La firma è inline nell'header del commento, dopo la data.
 
-**Note** (notes.md):
+**Note** (corpo del file della nota in `note/`):
 ```
 ## NOTA-042 — 2026-03-10 — Titolo sintetico
 **Autore**: Nome

@@ -44,9 +44,17 @@ una revisione e agisci tramite essa.
 
 **Posso modificare la descrizione di una questione dopo l'apertura?**
 
-No. Il corpo della questione (Descrizione, Domande aperte, Impatto) è immutabile.
-Per aggiungere una rettifica o un'integrazione, usa la sezione Commenti
-(COMMENTO-NNN, numerazione locale alla questione).
+Sì, finché la questione è aperta: il suo corpo è un documento di lavoro e si
+consolida. L'immutabilità del corpo appartiene alla nota (Art. 5 comma 5) e
+alla voce del mastro (Art. 6 comma 7), non alla questione aperta.
+
+Due campi soli hanno un regime speciale, che l'Art. 4 comma 6 stabilisce:
+`Domande aperte` e `Impatto` sono mutabili per addizione, cioè vi si aggiungono
+voci in qualsiasi momento documentando il motivo, e una voce esistente non si
+rimuove ma si dichiara superata o inattuata con motivazione inline.
+
+La sezione Commenti resta la via quando il commento ha valore proprio, e
+diventa l'unica via sugli elementi il cui corpo è davvero immutabile.
 
 **La motivazione nella Storia deve dire cosa ho fatto o perché?**
 
@@ -63,7 +71,9 @@ chi realizza porta a pending-approval, chi governa chiude e scrive nel mastro.
 **Come chiudo un rilievo che ha il campo Impatto non vuoto?**
 
 Prima di chiudere, verifica che esista almeno una questione di tipo revisione
-aperta nel campo Questioni collegate. La revisione non deve essere completata,
+aperta che dichiari il rilievo nel **proprio** campo `related`. Il legame si
+scrive sulla revisione, che è l'elemento che lo origina, e non sul rilievo
+(Art. 9 comma 2 e Art. 3 comma 6). La revisione non deve essere completata,
 ma deve esistere a testimonianza che il lavoro di applicazione è stato preso
 in carico.
 
@@ -165,7 +175,8 @@ del documento, non dal nome file.
 
 La RFC è progettata per un ciclo bidirezionale con attesa della risposta.
 Per comunicare qualcosa a un team esterno senza bloccare una questione, usa
-una nota in `notes.md` che documenta cosa è stato comunicato e a chi: la
+una nota della collezione `note/` che documenta cosa è stato comunicato e a
+chi: la
 nota non entra in `pending-rfc` e non blocca nessuna questione. In alternativa
 è ammessa una RFC informativa: nel documento si dichiara `Tipo: informativa`
 nell'intestazione e la questione di origine non transita a `pending-rfc`,
@@ -214,8 +225,16 @@ intermedi significativi, la sezione si omette. In caso di dubbio, includila.
 
 **Posso correggere un'entry nel mastro?**
 
-No. Il mastro è immutabile. Le voci vengono aggiunte in cima e non vengono
-mai modificate dopo la scrittura.
+Dipende da quale parte. La voce del mastro ha un doppio regime, che l'Art. 6
+comma 7 e l'Art. 10 stabiliscono: il **corpo** markdown è immutabile e non si
+tocca dopo la scrittura, perché è la testimonianza storica della decisione; il
+**frontmatter** è mutabile e si può correggere per sanare un disallineamento,
+per affinare i campi di giudizio (`decisioni`, `related`, `tag`) o nel corso di
+una bonifica di versione.
+
+Ne discende la via per rettificare una voce già chiusa senza violarne
+l'immutabilità: si scrive una nota che porta la rettifica e la si lega alla
+voce tramite il campo `related`, che il doppio regime rende mutabile.
 
 ---
 

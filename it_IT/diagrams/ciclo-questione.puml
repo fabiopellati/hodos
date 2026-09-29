@@ -34,7 +34,8 @@ closed --> [*]
 note bottom of pending_approval
   * Precondizione per rilievo con Impatto non vuoto:
   deve esistere almeno una questione di tipo revisione
-  aperta nel campo Questioni collegate.
+  aperta che dichiari il rilievo nel proprio campo
+  related (Art. 9 comma 2).
 end note
 
 @enduml

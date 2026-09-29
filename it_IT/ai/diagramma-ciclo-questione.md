@@ -54,8 +54,10 @@ Transizioni non elencate non sono valide.
 Condizione necessaria per qualsiasi questione: tutte le domande aperte sono risolte.
 
 Condizione aggiuntiva per questioni di tipo **rilievo** con campo `Impatto` non vuoto:
-il campo `Questioni collegate` deve contenere almeno una questione di tipo revisione
-in stato aperto. La revisione non deve essere completata prima della chiusura del rilievo:
+deve esistere almeno una questione di tipo revisione in stato aperto che dichiari il
+rilievo nel **proprio** campo `related`. Il legame si scrive sulla revisione, che è
+l'elemento che lo origina, e non sul rilievo (Art. 9 comma 2 e Art. 3 comma 6).
+La revisione non deve essere completata prima della chiusura del rilievo:
 deve esistere, a testimonianza che il lavoro di applicazione è stato preso in carico.
 
 Se la precondizione non è soddisfatta, la chiusura è bloccata.

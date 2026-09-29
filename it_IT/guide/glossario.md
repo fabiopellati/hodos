@@ -22,7 +22,7 @@ Livello primario: `protocollo.md` — normativo, per umano non tecnico. Livello
 secondario: `guide/` — operativo, per umano che applica il processo. Livello
 terziario: skills in `skills/` — procedurale, per agente esecutore (AI); formulati
 per efficacia ed efficienza del modello, autocontenuti. Distinti dai documenti
-di stato dell'opera (`questioni.md`, `mastro.md`, `notes.md`) che sono strumenti
+di stato dell'opera (`questioni.md`, `mastro.md`, `note.md`) che sono strumenti
 di governo del processo, non artefatti distribuibili.
 
 **Team-A**
@@ -58,7 +58,8 @@ aggiornato in-place durante i cicli di affinamento. Distinto da `questioni.md` e
 Tipo di questione che porta conoscenza nuova — non nota prima dell'analisi — che
 modifica o arricchisce la comprensione del dominio. Distinto da *revisione*.
 Quando il campo `Impatto` non è vuoto, il rilievo non può essere chiuso senza
-almeno una questione di *revisione* collegata aperta (vedi *Questioni collegate*).
+almeno una questione di *revisione* aperta che lo dichiari nel proprio campo
+`related` (vedi *related*).
 
 Criterio di scelta: aprire un rilievo quando si è identificato qualcosa di
 rilevante ma non si è ancora pronti ad agire — perché serve analisi, perché
@@ -69,33 +70,56 @@ Se invece la direzione è chiara e si è pronti ad agire, aprire una *revisione*
 
 **Questione**
 Problema aperto che deve essere risolto prima di procedere. Può essere di
-natura *rilievo*, *revisione* o *anomalia*. Vive in `questioni.md` finché non
-viene chiusa; alla chiusura viene rimossa e la risoluzione registrata in
-`mastro.md`.
+natura *rilievo*, *revisione* o *anomalia*. Vive nel proprio file della
+collezione `questioni/` finché non viene chiusa; alla chiusura il file viene
+spostato nella collezione `mastro/`, e i due indici derivati si rigenerano.
 
-**Questioni collegate**
-Campo opzionale di una questione che elenca i riferimenti ad altre questioni
-correlate. Diventa obbligatorio per le questioni di tipo *rilievo* con campo
-`Impatto` non vuoto: in quel caso deve contenere almeno un riferimento a una
-questione di tipo *revisione* aperta prima che il rilievo possa essere chiuso.
+**related**
+Campo opzionale del frontmatter di un elemento, che elenca i riferimenti agli
+altri elementi correlati della medesima opera. Sostituisce la sezione
+«Questioni collegate» che il corpo portava nelle versioni anteriori alla 1.0.0.
+
+Il legame si dichiara una volta sola, sull'elemento che lo origina, e le
+back-reference sono derivate dallo strumento e non si scrivono a mano
+(Art. 3 comma 6). Ne discende la direzione dell'obbligo nel caso del rilievo
+con `Impatto` non vuoto: è la questione di *revisione* a dover dichiarare il
+rilievo nel proprio `related` prima che il rilievo possa essere chiuso, non il
+rilievo a elencare la revisione (Art. 9 comma 2).
+
+Il perimetro del campo è locale all'opera: il legame verso un'altra opera si
+scrive in prosa nel corpo dell'elemento che lo origina.
 
 **Nota**
-Osservazione, memo o idea in incubazione registrata in `notes.md`. Non è una
+Osservazione, memo o idea in incubazione, che vive nel proprio file della
+collezione `note/` ed è sommariata dall'indice derivato `note.md`. Non è una
 questione: non ha stati, non produce una entry nel mastro, non richiede
 approvazione. Il corpo è immutabile dopo la scrittura. Può ricevere commenti
 (COMMENTO-NNN) per rettifiche o nuove conoscenze sullo stesso argomento, senza
 dover aprire una nota separata.
 
 **mastro.md**
-Registro immutabile delle decisioni prese. Contiene solo cicli chiusi.
-Ordine decrescente (prepend-only): le entry più recenti stanno in cima.
-Una entry non viene mai modificata dopo la scrittura.
+Indice derivato della collezione `mastro/`, il registro delle decisioni prese,
+che contiene solo cicli chiusi. Ne offre il sommario cronologico decrescente:
+le voci più recenti stanno in cima. Come gli altri indici si rigenera dai
+frontmatter e non si mantiene a mano.
+
+La voce del mastro ha un **doppio regime** (Art. 6 comma 7 e Art. 10): il corpo
+markdown è immutabile e non si tocca dopo la scrittura, perché è la
+testimonianza storica della decisione; il frontmatter è mutabile e si corregge
+per sanare un disallineamento, per affinare i campi di giudizio (`decisioni`,
+`related`, `tag`) o nel corso di una bonifica di versione.
 
 **questioni.md**
-Documento che contiene le questioni aperte di una fase. Ordine decrescente e
-immutabile dopo la creazione. Include una sezione di intestazione con l'indice
-e lo stato corrente di ogni questione. Quando una questione viene chiusa, viene
-rimossa dal file.
+Indice derivato della collezione `questioni/`, che riporta identificativo,
+titolo e stato corrente di ogni questione presente, in ordine decrescente per
+identificativo (Art. 4 commi 3 e 4). Non è la sorgente delle questioni — la
+sorgente è il singolo file `questioni/Q{NNN}-slug.md` — e non si mantiene a
+mano: si rigenera dai frontmatter.
+
+Le questioni chiuse non vi compaiono perché il loro file esce dalla collezione
+per andare in `mastro/` (Art. 4 comma 1), e non perché l'indice filtri sullo
+stato: il campo `stato` serve a distinguere gli stati che nella collezione
+convivono, da `open` a `in-progress`, `pending-approval` e `deferred`.
 
 **Opera**
 Istanza di lavoro organizzato che adotta Hodos come metodologia di processo.
