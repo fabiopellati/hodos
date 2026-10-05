@@ -3,6 +3,7 @@ tipo-artefatto: template
 documento: evoluzione
 descrizione: struttura canonica di un'evoluzione per unità mature in fase P2
 fase: P2
+autorita: operativa
 ---
 
 # Template — Evoluzione

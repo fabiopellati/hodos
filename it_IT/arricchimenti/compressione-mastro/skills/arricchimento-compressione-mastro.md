@@ -10,6 +10,7 @@ tipo: descrittivo
 locale: it_IT
 stato: deprecato
 deprecato-da: 1.0.0
+autorita: normativa
 ---
 
 > **ARRICCHIMENTO DEPRECATO (dalla versione 1.0.0 del protocollo).**

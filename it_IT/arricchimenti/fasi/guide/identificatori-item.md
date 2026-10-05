@@ -2,7 +2,7 @@
 tipo-artefatto: guida
 documento: identificatori-item
 descrizione: convenzione di identificazione univoca per gli item nei documenti di fase P0-P1
-autorita: operativa
+autorita: normativa
 arricchimento: fasi
 ---
 

@@ -3,6 +3,7 @@ tipo-artefatto: guida
 documento: mappa-terminologica
 descrizione: tabella di conversione dai termini software-specifici ai termini astratti del
   protocollo, usata nella trasformazione di documenti e skill
+autorita: informativa
 ---
 
 # Mappa Terminologica — Hodos

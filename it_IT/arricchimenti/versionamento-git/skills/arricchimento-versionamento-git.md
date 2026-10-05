@@ -8,6 +8,7 @@ client: Claude Code CLI
 invocazione: /hodos-arricchimento-versionamento-git
 tipo: descrittivo
 locale: it_IT
+autorita: normativa
 ---
 
 Arricchimento opzionale per opere che adottano git come sistema di versionamento.

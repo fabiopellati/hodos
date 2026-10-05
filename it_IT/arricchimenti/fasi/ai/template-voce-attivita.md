@@ -3,6 +3,7 @@ tipo-artefatto: template
 documento: voce-attivita
 descrizione: struttura canonica di una voce nel file attivita.md di un'unità in fase P2
 fase: P2
+autorita: operativa
 ---
 
 # Template — Voce Attività

@@ -2,7 +2,7 @@
 tipo-artefatto: guida
 documento: sviluppo-arricchimenti
 descrizione: guida per chi sviluppa arricchimenti Hodos indipendenti
-autorita: informativa
+autorita: normativa
 ---
 
 # Guida allo Sviluppo di Arricchimenti Hodos
@@ -120,7 +120,7 @@ campi necessari al sistema di indicizzazione:
 tipo-artefatto: guida    # o skill, regola, ai
 documento: nome-documento
 descrizione: descrizione breve per l'indicizzazione
-autorita: informativa    # o operativa
+autorita: normativa    # o operativa, informativa
 ---
 ```
 
@@ -130,6 +130,31 @@ trova l'artefatto:
 - `guida` e `ai` — trovati da `get_protocol_rules`
 - `skill` — trovato da `get_skill` e `list_skills`
 - Tutti i tipi — trovati da `search_knowledge`
+
+### Il campo `autorita`
+
+Il campo `autorita` dichiara quale rapporto l'artefatto intrattiene con le norme che tratta, ed è obbligatorio per ogni artefatto.
+La ragione è che più artefatti trattano la medesima materia, uno perché ne è la sede e gli altri perché la applicano o la spiegano, e chi legge un testo isolato dal suo contesto deve poter sapere se ha davanti la norma o un suo derivato.
+Il campo è dunque un'asserzione sul contenuto, che vale per qualunque lettore e non per un solo strumento.
+
+Il canale MCP è uno di quei lettori, e ne trae due effetti.
+Il primo è l'ordine: fra risultati di similarità comparabile serve per primo l'artefatto di autorità più alta, e un artefatto che non dichiara il campo vale quanto il più debole.
+Il secondo è ciò che la sessione legge: sotto ogni risultato servito il canale dichiara se il testo enuncia la norma nella propria sede oppure la applica o la commenta, e per un artefatto che non dichiara il campo dichiara di non poterlo dire.
+Chi assegna il valore decide quindi anche come il testo sarà qualificato a chi lo riceve.
+Un valore diverso dai tre ammessi, anche per un refuso, non è segnalato da nessuno ed equivale al silenzio, non a una dichiarazione.
+Che il canale legga il campo su un tipo di artefatto o su un altro dipende dal canale e può mutare: la dichiarazione resta dovuta su ogni artefatto, perché asserisce un fatto del contenuto e non un effetto atteso.
+
+I valori sono tre, e si assegnano rispondendo alla domanda se la norma che il testo enuncia viva anche altrove.
+
+- `normativa` — l'artefatto è la sede propria di almeno una norma, cioè la enuncia senza che essa derivi da un'altra sede. Sono normativi il protocollo, i principi, la skill di un arricchimento rispetto alle norme di quell'arricchimento, e ogni guida che stabilisce una regola o una convenzione che non è scritta altrove.
+- `operativa` — l'artefatto applica norme stabilite altrove, portandone la forma o la procedura: i template, le procedure, gli strumenti di classificazione delle richieste dell'operatore.
+- `informativa` — l'artefatto spiega, commenta o riassume norme stabilite altrove, senza aggiungervi né forma né regola: le FAQ, i glossari, le guide introduttive, i diagrammi.
+
+Il campo si dichiara per file, e un file che sia sede propria di una norma e insieme ripeta norme altrui non può qualificare in modo diverso le due parti.
+In quel caso il file dichiara `normativa`, e le parti che ripetono una norma stabilita altrove si riducono a un rinvio alla sede propria invece di riscriverla: una ripetizione concorre con la sede e a parità di autorità la vince quando la sua forma è più vicina alla domanda, mentre un rinvio ridotto all'essenziale non concorre, perché non ne porta il contenuto.
+
+La dichiarazione è un'asserzione sul contenuto e va mantenuta con esso.
+Un artefatto che acquista una norma propria cambia valore, e uno che la cede a un'altra sede lo cambia nel verso opposto.
 
 ---
 

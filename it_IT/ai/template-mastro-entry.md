@@ -3,6 +3,7 @@ tipo-artefatto: template
 documento: mastro-entry
 descrizione: struttura canonica di un'entry nel mastro.md, scritta alla chiusura di una questione
 fase: trasversale
+autorita: operativa
 ---
 
 # Template — Voce del Mastro

@@ -3,6 +3,7 @@ tipo-artefatto: template
 documento: rfc
 descrizione: struttura canonica di un documento RFC e regole operative dei cicli outbound, inbound e informativa
 fase: trasversale
+autorita: operativa
 ---
 
 # Template — RFC
