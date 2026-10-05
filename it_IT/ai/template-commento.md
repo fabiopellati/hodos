@@ -41,15 +41,15 @@ correggere un passaggio sbagliato, precisare una formulazione ambigua, smentire
 una deduzione che non era corretta nemmeno quando fu scritta — la strada giusta
 è consolidare il corpo della questione, non aggiungere un commento. Un commento
 di questo tipo già presente può essere riassorbito nel corpo e rimosso finché la
-questione è aperta, con l'approvazione dell'operatore.
+questione è aperta, con l'approvazione dell'operatore (Art. 4 comma 8, lettera d).
 
 Questo non intacca l'immutabilità del commento, che riguarda il suo testo: un
 commento non si riscrive mai in luogo. Riassorbire significa portare nel corpo il
 contenuto valido e togliere l'annotazione diventata superflua, non riformularla
 sul posto.
 
-La ragione è la stessa che governa il consolidamento del corpo, ed è spiegata
-nel template `questione`: una questione che alterna un'affermazione e la sua
+La ragione è la stessa che governa il consolidamento del corpo, ed è stabilita
+dall'Art. 4 comma 8: una questione che alterna un'affermazione e la sua
 successiva smentita è faticosa da leggere per una persona e induce in errore chi
 la consulti per frammenti, perché nulla garantisce che l'affermazione e la sua
 negazione vengano recuperate insieme. Vale anche qui il limite: riassorbire non
@@ -67,7 +67,7 @@ approvazione esplicita.
 - Il primo commento è COMMENTO-001. Leggere i commenti esistenti per determinare il prossimo numero.
 - Il commento è immutabile dopo la scrittura: il suo testo non si riscrive mai in luogo.
 - Il commento è additivo: si aggiunge in fondo alla sezione Commenti.
-- Su una questione aperta, quando il commento sarebbe una pura rettifica redazionale del corpo, si consolida il corpo invece di commentare; un commento redazionale già presente può essere riassorbito nel corpo e rimosso, con l'approvazione dell'operatore. I commenti che registrano un'interazione datata non si riassorbono.
+- Su una questione aperta, quando il commento sarebbe una pura rettifica redazionale del corpo, si consolida il corpo invece di commentare; un commento redazionale già presente può essere riassorbito nel corpo e rimosso, con l'approvazione dell'operatore. I commenti che registrano un'interazione datata non si riassorbono (Art. 4 comma 8).
 - La sezione **Commenti** si trova in fondo al contenitore, prima del separatore `---` finale. Se non esiste, crearla in quella posizione.
 - In una questione, la sezione Commenti segue tutti i campi strutturati (Descrizione, Domande aperte, Impatto). Il legame con altre questioni non è più una sezione del corpo: vive nel campo `related` del frontmatter.
 - Per rettificare un commento precedente, aggiungere un nuovo commento che lo riferisce esplicitamente (es. "Rettifica del COMMENTO-002").

@@ -47,7 +47,7 @@ una revisione e agisci tramite essa.
 **Posso modificare la descrizione di una questione dopo l'apertura?**
 
 Sì, finché la questione è aperta: il suo corpo è un documento di lavoro e si
-consolida. L'immutabilità del corpo appartiene alla nota (Art. 5 comma 5) e
+consolida (Art. 4 commi 7 e 8). L'immutabilità del corpo appartiene alla nota (Art. 5 comma 5) e
 alla voce del mastro (Art. 6 comma 7), non alla questione aperta.
 
 Due campi soli hanno un regime speciale, che l'Art. 4 comma 6 stabilisce:

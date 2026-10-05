@@ -25,7 +25,7 @@
 # Origine: QUESTIONE-194 dell'opera fabio/hodos, in attuazione del
 # DISPACCIO-004 del coordinamento delle sessioni del conto eqc.
 
-versione-banco: 3
+versione-banco: 4
 sorgente: hodos
 locale: it_IT
 # Il banco nasce con il tag v1.2.2. La misura di partenza è stata condotta
@@ -34,8 +34,12 @@ locale: it_IT
 # del banco, pubblicata con il tag v1.2.3, dichiara lo strumento per
 # interrogazione e non sposta alcuna sede attesa. La versione 3, pubblicata
 # con il tag v1.3.0, aggiunge le materie B16 e B17, introdotte dal protocollo
-# 1.3.0, e non sposta alcuna sede attesa delle precedenti.
-tag-riferimento: v1.3.0
+# 1.3.0, e non sposta alcuna sede attesa delle precedenti. La versione 4,
+# pubblicata con il tag v1.4.0, aggiunge il comma 7 alla sede attesa della B05,
+# perché il protocollo 1.4.0 vi enuncia il regime ordinario del corpo che prima
+# discendeva dal silenzio del comma 6, e aggiunge la materia B18 sul
+# consolidamento, introdotta dal comma 8.
+tag-riferimento: v1.4.0
 # Lo strumento di default vale per ogni interrogazione che non ne dichiari uno
 # proprio. Un'interrogazione la cui sede attesa è una skill dichiara
 # search_knowledge, perché get_protocol_rules per costruzione non serve le
@@ -95,7 +99,7 @@ interrogazioni:
     sede-attesa:
       percorso: it_IT/protocollo.md
       sezione: Art. 4 — Le questioni
-      commi: [6]
+      commi: [6, 7]
 
   - id: B06
     materia: immutabilità del corpo della voce del mastro e mutabilità del frontmatter
@@ -193,3 +197,11 @@ interrogazioni:
       percorso: it_IT/protocollo.md
       sezione: Art. 3 — Strumenti di governo
       commi: [9]
+
+  - id: B18
+    materia: consolidamento del corpo di una questione aperta
+    query: ho scritto una cosa sbagliata in una questione aperta, aggiungo un commento o la correggo nel testo
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 4 — Le questioni
+      commi: [8]

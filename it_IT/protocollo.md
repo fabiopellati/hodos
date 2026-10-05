@@ -9,9 +9,21 @@ autorita: normativa
 
 # Protocollo di Processo — Hodos
 
-**Versione**: 1.3.0
+**Versione**: 1.4.0
 **Stato**: forma normativa vigente
 
+> Nota di compatibilità (1.4.0).
+> Questa versione enuncia all'Art. 4 comma 7 il regime ordinario del corpo di
+> una questione aperta, che è modificabile salvo il regime per addizione del
+> comma 6: era norma vigente per silenzio, dedotta dall'immutabilità che il
+> protocollo concede alla sola nota e alla sola voce del mastro.
+> L'Art. 4 comma 8 accoglie la preferenza del consolidamento sull'accumulo e
+> il criterio che separa la traccia da conservare dal difetto da riscrivere,
+> che vivevano nei soli template della questione e del commento; i template
+> vi rinviano.
+> Nessun campo cambia forma e nessuna opera deve migrare: la norma descrive
+> la prassi che i template già prescrivevano.
+>
 > Nota di compatibilità (1.3.0).
 > Questa versione qualifica ogni campo del frontmatter come obbligatorio,
 > obbligatorio con lista vuota ammessa o facoltativo (Art. 3 comma 8 e
@@ -238,6 +250,43 @@ dall'idea al manufatto.
       superata o inattuata con motivazione esplicita inline;
    b) nuove voci possono essere aggiunte in qualsiasi momento, documentando
       il motivo.
+
+7. Salvo il regime del comma 6, il corpo di una questione è modificabile
+   finché la questione è aperta: si corregge la `Descrizione`, si riformula
+   un passaggio rimasto oscuro, si riassorbe nel corpo una rettifica annotata
+   a parte.
+   L'immutabilità del corpo appartiene alla nota (Art. 5 comma 5) e alla voce
+   del mastro (Art. 6 comma 7 e Art. 10 comma 1), e trattare come soltanto
+   additiva una questione aperta è un errore di applicazione e non una
+   cautela.
+
+8. Quando una rettifica renderebbe la questione più chiara, il corpo si
+   consolida invece di accumulare commenti o voci di Storia: un testo che
+   afferma una cosa e più avanti la smentisce induce in errore chi lo consulti
+   per frammenti, perché nulla garantisce che l'affermazione e la sua
+   negazione siano lette insieme.
+   Il consolidamento obbedisce alle regole seguenti:
+   a) il criterio è che cosa l'errore riguardava, non chi l'ha commesso:
+      la traccia di ciò che l'opera ha davvero creduto e poi ha appreso
+      diversamente si conserva, perché era corretta rispetto a ciò che si
+      sapeva allora e ricostruisce il perché di una decisione; l'affermazione
+      che non è mai stata vera per l'opera, difetto di redazione estraneo al
+      dominio, si riscrive come se fosse stata redatta correttamente fin
+      dall'inizio, insieme a ciò che ne era stato dedotto;
+   b) nel dubbio si conserva, e la classificazione la decide l'operatore e
+      non chi ha redatto il testo; se anche una sola decisione dell'opera si
+      è appoggiata all'affermazione, essa è entrata nel dominio e la traccia
+      resta;
+   c) consolidare non significa abbreviare: si rimuove ciò che è errato e si
+      riscrive ciò che è confuso a parità di ricchezza espositiva, sicché un
+      testo consolidato è più breve solo per ciò che vi era di sbagliato;
+   d) un commento che sarebbe una pura rettifica redazionale del corpo può
+      essere riassorbito nel corpo e rimosso, con l'approvazione
+      dell'operatore, mentre il commento che registra un'interazione
+      realmente avvenuta resta dov'è, perché la sua collocazione nel tempo è
+      parte dell'informazione.
+   Il testo rimosso resta nella cronologia di versione, che conserva senza
+   immettere in contesto.
 
 ---
 

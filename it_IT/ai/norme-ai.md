@@ -42,7 +42,7 @@ L'agente osserva anche norme che hanno sede nel protocollo o nei template, e che
 Vanno lette nella loro sede, che è la sola autorevole:
 
 - la forma segregata, gli indici derivati e il doppio regime del mastro: `protocollo.md`, Art. 3, Art. 6 e Art. 10;
-- la mutabilità del corpo della questione aperta: `protocollo.md`, Art. 4 comma 6, e il template `questione`;
+- la mutabilità del corpo della questione aperta e il suo consolidamento: `protocollo.md`, Art. 4 commi 6, 7 e 8;
 - il Percorso nella voce del mastro: `protocollo.md`, Art. 6 commi 5 e 6.
 
 ---
