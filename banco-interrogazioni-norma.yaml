@@ -16,19 +16,28 @@
 # ripete il lessico della sede attesa misurerebbe la sovrapposizione lessicale
 # e non la pertinenza.
 #
-# Il file sta fuori da `it_IT/` e non è markdown, sicché il canale non lo
-# indicizza e il banco non concorre al ranking che serve a misurare.
+# Il file sta nella radice del repository, fuori da `it_IT/`, e non è
+# markdown, sicché il canale non lo indicizza e il banco non concorre al
+# ranking che serve a misurare. Non sta in una directory propria perché il
+# canale tratta come locale ogni directory della radice, e una directory del
+# banco vi comparirebbe come una locale fittizia.
 #
 # Origine: QUESTIONE-194 dell'opera fabio/hodos, in attuazione del
 # DISPACCIO-004 del coordinamento delle sessioni del conto eqc.
 
-versione-banco: 1
+versione-banco: 2
 sorgente: hodos
 locale: it_IT
 # Il banco nasce con il tag v1.2.2. La misura di partenza è stata condotta
 # contro la v1.2.1, le cui sedi attese coincidono con queste, perché la v1.2.2
-# non sposta alcuna norma ma ne dichiara soltanto l'autorità.
-tag-riferimento: v1.2.2
+# non sposta alcuna norma ma ne dichiara soltanto l'autorità. La versione 2
+# del banco, pubblicata con il tag v1.2.3, dichiara lo strumento per
+# interrogazione e non sposta alcuna sede attesa.
+tag-riferimento: v1.2.3
+# Lo strumento di default vale per ogni interrogazione che non ne dichiari uno
+# proprio. Un'interrogazione la cui sede attesa è una skill dichiara
+# search_knowledge, perché get_protocol_rules per costruzione non serve le
+# skill e l'interrogazione non potrebbe mai riuscire.
 strumento: get_protocol_rules
 # Il canale serve un solo segmento per documento, il meglio ordinato, sicché
 # il documento atteso può arrivare primo con un articolo diverso da quello
@@ -161,6 +170,7 @@ interrogazioni:
   - id: B15
     materia: fasi del ciclo di vita P0-P4
     query: quali sono le fasi di un progetto e cosa si produce in ciascuna
+    strumento: search_knowledge
     sede-attesa:
       percorso: it_IT/arricchimenti/fasi/skills/arricchimento-fasi.md
       sezione: documento intero
