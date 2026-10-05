@@ -9,9 +9,20 @@ autorita: normativa
 
 # Protocollo di Processo — Hodos
 
-**Versione**: 1.2.1
+**Versione**: 1.3.0
 **Stato**: forma normativa vigente
 
+> Nota di compatibilità (1.3.0).
+> Questa versione qualifica ogni campo del frontmatter come obbligatorio,
+> obbligatorio con lista vuota ammessa o facoltativo (Art. 3 comma 8 e
+> Allegati A, B e C), ed enuncia che la qualificazione non ha efficacia
+> retroattiva: l'elemento anteriore che non la soddisfa è attestato una volta
+> dall'opera e qualificato come anteriore (Art. 3 comma 9).
+> Allinea inoltre l'Art. 4 comma 5 alla direzione del legame stabilita
+> dall'Art. 9 comma 2, che il comma rovesciava.
+> Nessun campo cambia forma: un'opera che adotta questa versione attesta i
+> propri anteriori e sana i campi il cui valore è ricavabile dall'elemento.
+>
 > Nota di compatibilità (1.2.1).
 > Questa versione corregge un difetto di numerazione dell'Art. 5, che recava
 > due commi distinti contrassegnati entrambi dal numero 5: le casistiche
@@ -166,6 +177,32 @@ dall'idea al manufatto.
    frontmatter è lasciata a chi adotta Hodos, secondo il proprio stack
    tecnologico: il protocollo non impone un linguaggio né un'architettura.
 
+8. Gli Allegati A, B e C qualificano ogni campo del frontmatter secondo una
+   di tre classi:
+   a) *obbligatorio* — la chiave è presente e il valore non è vuoto;
+   b) *obbligatorio con lista vuota ammessa* — la chiave è presente, e il
+      valore `[]` dichiara che il campo non si applica all'elemento;
+   c) *facoltativo* — la chiave può mancare.
+   Il validatore pretende ogni campo secondo la sua classe, e non degrada di
+   propria iniziativa un obbligo ad avvertimento: un elemento che non
+   soddisfa la qualificazione è difforme anche quando la difformità è
+   transitoria, come a metà di una migrazione.
+
+9. La qualificazione non ha efficacia retroattiva: la conformità di un
+   elemento si giudica rispetto alla norma vigente quando fu prodotto.
+   Quando una qualificazione è introdotta o resa più stringente, l'opera
+   attesta una volta l'elenco degli elementi già esistenti che non la
+   soddisfano, nominando la norma sopravvenuta e la data da cui vige.
+   Il validatore qualifica gli elementi dell'elenco come *anteriori*, esito
+   distinto tanto dal conforme quanto dal difforme: l'elemento anteriore non
+   è in violazione e non è un esempio della forma vigente.
+   L'elenco è un dato d'archivio che si consulta senza ricalcolarlo: si
+   accorcia quando un elemento è ricondotto alla forma vigente, e non si
+   allunga dopo l'attestazione.
+   Non è anteriore l'elemento il cui valore è ricavabile dall'elemento
+   stesso: quello si sana, e la sanatoria del mastro avviene sul frontmatter,
+   che è mutabile (Art. 10).
+
 ---
 
 ## Art. 4 — Le questioni
@@ -189,8 +226,10 @@ dall'idea al manufatto.
    L'ordinamento è una proprietà dell'indice, non dei file, che sono
    indipendenti l'uno dall'altro.
 
-5. Il campo `related` è opzionale, ma diventa obbligatorio per le questioni
-   di tipo *rilievo* con campo `Impatto` non vuoto (vedi Art. 9).
+5. Il campo `related` è facoltativo.
+   Il legame fra un rilievo con campo `Impatto` non vuoto e la revisione che
+   ne prende in carico l'impatto lo dichiara la revisione, nel proprio
+   `related` (Art. 9 comma 2), e non il rilievo.
 
 6. I campi `Domande aperte` e `Impatto` del corpo sono mutabili per addizione
    nel corso del ciclo. Due regole garantiscono la tracciabilità in entrambi
@@ -457,6 +496,13 @@ tag: [tema-uno, tema-due]
 ---
 ```
 
+Qualificazione dei campi (Art. 3 comma 8):
+
+- obbligatori: `id`, `titolo`, `descrizione`, `tipo-elemento`, `tipo`,
+  `stato`, `aperta`, `aggiornata`;
+- obbligatorio con lista vuota ammessa: `tag`;
+- facoltativo: `related` (Art. 4 comma 5).
+
 Corpo:
 
 ```
@@ -510,6 +556,11 @@ tag: [tema-uno]
 ---
 ```
 
+Qualificazione dei campi (Art. 3 comma 8):
+
+- obbligatori: `id`, `titolo`, `tipo-elemento`, `data`;
+- facoltativi: `related`, `tag`.
+
 Corpo:
 
 ```
@@ -549,6 +600,15 @@ file-toccati:
   - percorso/artefatto/uno
 ---
 ```
+
+Qualificazione dei campi (Art. 3 comma 8):
+
+- obbligatori: `id`, `titolo`, `descrizione`, `tipo-elemento`, `tipo`,
+  `stato`, `chiusa`, `decisioni`;
+- obbligatori con lista vuota ammessa: `tag` e `file-toccati`; per
+  `file-toccati` la lista vuota è il valore dovuto quando la sezione
+  `Impatto` dichiara che nessun artefatto è stato toccato;
+- facoltativo: `related`.
 
 Corpo:
 

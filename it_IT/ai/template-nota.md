@@ -31,7 +31,8 @@ tag: [tema-uno]
 {corpo della nota}
 ```
 
-I campi `related` e `tag` accettano liste vuote (`[]`) quando non applicabili.
+La qualificazione di ogni campo del frontmatter è nell'Allegato B del
+protocollo (Art. 3 comma 8).
 Il perimetro di `related` è locale all'opera e il legame verso un'altra opera
 si scrive in prosa nel corpo della nota: la norma è l'Art. 3 comma 6 del
 protocollo.
