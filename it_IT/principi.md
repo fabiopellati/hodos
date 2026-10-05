@@ -4,6 +4,7 @@ documento: principi
 descrizione: valori fondativi su cui Hodos è costruita, cioè il perché della metodologia
   e non il come, fra i quali la semplicità e l'adattabilità, con i criteri per valutarne
   l'adozione
+autorita: normativa
 ---
 
 # Principi Guida — Hodos

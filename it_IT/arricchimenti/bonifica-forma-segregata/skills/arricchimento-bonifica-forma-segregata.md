@@ -8,6 +8,7 @@ client: Claude Code CLI
 invocazione: /hodos-arricchimento-bonifica-forma-segregata
 tipo: operativo
 locale: it_IT
+autorita: normativa
 ---
 
 # Skill — Bonifica verso la forma segregata

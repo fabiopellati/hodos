@@ -1,6 +1,6 @@
 ---
 tipo-artefatto: guida
-autorita: operativa
+autorita: normativa
 documento: ciclo-post-release
 descrizione: Ciclo iterativo post-release per opere Hodos in produzione
 fase: trasversale

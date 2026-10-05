@@ -3,6 +3,7 @@ tipo-artefatto: template
 documento: nota
 descrizione: struttura canonica di una nota segregata nella cartella note/
 fase: trasversale
+autorita: operativa
 ---
 
 # Template — Nota

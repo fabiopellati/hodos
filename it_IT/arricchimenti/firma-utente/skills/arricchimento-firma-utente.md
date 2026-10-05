@@ -8,6 +8,7 @@ client: Claude Code CLI
 invocazione: /hodos-arricchimento-firma-utente
 tipo: descrittivo
 locale: it_IT
+autorita: normativa
 ---
 
 Arricchimento opzionale per opere in cui più operatori contribuiscono agli

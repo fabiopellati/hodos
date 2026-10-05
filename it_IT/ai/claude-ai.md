@@ -11,8 +11,9 @@ Questa guida descrive come l'agente AI applica il protocollo di processo definit
 in `protocollo.md`. È un layer opzionale: il processo è applicabile senza AI.
 L'agente accelera l'esecuzione ma non sostituisce le decisioni umane.
 
-Per le norme vincolanti (principi operativi, norma sul Percorso, limiti di
-autonomia) consultare `norme-ai.md`.
+Per le norme vincolanti proprie dell'agente (principi operativi, recupero
+obbligatorio del template, limiti di autonomia) consultare `norme-ai.md`.
+La norma sul Percorso ha sede nell'Art. 6 del protocollo.
 
 ---
 

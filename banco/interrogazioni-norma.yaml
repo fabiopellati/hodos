@@ -1,0 +1,167 @@
+# Banco delle interrogazioni di norma del corpus Hodos.
+#
+# Il banco dichiara, per ciascuna materia normativa, la sede propria della
+# norma che il canale MCP deve servire per prima. Le sedi attese sono
+# dichiarate dalla sorgente, cioè da quest'opera, e non dal canale, così che
+# la pertinenza si misuri contro un riferimento che chi misura non sceglie.
+#
+# Il banco vale per il tag del corpus nominato in `tag-riferimento`: le sedi
+# attese dipendono dal testo degli artefatti, sicché a ogni pubblicazione che
+# sposta una norma il banco va riletto e, se serve, aggiornato nello stesso
+# tag. Una misura condotta contro un tag diverso da quello dichiarato non è
+# una misura di questo banco.
+#
+# Le query sono formulate per materia e con le parole con cui una sessione al
+# lavoro chiederebbe la norma, non con le parole dell'articolo: un banco che
+# ripete il lessico della sede attesa misurerebbe la sovrapposizione lessicale
+# e non la pertinenza.
+#
+# Il file sta fuori da `it_IT/` e non è markdown, sicché il canale non lo
+# indicizza e il banco non concorre al ranking che serve a misurare.
+#
+# Origine: QUESTIONE-194 dell'opera fabio/hodos, in attuazione del
+# DISPACCIO-004 del coordinamento delle sessioni del conto eqc.
+
+versione-banco: 1
+sorgente: hodos
+locale: it_IT
+# Il banco nasce con il tag v1.2.2. La misura di partenza è stata condotta
+# contro la v1.2.1, le cui sedi attese coincidono con queste, perché la v1.2.2
+# non sposta alcuna norma ma ne dichiara soltanto l'autorità.
+tag-riferimento: v1.2.2
+strumento: get_protocol_rules
+# Il canale serve un solo segmento per documento, il meglio ordinato, sicché
+# il documento atteso può arrivare primo con un articolo diverso da quello
+# atteso. Le due cose si registrano separatamente, perché misurano difetti
+# diversi: il documento mancato è un difetto di prevalenza, l'articolo
+# mancato a documento servito è un difetto di rappresentanza.
+criteri:
+  - id: articolo-primo
+    enunciato: il primo risultato servito è il documento atteso con la sezione attesa
+  - id: documento-primo
+    enunciato: il primo risultato servito è il documento atteso, con qualunque sezione
+  - id: articolo-fra-i-primi-tre
+    enunciato: il documento atteso con la sezione attesa compare fra i primi tre risultati
+  - id: documento-fra-i-primi-tre
+    enunciato: il documento atteso compare fra i primi tre risultati, con qualunque sezione
+
+interrogazioni:
+  - id: B01
+    materia: stati di una questione e transizioni ammesse
+    query: quali stati può avere una questione e da quale stato si può passare a quale
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 8 — Stati e transizioni
+      commi: [1]
+
+  - id: B02
+    materia: distinzione fra rilievo e revisione
+    query: come decido se aprire un rilievo o una revisione
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 7 — Tipi di questione
+      commi: [2]
+
+  - id: B03
+    materia: immutabilità del tipo di una questione
+    query: posso cambiare il tipo di una questione dopo averla aperta
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 7 — Tipi di questione
+      commi: [4]
+
+  - id: B04
+    materia: il rilievo non modifica artefatti
+    query: durante un rilievo posso correggere direttamente un documento
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 7 — Tipi di questione
+      commi: [5]
+
+  - id: B05
+    materia: modificabilità del corpo di una questione aperta
+    query: posso modificare il testo di una questione ancora aperta
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 4 — Le questioni
+      commi: [6]
+
+  - id: B06
+    materia: immutabilità del corpo della voce del mastro e mutabilità del frontmatter
+    query: posso correggere una voce del mastro già scritta
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 10 — Doppio regime del mastro e tracciamento dei cambiamenti
+      commi: [1, 2]
+
+  - id: B07
+    materia: chiusura di un rilievo con impatto
+    query: posso chiudere un rilievo che ha impatti senza aprire altro
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 9 — Proiezione del rilievo in revisione
+      commi: [2]
+
+  - id: B08
+    materia: immutabilità del corpo della nota
+    query: come si corregge una nota già scritta
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 5 — Le note
+      commi: [5]
+
+  - id: B09
+    materia: gli indici sono proiezioni derivate e non si modificano a mano
+    query: posso aggiornare a mano il file questioni.md
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 3 — Strumenti di governo
+      commi: [4]
+
+  - id: B10
+    materia: perimetro del campo related e legame verso un'altra opera
+    query: come collego una questione a un elemento di un altro progetto
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 3 — Strumenti di governo
+      commi: [6]
+
+  - id: B11
+    materia: atto di chiusura di una questione
+    query: che cosa devo fare per chiudere una questione
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 6 — Il mastro
+      commi: [2]
+
+  - id: B12
+    materia: immutabilità della sezione di richiesta di una RFC
+    query: posso modificare la richiesta di una RFC dopo averla inviata
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: "Art. 11 — Coordinamento esterno: RFC"
+      commi: [3]
+
+  - id: B13
+    materia: RFC informativa senza risposta
+    query: posso mandare una RFC solo per informare senza aspettare risposta
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: "Art. 11 — Coordinamento esterno: RFC"
+      commi: [8]
+
+  - id: B14
+    materia: principi fondativi della metodologia
+    query: su quali principi si fonda Hodos
+    sede-attesa:
+      percorso: it_IT/principi.md
+      sezione: documento intero
+      commi: []
+
+  - id: B15
+    materia: fasi del ciclo di vita P0-P4
+    query: quali sono le fasi di un progetto e cosa si produce in ciascuna
+    sede-attesa:
+      percorso: it_IT/arricchimenti/fasi/skills/arricchimento-fasi.md
+      sezione: documento intero
+      commi: []

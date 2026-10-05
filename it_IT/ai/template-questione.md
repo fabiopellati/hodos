@@ -3,6 +3,7 @@ tipo-artefatto: template
 documento: questione
 descrizione: struttura canonica di una questione segregata nella cartella questioni/ (rilievo, revisione o anomalia)
 fase: trasversale
+autorita: operativa
 ---
 
 # Template — Questione

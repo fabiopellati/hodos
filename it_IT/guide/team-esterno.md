@@ -3,6 +3,7 @@ tipo-artefatto: guida
 documento: team-esterno
 descrizione: guida operativa per il team che riceve una RFC da un'opera governata con Hodos,
   senza presupporre conoscenza del processo interno di chi la emette
+autorita: informativa
 ---
 
 # Guida Operativa — Team Esterno

@@ -8,6 +8,7 @@ client: Claude Code CLI
 invocazione: /hodos-arricchimento-fasi
 tipo: descrittivo
 locale: it_IT
+autorita: normativa
 ---
 
 Percorso di riferimento opzionale per opere che adottano un ciclo di vita

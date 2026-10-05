@@ -4,6 +4,7 @@ documento: protocollo
 descrizione: testo normativo vigente del protocollo Hodos, con gli articoli su strumenti
   di governo, tipi e stati della questione, mastro, note, RFC e ciclo di vita degli
   artefatti di processo
+autorita: normativa
 ---
 
 # Protocollo di Processo — Hodos
