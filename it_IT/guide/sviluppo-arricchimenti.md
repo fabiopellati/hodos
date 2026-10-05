@@ -121,6 +121,7 @@ tipo-artefatto: guida    # o skill, regola, ai
 documento: nome-documento
 descrizione: descrizione breve per l'indicizzazione
 autorita: normativa    # o operativa, informativa
+canale: incluso    # facoltativo, o escluso
 ---
 ```
 
@@ -155,6 +156,23 @@ In quel caso il file dichiara `normativa`, e le parti che ripetono una norma sta
 
 La dichiarazione è un'asserzione sul contenuto e va mantenuta con esso.
 Un artefatto che acquista una norma propria cambia valore, e uno che la cede a un'altra sede lo cambia nel verso opposto.
+
+### Il campo `canale`
+
+Il campo `canale` dichiara se l'artefatto entra nel canale MCP, ed è facoltativo.
+A differenza di `tipo-artefatto` e di `autorita`, che descrivono il contenuto, è una dichiarazione rivolta al canale: decide se l'artefatto vi sia servito, e non che cosa esso sia.
+Per questo la sua presenza non dispensa dagli altri campi, che restano dovuti anche su un artefatto escluso perché valgono per ogni lettore.
+
+I valori sono due, e si scrivono esattamente in questa forma, minuscole comprese:
+
+- `incluso` — l'artefatto entra nel canale, ed è il regime ordinario: un artefatto che non dichiara il campo è incluso.
+- `escluso` — l'artefatto resta nel repository per i lettori umani ma non entra nell'indice, sicché non compare nelle ricerche, nell'elenco degli artefatti né nel recupero per percorso.
+
+Si esclude un artefatto che ha ragione di esistere per chi legge il repository, ma che servito a una sessione concorrerebbe con la sede propria delle norme che tratta senza aggiungervi nulla che la sessione non trovi lì.
+La decisione spetta al titolare del corpus, e il fatto che un artefatto perda il primato nelle ricerche non è di per sé una ragione per escluderlo.
+
+Un valore diverso dai due ammessi, anche per un refuso, fa scartare l'artefatto, e lo scarto compare nell'esito del sync con la sua ragione: un campo presente ma inefficace si vede così al primo sync invece di passare in silenzio.
+Gli artefatti esclusi compaiono a parte, distinti dagli scarti, nell'esito del sync e in `check_version`, ed è lì che si verifica che l'esclusione abbia avuto effetto.
 
 ---
 

@@ -55,7 +55,7 @@ obbligatoria. Non cambiare stato senza una voce nella Storia che dica il perché
 e non il cosa (Art. 8 comma 2).
 
 **Consolidare il corpo**: finché la questione è aperta il corpo è modificabile e
-si preferisce il consolidamento all'accumulo di commenti. L'immutabilità del
+si preferisce il consolidamento all'accumulo di commenti (Art. 4 commi 7 e 8). L'immutabilità del
 corpo appartiene alla nota e alla voce del mastro, non alla questione aperta.
 
 **Chiudere**: verificare che le domande aperte siano risolte, aggiungere al file
