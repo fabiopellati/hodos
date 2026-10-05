@@ -61,8 +61,8 @@ strumenti monolitici:
    - `id`, `titolo`, `tipo-elemento`;
    - per le questioni: `tipo`, `stato`, `aperta` (e `aggiornata` se ricavabile
      dalla storia);
-   - per le voci del mastro: `tipo`, `stato: closed`, `chiusa` (dalla data di
-     chiusura in intestazione);
+   - per le voci del mastro: `tipo` se l'elemento lo dichiara, `stato: closed`,
+     `chiusa` (dalla data di chiusura in intestazione);
    - per le note: `data`.
    I campi di giudizio (`decisioni`, `related`, `tag`, `file-toccati`) si
    lasciano vuoti o assenti in questo strato: verranno compilati nel secondo.
@@ -70,8 +70,10 @@ strumenti monolitici:
 6. Rigenera gli indici `questioni.md`, `mastro.md` e `note.md` come proiezione
    dei frontmatter appena creati, includendo il marcatore di file generato.
 
-Al termine di questo strato l'opera è già nella forma segregata e conforme
-alla struttura; manca solo la ricchezza dei metadati di giudizio.
+Al termine di questo strato l'opera è già nella forma segregata ma non è
+ancora conforme: mancano campi che il protocollo qualifica come obbligatori,
+e il validatore li segnala come difformità finché il secondo strato non è
+compiuto (Art. 3 comma 8).
 
 ---
 
@@ -86,10 +88,19 @@ successivi e non blocca il primo. Per ciascun elemento, letto il corpo:
   compatibilità affida a questo arricchimento;
 - compila `decisioni` distillando le decisioni prese (per le voci del mastro,
   dalla sezione `Decisioni prese`);
-- compila `file-toccati` dagli artefatti citati nella sezione `Impatto`;
+- compila `file-toccati` dagli artefatti citati nella sezione `Impatto`, e
+  con la lista vuota `[]` quando l'`Impatto` dichiara che nessun artefatto è
+  stato toccato;
 - compila `related` traducendo in lista di identificativi i legami che nel
   corpo erano scritti in prosa o nella vecchia sezione `Questioni collegate`;
 - compila `tag` con i temi ricorrenti dell'elemento.
+
+Un campo obbligatorio il cui valore l'elemento non porta, nemmeno nel corpo,
+perché l'elemento fu prodotto prima che la norma lo chiedesse, non si compila
+per giudizio: attribuirlo a posteriori non recupererebbe un dato perduto ma
+ne inventerebbe uno mai esistito.
+L'elemento entra invece nell'elenco degli anteriori che l'opera attesta una
+volta, e il validatore lo qualifica come tale (Art. 3 comma 9).
 
 Trattandosi del mastro, l'arricchimento avviene sul **frontmatter**, che è
 mutabile, mentre il corpo resta intatto: è esattamente il doppio regime

@@ -58,11 +58,12 @@ questione — il "prima", cioè il perché la questione esiste — ed è la proi
 queryable della sezione `Descrizione` del corpo. Nel mastro farà da contraltare
 a `decisioni`, il "dopo".
 
-Il campo `related` è opzionale nel caso generale; sostituisce la vecchia
-sezione `Questioni collegate` del corpo. Il suo perimetro è locale all'opera
-e il legame verso un'altra opera si scrive in prosa nel corpo: la norma è
-l'Art. 3 comma 6 del protocollo. I campi `related` e `tag` accettano liste
-vuote (`[]`) quando non applicabili.
+Quali campi siano obbligatori, quali ammettano la lista vuota e quali siano
+facoltativi lo stabilisce l'Allegato A del protocollo (Art. 3 comma 8).
+
+Il campo `related` sostituisce la vecchia sezione `Questioni collegate` del
+corpo. Il suo perimetro è locale all'opera e il legame verso un'altra opera
+si scrive in prosa nel corpo: la norma è l'Art. 3 comma 6 del protocollo.
 
 ## Tipi
 
@@ -143,7 +144,7 @@ La differenza è precisamente ciò che rende la questione importante — git con
 ## Regole
 
 - Il tipo è immutabile dopo l'apertura.
-- Il campo `descrizione` del frontmatter è la sintesi distillata delle motivazioni ed è obbligatorio: proietta in forma queryable la sezione `Descrizione` del corpo.
+- Il campo `descrizione` del frontmatter è la sintesi distillata delle motivazioni e proietta in forma queryable la sezione `Descrizione` del corpo; la sua qualificazione è nell'Allegato A del protocollo.
 - La Descrizione descrive il problema, non la soluzione.
 - Finché la questione è aperta il corpo è modificabile: vedi la sezione «La questione aperta è un documento di lavoro». L'immutabilità del corpo appartiene alla nota e alla voce del mastro, non alla questione aperta.
 - I campi Domande aperte e Impatto sono mutabili per addizione nel corso del ciclo: si possono aggiungere nuove voci documentando il motivo. Una voce esistente non si cancella, ma si può dichiarare superata o inattuata con motivazione esplicita inline.

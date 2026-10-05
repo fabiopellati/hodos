@@ -25,15 +25,17 @@
 # Origine: QUESTIONE-194 dell'opera fabio/hodos, in attuazione del
 # DISPACCIO-004 del coordinamento delle sessioni del conto eqc.
 
-versione-banco: 2
+versione-banco: 3
 sorgente: hodos
 locale: it_IT
 # Il banco nasce con il tag v1.2.2. La misura di partenza è stata condotta
 # contro la v1.2.1, le cui sedi attese coincidono con queste, perché la v1.2.2
 # non sposta alcuna norma ma ne dichiara soltanto l'autorità. La versione 2
 # del banco, pubblicata con il tag v1.2.3, dichiara lo strumento per
-# interrogazione e non sposta alcuna sede attesa.
-tag-riferimento: v1.2.3
+# interrogazione e non sposta alcuna sede attesa. La versione 3, pubblicata
+# con il tag v1.3.0, aggiunge le materie B16 e B17, introdotte dal protocollo
+# 1.3.0, e non sposta alcuna sede attesa delle precedenti.
+tag-riferimento: v1.3.0
 # Lo strumento di default vale per ogni interrogazione che non ne dichiari uno
 # proprio. Un'interrogazione la cui sede attesa è una skill dichiara
 # search_knowledge, perché get_protocol_rules per costruzione non serve le
@@ -175,3 +177,19 @@ interrogazioni:
       percorso: it_IT/arricchimenti/fasi/skills/arricchimento-fasi.md
       sezione: documento intero
       commi: []
+
+  - id: B16
+    materia: qualificazione dei campi del frontmatter di una questione
+    query: quali campi del frontmatter di una questione sono obbligatori e quali posso omettere
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Allegato A — Struttura di una questione
+      commi: []
+
+  - id: B17
+    materia: elemento anteriore a una norma sopravvenuta sui campi
+    query: una vecchia voce del mastro non ha un campo che oggi è richiesto, devo compilarlo
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 3 — Strumenti di governo
+      commi: [9]

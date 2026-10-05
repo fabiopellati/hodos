@@ -75,8 +75,9 @@ file-toccati:
 - Il perimetro di `related` è locale all'opera; il legame verso un'altra opera
   si scrive in prosa nel corpo della voce, fin dalla prima stesura, perché il
   corpo non si riapre (Art. 3 comma 6 del protocollo).
-- Decisioni prese e Impatto (corpo) sono obbligatori, così come i campi
-  `decisioni` e `file-toccati` (frontmatter) che ne sono la proiezione.
-- Il campo `descrizione` (frontmatter) è obbligatorio: è la sintesi distillata
-  delle motivazioni della questione, il "prima" che affianca `decisioni`.
+- Decisioni prese e Impatto (corpo) sono obbligatori; i campi `decisioni` e
+  `file-toccati` del frontmatter ne sono la proiezione.
+- La qualificazione di ogni campo del frontmatter — obbligatorio, obbligatorio
+  con lista vuota ammessa, facoltativo — è nell'Allegato C del protocollo
+  (Art. 3 comma 8), compreso il caso in cui `file-toccati` vale `[]`.
 - Il Percorso è obbligatorio salvo ciclo diretto: in caso di dubbio, includerlo.
