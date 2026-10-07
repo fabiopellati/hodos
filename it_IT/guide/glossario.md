@@ -38,9 +38,12 @@ Team-B non partecipa al processo interno di Team-A: interagisce solo attraverso
 il documento RFC.
 
 **Commento**
-Contributo additivo e immutabile aggiunto a una questione o a una nota dopo
-la sua creazione. Serve a rettificare, integrare o contestualizzare il
-contenuto originale senza modificarlo. Ogni commento è numerato localmente
+Contributo additivo aggiunto a una questione o a una nota dopo la sua
+creazione. Serve a rettificare, integrare o contestualizzare il contenuto
+originale senza riscriverlo. Il suo testo segue il regime del contenitore:
+nella nota è immutabile, nella questione aperta appartiene al corpo e il suo
+difetto di redazione si corregge in luogo (Art. 4 comma 9). Ogni commento
+è numerato localmente
 all'artefatto a cui appartiene (COMMENTO-001, COMMENTO-002, ...) e reca la
 data di inserimento. Non modifica lo stato né il corpo dell'artefatto a cui
 si riferisce.
