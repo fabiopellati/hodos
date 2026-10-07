@@ -69,9 +69,11 @@ l'intestazione. Non fa parte del titolo.
 
 Il campo `Nome` corrisponde esattamente al valore dichiarato in `CLAUDE.md`.
 
-La firma fa parte dell'elemento a cui appartiene e segue le stesse regole
-di immutabilità: una voce di storia firmata non si modifica, un commento
-firmato non si modifica.
+La firma fa parte dell'elemento a cui appartiene e non si modifica mai: una
+voce di storia firmata non si modifica, e la firma di un commento resta quella
+che era anche quando il testo del commento è correggibile, come nella questione
+aperta (Art. 4 comma 9), perché la correzione ripara la redazione e non
+l'attribuzione.
 
 ---
 
@@ -102,7 +104,8 @@ Non portano firma:
 In team con più operatori, sapere chi ha aperto una questione, chi ha scritto
 un commento o chi ha aggiornato la storia è informazione di processo rilevante.
 La firma è parte dell'elemento e non è separabile: garantisce che
-l'attribuzione sia immutabile come l'elemento a cui appartiene.
+l'attribuzione resti immutabile anche dove il testo dell'elemento è
+correggibile.
 
 Il formato differenziato per tipo di elemento riflette i vincoli strutturali
 di ciascuno: le voci di storia sono righe singole e richiedono firma inline;

@@ -82,7 +82,7 @@ Aggiungere in fondo al corpo solo se presente:
 **Commenti**
 
 COMMENTO-001 — {YYYY-MM-DD}
-{testo del commento, immutabile dopo la scrittura}
+{testo del commento; finché la questione è aperta segue il regime del corpo (Art. 4 comma 9)}
 ```
 
 ## Aggiornamento indice
@@ -113,6 +113,7 @@ Non proporre opzioni in testo libero.
 
 Finché la questione è aperta il suo corpo si modifica: si corregge la Descrizione, si riformula un passaggio rimasto oscuro, si riassorbe nel corpo una rettifica annotata a parte.
 Il regime ordinario è nell'Art. 4 comma 7; `Domande aperte` e `Impatto` fanno eccezione e sono mutabili per sola addizione (Art. 4 comma 6).
+I commenti appartengono al corpo: il refuso di un commento si corregge nel suo testo e non con un commento di rettifica (Art. 4 comma 9).
 
 Una rettifica che renderebbe la questione più chiara si porta nel corpo invece di aggiungere un commento o una voce di Storia, secondo l'Art. 4 comma 8.
 Prima di consolidare un passaggio errato, recupera quel comma con `get_protocol_rules`, perché stabilisce che cosa si conserva e che cosa si riscrive.

@@ -9,9 +9,21 @@ autorita: normativa
 
 # Protocollo di Processo — Hodos
 
-**Versione**: 1.4.0
+**Versione**: 1.5.0
 **Stato**: forma normativa vigente
 
+> Nota di compatibilità (1.5.0).
+> Questa versione enuncia all'Art. 4 comma 9 che i commenti di una questione
+> aperta appartengono al corpo e ne seguono il regime ordinario, sicché il
+> difetto di redazione di un commento si corregge nel suo testo invece che
+> con un commento di rettifica.
+> L'immutabilità del commento, che gli artefatti operativi dichiaravano senza
+> condizione, resta ai soli contenitori il cui corpo è immutabile, cioè la
+> nota e la voce del mastro.
+> Nessun campo cambia forma e nessuna opera deve migrare: i commenti di
+> rettifica già scritti restano validi e possono essere riassorbiti secondo
+> l'Art. 4 comma 8 lettera d.
+>
 > Nota di compatibilità (1.4.0).
 > Questa versione enuncia all'Art. 4 comma 7 il regime ordinario del corpo di
 > una questione aperta, che è modificabile salvo il regime per addizione del
@@ -287,6 +299,19 @@ dall'idea al manufatto.
       parte dell'informazione.
    Il testo rimosso resta nella cronologia di versione, che conserva senza
    immettere in contesto.
+
+9. I commenti di una questione aperta appartengono al corpo e ne seguono il
+   regime ordinario del comma 7: il refuso e ogni altro difetto di redazione
+   di un commento si correggono nel testo del commento stesso, e non
+   aggiungendo un commento di rettifica, che duplicherebbe l'errore invece di
+   rimuoverlo.
+   Il criterio è quello del comma 8 lettere a e b: la correzione non muta ciò
+   che il commento testimonia, cioè la data, l'autore e il contenuto
+   dell'interazione che registra, e ciò che l'opera ha davvero creduto e poi
+   appreso diversamente si conserva e si rettifica con un commento nuovo che
+   lo riferisce.
+   L'immutabilità del commento appartiene ai contenitori il cui corpo è
+   immutabile, cioè la nota (Art. 5 comma 5) e la voce del mastro.
 
 ---
 
@@ -581,6 +606,8 @@ COMMENTO-NNN — YYYY-MM-DD
 I campi `tipo` e `stato` compaiono sia nel frontmatter sia nel corpo: il
 frontmatter è il canale queryable, il corpo il canale narrativo.
 La coerenza tra i due è presidiata dal validatore dell'opera.
+La sezione `Commenti` appartiene al corpo, e finché la questione è aperta il
+testo dei commenti ne segue il regime (Art. 4 comma 9).
 Il legame con altri elementi della medesima opera si dichiara nel campo
 `related` del frontmatter, non più in una sezione `Questioni collegate` del
 corpo; il legame verso un'altra opera si scrive in prosa nel corpo

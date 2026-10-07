@@ -25,7 +25,7 @@
 # Origine: QUESTIONE-194 dell'opera fabio/hodos, in attuazione del
 # DISPACCIO-004 del coordinamento delle sessioni del conto eqc.
 
-versione-banco: 4
+versione-banco: 5
 sorgente: hodos
 locale: it_IT
 # Il banco nasce con il tag v1.2.2. La misura di partenza è stata condotta
@@ -38,8 +38,10 @@ locale: it_IT
 # pubblicata con il tag v1.4.0, aggiunge il comma 7 alla sede attesa della B05,
 # perché il protocollo 1.4.0 vi enuncia il regime ordinario del corpo che prima
 # discendeva dal silenzio del comma 6, e aggiunge la materia B18 sul
-# consolidamento, introdotta dal comma 8.
-tag-riferimento: v1.4.0
+# consolidamento, introdotta dal comma 8. La versione 5, pubblicata con il tag
+# v1.5.0, aggiunge la materia B19 sulla correzione del commento, introdotta
+# dal comma 9 dell'Art. 4, e non sposta alcuna sede attesa delle precedenti.
+tag-riferimento: v1.5.0
 # Lo strumento di default vale per ogni interrogazione che non ne dichiari uno
 # proprio. Un'interrogazione la cui sede attesa è una skill dichiara
 # search_knowledge, perché get_protocol_rules per costruzione non serve le
@@ -205,3 +207,11 @@ interrogazioni:
       percorso: it_IT/protocollo.md
       sezione: Art. 4 — Le questioni
       commi: [8]
+
+  - id: B19
+    materia: correzione del refuso in un commento di una questione aperta
+    query: ho fatto un refuso in un commento, lo correggo o scrivo un commento di rettifica
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 4 — Le questioni
+      commi: [9]

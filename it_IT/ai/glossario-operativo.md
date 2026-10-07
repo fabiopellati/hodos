@@ -107,13 +107,20 @@ questione. Se è solo un'informazione da registrare senza azione, è una nota.
 
 ## Commento
 
-Contributo additivo e immutabile aggiunto a una questione o a una nota già
-esistente. Serve a rettificare, integrare o contestualizzare senza modificare
-il corpo originale.
+Contributo additivo aggiunto a una questione o a una nota già esistente.
+Serve a rettificare, integrare o contestualizzare senza riscrivere il corpo
+che lo precede. Nella nota è immutabile; nella questione aperta appartiene al
+corpo e ne segue il regime (Art. 4 comma 9).
 
 **Espressioni che indicano un commento:**
 aggiungi un commento, nota aggiuntiva, integrazione, rettifica, preciso che,
-correggo il commento, a proposito di, aggiunta, aggiorno, specifico meglio.
+a proposito di, aggiunta, aggiorno, specifico meglio.
+
+**Espressioni che NON indicano un commento nuovo:**
+correggi il commento, c'è un refuso nel commento, sistema il COMMENTO-NNN.
+Su una questione aperta indicano la correzione del testo di quel commento,
+non l'aggiunta di un commento di rettifica (Art. 4 comma 9); sulla nota
+il commento è immutabile e la rettifica resta un commento nuovo.
 
 ---
 
