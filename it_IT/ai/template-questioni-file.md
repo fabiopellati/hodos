@@ -25,7 +25,7 @@ Non è la sorgente delle questioni — la sorgente è il singolo file `questioni
 
 - **QUESTIONE-{ID}** — {Titolo} — {stato}
 
-> Ultima questione inserita: —
+> Ultima questione ancora aperta: —
 > Ultima questione chiusa: —
 ```
 
@@ -38,5 +38,9 @@ Non è la sorgente delle questioni — la sorgente è il singolo file `questioni
   l'ordinamento è una proprietà dell'indice, non dei file.
 - L'indice non si modifica a mano: si rigenera dai frontmatter ad ogni
   apertura, cambio di stato e chiusura.
+- Le due righe di citazione insistono su collezioni diverse.
+  La prima cita la questione di identificativo più alto presente in `questioni/`, con la data del suo campo `aperta`: è l'ultima questione ancora aperta, non l'ultima inserita nell'opera, che può essere già passata in `mastro/`.
+  La seconda cita la voce di `mastro/` con la data di chiusura più recente, e a parità di data quella di identificativo più alto, con la data del suo campo `chiusa`.
+  Una collezione senza elementi rende la riga con il solo segnaposto.
 - Per la struttura di una singola questione, consultare il template
   `questione`.
