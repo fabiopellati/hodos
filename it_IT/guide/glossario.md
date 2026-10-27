@@ -92,12 +92,19 @@ rilievo a elencare la revisione (Art. 9 comma 2).
 
 Il perimetro del campo è locale all'opera: il legame verso un'altra opera si
 scrive in prosa nel corpo dell'elemento che lo origina.
+Il legame verso un elemento sorto dopo che l'elemento a cui si riferisce è
+divenuto immutabile è *sopravvenuto*: lo dichiara l'elemento più recente, e
+l'elemento immutabile non si riapre per riceverlo (Art. 3 comma 6).
+La mutabilità del frontmatter della nota e della voce del mastro non
+autorizza a scrivervi back-reference (Art. 3 comma 6 e Art. 5 comma 7).
 
 **Nota**
 Osservazione, memo o idea in incubazione, che vive nel proprio file della
 collezione `note/` ed è sommariata dall'indice derivato `note.md`. Non è una
 questione: non ha stati, non produce una entry nel mastro, non richiede
-approvazione. Il corpo è immutabile dopo la scrittura. Può ricevere commenti
+approvazione. Il corpo è immutabile dopo la scrittura, mentre il frontmatter
+è mutabile negli stessi limiti di quello della voce del mastro (Art. 5
+comma 7). Può ricevere commenti
 (COMMENTO-NNN) per rettifiche o nuove conoscenze sullo stesso argomento, senza
 dover aprire una nota separata.
 

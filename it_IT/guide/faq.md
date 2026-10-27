@@ -235,8 +235,11 @@ per affinare i campi di giudizio (`decisioni`, `related`, `tag`) o nel corso di
 una bonifica di versione.
 
 Ne discende la via per rettificare una voce già chiusa senza violarne
-l'immutabilità: si scrive una nota che porta la rettifica e la si lega alla
-voce tramite il campo `related`, che il doppio regime rende mutabile.
+l'immutabilità: si scrive una nota che porta la rettifica e dichiara la voce
+nel **proprio** campo `related`.
+La voce non riceve il legame nel suo frontmatter, benché mutabile, perché il
+legame si dichiara sull'elemento che lo origina e le back-reference non si
+scrivono a mano (Art. 3 comma 6 e Art. 5 comma 7).
 
 ---
 

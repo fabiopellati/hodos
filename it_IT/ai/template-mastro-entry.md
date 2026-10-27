@@ -75,6 +75,9 @@ file-toccati:
 - Il perimetro di `related` è locale all'opera; il legame verso un'altra opera
   si scrive in prosa nel corpo della voce, fin dalla prima stesura, perché il
   corpo non si riapre (Art. 3 comma 6 del protocollo).
+- Il legame verso un elemento sorto dopo la chiusura è sopravvenuto e non
+  omesso: lo dichiara l'elemento più recente, e la voce non si riapre per
+  riceverlo né è per questo in anomalia (Art. 3 comma 6).
 - Decisioni prese e Impatto (corpo) sono obbligatori; i campi `decisioni` e
   `file-toccati` del frontmatter ne sono la proiezione.
 - La qualificazione di ogni campo del frontmatter — obbligatorio, obbligatorio

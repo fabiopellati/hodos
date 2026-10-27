@@ -9,9 +9,23 @@ autorita: normativa
 
 # Protocollo di Processo — Hodos
 
-**Versione**: 1.5.0
+**Versione**: 1.6.0
 **Stato**: forma normativa vigente
 
+> Nota di compatibilità (1.6.0).
+> Questa versione enuncia all'Art. 3 comma 6 il legame sopravvenuto, cioè
+> quello verso un elemento sorto dopo che l'elemento a cui si riferisce è
+> divenuto immutabile: lo dichiara l'elemento più recente, e l'elemento
+> immutabile non si riapre per riceverlo né è in anomalia, perché il legame
+> non vi è stato omesso.
+> Enuncia inoltre all'Art. 5 comma 7 che il frontmatter della nota è
+> mutabile per i fini e nei limiti del frontmatter della voce del mastro,
+> mentre il corpo e i commenti restano immutabili, e che la mutabilità di
+> `related` non autorizza a scrivere back-reference.
+> Nessun campo cambia forma e nessuna opera deve migrare: un'opera che abbia
+> scritto a mano una back-reference nel `related` di un elemento immutabile
+> la toglie dal frontmatter, che è mutabile.
+>
 > Nota di compatibilità (1.5.0).
 > Questa versione enuncia all'Art. 4 comma 9 che i commenti di una questione
 > aperta appartengono al corpo e ne seguono il regime ordinario, sicché il
@@ -191,6 +205,14 @@ dall'idea al manufatto.
    scrive in prosa nel corpo dell'elemento che lo origina, con il nome
    dell'opera e l'identificativo, ed eventualmente il percorso del file, fin
    dalla prima stesura dell'elemento.
+   Il legame verso un elemento sorto dopo che l'elemento a cui si riferisce è
+   divenuto immutabile è un legame sopravvenuto: lo origina l'elemento più
+   recente, che lo dichiara nella forma che gli spetta, in `related` se i due
+   elementi appartengono alla medesima opera e in prosa nel proprio corpo se
+   appartengono a opere diverse.
+   L'elemento immutabile non si riapre per ricevere il legame sopravvenuto e
+   non è per questo in anomalia, perché il legame non vi è stato omesso: al
+   momento della sua stesura l'elemento a cui si riferisce non esisteva.
    Il protocollo non tratta il caso dell'elemento già immutabile in cui il
    legame sia stato omesso: è un'anomalia dell'opera e resta a sua cura.
 
@@ -344,6 +366,15 @@ dall'idea al manufatto.
       ancora maturo per aprire una questione formale;
    c) *memo* — riferimento, vincolo o promemoria che serve a non perdere
       un'informazione.
+
+7. Il frontmatter di una nota è mutabile, per i fini e nei limiti che
+   l'Art. 10 comma 2 stabilisce per il frontmatter della voce del mastro; il
+   corpo e i commenti restano immutabili (comma 5).
+   La mutabilità di `related` non autorizza a scrivere back-reference: il
+   legame si dichiara sull'elemento che lo origina (Art. 3 comma 6), sicché
+   una nota scritta per rettificare o integrare un altro elemento porta il
+   legame nel proprio `related`, e l'elemento rettificato non lo riceve nel
+   suo.
 
 ---
 
@@ -618,6 +649,7 @@ corpo; il legame verso un'altra opera si scrive in prosa nel corpo
 ## Allegato B — Struttura di una nota
 
 File: `note/NOTA-{NNN}-slug.md`.
+Il corpo è immutabile; il frontmatter è mutabile (Art. 5 commi 5 e 7).
 
 Frontmatter:
 

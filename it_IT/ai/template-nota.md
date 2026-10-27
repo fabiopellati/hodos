@@ -36,6 +36,9 @@ protocollo (Art. 3 comma 8).
 Il perimetro di `related` è locale all'opera e il legame verso un'altra opera
 si scrive in prosa nel corpo della nota: la norma è l'Art. 3 comma 6 del
 protocollo.
+Una nota scritta per rettificare o integrare un altro elemento dichiara
+quell'elemento nel proprio `related`, e l'elemento rettificato non riceve il
+legame nel suo (Art. 5 comma 7).
 
 ## Commento a una nota esistente
 
@@ -76,6 +79,6 @@ Non proporre opzioni in testo libero.
 
 - Il formato è leggero: nessuna sezione strutturata, nessuno stato.
 - La descrizione sintetica è quella che appare nell'indice: deve essere comprensibile senza leggere il corpo.
-- Il corpo di una nota è immutabile dopo la scrittura.
+- Il corpo di una nota è immutabile dopo la scrittura (Art. 5 comma 5); il frontmatter è mutabile per i fini e nei limiti dell'Art. 5 comma 7, che rinvia a quelli del frontmatter della voce del mastro.
 - Per rettifiche o nuove conoscenze sullo stesso argomento, aggiungere un commento (COMMENTO-NNN) alla nota esistente invece di aprirne una nuova.
 - I commenti sono additivi e immutabili.
