@@ -25,7 +25,7 @@
 # Origine: QUESTIONE-194 dell'opera fabio/hodos, in attuazione del
 # DISPACCIO-004 del coordinamento delle sessioni del conto eqc.
 
-versione-banco: 5
+versione-banco: 6
 sorgente: hodos
 locale: it_IT
 # Il banco nasce con il tag v1.2.2. La misura di partenza è stata condotta
@@ -41,7 +41,11 @@ locale: it_IT
 # consolidamento, introdotta dal comma 8. La versione 5, pubblicata con il tag
 # v1.5.0, aggiunge la materia B19 sulla correzione del commento, introdotta
 # dal comma 9 dell'Art. 4, e non sposta alcuna sede attesa delle precedenti.
-tag-riferimento: v1.5.0
+# La versione 6, pubblicata con il tag v1.6.0, aggiunge la materia B20 sul
+# legame sopravvenuto, introdotta nel comma 6 dell'Art. 3, e la materia B21 sul
+# frontmatter della nota, introdotta dal comma 7 dell'Art. 5, e non sposta
+# alcuna sede attesa delle precedenti.
+tag-riferimento: v1.6.0
 # Lo strumento di default vale per ogni interrogazione che non ne dichiari uno
 # proprio. Un'interrogazione la cui sede attesa è una skill dichiara
 # search_knowledge, perché get_protocol_rules per costruzione non serve le
@@ -215,3 +219,19 @@ interrogazioni:
       percorso: it_IT/protocollo.md
       sezione: Art. 4 — Le questioni
       commi: [9]
+
+  - id: B20
+    materia: legame sopravvenuto verso un elemento già immutabile
+    query: una voce del mastro già chiusa è stata ripresa da una questione nata dopo in un altro progetto, devo aggiungere il riferimento alla voce chiusa
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 3 — Strumenti di governo
+      commi: [6]
+
+  - id: B21
+    materia: mutabilità del frontmatter di una nota
+    query: posso correggere i metadati di una nota già scritta, per esempio i tag o i collegamenti
+    sede-attesa:
+      percorso: it_IT/protocollo.md
+      sezione: Art. 5 — Le note
+      commi: [7]

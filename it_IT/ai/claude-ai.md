@@ -78,6 +78,8 @@ Sintesi, e risolvere dalla fase radice verso quella più avanzata.
 identificativo univoco, descrizione sintetica e data, e rigenerare l'indice.
 Il corpo della nota è immutabile dopo la scrittura: ogni rettifica o nuova
 conoscenza sullo stesso argomento va nella sezione `Commenti` (Art. 5 comma 5).
+Il frontmatter della nota è invece mutabile, per i fini e nei limiti dell'Art. 5
+comma 7, che non autorizza a scrivervi back-reference.
 
 **Quando usare una nota invece di una questione**: quando non c'è ancora una
 decisione da prendere, quando la decisione esiste ma il processo non è nella

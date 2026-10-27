@@ -64,6 +64,9 @@ facoltativi lo stabilisce l'Allegato A del protocollo (Art. 3 comma 8).
 Il campo `related` sostituisce la vecchia sezione `Questioni collegate` del
 corpo. Il suo perimetro è locale all'opera e il legame verso un'altra opera
 si scrive in prosa nel corpo: la norma è l'Art. 3 comma 6 del protocollo.
+Lo stesso comma stabilisce che il legame verso un elemento già immutabile lo
+dichiara la questione più recente, e che quell'elemento non si riapre per
+riceverlo.
 
 ## Tipi
 
